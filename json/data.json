@@ -1,0 +1,4876 @@
+{
+	"P_SSR": [
+		{
+			"header_title": "P-SSR",
+			"header_length": 7
+		},
+		{
+			"idol_name": "마노",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ほわっとスマイル】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "mano_p_ssr1"
+				},
+				{
+					"card_name": "【ハ♡トフェルトゥギフト】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2019-01-31",
+					"card_addr": "mano_p_ssr2"
+				},
+				{
+					"card_name": "【はじけてスマイル】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2019-08-09",
+					"card_addr": "mano_p_ssr3"
+				},
+				{
+					"card_name": "【深染め、いろみぐさ】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2019-10-31",
+					"card_addr": "mano_p_ssr4"
+				},
+				{
+					"card_name": "【ソラを跳ね】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2020-07-10",
+					"card_addr": "mano_p_ssr5"
+				},
+				{
+					"card_name": "【花風Smiley】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2021-04-01",
+					"card_addr": "mano_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "히오리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【柔らかな微笑み】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "hiori_p_ssr1"
+				},
+				{
+					"card_name": "【淡雪の戯れ】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-11-30",
+					"card_addr": "hiori_p_ssr2"
+				},
+				{
+					"card_name": "【伸ばす手に乗せるのは】風野 灯織",
+					"card_type": "한정",
+					"card_date": "2019-04-01",
+					"card_addr": "hiori_p_ssr3"
+				},
+				{
+					"card_name": "【清閑に息をひそめて】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2020-01-20",
+					"card_addr": "hiori_p_ssr4"
+				},
+				{
+					"card_name": "【黒百合前で待ち合わせ】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2021-01-22",
+					"card_addr": "hiori_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hiori_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "메구루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【金色の元気いっぱいガール】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "meguru_p_ssr1"
+				},
+				{
+					"card_name": "【夏に恋するピチカート！】八宮 めぐる",
+					"card_type": "한정",
+					"card_date": "2018-08-10",
+					"card_addr": "meguru_p_ssr2"
+				},
+				{
+					"card_name": "【シュカのまにまに】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2019-06-20",
+					"card_addr": "meguru_p_ssr3"
+				},
+				{
+					"card_name": "【日々を紡ぐインヴェルノ】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2019-12-26",
+					"card_addr": "meguru_p_ssr4"
+				},
+				{
+					"card_name": "【アイの誓い】八宮 めぐる",
+					"card_type": "한정",
+					"card_date": "2020-05-31",
+					"card_addr": "meguru_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "meguru_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "코가네",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ばりうまかブルース】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2018-04-30",
+					"card_addr": "kogane_p_ssr1"
+				},
+				{
+					"card_name": "【月の浜辺で待っとって】月岡 恋鐘",
+					"card_type": "한정",
+					"card_date": "2019-01-01",
+					"card_addr": "kogane_p_ssr2"
+				},
+				{
+					"card_name": "【風吹く丘にはよ来んね】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2019-05-20",
+					"card_addr": "kogane_p_ssr3"
+				},
+				{
+					"card_name": "【うちのリボンは恋結び】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2020-02-12",
+					"card_addr": "kogane_p_ssr4"
+				},
+				{
+					"card_name": "【心の鐘が鳴っとるけん】月岡 恋鐘",
+					"card_type": "한정",
+					"card_date": "2020-11-30",
+					"card_addr": "kogane_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "마미미",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【トリッキーナイト】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2018-08-31",
+					"card_addr": "mamimi_p_ssr1"
+				},
+				{
+					"card_name": "【摩的・アンチテーゼ】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": "mamimi_p_ssr2"
+				},
+				{
+					"card_name": "【パープル・ミラージュ】田中 摩美々",
+					"card_type": "한정",
+					"card_date": "2019-07-19",
+					"card_addr": "mamimi_p_ssr3"
+				},
+				{
+					"card_name": "【フィドル・ファドル】田中 摩美々",
+					"card_type": "한정",
+					"card_date": "2019-11-30",
+					"card_addr": "mamimi_p_ssr4"
+				},
+				{
+					"card_name": "【真・TRAVELER】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2020-09-11",
+					"card_addr": "mamimi_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "사쿠야",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【紺碧のボーダーライン】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2018-07-31",
+					"card_addr": "sakuya_p_ssr1"
+				},
+				{
+					"card_name": "【1/60・NaturalHeart】白瀬 咲耶",
+					"card_type": "한정",
+					"card_date": "2019-02-28",
+					"card_addr": "sakuya_p_ssr2"
+				},
+				{
+					"card_name": "【幸福のリズム】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2019-06-10",
+					"card_addr": "sakuya_p_ssr3"
+				},
+				{
+					"card_name": "【海と太陽のプロメッサ】白瀬 咲耶",
+					"card_type": "한정",
+					"card_date": "2020-04-30",
+					"card_addr": "sakuya_p_ssr4"
+				},
+				{
+					"card_name": "【乙女と交わすTrick】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2020-10-12",
+					"card_addr": "sakuya_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "유이카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【お試し／みつゴコロ】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2018-09-30",
+					"card_addr": "yuika_p_ssr1"
+				},
+				{
+					"card_name": "【それなら目をつぶりましょう】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2019-05-10",
+					"card_addr": "yuika_p_ssr2"
+				},
+				{
+					"card_name": "【NOT≠EQUAL】三峰 結華",
+					"card_type": "한정",
+					"card_date": "2019-08-31",
+					"card_addr": "yuika_p_ssr3"
+				},
+				{
+					"card_name": "【く　ら　く　ら】三峰 結華",
+					"card_type": "한정",
+					"card_date": "2020-07-31",
+					"card_addr": "yuika_p_ssr4"
+				},
+				{
+					"card_name": "【雨に祝福】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2020-11-10",
+					"card_addr": "yuika_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "키리코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【霧・音・燦・燦】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-11-19",
+					"card_addr": "kiriko_p_ssr1"
+				},
+				{
+					"card_name": "【夕・音・鳴・鳴】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2019-04-19",
+					"card_addr": "kiriko_p_ssr2"
+				},
+				{
+					"card_name": "【菜・菜・輪・舞】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2019-09-10",
+					"card_addr": "kiriko_p_ssr3"
+				},
+				{
+					"card_name": "【鱗・鱗・謹・賀】幽谷 霧子",
+					"card_type": "한정",
+					"card_date": "2020-01-01",
+					"card_addr": "kiriko_p_ssr4"
+				},
+				{
+					"card_name": "【琴・禽・空・華】幽谷 霧子",
+					"card_type": "한정",
+					"card_date": "2021-02-28",
+					"card_addr": "kiriko_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "카호",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【第2形態アーマードタイプ】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2018-05-31",
+					"card_addr": "kaho_p_ssr1"
+				},
+				{
+					"card_name": "【新装備・バブルバスター！】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2019-01-21",
+					"card_addr": "kaho_p_ssr2"
+				},
+				{
+					"card_name": "【潮騒のシーショア】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2019-08-21",
+					"card_addr": "kaho_p_ssr3"
+				},
+				{
+					"card_name": "【エクストリーム・ブレイク！】小宮 果穂",
+					"card_type": "한정",
+					"card_date": "2020-01-31",
+					"card_addr": "kaho_p_ssr4"
+				},
+				{
+					"card_name": "【日刊ウィズ・ユー！】小宮 果穂",
+					"card_type": "한정",
+					"card_date": "2021-01-12",
+					"card_addr": "kaho_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "치요코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【チョコ色×きらきらロマン】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2018-10-31",
+					"card_addr": "chiyoko_p_ssr1"
+				},
+				{
+					"card_name": "【あそ→と♡ちよこれいと】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2019-02-08",
+					"card_addr": "chiyoko_p_ssr2"
+				},
+				{
+					"card_name": "【かきまぜたら＊ミルク】園田 智代子",
+					"card_type": "한정",
+					"card_date": "2019-09-30",
+					"card_addr": "chiyoko_p_ssr3"
+				},
+				{
+					"card_name": "【You’re My Dream】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2020-04-10",
+					"card_addr": "chiyoko_p_ssr4"
+				},
+				{
+					"card_name": "【プリティ・スイート】園田 智代子",
+					"card_type": "한정",
+					"card_date": "2020-12-11",
+					"card_addr": "chiyoko_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "쥬리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ラムネ色の覚悟】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-08-20",
+					"card_addr": "juri_p_ssr1"
+				},
+				{
+					"card_name": "【とびっきりジンジャー】西城 樹里",
+					"card_type": "한정",
+					"card_date": "2018-12-14",
+					"card_addr": "juri_p_ssr2"
+				},
+				{
+					"card_name": "【曲がり角のランウェイ】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2019-07-10",
+					"card_addr": "juri_p_ssr3"
+				},
+				{
+					"card_name": "【誰が為シンパシー】西城 樹里",
+					"card_type": "한정",
+					"card_date": "2020-01-10",
+					"card_addr": "juri_p_ssr4"
+				},
+				{
+					"card_name": "【秋陽のスケッチ】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2020-09-23",
+					"card_addr": "juri_p_ssr5"
+				},
+				{
+					"card_name": "【I・OWE・U】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2021-04-12",
+					"card_addr": "juri_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "린제",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【杜野 凛世の印象派】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2018-10-19",
+					"card_addr": "rinze_p_ssr1"
+				},
+				{
+					"card_name": "【凛世花伝】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2019-03-22",
+					"card_addr": "rinze_p_ssr2"
+				},
+				{
+					"card_name": "【水色感情】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2019-09-20",
+					"card_addr": "rinze_p_ssr3"
+				},
+				{
+					"card_name": "【十二月短篇】杜野 凛世",
+					"card_type": "한정",
+					"card_date": "2019-12-13",
+					"card_addr": "rinze_p_ssr4"
+				},
+				{
+					"card_name": "【われにかへれ】杜野 凛世",
+					"card_type": "한정",
+					"card_date": "2020-08-11",
+					"card_addr": "rinze_p_ssr5"
+				},
+				{
+					"card_name": "【ロー・ポジション】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2021-03-22",
+					"card_addr": "rinze_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "나츠하",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【アルティメットマーメイド】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2018-07-20",
+					"card_addr": "natsuha_p_ssr1"
+				},
+				{
+					"card_name": "【メイドインナツハ】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2019-02-18",
+					"card_addr": "natsuha_p_ssr2"
+				},
+				{
+					"card_name": "【Ring a bell】有栖川 夏葉",
+					"card_type": "한정",
+					"card_date": "2019-05-31",
+					"card_addr": "natsuha_p_ssr3"
+				},
+				{
+					"card_name": "【♡AKQJ10】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2020-03-19",
+					"card_addr": "natsuha_p_ssr4"
+				},
+				{
+					"card_name": "【cheer+】有栖川 夏葉",
+					"card_type": "한정",
+					"card_date": "2020-08-31",
+					"card_addr": "natsuha_p_ssr5"
+				},
+				{
+					"card_name": "【夏は来ぬ】有栖川 夏葉",
+					"card_type": "한정",
+					"card_date": "2021-04-30",
+					"card_addr": "natsuha_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "아마나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【スタンバイオッケー】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-05-21",
+					"card_addr": "amana_p_ssr1"
+				},
+				{
+					"card_name": "【ゆらゆらアクアリウム】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-12-21",
+					"card_addr": "amana_p_ssr2"
+				},
+				{
+					"card_name": "【ないしょのスイーツ】大崎 甘奈",
+					"card_type": "한정",
+					"card_date": "2019-10-21",
+					"card_addr": "amana_p_ssr3"
+				},
+				{
+					"card_name": "【お散歩サンライト】大崎 甘奈",
+					"card_type": "한정",
+					"card_date": "2020-02-29",
+					"card_addr": "amana_p_ssr4"
+				},
+				{
+					"card_name": "【叶えて☆ゴールドフィッシュ】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2020-08-21",
+					"card_addr": "amana_p_ssr5"
+				},
+				{
+					"card_name": "【約束ペタル】大崎 甘奈",
+					"card_type": "한정",
+					"card_date": "2021-03-12",
+					"card_addr": "amana_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "텐카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【事務所。静寂。大輪の華】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2018-06-30",
+					"card_addr": "tenka_p_ssr1"
+				},
+				{
+					"card_name": "【好きなものはなんですか？】大崎 甜花",
+					"card_type": "한정",
+					"card_date": "2019-04-29",
+					"card_addr": "tenka_p_ssr2"
+				},
+				{
+					"card_name": "【I♡DOLL】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2019-11-11",
+					"card_addr": "tenka_p_ssr3"
+				},
+				{
+					"card_name": "【四夜一夜物語】大崎 甜花",
+					"card_type": "한정",
+					"card_date": "2020-04-20",
+					"card_addr": "tenka_p_ssr4"
+				},
+				{
+					"card_name": "【BON・BON・DAY！】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2021-02-10",
+					"card_addr": "tenka_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "치유키",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【マイ・ピュア・ロマンス】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2018-09-20",
+					"card_addr": "chiyuki_p_ssr1"
+				},
+				{
+					"card_name": "【シークレット・ヒロイン】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2019-03-12",
+					"card_addr": "chiyuki_p_ssr2"
+				},
+				{
+					"card_name": "【サマーハニー・シーズン】桑山 千雪",
+					"card_type": "한정",
+					"card_date": "2019-07-31",
+					"card_addr": "chiyuki_p_ssr3"
+				},
+				{
+					"card_name": "【はるかぜまち、1番地】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2020-03-10",
+					"card_addr": "chiyuki_p_ssr4"
+				},
+				{
+					"card_name": "【秋空と紅葉】桑山 千雪",
+					"card_type": "한정",
+					"card_date": "2020-10-31",
+					"card_addr": "chiyuki_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "아사히",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-01",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ジャンプ！スタッグ！！！】芹沢 あさひ",
+					"card_type": "통상",
+					"card_date": "2019-06-30",
+					"card_addr": "asahi_p_ssr1"
+				},
+				{
+					"card_name": "【空と青とアイツ】芹沢 あさひ",
+					"card_type": "한정",
+					"card_date": "2020-04-01",
+					"card_addr": "asahi_p_ssr2"
+				},
+				{
+					"card_name": "【不機嫌なテーマパーク】芹沢 あさひ",
+					"card_type": "통상",
+					"card_date": "2020-11-20",
+					"card_addr": "asahi_p_ssr3"
+				},
+				{
+					"card_name": "【Housekeeping!】芹沢 あさひ",
+					"card_type": "한정",
+					"card_date": "2021-01-31",
+					"card_addr": "asahi_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "후유코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-05",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【オ♡フ♡レ♡コ】黛 冬優子",
+					"card_type": "통상",
+					"card_date": "2019-11-20",
+					"card_addr": "fuyuko_p_ssr1"
+				},
+				{
+					"card_name": "【アンシーン・ダブルキャスト】黛 冬優子",
+					"card_type": "한정",
+					"card_date": "2020-07-21",
+					"card_addr": "fuyuko_p_ssr2"
+				},
+				{
+					"card_name": "【starring F】黛 冬優子",
+					"card_type": "통상",
+					"card_date": "2020-12-23",
+					"card_addr": "fuyuko_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "메이",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-09",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ちょっとあげる～】和泉 愛依",
+					"card_type": "통상",
+					"card_date": "2019-10-11",
+					"card_addr": "mei_p_ssr1"
+				},
+				{
+					"card_name": "【メイ・ビー】和泉 愛依",
+					"card_type": "통상",
+					"card_date": "2020-02-20",
+					"card_addr": "mei_p_ssr2"
+				},
+				{
+					"card_name": "【シャッターチャンス！？】和泉 愛依",
+					"card_type": "한정",
+					"card_date": "2020-09-30",
+					"card_addr": "mei_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "토오루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-03",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【10個、光】浅倉 透",
+					"card_type": "통상",
+					"card_date": "2020-05-13",
+					"card_addr": "toru_p_ssr1"
+				},
+				{
+					"card_name": "【途方もない午後】浅倉 透",
+					"card_type": "한정",
+					"card_date": "2020-06-30",
+					"card_addr": "toru_p_ssr2"
+				},
+				{
+					"card_name": "【つづく、】浅倉 透",
+					"card_type": "한정",
+					"card_date": "2021-04-20",
+					"card_addr": "toru_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "마도카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-06",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【カラカラカラ】樋口 円香",
+					"card_type": "통상",
+					"card_date": "2020-05-22",
+					"card_addr": "madoka_p_ssr1"
+				},
+				{
+					"card_name": "【ギンコ・ビローバ】樋口 円香",
+					"card_type": "한정",
+					"card_date": "2020-10-21",
+					"card_addr": "madoka_p_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "코이토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-09",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ポシェットの中には】福丸 小糸",
+					"card_type": "통상",
+					"card_date": "2020-06-19",
+					"card_addr": "koito_p_ssr1"
+				},
+				{
+					"card_name": "【おみくじ結びますか】福丸 小糸",
+					"card_type": "한정",
+					"card_date": "2021-01-01",
+					"card_addr": "koito_p_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "히나나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【HAPPY-!NG】市川 雛菜",
+					"card_type": "통상",
+					"card_date": "2020-06-19",
+					"card_addr": "hinana_p_ssr1"
+				},
+				{
+					"card_name": "【♡LOG】市川 雛菜",
+					"card_type": "통상",
+					"card_date": "2021-02-19",
+					"card_addr": "hinana_p_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_ssr6"
+				}
+			]
+		},
+		{
+			"idol_name": "니치카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-05",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		},
+		{
+			"idol_name": "미코토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-08",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		}
+	],
+	"P_SR": [
+		{
+			"header_title": "P-SR",
+			"header_length": 6
+		},
+		{
+			"idol_name": "마노",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ナチュラルモード】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2018-05-21",
+					"card_addr": "mano_p_sr1"
+				},
+				{
+					"card_name": "【ぐうぜんBOOKS】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2018-09-30",
+					"card_addr": "mano_p_sr2"
+				},
+				{
+					"card_name": "【しじまに華ひととき】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2019-01-01",
+					"card_addr": "mano_p_sr3"
+				},
+				{
+					"card_name": "【花結びゆくゆく】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2020-03-10",
+					"card_addr": "mano_p_sr4"
+				},
+				{
+					"card_name": "【一番星の魔法】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2020-11-30",
+					"card_addr": "mano_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "히오리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【手作りの心遣い】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-04-26",
+					"card_addr": "hiori_p_sr1"
+				},
+				{
+					"card_name": "【マフラー直して、心は解けて】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2018-12-26",
+					"card_addr": "hiori_p_sr2"
+				},
+				{
+					"card_name": "【落下予測地点】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2019-08-09",
+					"card_addr": "hiori_p_sr3"
+				},
+				{
+					"card_name": "【インビジブルタイム】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2020-10-12",
+					"card_addr": "hiori_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hiori_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "메구루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【キネマ・リリックで夢見て】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2018-09-20",
+					"card_addr": "meguru_p_sr1"
+				},
+				{
+					"card_name": "【小さな夜のトロイメライ】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2018-12-21",
+					"card_addr": "meguru_p_sr2"
+				},
+				{
+					"card_name": "【チエルアルコは流星の】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2019-04-19",
+					"card_addr": "meguru_p_sr3"
+				},
+				{
+					"card_name": "【ハロー・ワールド】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2020-03-19",
+					"card_addr": "meguru_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "meguru_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "코가네",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ばってん長崎恋岬】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kogane_p_sr1"
+				},
+				{
+					"card_name": "【ビ～♡バップ海岸】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2018-07-31",
+					"card_addr": "kogane_p_sr2"
+				},
+				{
+					"card_name": "【は～と♡に火をつけて】月岡 恋鐘",
+					"card_type": "이벤트",
+					"card_date": "2019-04-24",
+					"card_addr": "kogane_p_sr3"
+				},
+				{
+					"card_name": "【猫道カントリー】月岡 恋鐘",
+					"card_type": "이벤트",
+					"card_date": "2020-09-23",
+					"card_addr": "kogane_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "마미미",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【裏腹あまのじゃく】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "mamimi_p_sr1"
+				},
+				{
+					"card_name": "【夕つ方まみみチック】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2018-06-20",
+					"card_addr": "mamimi_p_sr2"
+				},
+				{
+					"card_name": "【そのまみみ無気力につき】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2019-01-11",
+					"card_addr": "mamimi_p_sr3"
+				},
+				{
+					"card_name": "【FANCY 24g】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2020-02-20",
+					"card_addr": "mamimi_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "사쿠야",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【秘めやかファンサービス】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "sakuya_p_sr1"
+				},
+				{
+					"card_name": "【ふれあい、おもいあい】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2018-11-19",
+					"card_addr": "sakuya_p_sr2"
+				},
+				{
+					"card_name": "【雪染めロマンティカ】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2020-01-20",
+					"card_addr": "sakuya_p_sr3"
+				},
+				{
+					"card_name": "【真紅一輪】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2020-06-10",
+					"card_addr": "sakuya_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "유이카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【カラフルメタモルフォーゼ】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "yuika_p_sr1"
+				},
+				{
+					"card_name": "【雨色、上機嫌】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2018-06-11",
+					"card_addr": "yuika_p_sr2"
+				},
+				{
+					"card_name": "【お願い、ただの少女がいい】三峰 結華",
+					"card_type": "이벤트",
+					"card_date": "2019-03-12",
+					"card_addr": "yuika_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "키리코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【包・帯・組・曲】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kiriko_p_sr1"
+				},
+				{
+					"card_name": "【伝・伝・心・音】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-04-30",
+					"card_addr": "kiriko_p_sr2"
+				},
+				{
+					"card_name": "【白・白・白・祈】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2019-02-28",
+					"card_addr": "kiriko_p_sr3"
+				},
+				{
+					"card_name": "【天・天・白・布】幽谷 霧子",
+					"card_type": "이벤트",
+					"card_date": "2019-05-20",
+					"card_addr": "kiriko_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "카호",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【マメ丸と一緒！】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kaho_p_sr1"
+				},
+				{
+					"card_name": "【デコって！ハッピークッキー】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2018-10-19",
+					"card_addr": "kaho_p_sr2"
+				},
+				{
+					"card_name": "【キャッチ・ザ・フォール！】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2019-10-11",
+					"card_addr": "kaho_p_sr3"
+				},
+				{
+					"card_name": "【窓辺・サイレントタイム】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2019-11-11",
+					"card_addr": "kaho_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "치요코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【純真チョコレート】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "chiyoko_p_sr1"
+				},
+				{
+					"card_name": "【よろしく♡めしませっ】園田 智代子",
+					"card_type": "이벤트",
+					"card_date": "2018-07-20",
+					"card_addr": "chiyoko_p_sr2"
+				},
+				{
+					"card_name": "【錯覚・Darling】園田 智代子",
+					"card_type": "한정",
+					"card_date": "2020-01-10",
+					"card_addr": "chiyoko_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "쥬리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【バッドガールの羽ばたき】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "juri_p_sr1"
+				},
+				{
+					"card_name": "【オフデーゲーム】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-05-31",
+					"card_addr": "juri_p_sr2"
+				},
+				{
+					"card_name": "【STARTRAIN】西城 樹里",
+					"card_type": "이벤트",
+					"card_date": "2019-02-18",
+					"card_addr": "juri_p_sr3"
+				},
+				{
+					"card_name": "【夏服にWIND YOU！】西城 樹里",
+					"card_type": "이벤트",
+					"card_date": "2020-06-19",
+					"card_addr": "juri_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "린제",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【想ひいろは】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "rinze_p_sr1"
+				},
+				{
+					"card_name": "【凛凛、凛世】杜野 凛世",
+					"card_type": "캠페인",
+					"card_date": "2018-04-24",
+					"card_addr": "rinze_p_sr2"
+				},
+				{
+					"card_name": "【微熱風鈴】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2018-07-11",
+					"card_addr": "rinze_p_sr3"
+				},
+				{
+					"card_name": "【ふらここのうた】杜野 凛世",
+					"card_type": "이벤트",
+					"card_date": "2018-11-30",
+					"card_addr": "rinze_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "나츠하",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ストイックトレーニング】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "natsuha_p_sr1"
+				},
+				{
+					"card_name": "【カトレアの花言葉】有栖川 夏葉",
+					"card_type": "이벤트",
+					"card_date": "2018-10-31",
+					"card_addr": "natsuha_p_sr2"
+				},
+				{
+					"card_name": "【鳥籠をひらいて】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2020-05-13",
+					"card_addr": "natsuha_p_sr3"
+				},
+				{
+					"card_name": "【風がかけていくように】有栖川 夏葉",
+					"card_type": "이벤트",
+					"card_date": "2021-01-22",
+					"card_addr": "natsuha_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "아마나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【似合うかな？】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "amana_p_sr1"
+				},
+				{
+					"card_name": "【甜花ちゃんといっしょ☆】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-10-10",
+					"card_addr": "amana_p_sr2"
+				},
+				{
+					"card_name": "【ふたつの雨】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2019-06-20",
+					"card_addr": "amana_p_sr3"
+				},
+				{
+					"card_name": "【見つけたい、だけど……】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2020-04-20",
+					"card_addr": "amana_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "텐카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【秘密のだらだらタイム】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "tenka_p_sr1"
+				},
+				{
+					"card_name": "【シンメトリー・プールサイド】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2018-08-20",
+					"card_addr": "tenka_p_sr2"
+				},
+				{
+					"card_name": "【氷上バンビーナ】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2018-11-30",
+					"card_addr": "tenka_p_sr3"
+				},
+				{
+					"card_name": "【お日様染めのマリーナ】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2019-01-31",
+					"card_addr": "tenka_p_sr4"
+				},
+				{
+					"card_name": "【ストライク狙って】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2019-12-26",
+					"card_addr": "tenka_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "치유키",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【マイフェイバリット】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "chiyuki_p_sr1"
+				},
+				{
+					"card_name": "【一夏一刻物語】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2018-06-30",
+					"card_addr": "chiyuki_p_sr2"
+				},
+				{
+					"card_name": "【よそゆき顔のセレナーデ】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2019-01-21",
+					"card_addr": "chiyuki_p_sr3"
+				},
+				{
+					"card_name": "【ワン・モア・フラワリング】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2019-10-21",
+					"card_addr": "chiyuki_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "아사히",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-01",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【さかさま世界】芹沢 あさひ",
+					"card_type": "통상",
+					"card_date": "2019-05-20",
+					"card_addr": "asahi_p_sr1"
+				},
+				{
+					"card_name": "【かしゃーんとがらがら】芹沢 あさひ",
+					"card_type": "이벤트",
+					"card_date": "2019-09-20",
+					"card_addr": "asahi_p_sr2"
+				},
+				{
+					"card_name": "【はり・はり】芹沢 あさひ",
+					"card_type": "이벤트",
+					"card_date": "2021-02-19",
+					"card_addr": "asahi_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "후유코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-05",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ザ・冬優子イズム】黛 冬優子",
+					"card_type": "통상",
+					"card_date": "2019-04-29",
+					"card_addr": "fuyuko_p_sr1"
+				},
+				{
+					"card_name": "【水×天カイヤナイト】黛 冬優子",
+					"card_type": "이벤트",
+					"card_date": "2019-07-19",
+					"card_addr": "fuyuko_p_sr2"
+				},
+				{
+					"card_name": "【はるさき可憐花】黛 冬優子",
+					"card_type": "이벤트",
+					"card_date": "2021-04-12",
+					"card_addr": "fuyuko_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "메이",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-09",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【気になる！？染めちゃう！？】和泉 愛依",
+					"card_type": "통상",
+					"card_date": "2019-06-10",
+					"card_addr": "mei_p_sr1"
+				},
+				{
+					"card_name": "【てへっ♪】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2019-08-09",
+					"card_addr": "mei_p_sr2"
+				},
+				{
+					"card_name": "【ご褒美、いるよね♪】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2020-05-22",
+					"card_addr": "mei_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "토오루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-03",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【まわるものについて】浅倉 透",
+					"card_type": "이벤트",
+					"card_date": "2020-11-10",
+					"card_addr": "toru_p_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "마도카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-06",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "코이토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-09",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【はれのひ喫茶店】福丸 小糸",
+					"card_type": "이벤트",
+					"card_date": "2021-03-22",
+					"card_addr": "koito_p_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "히나나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【#SS】市川 雛菜",
+					"card_type": "이벤트",
+					"card_date": "2020-08-11",
+					"card_addr": "hinana_p_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_p_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "니치카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-05",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		},
+		{
+			"idol_name": "미코토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-08",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		}
+	],
+	"S_SSR": [
+		{
+			"header_title": "S-SSR",
+			"header_length": 10
+		},
+		{
+			"idol_name": "마노",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【トリプルイルミネーション】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2018-04-26",
+					"card_addr": "mano_s_ssr1"
+				},
+				{
+					"card_name": "【お揃いスナップ】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2018-06-30",
+					"card_addr": "mano_s_ssr2"
+				},
+				{
+					"card_name": "【スプラッシュビート】櫻木 真乃",
+					"card_type": "캠페인",
+					"card_date": "2018-07-31",
+					"card_addr": "mano_s_ssr3"
+				},
+				{
+					"card_name": "【はじまりのエピローグ】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2018-12-14",
+					"card_addr": "mano_s_ssr4"
+				},
+				{
+					"card_name": "【冬街イルミネート】櫻木 真乃",
+					"card_type": "캠페인",
+					"card_date": "2018-12-14",
+					"card_addr": "mano_s_ssr5"
+				},
+				{
+					"card_name": "【駅線上の日常】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2019-04-01",
+					"card_addr": "mano_s_ssr6"
+				},
+				{
+					"card_name": "【つむぎ、まばゆく。星屑たち】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2020-07-31",
+					"card_addr": "mano_s_ssr7"
+				},
+				{
+					"card_name": "【こころ、えんにならんで】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2020-10-12",
+					"card_addr": "mano_s_ssr8"
+				},
+				{
+					"card_name": "【泡沫の石たちに乾杯】櫻木 真乃",
+					"card_type": "한정",
+					"card_date": "2021-01-12",
+					"card_addr": "mano_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "히오리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【みんなと結んだもの】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-08-31",
+					"card_addr": "hiori_s_ssr1"
+				},
+				{
+					"card_name": "【風野署長の一日勤務回想録】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2019-01-31",
+					"card_addr": "hiori_s_ssr2"
+				},
+				{
+					"card_name": "【星合アステリズム】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2019-06-20",
+					"card_addr": "hiori_s_ssr3"
+				},
+				{
+					"card_name": "【星掬い藍仰ぐ】風野 灯織",
+					"card_type": "한정",
+					"card_date": "2019-10-31",
+					"card_addr": "hiori_s_ssr4"
+				},
+				{
+					"card_name": "【宝石色のしおり】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2020-05-31",
+					"card_addr": "hiori_s_ssr5"
+				},
+				{
+					"card_name": "【水面を仰いで海の底】風野 灯織",
+					"card_type": "한정",
+					"card_date": "2020-10-31",
+					"card_addr": "hiori_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hiori_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hiori_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hiori_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "메구루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【スタァライトショウタイム】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2018-05-10",
+					"card_addr": "meguru_s_ssr1"
+				},
+				{
+					"card_name": "【キャプテン★パンプキン】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2018-09-30",
+					"card_addr": "meguru_s_ssr2"
+				},
+				{
+					"card_name": "【花笑み咲匂う】八宮 めぐる",
+					"card_type": "한정",
+					"card_date": "2019-04-29",
+					"card_addr": "meguru_s_ssr3"
+				},
+				{
+					"card_name": "【ああひかりよ】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2019-10-31",
+					"card_addr": "meguru_s_ssr4"
+				},
+				{
+					"card_name": "【アップ・トゥ・ユー】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2020-09-11",
+					"card_addr": "meguru_s_ssr5"
+				},
+				{
+					"card_name": "【ハッピー・バレンタイン？】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2021-02-10",
+					"card_addr": "meguru_s_ssr6"
+				},
+				{
+					"card_name": "【Scoop up Scraps】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2021-04-01",
+					"card_addr": "meguru_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "meguru_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "meguru_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "코가네",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ふっふ～ん、ふふ～ん♪】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kogane_s_ssr1"
+				},
+				{
+					"card_name": "【これ、なんの話～？】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2018-10-10",
+					"card_addr": "kogane_s_ssr2"
+				},
+				{
+					"card_name": "【SIDE：K】月岡 恋鐘",
+					"card_type": "이벤트",
+					"card_date": "2019-02-28",
+					"card_addr": "kogane_s_ssr3"
+				},
+				{
+					"card_name": "【夏、どがんね～？】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2019-07-10",
+					"card_addr": "kogane_s_ssr4"
+				},
+				{
+					"card_name": "【晴れ、よかばい～！】月岡 恋鐘",
+					"card_type": "한정",
+					"card_date": "2020-04-30",
+					"card_addr": "kogane_s_ssr5"
+				},
+				{
+					"card_name": "【会いに行かんば～！】月岡 恋鐘",
+					"card_type": "한정",
+					"card_date": "2021-03-12",
+					"card_addr": "kogane_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "마미미",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ゴシックデコレーション】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2018-05-04",
+					"card_addr": "mamimi_s_ssr1"
+				},
+				{
+					"card_name": "【闇鍋上等】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2018-11-30",
+					"card_addr": "mamimi_s_ssr2"
+				},
+				{
+					"card_name": "【夜夜中ワンダーラスト】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2019-02-28",
+					"card_addr": "mamimi_s_ssr3"
+				},
+				{
+					"card_name": "【きまぐれのめぐみ】田中 摩美々",
+					"card_type": "한정",
+					"card_date": "2019-09-30",
+					"card_addr": "mamimi_s_ssr4"
+				},
+				{
+					"card_name": "【デタラメハッシュタグ】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2020-01-01",
+					"card_addr": "mamimi_s_ssr5"
+				},
+				{
+					"card_name": "【スプリング・フィッシュ】田中 摩美々",
+					"card_type": "한정",
+					"card_date": "2020-04-20",
+					"card_addr": "mamimi_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "사쿠야",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【指先の煌めき】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "sakuya_s_ssr1"
+				},
+				{
+					"card_name": "【街角フラワーガーデン】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2018-04-30",
+					"card_addr": "sakuya_s_ssr2"
+				},
+				{
+					"card_name": "【月映えのソワレ】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2019-08-31",
+					"card_addr": "sakuya_s_ssr3"
+				},
+				{
+					"card_name": "【prince×princess】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2019-11-11",
+					"card_addr": "sakuya_s_ssr4"
+				},
+				{
+					"card_name": "【シー・イズ】白瀬 咲耶",
+					"card_type": "한정",
+					"card_date": "2020-08-11",
+					"card_addr": "sakuya_s_ssr5"
+				},
+				{
+					"card_name": "【あのねが言える場所】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2021-02-28",
+					"card_addr": "sakuya_s_ssr6"
+				},
+				{
+					"card_name": "【それは途中の１ページ】白瀬 咲耶",
+					"card_type": "한정",
+					"card_date": "2021-04-30",
+					"card_addr": "sakuya_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "유이카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【等身大のレイニーデイ】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "yuika_s_ssr1"
+				},
+				{
+					"card_name": "【ハロー、私の「いつも通り」】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2019-01-11",
+					"card_addr": "yuika_s_ssr2"
+				},
+				{
+					"card_name": "【賑やか四畳半】三峰 結華",
+					"card_type": "한정",
+					"card_date": "2019-10-21",
+					"card_addr": "yuika_s_ssr3"
+				},
+				{
+					"card_name": "【プレゼントなら両手いっぱい】三峰 結華",
+					"card_type": "한정",
+					"card_date": "2019-12-13",
+					"card_addr": "yuika_s_ssr4"
+				},
+				{
+					"card_name": "【おはようと日向に手を振る】三峰 結華",
+					"card_type": "이벤트",
+					"card_date": "2020-04-30",
+					"card_addr": "yuika_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "키리코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【霧・霧・奇・譚】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-09-30",
+					"card_addr": "kiriko_s_ssr1"
+				},
+				{
+					"card_name": "【娘・娘・謹・賀】幽谷 霧子",
+					"card_type": "이벤트",
+					"card_date": "2019-01-01",
+					"card_addr": "kiriko_s_ssr2"
+				},
+				{
+					"card_name": "【潜・潜・夏・娘】幽谷 霧子",
+					"card_type": "한정",
+					"card_date": "2019-07-31",
+					"card_addr": "kiriko_s_ssr3"
+				},
+				{
+					"card_name": "【奇・綺・甘・甘】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2020-02-12",
+					"card_addr": "kiriko_s_ssr4"
+				},
+				{
+					"card_name": "【数・数・娘・娘】幽谷 霧子",
+					"card_type": "한정",
+					"card_date": "2020-10-21",
+					"card_addr": "kiriko_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "카호",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ヒーローインザパーク】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kaho_s_ssr1"
+				},
+				{
+					"card_name": "【鉄板★絶品★海の家】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2018-07-31",
+					"card_addr": "kaho_s_ssr2"
+				},
+				{
+					"card_name": "【雨のち、マイヒーロー】小宮 果穂",
+					"card_type": "한정",
+					"card_date": "2019-05-31",
+					"card_addr": "kaho_s_ssr3"
+				},
+				{
+					"card_name": "【ナツイロ☆アフタースクール】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2020-06-19",
+					"card_addr": "kaho_s_ssr4"
+				},
+				{
+					"card_name": "【続！（完全）燃焼】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2020-08-31",
+					"card_addr": "kaho_s_ssr5"
+				},
+				{
+					"card_name": "【反撃の狼煙をあげよ！】小宮 果穂",
+					"card_type": "한정",
+					"card_date": "2021-04-01",
+					"card_addr": "kaho_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "치요코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【放課後★肝試しパニック】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2018-05-31",
+					"card_addr": "chiyoko_s_ssr1"
+				},
+				{
+					"card_name": "【桜餅マスター……？】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2018-06-20",
+					"card_addr": "chiyoko_s_ssr2"
+				},
+				{
+					"card_name": "【紅蘭偉魔空珠に挑め！】園田 智代子",
+					"card_type": "이벤트",
+					"card_date": "2019-05-31",
+					"card_addr": "chiyoko_s_ssr3"
+				},
+				{
+					"card_name": "【おあがり←くらいまっくす】園田 智代子",
+					"card_type": "한정",
+					"card_date": "2020-01-31",
+					"card_addr": "chiyoko_s_ssr4"
+				},
+				{
+					"card_name": "【kimagure全力ビート！】園田 智代子",
+					"card_type": "한정",
+					"card_date": "2020-08-31",
+					"card_addr": "chiyoko_s_ssr5"
+				},
+				{
+					"card_name": "【code:SH☆☆TING star!】園田 智代子",
+					"card_type": "이벤트",
+					"card_date": "2021-04-30",
+					"card_addr": "chiyoko_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "쥬리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【未知なるFROZEN】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-07-31",
+					"card_addr": "juri_s_ssr1"
+				},
+				{
+					"card_name": "【スリープオーバーベイビー】西城 樹里",
+					"card_type": "한정",
+					"card_date": "2019-08-31",
+					"card_addr": "juri_s_ssr2"
+				},
+				{
+					"card_name": "【坂道だらけのこの街で】西城 樹里",
+					"card_type": "이벤트",
+					"card_date": "2020-01-31",
+					"card_addr": "juri_s_ssr3"
+				},
+				{
+					"card_name": "【SPACE WHAT？】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2020-05-22",
+					"card_addr": "juri_s_ssr4"
+				},
+				{
+					"card_name": "【モーニング・グロウリー？】西城 樹里",
+					"card_type": "한정",
+					"card_date": "2020-11-30",
+					"card_addr": "juri_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "린제",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ふれんど日和】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "rinze_s_ssr1"
+				},
+				{
+					"card_name": "【凛世夕町物語】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2019-02-18",
+					"card_addr": "rinze_s_ssr2"
+				},
+				{
+					"card_name": "【常夏CLIMAX】杜野 凛世",
+					"card_type": "이벤트",
+					"card_date": "2019-07-31",
+					"card_addr": "rinze_s_ssr3"
+				},
+				{
+					"card_name": "【夜明けの晩に】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2020-04-10",
+					"card_addr": "rinze_s_ssr4"
+				},
+				{
+					"card_name": "【日を食んで、夜を啜って】杜野 凛世",
+					"card_type": "이벤트",
+					"card_date": "2020-12-11",
+					"card_addr": "rinze_s_ssr5"
+				},
+				{
+					"card_name": "【祝唄-hogiuta-】杜野 凛世",
+					"card_type": "한정",
+					"card_date": "2021-01-01",
+					"card_addr": "rinze_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "나츠하",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【熱血指導！】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "natsuha_s_ssr1"
+				},
+				{
+					"card_name": "【遊びも本気で】有栖川 夏葉",
+					"card_type": "이벤트",
+					"card_date": "2018-05-31",
+					"card_addr": "natsuha_s_ssr2"
+				},
+				{
+					"card_name": "【＃ナッツ・チョコジェリー】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2018-11-09",
+					"card_addr": "natsuha_s_ssr3"
+				},
+				{
+					"card_name": "【月刊CLIMAX】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": "natsuha_s_ssr4"
+				},
+				{
+					"card_name": "【Sr×Ba×Cu＝】有栖川 夏葉",
+					"card_type": "한정",
+					"card_date": "2020-07-21",
+					"card_addr": "natsuha_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "아마나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【幸せのりんご飴】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2018-06-30",
+					"card_addr": "amana_s_ssr1"
+				},
+				{
+					"card_name": "【まだ……寝ないから……】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-10-31",
+					"card_addr": "amana_s_ssr2"
+				},
+				{
+					"card_name": "【お菓子なティータイム】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2019-01-31",
+					"card_addr": "amana_s_ssr3"
+				},
+				{
+					"card_name": "【ハッピーの答えはどこに？】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2019-04-29",
+					"card_addr": "amana_s_ssr4"
+				},
+				{
+					"card_name": "【Cherry Jelly】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2020-03-19",
+					"card_addr": "amana_s_ssr5"
+				},
+				{
+					"card_name": "【スペンサー家の日常】大崎 甘奈",
+					"card_type": "한정",
+					"card_date": "2021-01-31",
+					"card_addr": "amana_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "텐카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【彩りファッションドール】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "tenka_s_ssr1"
+				},
+				{
+					"card_name": "【身支度はお任せ☆】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2018-05-21",
+					"card_addr": "tenka_s_ssr2"
+				},
+				{
+					"card_name": "【かしまし、みっつの願いごと】大崎 甜花",
+					"card_type": "한정",
+					"card_date": "2019-01-01",
+					"card_addr": "tenka_s_ssr3"
+				},
+				{
+					"card_name": "【トゥインクル・トゥインクル】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2019-09-30",
+					"card_addr": "tenka_s_ssr4"
+				},
+				{
+					"card_name": "【見果てぬ先のアヴァロン】大崎 甜花",
+					"card_type": "한정",
+					"card_date": "2020-02-29",
+					"card_addr": "tenka_s_ssr5"
+				},
+				{
+					"card_name": "【リトル・スターズ】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2020-10-31",
+					"card_addr": "tenka_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "치유키",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【先生のお時間】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "chiyuki_s_ssr1"
+				},
+				{
+					"card_name": "【永遠のCarol】桑山 千雪",
+					"card_type": "한정",
+					"card_date": "2018-12-14",
+					"card_addr": "chiyuki_s_ssr2"
+				},
+				{
+					"card_name": "【トキ・メキ・タコさん】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2019-03-22",
+					"card_addr": "chiyuki_s_ssr3"
+				},
+				{
+					"card_name": "【ウォーム・スノウ】桑山 千雪",
+					"card_type": "한정",
+					"card_date": "2019-11-30",
+					"card_addr": "chiyuki_s_ssr4"
+				},
+				{
+					"card_name": "【ドゥワッチャラブ！】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2020-02-29",
+					"card_addr": "chiyuki_s_ssr5"
+				},
+				{
+					"card_name": "【夏空への挑戦】桑山 千雪",
+					"card_type": "한정",
+					"card_date": "2020-07-31",
+					"card_addr": "chiyuki_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "아사히",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【プレゼン・バトン！】芹沢 あさひ",
+					"card_type": "이벤트",
+					"card_date": "2019-12-13",
+					"card_addr": "asahi_s_ssr1"
+				},
+				{
+					"card_name": "【あめ、ゆき、はれ】芹沢 あさひ",
+					"card_type": "통상",
+					"card_date": "2020-01-20",
+					"card_addr": "asahi_s_ssr2"
+				},
+				{
+					"card_name": "【今日の手は空を切らない】芹沢 あさひ",
+					"card_type": "한정",
+					"card_date": "2020-05-31",
+					"card_addr": "asahi_s_ssr3"
+				},
+				{
+					"card_name": "【ゴースト・サイド！】芹沢 あさひ",
+					"card_type": "이벤트",
+					"card_date": "2020-09-30",
+					"card_addr": "asahi_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "후유코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【スパイシーベリィデコレイト】黛 冬優子",
+					"card_type": "통상",
+					"card_date": "2019-09-10",
+					"card_addr": "fuyuko_s_ssr1"
+				},
+				{
+					"card_name": "【ノー墨・勝者フェイス】黛 冬優子",
+					"card_type": "한정",
+					"card_date": "2020-01-01",
+					"card_addr": "fuyuko_s_ssr2"
+				},
+				{
+					"card_name": "【＠ストーリィズ】黛 冬優子",
+					"card_type": "이벤트",
+					"card_date": "2020-04-01",
+					"card_addr": "fuyuko_s_ssr3"
+				},
+				{
+					"card_name": "【×トリック／〇＿＿＿＿】黛 冬優子",
+					"card_type": "한정",
+					"card_date": "2021-02-28",
+					"card_addr": "fuyuko_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "메이",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【なるんじゃん？】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2019-06-30",
+					"card_addr": "mei_s_ssr1"
+				},
+				{
+					"card_name": "【うち来る～！？】和泉 愛依",
+					"card_type": "한정",
+					"card_date": "2020-04-01",
+					"card_addr": "mei_s_ssr2"
+				},
+				{
+					"card_name": "【エンジョイ！パーティ】和泉 愛依",
+					"card_type": "통상",
+					"card_date": "2020-12-23",
+					"card_addr": "mei_s_ssr3"
+				},
+				{
+					"card_name": "【いるっしょ！】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2021-01-31",
+					"card_addr": "mei_s_ssr4"
+				},
+				{
+					"card_name": "【よしよし♪】和泉 愛依",
+					"card_type": "한정",
+					"card_date": "2021-04-20",
+					"card_addr": "mei_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "토오루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ハウー・アー・UFO】浅倉 透",
+					"card_type": "통상",
+					"card_date": "2020-08-21",
+					"card_addr": "toru_s_ssr1"
+				},
+				{
+					"card_name": "【pooool】浅倉 透",
+					"card_type": "한정",
+					"card_date": "2020-12-11",
+					"card_addr": "toru_s_ssr2"
+				},
+				{
+					"card_name": "【がんばれ！ ノロマ号】浅倉 透",
+					"card_type": "이벤트",
+					"card_date": "2021-01-01",
+					"card_addr": "toru_s_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "마도카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【游魚】樋口 円香",
+					"card_type": "이벤트",
+					"card_date": "2020-06-30",
+					"card_addr": "madoka_s_ssr1"
+				},
+				{
+					"card_name": "【UNTITLED】樋口 円香",
+					"card_type": "통상",
+					"card_date": "2020-11-10",
+					"card_addr": "madoka_s_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "코이토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【パーティのやくそく】福丸 小糸",
+					"card_type": "한정",
+					"card_date": "2020-09-30",
+					"card_addr": "koito_s_ssr1"
+				},
+				{
+					"card_name": "【思い出にもならない】福丸 小糸",
+					"card_type": "통상",
+					"card_date": "2021-04-12",
+					"card_addr": "koito_s_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "히나나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ROOKIE!】市川 雛菜",
+					"card_type": "한정",
+					"card_date": "2020-06-30",
+					"card_addr": "hinana_s_ssr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr5"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr6"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr7"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr8"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_ssr9"
+				}
+			]
+		},
+		{
+			"idol_name": "니치카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-30",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		},
+		{
+			"idol_name": "미코토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-30",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		}
+	],
+	"S_SR": [
+		{
+			"header_title": "S-SR",
+			"header_length": 6
+		},
+		{
+			"idol_name": "마노",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【天然色ピクニック】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "mano_s_sr1"
+				},
+				{
+					"card_name": "【音、雨、パシャ、リ】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2019-06-10",
+					"card_addr": "mano_s_sr2"
+				},
+				{
+					"card_name": "【by to illuminate】櫻木 真乃",
+					"card_type": "통상",
+					"card_date": "2020-02-20",
+					"card_addr": "mano_s_sr3"
+				},
+				{
+					"card_name": "【まわる音色、君色のかおり】櫻木 真乃",
+					"card_type": "이벤트",
+					"card_date": "2020-09-11",
+					"card_addr": "mano_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mano_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "히오리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【克服の特訓】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "hiori_s_sr1"
+				},
+				{
+					"card_name": "【遊び疲れて……】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-08-10",
+					"card_addr": "hiori_s_sr2"
+				},
+				{
+					"card_name": "【魔法の階段を上って……】風野 灯織",
+					"card_type": "통상",
+					"card_date": "2018-10-19",
+					"card_addr": "hiori_s_sr3"
+				},
+				{
+					"card_name": "【RPGのススメ】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2019-09-10",
+					"card_addr": "hiori_s_sr4"
+				},
+				{
+					"card_name": "【クローズ・トゥ・ユー】風野 灯織",
+					"card_type": "이벤트",
+					"card_date": "2020-03-10",
+					"card_addr": "hiori_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "메구루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【友情の花吹雪】八宮 めぐる",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "meguru_s_sr1"
+				},
+				{
+					"card_name": "【友達という灯り】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2018-04-26",
+					"card_addr": "meguru_s_sr2"
+				},
+				{
+					"card_name": "【アイムカミングスーン】八宮 めぐる",
+					"card_type": "이벤트",
+					"card_date": "2019-01-31",
+					"card_addr": "meguru_s_sr3"
+				},
+				{
+					"card_name": "【サンシャインシエスタ！】八宮 めぐる",
+					"card_type": "한정",
+					"card_date": "2019-07-19",
+					"card_addr": "meguru_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "meguru_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "코가네",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【やけん、なんの話～！？】月岡 恋鐘",
+					"card_type": "이벤트",
+					"card_date": "2018-12-14",
+					"card_addr": "kogane_s_sr1"
+				},
+				{
+					"card_name": "【と～りゃんせ！】月岡 恋鐘",
+					"card_type": "한정",
+					"card_date": "2019-04-01",
+					"card_addr": "kogane_s_sr2"
+				},
+				{
+					"card_name": "【秋、どがんね～？】月岡 恋鐘",
+					"card_type": "이벤트",
+					"card_date": "2019-10-11",
+					"card_addr": "kogane_s_sr3"
+				},
+				{
+					"card_name": "【冬、どがんね～？】月岡 恋鐘",
+					"card_type": "통상",
+					"card_date": "2019-12-26",
+					"card_addr": "kogane_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kogane_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "마미미",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【カラフルポップMIX】田中 摩美々",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "mamimi_s_sr1"
+				},
+				{
+					"card_name": "【アーリー・ナチュラリィ】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2018-05-21",
+					"card_addr": "mamimi_s_sr2"
+				},
+				{
+					"card_name": "【イン・ザ・ピンク】田中 摩美々",
+					"card_type": "이벤트",
+					"card_date": "2021-01-12",
+					"card_addr": "mamimi_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mamimi_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "사쿠야",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【雲間のモーメント】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2018-06-20",
+					"card_addr": "sakuya_s_sr1"
+				},
+				{
+					"card_name": "【マジカル＊スカイレース】白瀬 咲耶",
+					"card_type": "이벤트",
+					"card_date": "2018-09-30",
+					"card_addr": "sakuya_s_sr2"
+				},
+				{
+					"card_name": "【咲耶と摩美々のぶらり旅】白瀬 咲耶",
+					"card_type": "통상",
+					"card_date": "2019-01-21",
+					"card_addr": "sakuya_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "sakuya_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "유이카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【輪になって】三峰 結華",
+					"card_type": "이벤트",
+					"card_date": "2018-05-04",
+					"card_addr": "yuika_s_sr1"
+				},
+				{
+					"card_name": "【メロウビート・スローダウン】三峰 結華",
+					"card_type": "통상",
+					"card_date": "2018-08-20",
+					"card_addr": "yuika_s_sr2"
+				},
+				{
+					"card_name": "【SIDE：Y】三峰 結華",
+					"card_type": "이벤트",
+					"card_date": "2019-02-28",
+					"card_addr": "yuika_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "yuika_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "키리코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【綿毛ノ想】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "kiriko_s_sr1"
+				},
+				{
+					"card_name": "【娘・娘・金・魚】幽谷 霧子",
+					"card_type": "통상",
+					"card_date": "2018-07-20",
+					"card_addr": "kiriko_s_sr2"
+				},
+				{
+					"card_name": "【我・思・君・思】幽谷 霧子",
+					"card_type": "이벤트",
+					"card_date": "2019-07-10",
+					"card_addr": "kiriko_s_sr3"
+				},
+				{
+					"card_name": "【君・空・我・空】幽谷 霧子",
+					"card_type": "이벤트",
+					"card_date": "2020-04-10",
+					"card_addr": "kiriko_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kiriko_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "카호",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【放課後スノーガールズ！】小宮 果穂",
+					"card_type": "통상",
+					"card_date": "2018-12-21",
+					"card_addr": "kaho_s_sr1"
+				},
+				{
+					"card_name": "【無敵の証！五紋章！】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2019-03-22",
+					"card_addr": "kaho_s_sr2"
+				},
+				{
+					"card_name": "【ホーカゴ・ア・ゴーゴー！】小宮 果穂",
+					"card_type": "이벤트",
+					"card_date": "2020-05-13",
+					"card_addr": "kaho_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "kaho_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "치요코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【迷走チョコロード】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "chiyoko_s_sr1"
+				},
+				{
+					"card_name": "【Best☆Great☆サマー！】園田 智代子",
+					"card_type": "이벤트",
+					"card_date": "2019-08-21",
+					"card_addr": "chiyoko_s_sr2"
+				},
+				{
+					"card_name": "【ぐるもこ・まふ×２】園田 智代子",
+					"card_type": "통상",
+					"card_date": "2019-11-20",
+					"card_addr": "chiyoko_s_sr3"
+				},
+				{
+					"card_name": "【茜色セレンディピティ】園田 智代子",
+					"card_type": "이벤트",
+					"card_date": "2020-11-20",
+					"card_addr": "chiyoko_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyoko_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "쥬리",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【意地っ張りサンセット】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "juri_s_sr1"
+				},
+				{
+					"card_name": "【3名様極楽旅行記】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2018-11-19",
+					"card_addr": "juri_s_sr2"
+				},
+				{
+					"card_name": "【グッド・ラック・ボール】西城 樹里",
+					"card_type": "이벤트",
+					"card_date": "2019-05-10",
+					"card_addr": "juri_s_sr3"
+				},
+				{
+					"card_name": "【晴れ待ちのひと時】西城 樹里",
+					"card_type": "통상",
+					"card_date": "2021-01-22",
+					"card_addr": "juri_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "juri_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "린제",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【百色ふぉとぐらふ】杜野 凛世",
+					"card_type": "이벤트",
+					"card_date": "2018-05-31",
+					"card_addr": "rinze_s_sr1"
+				},
+				{
+					"card_name": "【をとめ大学】杜野 凛世",
+					"card_type": "통상",
+					"card_date": "2019-05-20",
+					"card_addr": "rinze_s_sr2"
+				},
+				{
+					"card_name": "【をとめ辞典】杜野 凛世",
+					"card_type": "이벤트",
+					"card_date": "2020-02-12",
+					"card_addr": "rinze_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "rinze_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "나츠하",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【虹待ちレインドロップ】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2018-09-20",
+					"card_addr": "natsuha_s_sr1"
+				},
+				{
+					"card_name": "【紅いろは、白】有栖川 夏葉",
+					"card_type": "이벤트",
+					"card_date": "2019-01-01",
+					"card_addr": "natsuha_s_sr2"
+				},
+				{
+					"card_name": "【スタンド・バイ】有栖川 夏葉",
+					"card_type": "통상",
+					"card_date": "2019-09-20",
+					"card_addr": "natsuha_s_sr3"
+				},
+				{
+					"card_name": "【夢追いランナバウト】有栖川 夏葉",
+					"card_type": "이벤트",
+					"card_date": "2019-11-20",
+					"card_addr": "natsuha_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "natsuha_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "아마나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【秘密のがんばり】大崎 甘奈",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": "amana_s_sr1"
+				},
+				{
+					"card_name": "【光の想い出】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2018-07-31",
+					"card_addr": "amana_s_sr2"
+				},
+				{
+					"card_name": "【冬の日の『贈り物』】大崎 甘奈",
+					"card_type": "이벤트",
+					"card_date": "2019-11-30",
+					"card_addr": "amana_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "amana_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "텐카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【アイ・セーブ・ユー】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2018-06-30",
+					"card_addr": "tenka_s_sr1"
+				},
+				{
+					"card_name": "【楽園に背く】大崎 甜花",
+					"card_type": "통상",
+					"card_date": "2019-03-22",
+					"card_addr": "tenka_s_sr2"
+				},
+				{
+					"card_name": "【Summer for Us】大崎 甜花",
+					"card_type": "이벤트",
+					"card_date": "2020-08-21",
+					"card_addr": "tenka_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "tenka_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "치유키",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2018-04-24",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【ブルーミングハート】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2018-05-21",
+					"card_addr": "chiyuki_s_sr1"
+				},
+				{
+					"card_name": "【こころに恋】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2019-06-30",
+					"card_addr": "chiyuki_s_sr2"
+				},
+				{
+					"card_name": "【RELAXIN】桑山 千雪",
+					"card_type": "이벤트",
+					"card_date": "2020-12-23",
+					"card_addr": "chiyuki_s_sr3"
+				},
+				{
+					"card_name": "【好き、っていうのはね】桑山 千雪",
+					"card_type": "통상",
+					"card_date": "2021-03-22",
+					"card_addr": "chiyuki_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "chiyuki_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "아사히",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【腹が減っては遊びはできぬ】芹沢 あさひ",
+					"card_type": "통상",
+					"card_date": "2019-08-21",
+					"card_addr": "asahi_s_sr1"
+				},
+				{
+					"card_name": "【花火の夜に……】芹沢 あさひ",
+					"card_type": "이벤트",
+					"card_date": "2020-07-10",
+					"card_addr": "asahi_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "asahi_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "후유코",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【(ノージャンル)グラヴィティ】黛 冬優子",
+					"card_type": "이벤트",
+					"card_date": "2020-06-10",
+					"card_addr": "fuyuko_s_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "fuyuko_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "메이",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2019-04-12",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【和泉流・書道心得】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2020-01-10",
+					"card_addr": "mei_s_sr1"
+				},
+				{
+					"card_name": "【+『α』】和泉 愛依",
+					"card_type": "통상",
+					"card_date": "2020-06-19",
+					"card_addr": "mei_s_sr2"
+				},
+				{
+					"card_name": "【イケてた！？】和泉 愛依",
+					"card_type": "이벤트",
+					"card_date": "2021-03-12",
+					"card_addr": "mei_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "mei_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "토오루",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【かっとばし党の逆襲】浅倉 透",
+					"card_type": "이벤트",
+					"card_date": "2020-10-21",
+					"card_addr": "toru_s_sr1"
+				},
+				{
+					"card_name": "【faaaar】浅倉 透",
+					"card_type": "통상",
+					"card_date": "2021-02-19",
+					"card_addr": "toru_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "toru_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "마도카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【閑話】樋口 円香",
+					"card_type": "통상",
+					"card_date": "2020-09-23",
+					"card_addr": "madoka_s_sr1"
+				},
+				{
+					"card_name": "【Feb.】樋口 円香",
+					"card_type": "이벤트",
+					"card_date": "2021-02-10",
+					"card_addr": "madoka_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "madoka_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "코이토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【きせつはアイスクリン】福丸 小糸",
+					"card_type": "이벤트",
+					"card_date": "2020-07-21",
+					"card_addr": "koito_s_sr1"
+				},
+				{
+					"card_name": "【しかえし優等生】福丸 小糸",
+					"card_type": "통상",
+					"card_date": "2020-11-20",
+					"card_addr": "koito_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "koito_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "히나나",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2020-04-13",
+					"card_addr": ""
+				},
+				{
+					"card_name": "【PEEPS!】市川 雛菜",
+					"card_type": "이벤트",
+					"card_date": "2021-04-20",
+					"card_addr": "hinana_s_sr1"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_sr2"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_sr3"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_sr4"
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": "hinana_s_sr5"
+				}
+			]
+		},
+		{
+			"idol_name": "니치카",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-30",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		},
+		{
+			"idol_name": "미코토",
+			"card_data": [
+				{
+					"card_name": "",
+					"card_type": "통상",
+					"card_date": "2021-04-30",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				},
+				{
+					"card_name": "",
+					"card_type": "",
+					"card_date": "",
+					"card_addr": ""
+				}
+			]
+		}
+	]
+}

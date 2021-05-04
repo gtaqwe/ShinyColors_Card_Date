@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="styles.css">
+	<title>Card Table</title>
+</head>
+
+<body>
+	<div>
+		<input type="button" value="P-SSR" onclick="P_SSR()" class="Pbutton">
+		<input type="button" value="S-SSR" onclick="S_SSR()" class="Sbutton">
+		<br>
+		<input type="button" value="P-SR" onclick="P_SR()" class="Pbutton">
+		<input type="button" value="S-SR" onclick="S_SR()" class="Sbutton">
+	</div>
+
+	<div>
+		<input type="button" value="Main Capture" onclick="captureScreen('TABLE')" class="Capturebutton">
+		<input type="button" value="Rank List Capture" onclick="captureScreen('RANK')" class="Capturebutton">
+	</div>
+
+	<div id="CAPTURE_FRAME" style="width:max-content">
+		<div>
+			<label>기준일:</label>
+			<input type="date" id="TargetDate" name="TargetDate" onchange="updateDate(nowSelect)">
+		</div>
+
+		<div style="overflow:hidden;">
+			<table style="float:left">
+				<th style="width: 100px">통상</th>
+				<th class="limit-card-cell" style="width: 100px">한정</th>
+				<th class="event-card-cell" style="width: 100px">이벤트</th>
+				<th class="campaign-card-cell" style="width: 100px">캠페인</th>
+			</table>
+			<span id="convertSpan" style="margin:5px 20px; float:left;">
+				<label class="switch">
+					<input type="checkbox" id="fesImgConvertBtn"
+						onchange="getToggleString($('#fesImgConvertBtn').is(':checked'))">
+					<span class="slider round"></span>
+				</label>
+
+				<span id="toggleStr"></span>
+			</span>
+		</div>
+
+		<div id="MAIN"></div>
+		<!-- <div id="MAIN_RANK" style="float:left; margin: 5px 10px 5px 0px;"></div> -->
+
+		<div id="NOTE_SPACE"></div>
+	</div>
+
+	<div id="MAIN2" style="width:max-content">
+		<div id="RANK" style="float:left; margin: 5px 10px 5px 0px;"></div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<script src="CreateTable.js"></script>
+	<script src="IndexScripts.js"></script>
+
+</body>
+
+</html>
