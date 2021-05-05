@@ -7,7 +7,6 @@ async function init() {
     await getJSON("json/data.json").then(function(resp) {
         jsonData = JSON.parse(resp);
     });
-    // console.log("jsonData:",jsonData);
 
     nowSelect = 0;
     document.getElementById("TargetDate").valueAsDate = new Date(getToday());
@@ -38,19 +37,6 @@ function getJSON(jsonFile) {
         console.error(err);
     }
 }
-
-// function loadJSON() {
-//     var xmlhttp = new XMLHttpRequest();
-//     var url = "./test.json";
-
-//     xmlhttp.onreadystatechange = function () {
-//         if (this.readyState == 4 && this.status == 200) {
-//             jsonData = JSON.parse(xmlhttp.responseText);
-//         }
-//     };
-//     xmlhttp.open("GET", url, true);
-//     xmlhttp.send();
-// }
 
 function getToday() {
     var today = new Date();
