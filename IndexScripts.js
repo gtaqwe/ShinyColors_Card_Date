@@ -272,7 +272,6 @@ function captureScreen(frameName) {
         html2canvas(document.querySelector(frameId), { scrollY: -window.scrollY, scrollX: -window.scrollX }).then(canvas => {
             downloadURI(canvas.toDataURL('image/png'), captureName);
         });
-
     }
 }
 
