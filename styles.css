@@ -219,12 +219,12 @@ input:checked+.slider:before {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #ccc;
   }
   
   /* On mouse-over, add a grey background color */
   .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #aaa;
   }
   
   /* When the checkbox is checked, add a blue background */
