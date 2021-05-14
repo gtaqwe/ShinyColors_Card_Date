@@ -1,34 +1,34 @@
-function buildTable(jsonData) {
-    runBuildTable(jsonData)
-    runBuildDateRank()
+function buildTable(idolData) {    
+    runBuildTable(idolData);
+    runBuildDateRank();
 }
 
-function runBuildTable(jsonData) {
-    var tableTitle = jsonData[0].header_title
-    var rowLength = jsonData.length
-    var columnLength = jsonData[0].header_length
+function runBuildTable(idolData) {
+    var tableTitle = idolData.Title;
+    var rowLength = idolData.Data.length;
+    var columnLength = idolData.Length;
 
     var table = '<table id="date-table">';
-    for (var singleRow = 0; singleRow < rowLength; singleRow++) {
-        if (singleRow === 0) {
-            table += '<thead>';
-            table += '<tr>';
-        } else {
-            table += '<tr>';
-        }
-        if (singleRow === 0) {
-            table += tableHeader(tableTitle, columnLength);
-        } else {
-            table += calTerm(jsonData[singleRow])
-        }
-        if (singleRow === 0) {
-            table += '</tr>';
-            table += '</thead>';
-            table += '<tbody>';
-        } else {
-            table += '</tr>';
-        }
+
+    table += '<thead>';
+    table += '<tr>';
+
+    table += tableHeader(tableTitle, columnLength);
+
+    table += '</tr>';
+    table += '</thead>';
+    table += '<tbody>';
+
+
+
+    for (var row = 0; row < rowLength; row++) {
+        table += '<tr>';
+
+        table += calTerm(idolData.Data[row], columnLength);
+
+        table += '</tr>';
     }
+
     table += '</tbody>';
     table += '</table>';
 
@@ -50,57 +50,63 @@ function tableHeader(title, len) {
     return resContent
 }
 
-function calTerm(totalData) {
+function calTerm(totalData, totalLen) {
     var resContent = '<td class="td-name-cell">' + totalData.idol_name + '</td>';
 
-    cardDataList = totalData.card_data
-    len = totalData.card_data.length
-    for (var idx = 0; idx < len; idx++) {
+    cardDataList = totalData.card_data;
+    cardLen = totalData.card_data.length;
+    for (var idx = 0; idx < totalLen; idx++) {
         var date1;
         var date2;
         var currDay = 24 * 60 * 60 * 1000;
         var term;
         var termCode;
 
-        var cardDate = cardDataList[idx].card_date;
+        if (idx < cardLen) {
+            var cardDate = cardDataList[idx].card_date;
+            var cardType = cardDataList[idx].card_type;
+            var cardName = cardDataList[idx].card_name;
+            var cardAddr = cardDataList[idx].card_addr;
 
-        var cardType = cardDataList[idx].card_type;
-        var cardName = cardDataList[idx].card_name;
-        var cardAddr = cardDataList[idx].card_addr;
-
-        if (cardType == "한정") {
-            resContent += '<td class="limit-card-cell" ';
-        }
-        else if (cardType == "이벤트") {
-            resContent += '<td class="event-card-cell" ';
-        }
-        else if (cardType == "캠페인") {
-            resContent += '<td class="campaign-card-cell" ';
-        }
-        else {
-            resContent += '<td ';
-        }
-
-        resContent += 'addr="' + cardAddr + '" name="' + cardName + '"' + '>' + cardDate + '</td>';
-
-        if (cardDate != '') {
-            date1 = calDate(cardDate);
-
-            if (idx == len - 1 || cardDataList[idx + 1].card_date == '') {
-                date2 = calDate(getDate());
-                term = (date2 - date1) / currDay;
-                termCode = '<td class="now-term">' + term + '</td>';
+        
+            if (cardType == "한정") {
+                resContent += '<td class="limit-card-cell" ';
+            }
+            else if (cardType == "이벤트") {
+                resContent += '<td class="event-card-cell" ';
+            }
+            else if (cardType == "캠페인") {
+                resContent += '<td class="campaign-card-cell" ';
             }
             else {
-                date2 = calDate(cardDataList[idx + 1].card_date);
-                term = (date2 - date1) / currDay;
-                termCode = '<td class="pre-term">' + term + '</td>';
+                resContent += '<td ';
             }
+
+            resContent += 'addr="' + cardAddr + '" name="' + cardName + '"' + '>' + cardDate + '</td>';
+
+            if (cardDate != '') {
+                date1 = calDate(cardDate);
+
+                if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == '') {
+                    date2 = calDate(getDate());
+                    term = (date2 - date1) / currDay;
+                    termCode = '<td class="now-term">' + term + '</td>';
+                }
+                else {
+                    date2 = calDate(cardDataList[idx + 1].card_date);
+                    term = (date2 - date1) / currDay;
+                    termCode = '<td class="pre-term">' + term + '</td>';
+                }
+            }
+            else {
+                termCode = '<td></td>';
+            }            
         }
         else {
-            term = '';
-            termCode = '<td>' + term + '</td>';
+            resContent += '<td></td>';
+            termCode = '<td></td>';
         }
+
         resContent = resContent + termCode;
     }
 

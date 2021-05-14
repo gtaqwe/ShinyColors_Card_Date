@@ -95,7 +95,8 @@ function CtlfesImgConvertBtn(ps) {
 }
 
 function P_SSR() {
-    buildTable(jsonData.P_SSR);
+    var idolData = idolDataProcess(jsonData.P_SSR)
+    buildTable(idolData);
 
     document.getElementById('NOTE_SPACE').innerText = '※ P카드의 첫 실장일은 「白いツバサ」 실장일';
     nowSelect = 1;
@@ -104,7 +105,8 @@ function P_SSR() {
 }
 
 function P_SR() {
-    buildTable(jsonData.P_SR);
+    var idolData = idolDataProcess(jsonData.P_SR)
+    buildTable(idolData);
 
     document.getElementById('NOTE_SPACE').innerText = '※ P카드의 첫 실장일은 「白いツバサ」 실장일';
     nowSelect = 3;
@@ -113,7 +115,8 @@ function P_SR() {
 }
 
 function S_SSR() {
-    buildTable(jsonData.S_SSR);
+    var idolData = idolDataProcess(jsonData.S_SSR)
+    buildTable(idolData);
 
     document.getElementById('NOTE_SPACE').innerText = '※ S카드의 첫 실장일은 「283プロのヒナ」 실장일';
     nowSelect = 2;
@@ -122,12 +125,59 @@ function S_SSR() {
 }
 
 function S_SR() {
-    buildTable(jsonData.S_SR);
+    var idolData = idolDataProcess(jsonData.S_SR)
+    buildTable(idolData);
 
     document.getElementById('NOTE_SPACE').innerText = '※ S카드의 첫 실장일은 「283プロのヒナ」 실장일';
     nowSelect = 4;
 
     CtlfesImgConvertBtn("s");
+}
+
+function idolDataProcess(jsonData) {
+    var tableTitle = jsonData[0].header_title;
+    var maxColumnLen = 0;
+    var rowLength = jsonData.length;
+
+    totalList = []
+    for(var i = 1; i < rowLength; i++) {
+        var targetList = []
+        for(var j = 0; j < jsonData[i].card_data.length; j++) {
+            var cardType = jsonData[i].card_data[j].card_type;
+
+            if (cardType == "첫실장") {
+                targetList.push(jsonData[i].card_data[j]);
+            }
+
+            if (cardType == "통상" && $('#generalCardChkBox').is(':checked')) {
+                targetList.push(jsonData[i].card_data[j]);
+            }
+            else if (cardType == "한정" && $('#limitCardChkBox').is(':checked')) {
+                targetList.push(jsonData[i].card_data[j]);
+            }
+            else if (cardType == "이벤트" && $('#eventCardChkBox').is(':checked')) {
+                targetList.push(jsonData[i].card_data[j]);
+            }
+            else if (cardType == "캠페인" && $('#campaignCardChkBox').is(':checked')) {
+                targetList.push(jsonData[i].card_data[j]);
+            }
+
+        }
+        var obj = {
+            'idol_name': jsonData[i].idol_name,
+            'card_data': targetList
+        };
+        totalList.push(obj);
+        if(targetList.length > maxColumnLen) maxColumnLen = targetList.length;
+    }
+
+    var selectedData = {
+        'Title': tableTitle,
+        'Length': maxColumnLen,
+        'Data': totalList
+    };
+
+    return selectedData;
 }
 
 //////////////////////////////////////////////////
@@ -219,13 +269,10 @@ function captureScreen(frameName) {
         else if (nowSelect == 3) captureName = frameName + "_P_SR.png";
         else if (nowSelect == 4) captureName = frameName + "_S_SR.png";
 
-        document.getElementById("convertSpan").style.display= 'none';
-
         html2canvas(document.querySelector(frameId), { scrollY: -window.scrollY, scrollX: -window.scrollX }).then(canvas => {
             downloadURI(canvas.toDataURL('image/png'), captureName);
         });
 
-        document.getElementById("convertSpan").style.display= '';
     }
 }
 
