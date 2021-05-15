@@ -21,51 +21,53 @@
 		<input type="button" value="Rank List Capture" onclick="captureScreen('RANK')" class="Capturebutton">
 	</div>
 
-	<div id="VIEW_SELECT" style="width:max-content; overflow:hidden;">
-		<span id="generalChkSpan" style="margin:5px 10px; float:left">
-			<label class="container">통상
-				<input type="checkbox" id="generalCardChkBox"
-				checked="checked" onchange="updateDate(nowSelect)">
-				<span class="checkmark"></span>
-			</label>
-		</span>
-
-		<span id="limitChkSpan" style="margin:5px 10px; float:left">
-			<label class="container">한정
-				<input type="checkbox" id="limitCardChkBox"
-				checked="checked" onchange="updateDate(nowSelect)">
-				<span class="checkmark"></span>
-			</label>
-		</span>
-
-		<span id="eventChkSpan" style="margin:5px 10px; float:left">
-			<label class="container">이벤트
-				<input type="checkbox" id="eventCardChkBox"
-				checked="checked" onchange="updateDate(nowSelect)">
-				<span class="checkmark"></span>
-			</label>
-		</span>
-
-		<span id="campaignChkSpan" style="margin:5px 10px; float:left">
-			<label class="container">캠페인
-				<input type="checkbox" id="campaignCardChkBox"
-				checked="checked" onchange="updateDate(nowSelect)">
-				<span class="checkmark"></span>
-			</label>
-		</span>
-
-		<span id="convertSpan" style="margin:5px 10px; float:left">
-			<label class="switch">
-				<input type="checkbox" id="fesImgConvertBtn"
-					onchange="getToggleString($('#fesImgConvertBtn').is(':checked'))">
-				<span class="slider round"></span>
-			</label>
-
-			<span id="toggleStr"></span>
-		</span>
-	</div>
-
 	<div id="CAPTURE_FRAME" style="width:max-content;">
+		
+		<div id="VIEW_SELECT" style="width:max-content; overflow:hidden;">
+			<span id="generalChkSpan" style="margin:5px 10px; float:left">
+				<label class="container">통상
+					<input type="checkbox" id="generalCardChkBox"
+					checked="checked" onchange="updateDate(nowSelect)">
+					<span class="checkmark"></span>
+				</label>
+			</span>
+
+			<span id="limitChkSpan" style="margin:5px 10px; float:left">
+				<label class="container">한정
+					<input type="checkbox" id="limitCardChkBox"
+					checked="checked" onchange="updateDate(nowSelect)">
+					<span class="checkmark"></span>
+				</label>
+			</span>
+
+			<span id="eventChkSpan" style="margin:5px 10px; float:left">
+				<label class="container">이벤트
+					<input type="checkbox" id="eventCardChkBox"
+					checked="checked" onchange="updateDate(nowSelect)">
+					<span class="checkmark"></span>
+				</label>
+			</span>
+
+			<span id="campaignChkSpan" style="margin:5px 10px; float:left">
+				<label class="container">캠페인
+					<input type="checkbox" id="campaignCardChkBox"
+					checked="checked" onchange="updateDate(nowSelect)">
+					<span class="checkmark"></span>
+				</label>
+			</span>
+
+			<span id="convertSpan" style="margin:5px 10px; float:left">
+				<label class="switch">
+					<input type="checkbox" id="fesImgConvertBtn"
+						onchange="getToggleString($('#fesImgConvertBtn').is(':checked'))">
+					<span class="slider round"></span>
+				</label>
+
+				<span id="toggleStr"></span>
+			</span>
+		</div>
+
+	
 		<div style="overflow:hidden;">
 			<label>기준일:</label>
 			<input type="date" id="TargetDate" name="TargetDate" onchange="updateDate(nowSelect)">

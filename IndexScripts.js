@@ -269,9 +269,13 @@ function captureScreen(frameName) {
         else if (nowSelect == 3) captureName = frameName + "_P_SR.png";
         else if (nowSelect == 4) captureName = frameName + "_S_SR.png";
 
+        document.getElementById("convertSpan").style.display= 'none';
+
         html2canvas(document.querySelector(frameId), { scrollY: -window.scrollY, scrollX: -window.scrollX }).then(canvas => {
             downloadURI(canvas.toDataURL('image/png'), captureName);
         });
+
+        document.getElementById("convertSpan").style.display= '';
     }
 }
 
