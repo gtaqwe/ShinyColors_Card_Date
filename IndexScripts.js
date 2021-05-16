@@ -149,10 +149,10 @@ function idolDataProcess(jsonData) {
                 targetList.push(jsonData[i].card_data[j]);
             }
 
-            if (cardType == "통상" && $('#generalCardChkBox').is(':checked')) {
+            if (cardType == "통상" && $('#permanentCardChkBox').is(':checked')) {
                 targetList.push(jsonData[i].card_data[j]);
             }
-            else if (cardType == "한정" && $('#limitCardChkBox').is(':checked')) {
+            else if (cardType == "한정" && $('#limitedCardChkBox').is(':checked')) {
                 targetList.push(jsonData[i].card_data[j]);
             }
             else if (cardType == "이벤트" && $('#eventCardChkBox').is(':checked')) {
@@ -231,10 +231,10 @@ function imgMapping() {
 
         // console.log ((e.pageY + previewHeight) + ":" + ($(window).innerHeight() + $(document).scrollTop()))
         if ((e.pageY + previewHeight) > ($(window).innerHeight() + $(document).scrollTop())) {
-            $("#preview").css("top", (e.pageY - xOffset - previewHeight) + "px")
+            $("#preview").css("top", (e.pageY - xOffset - previewHeight) + "px");
         }
         else {
-            $("#preview").css("top", (e.pageY - xOffset) + "px")
+            $("#preview").css("top", (e.pageY - xOffset) + "px");
         }
 
         // console.log ((e.pageX + previewWidth) + ":" + ($(window).innerWidth() + $(document).scrollLeft()))
@@ -260,14 +260,20 @@ function captureScreen(frameName) {
     if (nowSelect != 0) {
         var captureName;
         var frameId;
+        var viewMode = "";
 
         if (frameName == 'TABLE') frameId = '#CAPTURE_FRAME'
         else if (frameName == 'RANK') frameId = '#RANK'
 
-        if (nowSelect == 1) captureName = frameName + "_P_SSR.png";
-        else if (nowSelect == 2) captureName = frameName + "_S_SSR.png";
-        else if (nowSelect == 3) captureName = frameName + "_P_SR.png";
-        else if (nowSelect == 4) captureName = frameName + "_S_SR.png";
+        if ($('#permanentCardChkBox').is(':checked')) viewMode += "P";
+        if ($('#limitedCardChkBox').is(':checked')) viewMode += "L";
+        if ($('#eventCardChkBox').is(':checked')) viewMode += "E";
+        if ($('#campaignCardChkBox').is(':checked')) viewMode += "C";
+
+        if (nowSelect == 1) captureName = frameName + "_P_SSR_" + viewMode + ".png";
+        else if (nowSelect == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";
+        else if (nowSelect == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
+        else if (nowSelect == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
 
         document.getElementById("convertSpan").style.display= 'none';
 
