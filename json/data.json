@@ -1,11 +1,11 @@
 {
 	"P_SSR": [
 		{
-			"header_title": "P-SSR",
-			"header_length": 7
+			"header_title": "P-SSR"
 		},
 		{
 			"idol_name": "마노",
+			"eng_name": "mano",
 			"card_data": [
 				{
 					"card_name": "",
@@ -53,6 +53,7 @@
 		},
 		{
 			"idol_name": "히오리",
+			"eng_name": "hiori",
 			"card_data": [
 				{
 					"card_name": "",
@@ -100,6 +101,7 @@
 		},
 		{
 			"idol_name": "메구루",
+			"eng_name": "meguru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -147,6 +149,7 @@
 		},
 		{
 			"idol_name": "코가네",
+			"eng_name": "kogane",
 			"card_data": [
 				{
 					"card_name": "",
@@ -194,6 +197,7 @@
 		},
 		{
 			"idol_name": "마미미",
+			"eng_name": "mamimi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -241,6 +245,7 @@
 		},
 		{
 			"idol_name": "사쿠야",
+			"eng_name": "sakuya",
 			"card_data": [
 				{
 					"card_name": "",
@@ -288,6 +293,7 @@
 		},
 		{
 			"idol_name": "유이카",
+			"eng_name": "yuika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -335,6 +341,7 @@
 		},
 		{
 			"idol_name": "키리코",
+			"eng_name": "kiriko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -382,6 +389,7 @@
 		},
 		{
 			"idol_name": "카호",
+			"eng_name": "kaho",
 			"card_data": [
 				{
 					"card_name": "",
@@ -429,6 +437,7 @@
 		},
 		{
 			"idol_name": "치요코",
+			"eng_name": "chiyoko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -476,6 +485,7 @@
 		},
 		{
 			"idol_name": "쥬리",
+			"eng_name": "juri",
 			"card_data": [
 				{
 					"card_name": "",
@@ -523,6 +533,7 @@
 		},
 		{
 			"idol_name": "린제",
+			"eng_name": "rinze",
 			"card_data": [
 				{
 					"card_name": "",
@@ -570,6 +581,7 @@
 		},
 		{
 			"idol_name": "나츠하",
+			"eng_name": "natsuha",
 			"card_data": [
 				{
 					"card_name": "",
@@ -617,6 +629,7 @@
 		},
 		{
 			"idol_name": "아마나",
+			"eng_name": "amana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -664,6 +677,7 @@
 		},
 		{
 			"idol_name": "텐카",
+			"eng_name": "tenka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -711,6 +725,7 @@
 		},
 		{
 			"idol_name": "치유키",
+			"eng_name": "chiyuki",
 			"card_data": [
 				{
 					"card_name": "",
@@ -758,6 +773,7 @@
 		},
 		{
 			"idol_name": "아사히",
+			"eng_name": "asahi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -805,6 +821,7 @@
 		},
 		{
 			"idol_name": "후유코",
+			"eng_name": "fuyuko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -852,6 +869,7 @@
 		},
 		{
 			"idol_name": "메이",
+			"eng_name": "mei",
 			"card_data": [
 				{
 					"card_name": "",
@@ -899,6 +917,7 @@
 		},
 		{
 			"idol_name": "토오루",
+			"eng_name": "toru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -946,6 +965,7 @@
 		},
 		{
 			"idol_name": "마도카",
+			"eng_name": "madoka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -993,6 +1013,7 @@
 		},
 		{
 			"idol_name": "코이토",
+			"eng_name": "koito",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1040,6 +1061,7 @@
 		},
 		{
 			"idol_name": "히나나",
+			"eng_name": "hinana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1087,6 +1109,7 @@
 		},
 		{
 			"idol_name": "니치카",
+			"eng_name": "nichika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1134,6 +1157,7 @@
 		},
 		{
 			"idol_name": "미코토",
+			"eng_name": "mikoto",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1143,8 +1167,8 @@
 				},
 				{
 					"card_name": "",
-					"card_type": "",
-					"card_date": "",
+					"card_type": "통상",
+					"card_date": "2021-05-20",
 					"card_addr": "mikoto_p_ssr1"
 				},
 				{
@@ -1182,11 +1206,11 @@
 	],
 	"P_SR": [
 		{
-			"header_title": "P-SR",
-			"header_length": 6
+			"header_title": "P-SR"
 		},
 		{
 			"idol_name": "마노",
+			"eng_name": "mano",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1228,6 +1252,7 @@
 		},
 		{
 			"idol_name": "히오리",
+			"eng_name": "hiori",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1269,6 +1294,7 @@
 		},
 		{
 			"idol_name": "메구루",
+			"eng_name": "meguru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1310,6 +1336,7 @@
 		},
 		{
 			"idol_name": "코가네",
+			"eng_name": "kogane",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1351,6 +1378,7 @@
 		},
 		{
 			"idol_name": "마미미",
+			"eng_name": "mamimi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1392,6 +1420,7 @@
 		},
 		{
 			"idol_name": "사쿠야",
+			"eng_name": "sakuya",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1433,6 +1462,7 @@
 		},
 		{
 			"idol_name": "유이카",
+			"eng_name": "yuika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1474,6 +1504,7 @@
 		},
 		{
 			"idol_name": "키리코",
+			"eng_name": "kiriko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1515,6 +1546,7 @@
 		},
 		{
 			"idol_name": "카호",
+			"eng_name": "kaho",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1556,6 +1588,7 @@
 		},
 		{
 			"idol_name": "치요코",
+			"eng_name": "chiyoko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1597,6 +1630,7 @@
 		},
 		{
 			"idol_name": "쥬리",
+			"eng_name": "juri",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1638,6 +1672,7 @@
 		},
 		{
 			"idol_name": "린제",
+			"eng_name": "rinze",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1671,14 +1706,15 @@
 				},
 				{
 					"card_name": "",
-					"card_type": "",
-					"card_date": "",
+					"card_type": "이벤트",
+					"card_date": "2021-05-20",
 					"card_addr": "rinze_p_sr5"
 				}
 			]
 		},
 		{
 			"idol_name": "나츠하",
+			"eng_name": "natsuha",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1720,6 +1756,7 @@
 		},
 		{
 			"idol_name": "아마나",
+			"eng_name": "amana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1761,6 +1798,7 @@
 		},
 		{
 			"idol_name": "텐카",
+			"eng_name": "tenka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1802,6 +1840,7 @@
 		},
 		{
 			"idol_name": "치유키",
+			"eng_name": "chiyuki",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1843,6 +1882,7 @@
 		},
 		{
 			"idol_name": "아사히",
+			"eng_name": "asahi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1884,6 +1924,7 @@
 		},
 		{
 			"idol_name": "후유코",
+			"eng_name": "fuyuko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1925,6 +1966,7 @@
 		},
 		{
 			"idol_name": "메이",
+			"eng_name": "mei",
 			"card_data": [
 				{
 					"card_name": "",
@@ -1966,6 +2008,7 @@
 		},
 		{
 			"idol_name": "토오루",
+			"eng_name": "toru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2007,6 +2050,7 @@
 		},
 		{
 			"idol_name": "마도카",
+			"eng_name": "madoka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2048,6 +2092,7 @@
 		},
 		{
 			"idol_name": "코이토",
+			"eng_name": "koito",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2089,6 +2134,7 @@
 		},
 		{
 			"idol_name": "히나나",
+			"eng_name": "hinana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2130,6 +2176,7 @@
 		},
 		{
 			"idol_name": "니치카",
+			"eng_name": "nichika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2171,6 +2218,7 @@
 		},
 		{
 			"idol_name": "미코토",
+			"eng_name": "mikoto",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2213,11 +2261,11 @@
 	],
 	"S_SSR": [
 		{
-			"header_title": "S-SSR",
-			"header_length": 10
+			"header_title": "S-SSR"
 		},
 		{
 			"idol_name": "마노",
+			"eng_name": "mano",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2283,6 +2331,7 @@
 		},
 		{
 			"idol_name": "히오리",
+			"eng_name": "hiori",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2348,6 +2397,7 @@
 		},
 		{
 			"idol_name": "메구루",
+			"eng_name": "meguru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2413,6 +2463,7 @@
 		},
 		{
 			"idol_name": "코가네",
+			"eng_name": "kogane",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2478,6 +2529,7 @@
 		},
 		{
 			"idol_name": "마미미",
+			"eng_name": "mamimi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2543,6 +2595,7 @@
 		},
 		{
 			"idol_name": "사쿠야",
+			"eng_name": "sakuya",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2608,6 +2661,7 @@
 		},
 		{
 			"idol_name": "유이카",
+			"eng_name": "yuika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2647,8 +2701,8 @@
 				},
 				{
 					"card_name": "",
-					"card_type": "",
-					"card_date": "",
+					"card_type": "통상",
+					"card_date": "2021-05-20",
 					"card_addr": "yuika_s_ssr6"
 				},
 				{
@@ -2673,6 +2727,7 @@
 		},
 		{
 			"idol_name": "키리코",
+			"eng_name": "kiriko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2738,6 +2793,7 @@
 		},
 		{
 			"idol_name": "카호",
+			"eng_name": "kaho",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2803,6 +2859,7 @@
 		},
 		{
 			"idol_name": "치요코",
+			"eng_name": "chiyoko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2868,6 +2925,7 @@
 		},
 		{
 			"idol_name": "쥬리",
+			"eng_name": "juri",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2933,6 +2991,7 @@
 		},
 		{
 			"idol_name": "린제",
+			"eng_name": "rinze",
 			"card_data": [
 				{
 					"card_name": "",
@@ -2998,6 +3057,7 @@
 		},
 		{
 			"idol_name": "나츠하",
+			"eng_name": "natsuha",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3063,6 +3123,7 @@
 		},
 		{
 			"idol_name": "아마나",
+			"eng_name": "amana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3128,6 +3189,7 @@
 		},
 		{
 			"idol_name": "텐카",
+			"eng_name": "tenka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3193,6 +3255,7 @@
 		},
 		{
 			"idol_name": "치유키",
+			"eng_name": "chiyuki",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3258,6 +3321,7 @@
 		},
 		{
 			"idol_name": "아사히",
+			"eng_name": "asahi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3323,6 +3387,7 @@
 		},
 		{
 			"idol_name": "후유코",
+			"eng_name": "fuyuko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3388,6 +3453,7 @@
 		},
 		{
 			"idol_name": "메이",
+			"eng_name": "mei",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3453,6 +3519,7 @@
 		},
 		{
 			"idol_name": "토오루",
+			"eng_name": "toru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3518,6 +3585,7 @@
 		},
 		{
 			"idol_name": "마도카",
+			"eng_name": "madoka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3583,6 +3651,7 @@
 		},
 		{
 			"idol_name": "코이토",
+			"eng_name": "koito",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3648,6 +3717,7 @@
 		},
 		{
 			"idol_name": "히나나",
+			"eng_name": "hinana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3713,6 +3783,7 @@
 		},
 		{
 			"idol_name": "니치카",
+			"eng_name": "nichika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3778,6 +3849,7 @@
 		},
 		{
 			"idol_name": "미코토",
+			"eng_name": "mikoto",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3844,11 +3916,11 @@
 	],
 	"S_SR": [
 		{
-			"header_title": "S-SR",
-			"header_length": 7
+			"header_title": "S-SR"
 		},
 		{
 			"idol_name": "마노",
+			"eng_name": "mano",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3896,6 +3968,7 @@
 		},
 		{
 			"idol_name": "히오리",
+			"eng_name": "hiori",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3943,6 +4016,7 @@
 		},
 		{
 			"idol_name": "메구루",
+			"eng_name": "meguru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -3990,6 +4064,7 @@
 		},
 		{
 			"idol_name": "코가네",
+			"eng_name": "kogane",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4037,6 +4112,7 @@
 		},
 		{
 			"idol_name": "마미미",
+			"eng_name": "mamimi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4084,6 +4160,7 @@
 		},
 		{
 			"idol_name": "사쿠야",
+			"eng_name": "sakuya",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4131,6 +4208,7 @@
 		},
 		{
 			"idol_name": "유이카",
+			"eng_name": "yuika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4178,6 +4256,7 @@
 		},
 		{
 			"idol_name": "키리코",
+			"eng_name": "kiriko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4225,6 +4304,7 @@
 		},
 		{
 			"idol_name": "카호",
+			"eng_name": "kaho",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4272,6 +4352,7 @@
 		},
 		{
 			"idol_name": "치요코",
+			"eng_name": "chiyoko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4319,6 +4400,7 @@
 		},
 		{
 			"idol_name": "쥬리",
+			"eng_name": "juri",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4366,6 +4448,7 @@
 		},
 		{
 			"idol_name": "린제",
+			"eng_name": "rinze",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4413,6 +4496,7 @@
 		},
 		{
 			"idol_name": "나츠하",
+			"eng_name": "natsuha",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4460,6 +4544,7 @@
 		},
 		{
 			"idol_name": "아마나",
+			"eng_name": "amana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4507,6 +4592,7 @@
 		},
 		{
 			"idol_name": "텐카",
+			"eng_name": "tenka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4554,6 +4640,7 @@
 		},
 		{
 			"idol_name": "치유키",
+			"eng_name": "chiyuki",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4601,6 +4688,7 @@
 		},
 		{
 			"idol_name": "아사히",
+			"eng_name": "asahi",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4648,6 +4736,7 @@
 		},
 		{
 			"idol_name": "후유코",
+			"eng_name": "fuyuko",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4695,6 +4784,7 @@
 		},
 		{
 			"idol_name": "메이",
+			"eng_name": "mei",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4742,6 +4832,7 @@
 		},
 		{
 			"idol_name": "토오루",
+			"eng_name": "toru",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4789,6 +4880,7 @@
 		},
 		{
 			"idol_name": "마도카",
+			"eng_name": "madoka",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4836,6 +4928,7 @@
 		},
 		{
 			"idol_name": "코이토",
+			"eng_name": "koito",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4883,6 +4976,7 @@
 		},
 		{
 			"idol_name": "히나나",
+			"eng_name": "hinana",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4930,6 +5024,7 @@
 		},
 		{
 			"idol_name": "니치카",
+			"eng_name": "nichika",
 			"card_data": [
 				{
 					"card_name": "",
@@ -4977,6 +5072,7 @@
 		},
 		{
 			"idol_name": "미코토",
+			"eng_name": "mikoto",
 			"card_data": [
 				{
 					"card_name": "",
