@@ -216,6 +216,10 @@ function buildRankTable1(tableType, termAry, oldRanks, borderStyle) {
     table += '</tr>';
 
     table += '<tr>';
+    table += '<th colspan="3">' + getDate() + '</th>';
+    table += '</tr>';
+
+    table += '<tr>';
     table += '<th style="' + borderStyle.left + '">이름</th>';
     table += '<th style="' + borderStyle.left + '">순위</th>';
     table += '<th style="' + borderStyle.left + '">간격일</th>';
@@ -258,6 +262,10 @@ function buildRankTable2(tableType, termAry, oldRanks, borderStyle) {
     table += '<thead>';
     table += '<tr>';
     table += '<th colspan="3">' + tableType + '</th>';
+    table += '</tr>';
+
+    table += '<tr>';
+    table += '<th colspan="3">' + getDate() + '</th>';
     table += '</tr>';
 
     table += '<tr>';
