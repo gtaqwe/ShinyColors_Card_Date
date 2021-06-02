@@ -88,7 +88,7 @@ function calTerm(totalData, totalLen) {
                 date1 = calDate(cardDate);
 
                 if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == '') {
-                    date2 = calDate(getDate());
+                    date2 = calDate(getTargetDate());
                     term = (date2 - date1) / currDay;
                     termCode = '<td class="now-term">' + term + '</td>';
                 }
@@ -113,13 +113,13 @@ function calTerm(totalData, totalLen) {
     return resContent;
 }
 
-function getDate() {
+function getTargetDate() {
     var targetDate = document.getElementById('TargetDate').valueAsDate;
     var nowYear = targetDate.getFullYear();
     var nowMonth = targetDate.getMonth() + 1;
     var nowDate = targetDate.getDate();
 
-    return nowYear.toString() + '-' + nowMonth.toString().padStart(2, '0') + '-' + nowDate.toString();
+    return nowYear.toString() + '-' + nowMonth.toString().padStart(2, '0') + '-' + nowDate.toString().padStart(2, '0');
 }
 
 function calDate(dateStr) {
@@ -216,7 +216,7 @@ function buildRankTable1(tableType, termAry, oldRanks, borderStyle) {
     table += '</tr>';
 
     table += '<tr>';
-    table += '<th colspan="3">' + getDate() + '</th>';
+    table += '<th colspan="3">' + getTargetDate() + '</th>';
     table += '</tr>';
 
     table += '<tr>';
@@ -265,7 +265,7 @@ function buildRankTable2(tableType, termAry, oldRanks, borderStyle) {
     table += '</tr>';
 
     table += '<tr>';
-    table += '<th colspan="3">' + getDate() + '</th>';
+    table += '<th colspan="3">' + getTargetDate() + '</th>';
     table += '</tr>';
 
     table += '<tr>';
