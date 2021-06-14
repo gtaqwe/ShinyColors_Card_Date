@@ -264,6 +264,32 @@ function buildRankTable2(tableType, termAry, oldRanks, borderStyle) {
     table += '<th colspan="3">' + tableType + '</th>';
     table += '</tr>';
 
+    const notSelectStr = "미선택"
+    var gachaTypeStr = notSelectStr
+    if ($("#permanentCardChkBox").is(":checked")) {
+        gachaTypeStr = ""
+        gachaTypeStr += "P"
+    }
+    if ($("#limitedCardChkBox").is(":checked")) {
+        if (gachaTypeStr != notSelectStr) gachaTypeStr += " "
+        else gachaTypeStr = ""
+        gachaTypeStr += "L"
+    }
+    if ($("#eventCardChkBox").is(":checked")) {
+        if (gachaTypeStr != notSelectStr) gachaTypeStr += " "
+        else gachaTypeStr = ""
+        gachaTypeStr += "E"
+    }
+    if ($("#campaignCardChkBox").is(":checked")) {
+        if (gachaTypeStr != notSelectStr) gachaTypeStr += " "
+        else gachaTypeStr = ""
+        gachaTypeStr += "C"
+    }
+
+    table += '<tr>';
+    table += '<th colspan="3">' + gachaTypeStr + '</th>';
+    table += '</tr>';
+
     table += '<tr>';
     table += '<th colspan="3">' + getTargetDate() + '</th>';
     table += '</tr>';
