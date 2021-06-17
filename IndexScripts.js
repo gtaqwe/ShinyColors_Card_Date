@@ -135,36 +135,37 @@ function S_SR() {
 }
 
 function idolDataProcess(jsonData) {
-    var tableTitle = jsonData[0].header_title;
+    var tableTitle = jsonData.header_title;
     var maxColumnLen = 0;
-    var rowLength = jsonData.length;
+    var idolList = jsonData.idol_list
+    var rowLength = idolList.length;
 
     totalList = []
-    for(var i = 1; i < rowLength; i++) {
+    for(var i = 0; i < rowLength; i++) {
         var targetList = []
-        for(var j = 0; j < jsonData[i].card_data.length; j++) {
-            var cardType = jsonData[i].card_data[j].card_type;
+        for(var j = 0; j < idolList[i].card_data.length; j++) {
+            var cardType = idolList[i].card_data[j].card_type;
 
             if (cardType == "첫실장") {
-                targetList.push(jsonData[i].card_data[j]);
+                targetList.push(idolList[i].card_data[j]);
             }
 
             if (cardType == "통상" && $('#permanentCardChkBox').is(':checked')) {
-                targetList.push(jsonData[i].card_data[j]);
+                targetList.push(idolList[i].card_data[j]);
             }
             else if (cardType == "한정" && $('#limitedCardChkBox').is(':checked')) {
-                targetList.push(jsonData[i].card_data[j]);
+                targetList.push(idolList[i].card_data[j]);
             }
             else if (cardType == "이벤트" && $('#eventCardChkBox').is(':checked')) {
-                targetList.push(jsonData[i].card_data[j]);
+                targetList.push(idolList[i].card_data[j]);
             }
             else if (cardType == "캠페인" && $('#campaignCardChkBox').is(':checked')) {
-                targetList.push(jsonData[i].card_data[j]);
+                targetList.push(idolList[i].card_data[j]);
             }
 
         }
         var obj = {
-            'idol_name': jsonData[i].idol_name,
+            'idol_name': idolList[i].idol_name,
             'card_data': targetList
         };
         totalList.push(obj);
