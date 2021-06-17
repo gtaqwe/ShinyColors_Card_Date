@@ -44,9 +44,11 @@ function getToday() {
     var nowMonth = today.getMonth() + 1;
     var nowDate = today.getDate();
 
+    // yyyy-mm-dd 형식
     return nowYear.toString() + '-' + nowMonth.toString().padStart(2, '0') + '-' + nowDate.toString().padStart(2, '0');
 }
 
+// VIEW_SELECT의 표시타입 체크 변경
 function updateDate(nowSelect) {
     if (nowSelect == 1) {
         P_SSR();
@@ -62,17 +64,6 @@ function updateDate(nowSelect) {
     }
 }
 
-function getSelectVal() {
-    var val
-    if (nowSelect == 1 || nowSelect == 3) {
-        val = "p";
-    }
-    else if (nowSelect == 2 || nowSelect == 4) {
-        val = "s";
-    }
-    return val;
-}
-
 function getToggleString(fesChk) {
     if (fesChk == true) {
         $("#toggleStr").html("페스");
@@ -82,6 +73,8 @@ function getToggleString(fesChk) {
     }
 }
 
+// 표시 일러스트 변경 (사복 - 페스)
+// S의 경우 사복으로 고정
 function CtlfesImgConvertBtn(ps) {
     if (ps == "p") {
         document.getElementById("fesImgConvertBtn").disabled = false;
@@ -91,7 +84,6 @@ function CtlfesImgConvertBtn(ps) {
         document.getElementById("fesImgConvertBtn").disabled = true;
         getToggleString(false);
     }
-
 }
 
 function P_SSR() {
@@ -134,6 +126,7 @@ function S_SR() {
     CtlfesImgConvertBtn("s");
 }
 
+// Json파일의 데이터추출, 재가공
 function idolDataProcess(jsonData) {
     var tableTitle = jsonData.header_title;
     var maxColumnLen = 0;
@@ -141,8 +134,11 @@ function idolDataProcess(jsonData) {
     var rowLength = idolList.length;
 
     totalList = []
+    // 아이돌 수
     for(var i = 0; i < rowLength; i++) {
         var targetList = []
+
+        // 아이돌별 카드 수
         for(var j = 0; j < idolList[i].card_data.length; j++) {
             var cardType = idolList[i].card_data[j].card_type;
 
@@ -150,6 +146,7 @@ function idolDataProcess(jsonData) {
                 targetList.push(idolList[i].card_data[j]);
             }
 
+            // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Push
             if (cardType == "통상" && $('#permanentCardChkBox').is(':checked')) {
                 targetList.push(idolList[i].card_data[j]);
             }
@@ -162,16 +159,22 @@ function idolDataProcess(jsonData) {
             else if (cardType == "캠페인" && $('#campaignCardChkBox').is(':checked')) {
                 targetList.push(idolList[i].card_data[j]);
             }
-
         }
+
         var obj = {
             'idol_name': idolList[i].idol_name,
             'card_data': targetList
         };
         totalList.push(obj);
+
+        // 표에 표시할 열의 개수를 설정
         if(targetList.length > maxColumnLen) maxColumnLen = targetList.length;
     }
 
+    // 표시할 데이터
+    // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
+    // Length : 최대 열 수
+    // Data : 표시할 카드 데이터
     var selectedData = {
         'Title': tableTitle,
         'Length': maxColumnLen,
@@ -183,17 +186,16 @@ function idolDataProcess(jsonData) {
 
 //////////////////////////////////////////////////
 /*
-* Image preview script 
+* Image preview script
 * powered by jQuery (http://www.jquery.com)
-* 
+*
 * written by Alen Grakalic (http://cssglobe.com)
-* 
+*
 * for more info visit http://cssglobe.com/post/1695/easiest-tooltip-and-image-preview-using-jquery
 *
 */
 
 function imgMapping() {
-
     /* CONFIG */
 
     var xOffset = 10;
@@ -205,14 +207,19 @@ function imgMapping() {
     // you might want to adjust to get the right result
 
     /* END CONFIG */
+
+    // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
     $("#date-table td").hover(function (e) {
-        var imgAddrAttr = $(this).closest('td').attr('addr');
-        var imgNameAttr = $(this).closest('td').attr('name');
-        var fesChk = $("#fesImgConvertBtn").is(":checked");
+        var imgAddrAttr = $(this).closest('td').attr('addr');   // 이미지 파일명
+        var imgNameAttr = $(this).closest('td').attr('name');   // 카드명
+        var fesChk = $("#fesImgConvertBtn").is(":checked");     // 일러스트 표시 모드
+
+        // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
         if (fesChk == true) {
             imgAddrAttr += "_f";
         }
 
+        // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
         if (imgNameAttr != "" && imgNameAttr != undefined) {
             $("body").append("<p id='preview'><img src='img/" + imgAddrAttr
                 + ".png' width='" + imgWidth + "' height='" + imgHeight + "'><br>" + imgNameAttr + "</p>");
@@ -221,11 +228,13 @@ function imgMapping() {
                 .css("left", (e.pageX + yOffset) + "px")
                 .fadeIn("fast");
         }
-
     },
+        // 마우스 포인트가 해당 셀에 위치하지 않으면 비표시
         function () {
             $("#preview").remove();
         });
+
+    // 마우스 포인트 위치에 따라 프리뷰 이동
     $("#date-table td").mousemove(function (e) {
         var previewWidth = $("#preview").width();
         var previewHeight = $("#preview").height();
@@ -256,8 +265,8 @@ function imgMapping() {
 }
 //////////////////////////////////////////////////
 
+// Div 캡쳐 버튼 처리
 function captureScreen(frameName) {
-
     if (nowSelect != 0) {
         var captureName;
         var frameId;
