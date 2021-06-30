@@ -1123,9 +1123,9 @@
 						"card_addr": "nichika_p_ssr1"
 					},
 					{
-						"card_name": "",
-						"card_type": "",
-						"card_date": "",
+						"card_name": "【ヴぇりべりいかシたサマー】七草 にちか",
+						"card_type": "한정",
+						"card_date": "2021-06-30",
 						"card_addr": "nichika_p_ssr2"
 					},
 					{
@@ -2325,6 +2325,12 @@
 						"card_type": "한정",
 						"card_date": "2021-01-12",
 						"card_addr": "mano_s_ssr9"
+					},
+					{
+						"card_name": "【夏風渡るdiary】櫻木 真乃",
+						"card_type": "한정",
+						"card_date": "2021-06-30",
+						"card_addr": "mano_s_ssr10"
 					}
 				]
 			},
@@ -2391,6 +2397,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "hiori_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "hiori_s_ssr10"
 					}
 				]
 			},
@@ -2457,6 +2469,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "meguru_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "meguru_s_ssr10"
 					}
 				]
 			},
@@ -2523,6 +2541,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "kogane_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "kogane_s_ssr10"
 					}
 				]
 			},
@@ -2589,6 +2613,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "mamimi_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "mamimi_s_ssr10"
 					}
 				]
 			},
@@ -2655,6 +2685,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "sakuya_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "sakuya_s_ssr10"
 					}
 				]
 			},
@@ -2721,6 +2757,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "yuika_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "yuika_s_ssr10"
 					}
 				]
 			},
@@ -2787,6 +2829,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "kiriko_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "kiriko_s_ssr10"
 					}
 				]
 			},
@@ -2853,6 +2901,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "kaho_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "kaho_s_ssr10"
 					}
 				]
 			},
@@ -2919,6 +2973,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "chiyoko_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "chiyoko_s_ssr10"
 					}
 				]
 			},
@@ -2985,6 +3045,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "juri_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "juri_s_ssr10"
 					}
 				]
 			},
@@ -3051,6 +3117,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "rinze_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "rinze_s_ssr10"
 					}
 				]
 			},
@@ -3117,6 +3189,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "natsuha_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "natsuha_s_ssr10"
 					}
 				]
 			},
@@ -3183,6 +3261,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "amana_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "amana_s_ssr10"
 					}
 				]
 			},
@@ -3249,6 +3333,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "tenka_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "tenka_s_ssr10"
 					}
 				]
 			},
@@ -3315,6 +3405,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "chiyuki_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "chiyuki_s_ssr10"
 					}
 				]
 			},
@@ -3381,6 +3477,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "asahi_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "asahi_s_ssr10"
 					}
 				]
 			},
@@ -3447,6 +3549,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "fuyuko_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "fuyuko_s_ssr10"
 					}
 				]
 			},
@@ -3513,6 +3621,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "mei_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "mei_s_ssr10"
 					}
 				]
 			},
@@ -3579,6 +3693,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "toru_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "toru_s_ssr10"
 					}
 				]
 			},
@@ -3645,6 +3765,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "madoka_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "madoka_s_ssr10"
 					}
 				]
 			},
@@ -3711,6 +3837,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "koito_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "koito_s_ssr10"
 					}
 				]
 			},
@@ -3777,6 +3909,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "hinana_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "hinana_s_ssr10"
 					}
 				]
 			},
@@ -3843,6 +3981,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "nichika_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "nichika_s_ssr10"
 					}
 				]
 			},
@@ -3863,9 +4007,9 @@
 						"card_addr": "mikoto_s_ssr1"
 					},
 					{
-						"card_name": "",
-						"card_type": "",
-						"card_date": "",
+						"card_name": "【RESONANCE】緋田 美琴",
+						"card_type": "이벤트",
+						"card_date": "2021-06-30",
 						"card_addr": "mikoto_s_ssr2"
 					},
 					{
@@ -3909,6 +4053,12 @@
 						"card_type": "",
 						"card_date": "",
 						"card_addr": "mikoto_s_ssr9"
+					},
+					{
+						"card_name": "",
+						"card_type": "",
+						"card_date": "",
+						"card_addr": "mikoto_s_ssr10"
 					}
 				]
 			}
