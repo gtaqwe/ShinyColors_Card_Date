@@ -3,8 +3,9 @@
 		"header_title": "P-SSR",
 		"idol_list": [
 			{
-				"idol_name": "마노",
-				"eng_name": "mano",
+				"idol_ko_name": "마노",
+				"idol_ja_name": "櫻木 真乃",
+				"idol_en_name": "Mano",
 				"card_data": [
 					{
 						"card_name": "",
@@ -51,8 +52,9 @@
 				]
 			},
 			{
-				"idol_name": "히오리",
-				"eng_name": "hiori",
+				"idol_ko_name": "히오리",
+				"idol_ja_name": "風野 灯織",
+				"idol_en_name": "Hiori",
 				"card_data": [
 					{
 						"card_name": "",
@@ -99,8 +101,9 @@
 				]
 			},
 			{
-				"idol_name": "메구루",
-				"eng_name": "meguru",
+				"idol_ko_name": "메구루",
+				"idol_ja_name": "八宮 めぐる",
+				"idol_en_name": "Meguru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -147,8 +150,9 @@
 				]
 			},
 			{
-				"idol_name": "코가네",
-				"eng_name": "kogane",
+				"idol_ko_name": "코가네",
+				"idol_ja_name": "月岡 恋鐘",
+				"idol_en_name": "Kogane",
 				"card_data": [
 					{
 						"card_name": "",
@@ -195,8 +199,9 @@
 				]
 			},
 			{
-				"idol_name": "마미미",
-				"eng_name": "mamimi",
+				"idol_ko_name": "마미미",
+				"idol_ja_name": "田中 摩美々",
+				"idol_en_name": "Mamimi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -243,8 +248,9 @@
 				]
 			},
 			{
-				"idol_name": "사쿠야",
-				"eng_name": "sakuya",
+				"idol_ko_name": "사쿠야",
+				"idol_ja_name": "白瀬 咲耶",
+				"idol_en_name": "Sakuya",
 				"card_data": [
 					{
 						"card_name": "",
@@ -291,8 +297,9 @@
 				]
 			},
 			{
-				"idol_name": "유이카",
-				"eng_name": "yuika",
+				"idol_ko_name": "유이카",
+				"idol_ja_name": "三峰 結華",
+				"idol_en_name": "Yuika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -339,8 +346,9 @@
 				]
 			},
 			{
-				"idol_name": "키리코",
-				"eng_name": "kiriko",
+				"idol_ko_name": "키리코",
+				"idol_ja_name": "幽谷 霧子",
+				"idol_en_name": "Kiriko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -387,8 +395,9 @@
 				]
 			},
 			{
-				"idol_name": "카호",
-				"eng_name": "kaho",
+				"idol_ko_name": "카호",
+				"idol_ja_name": "小宮 果穂",
+				"idol_en_name": "Kaho",
 				"card_data": [
 					{
 						"card_name": "",
@@ -435,8 +444,9 @@
 				]
 			},
 			{
-				"idol_name": "치요코",
-				"eng_name": "chiyoko",
+				"idol_ko_name": "치요코",
+				"idol_ja_name": "園田 智代子",
+				"idol_en_name": "Chiyoko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -483,8 +493,9 @@
 				]
 			},
 			{
-				"idol_name": "쥬리",
-				"eng_name": "juri",
+				"idol_ko_name": "쥬리",
+				"idol_ja_name": "西城 樹里",
+				"idol_en_name": "Juri",
 				"card_data": [
 					{
 						"card_name": "",
@@ -531,8 +542,9 @@
 				]
 			},
 			{
-				"idol_name": "린제",
-				"eng_name": "rinze",
+				"idol_ko_name": "린제",
+				"idol_ja_name": "杜野 凛世",
+				"idol_en_name": "Rinze",
 				"card_data": [
 					{
 						"card_name": "",
@@ -579,8 +591,9 @@
 				]
 			},
 			{
-				"idol_name": "나츠하",
-				"eng_name": "natsuha",
+				"idol_ko_name": "나츠하",
+				"idol_ja_name": "有栖川 夏葉",
+				"idol_en_name": "Natsuha",
 				"card_data": [
 					{
 						"card_name": "",
@@ -627,8 +640,9 @@
 				]
 			},
 			{
-				"idol_name": "아마나",
-				"eng_name": "amana",
+				"idol_ko_name": "아마나",
+				"idol_ja_name": "大崎 甘奈",
+				"idol_en_name": "Amana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -675,8 +689,9 @@
 				]
 			},
 			{
-				"idol_name": "텐카",
-				"eng_name": "tenka",
+				"idol_ko_name": "텐카",
+				"idol_ja_name": "大崎 甜花",
+				"idol_en_name": "Tenka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -723,8 +738,9 @@
 				]
 			},
 			{
-				"idol_name": "치유키",
-				"eng_name": "chiyuki",
+				"idol_ko_name": "치유키",
+				"idol_ja_name": "桑山 千雪",
+				"idol_en_name": "Chiyuki",
 				"card_data": [
 					{
 						"card_name": "",
@@ -771,8 +787,9 @@
 				]
 			},
 			{
-				"idol_name": "아사히",
-				"eng_name": "asahi",
+				"idol_ko_name": "아사히",
+				"idol_ja_name": "芹沢 あさひ",
+				"idol_en_name": "Asahi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -819,8 +836,9 @@
 				]
 			},
 			{
-				"idol_name": "후유코",
-				"eng_name": "fuyuko",
+				"idol_ko_name": "후유코",
+				"idol_ja_name": "黛 冬優子",
+				"idol_en_name": "Fuyuko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -867,8 +885,9 @@
 				]
 			},
 			{
-				"idol_name": "메이",
-				"eng_name": "mei",
+				"idol_ko_name": "메이",
+				"idol_ja_name": "和泉 愛依",
+				"idol_en_name": "Mei",
 				"card_data": [
 					{
 						"card_name": "",
@@ -915,8 +934,9 @@
 				]
 			},
 			{
-				"idol_name": "토오루",
-				"eng_name": "toru",
+				"idol_ko_name": "토오루",
+				"idol_ja_name": "浅倉 透",
+				"idol_en_name": "Toru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -963,8 +983,9 @@
 				]
 			},
 			{
-				"idol_name": "마도카",
-				"eng_name": "madoka",
+				"idol_ko_name": "마도카",
+				"idol_ja_name": "樋口 円香",
+				"idol_en_name": "Madoka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1011,8 +1032,9 @@
 				]
 			},
 			{
-				"idol_name": "코이토",
-				"eng_name": "koito",
+				"idol_ko_name": "코이토",
+				"idol_ja_name": "福丸 小糸",
+				"idol_en_name": "Koito",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1059,8 +1081,9 @@
 				]
 			},
 			{
-				"idol_name": "히나나",
-				"eng_name": "hinana",
+				"idol_ko_name": "히나나",
+				"idol_ja_name": "市川 雛菜",
+				"idol_en_name": "Hinana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1107,8 +1130,9 @@
 				]
 			},
 			{
-				"idol_name": "니치카",
-				"eng_name": "nichika",
+				"idol_ko_name": "니치카",
+				"idol_ja_name": "七草 にちか",
+				"idol_en_name": "Nichika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1155,8 +1179,9 @@
 				]
 			},
 			{
-				"idol_name": "미코토",
-				"eng_name": "mikoto",
+				"idol_ko_name": "미코토",
+				"idol_ja_name": "緋田 美琴",
+				"idol_en_name": "Mikoto",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1208,8 +1233,9 @@
 		"header_title": "P-SR",
 		"idol_list": [
 			{
-				"idol_name": "마노",
-				"eng_name": "mano",
+				"idol_ko_name": "마노",
+				"idol_ja_name": "櫻木 真乃",
+				"idol_en_name": "Mano",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1250,8 +1276,9 @@
 				]
 			},
 			{
-				"idol_name": "히오리",
-				"eng_name": "hiori",
+				"idol_ko_name": "히오리",
+				"idol_ja_name": "風野 灯織",
+				"idol_en_name": "Hiori",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1292,8 +1319,9 @@
 				]
 			},
 			{
-				"idol_name": "메구루",
-				"eng_name": "meguru",
+				"idol_ko_name": "메구루",
+				"idol_ja_name": "八宮 めぐる",
+				"idol_en_name": "Meguru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1334,8 +1362,9 @@
 				]
 			},
 			{
-				"idol_name": "코가네",
-				"eng_name": "kogane",
+				"idol_ko_name": "코가네",
+				"idol_ja_name": "月岡 恋鐘",
+				"idol_en_name": "Kogane",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1376,8 +1405,9 @@
 				]
 			},
 			{
-				"idol_name": "마미미",
-				"eng_name": "mamimi",
+				"idol_ko_name": "마미미",
+				"idol_ja_name": "田中 摩美々",
+				"idol_en_name": "Mamimi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1418,8 +1448,9 @@
 				]
 			},
 			{
-				"idol_name": "사쿠야",
-				"eng_name": "sakuya",
+				"idol_ko_name": "사쿠야",
+				"idol_ja_name": "白瀬 咲耶",
+				"idol_en_name": "Sakuya",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1460,8 +1491,9 @@
 				]
 			},
 			{
-				"idol_name": "유이카",
-				"eng_name": "yuika",
+				"idol_ko_name": "유이카",
+				"idol_ja_name": "三峰 結華",
+				"idol_en_name": "Yuika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1502,8 +1534,9 @@
 				]
 			},
 			{
-				"idol_name": "키리코",
-				"eng_name": "kiriko",
+				"idol_ko_name": "키리코",
+				"idol_ja_name": "幽谷 霧子",
+				"idol_en_name": "Kiriko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1544,8 +1577,9 @@
 				]
 			},
 			{
-				"idol_name": "카호",
-				"eng_name": "kaho",
+				"idol_ko_name": "카호",
+				"idol_ja_name": "小宮 果穂",
+				"idol_en_name": "Kaho",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1586,8 +1620,9 @@
 				]
 			},
 			{
-				"idol_name": "치요코",
-				"eng_name": "chiyoko",
+				"idol_ko_name": "치요코",
+				"idol_ja_name": "園田 智代子",
+				"idol_en_name": "Chiyoko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1628,8 +1663,9 @@
 				]
 			},
 			{
-				"idol_name": "쥬리",
-				"eng_name": "juri",
+				"idol_ko_name": "쥬리",
+				"idol_ja_name": "西城 樹里",
+				"idol_en_name": "Juri",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1670,8 +1706,9 @@
 				]
 			},
 			{
-				"idol_name": "린제",
-				"eng_name": "rinze",
+				"idol_ko_name": "린제",
+				"idol_ja_name": "杜野 凛世",
+				"idol_en_name": "Rinze",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1712,8 +1749,9 @@
 				]
 			},
 			{
-				"idol_name": "나츠하",
-				"eng_name": "natsuha",
+				"idol_ko_name": "나츠하",
+				"idol_ja_name": "有栖川 夏葉",
+				"idol_en_name": "Natsuha",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1754,8 +1792,9 @@
 				]
 			},
 			{
-				"idol_name": "아마나",
-				"eng_name": "amana",
+				"idol_ko_name": "아마나",
+				"idol_ja_name": "大崎 甘奈",
+				"idol_en_name": "Amana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1796,8 +1835,9 @@
 				]
 			},
 			{
-				"idol_name": "텐카",
-				"eng_name": "tenka",
+				"idol_ko_name": "텐카",
+				"idol_ja_name": "大崎 甜花",
+				"idol_en_name": "Tenka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1838,8 +1878,9 @@
 				]
 			},
 			{
-				"idol_name": "치유키",
-				"eng_name": "chiyuki",
+				"idol_ko_name": "치유키",
+				"idol_ja_name": "桑山 千雪",
+				"idol_en_name": "Chiyuki",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1880,8 +1921,9 @@
 				]
 			},
 			{
-				"idol_name": "아사히",
-				"eng_name": "asahi",
+				"idol_ko_name": "아사히",
+				"idol_ja_name": "芹沢 あさひ",
+				"idol_en_name": "Asahi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1922,8 +1964,9 @@
 				]
 			},
 			{
-				"idol_name": "후유코",
-				"eng_name": "fuyuko",
+				"idol_ko_name": "후유코",
+				"idol_ja_name": "黛 冬優子",
+				"idol_en_name": "Fuyuko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -1964,8 +2007,9 @@
 				]
 			},
 			{
-				"idol_name": "메이",
-				"eng_name": "mei",
+				"idol_ko_name": "메이",
+				"idol_ja_name": "和泉 愛依",
+				"idol_en_name": "Mei",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2006,8 +2050,9 @@
 				]
 			},
 			{
-				"idol_name": "토오루",
-				"eng_name": "toru",
+				"idol_ko_name": "토오루",
+				"idol_ja_name": "浅倉 透",
+				"idol_en_name": "Toru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2048,8 +2093,9 @@
 				]
 			},
 			{
-				"idol_name": "마도카",
-				"eng_name": "madoka",
+				"idol_ko_name": "마도카",
+				"idol_ja_name": "樋口 円香",
+				"idol_en_name": "Madoka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2090,8 +2136,9 @@
 				]
 			},
 			{
-				"idol_name": "코이토",
-				"eng_name": "koito",
+				"idol_ko_name": "코이토",
+				"idol_ja_name": "福丸 小糸",
+				"idol_en_name": "Koito",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2132,8 +2179,9 @@
 				]
 			},
 			{
-				"idol_name": "히나나",
-				"eng_name": "hinana",
+				"idol_ko_name": "히나나",
+				"idol_ja_name": "市川 雛菜",
+				"idol_en_name": "Hinana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2174,8 +2222,9 @@
 				]
 			},
 			{
-				"idol_name": "니치카",
-				"eng_name": "nichika",
+				"idol_ko_name": "니치카",
+				"idol_ja_name": "七草 にちか",
+				"idol_en_name": "Nichika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2216,8 +2265,9 @@
 				]
 			},
 			{
-				"idol_name": "미코토",
-				"eng_name": "mikoto",
+				"idol_ko_name": "미코토",
+				"idol_ja_name": "緋田 美琴",
+				"idol_en_name": "Mikoto",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2263,8 +2313,9 @@
 		"header_title": "S-SSR",
 		"idol_list": [
 			{
-				"idol_name": "마노",
-				"eng_name": "mano",
+				"idol_ko_name": "마노",
+				"idol_ja_name": "櫻木 真乃",
+				"idol_en_name": "Mano",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2335,8 +2386,9 @@
 				]
 			},
 			{
-				"idol_name": "히오리",
-				"eng_name": "hiori",
+				"idol_ko_name": "히오리",
+				"idol_ja_name": "風野 灯織",
+				"idol_en_name": "Hiori",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2407,8 +2459,9 @@
 				]
 			},
 			{
-				"idol_name": "메구루",
-				"eng_name": "meguru",
+				"idol_ko_name": "메구루",
+				"idol_ja_name": "八宮 めぐる",
+				"idol_en_name": "Meguru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2479,8 +2532,9 @@
 				]
 			},
 			{
-				"idol_name": "코가네",
-				"eng_name": "kogane",
+				"idol_ko_name": "코가네",
+				"idol_ja_name": "月岡 恋鐘",
+				"idol_en_name": "Kogane",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2551,8 +2605,9 @@
 				]
 			},
 			{
-				"idol_name": "마미미",
-				"eng_name": "mamimi",
+				"idol_ko_name": "마미미",
+				"idol_ja_name": "田中 摩美々",
+				"idol_en_name": "Mamimi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2623,8 +2678,9 @@
 				]
 			},
 			{
-				"idol_name": "사쿠야",
-				"eng_name": "sakuya",
+				"idol_ko_name": "사쿠야",
+				"idol_ja_name": "白瀬 咲耶",
+				"idol_en_name": "Sakuya",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2695,8 +2751,9 @@
 				]
 			},
 			{
-				"idol_name": "유이카",
-				"eng_name": "yuika",
+				"idol_ko_name": "유이카",
+				"idol_ja_name": "三峰 結華",
+				"idol_en_name": "Yuika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2767,8 +2824,9 @@
 				]
 			},
 			{
-				"idol_name": "키리코",
-				"eng_name": "kiriko",
+				"idol_ko_name": "키리코",
+				"idol_ja_name": "幽谷 霧子",
+				"idol_en_name": "Kiriko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2839,8 +2897,9 @@
 				]
 			},
 			{
-				"idol_name": "카호",
-				"eng_name": "kaho",
+				"idol_ko_name": "카호",
+				"idol_ja_name": "小宮 果穂",
+				"idol_en_name": "Kaho",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2911,8 +2970,9 @@
 				]
 			},
 			{
-				"idol_name": "치요코",
-				"eng_name": "chiyoko",
+				"idol_ko_name": "치요코",
+				"idol_ja_name": "園田 智代子",
+				"idol_en_name": "Chiyoko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -2983,8 +3043,9 @@
 				]
 			},
 			{
-				"idol_name": "쥬리",
-				"eng_name": "juri",
+				"idol_ko_name": "쥬리",
+				"idol_ja_name": "西城 樹里",
+				"idol_en_name": "Juri",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3055,8 +3116,9 @@
 				]
 			},
 			{
-				"idol_name": "린제",
-				"eng_name": "rinze",
+				"idol_ko_name": "린제",
+				"idol_ja_name": "杜野 凛世",
+				"idol_en_name": "Rinze",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3127,8 +3189,9 @@
 				]
 			},
 			{
-				"idol_name": "나츠하",
-				"eng_name": "natsuha",
+				"idol_ko_name": "나츠하",
+				"idol_ja_name": "有栖川 夏葉",
+				"idol_en_name": "Natsuha",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3199,8 +3262,9 @@
 				]
 			},
 			{
-				"idol_name": "아마나",
-				"eng_name": "amana",
+				"idol_ko_name": "아마나",
+				"idol_ja_name": "大崎 甘奈",
+				"idol_en_name": "Amana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3271,8 +3335,9 @@
 				]
 			},
 			{
-				"idol_name": "텐카",
-				"eng_name": "tenka",
+				"idol_ko_name": "텐카",
+				"idol_ja_name": "大崎 甜花",
+				"idol_en_name": "Tenka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3343,8 +3408,9 @@
 				]
 			},
 			{
-				"idol_name": "치유키",
-				"eng_name": "chiyuki",
+				"idol_ko_name": "치유키",
+				"idol_ja_name": "桑山 千雪",
+				"idol_en_name": "Chiyuki",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3415,8 +3481,9 @@
 				]
 			},
 			{
-				"idol_name": "아사히",
-				"eng_name": "asahi",
+				"idol_ko_name": "아사히",
+				"idol_ja_name": "芹沢 あさひ",
+				"idol_en_name": "Asahi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3487,8 +3554,9 @@
 				]
 			},
 			{
-				"idol_name": "후유코",
-				"eng_name": "fuyuko",
+				"idol_ko_name": "후유코",
+				"idol_ja_name": "黛 冬優子",
+				"idol_en_name": "Fuyuko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3522,8 +3590,8 @@
 					},
 					{
 						"card_name": "",
-						"card_type": "",
-						"card_date": "",
+						"card_type": "페스",
+						"card_date": "2021-07-20",
 						"card_addr": "fuyuko_s_ssr5"
 					},
 					{
@@ -3559,8 +3627,9 @@
 				]
 			},
 			{
-				"idol_name": "메이",
-				"eng_name": "mei",
+				"idol_ko_name": "메이",
+				"idol_ja_name": "和泉 愛依",
+				"idol_en_name": "Mei",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3631,8 +3700,9 @@
 				]
 			},
 			{
-				"idol_name": "토오루",
-				"eng_name": "toru",
+				"idol_ko_name": "토오루",
+				"idol_ja_name": "浅倉 透",
+				"idol_en_name": "Toru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3703,8 +3773,9 @@
 				]
 			},
 			{
-				"idol_name": "마도카",
-				"eng_name": "madoka",
+				"idol_ko_name": "마도카",
+				"idol_ja_name": "樋口 円香",
+				"idol_en_name": "Madoka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3775,8 +3846,9 @@
 				]
 			},
 			{
-				"idol_name": "코이토",
-				"eng_name": "koito",
+				"idol_ko_name": "코이토",
+				"idol_ja_name": "福丸 小糸",
+				"idol_en_name": "Koito",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3847,8 +3919,9 @@
 				]
 			},
 			{
-				"idol_name": "히나나",
-				"eng_name": "hinana",
+				"idol_ko_name": "히나나",
+				"idol_ja_name": "市川 雛菜",
+				"idol_en_name": "Hinana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3919,8 +3992,9 @@
 				]
 			},
 			{
-				"idol_name": "니치카",
-				"eng_name": "nichika",
+				"idol_ko_name": "니치카",
+				"idol_ja_name": "七草 にちか",
+				"idol_en_name": "Nichika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -3991,8 +4065,9 @@
 				]
 			},
 			{
-				"idol_name": "미코토",
-				"eng_name": "mikoto",
+				"idol_ko_name": "미코토",
+				"idol_ja_name": "緋田 美琴",
+				"idol_en_name": "Mikoto",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4068,8 +4143,9 @@
 		"header_title": "S-SR",
 		"idol_list": [
 			{
-				"idol_name": "마노",
-				"eng_name": "mano",
+				"idol_ko_name": "마노",
+				"idol_ja_name": "櫻木 真乃",
+				"idol_en_name": "Mano",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4116,8 +4192,9 @@
 				]
 			},
 			{
-				"idol_name": "히오리",
-				"eng_name": "hiori",
+				"idol_ko_name": "히오리",
+				"idol_ja_name": "風野 灯織",
+				"idol_en_name": "Hiori",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4164,8 +4241,9 @@
 				]
 			},
 			{
-				"idol_name": "메구루",
-				"eng_name": "meguru",
+				"idol_ko_name": "메구루",
+				"idol_ja_name": "八宮 めぐる",
+				"idol_en_name": "Meguru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4212,8 +4290,9 @@
 				]
 			},
 			{
-				"idol_name": "코가네",
-				"eng_name": "kogane",
+				"idol_ko_name": "코가네",
+				"idol_ja_name": "月岡 恋鐘",
+				"idol_en_name": "Kogane",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4260,8 +4339,9 @@
 				]
 			},
 			{
-				"idol_name": "마미미",
-				"eng_name": "mamimi",
+				"idol_ko_name": "마미미",
+				"idol_ja_name": "田中 摩美々",
+				"idol_en_name": "Mamimi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4308,8 +4388,9 @@
 				]
 			},
 			{
-				"idol_name": "사쿠야",
-				"eng_name": "sakuya",
+				"idol_ko_name": "사쿠야",
+				"idol_ja_name": "白瀬 咲耶",
+				"idol_en_name": "Sakuya",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4356,8 +4437,9 @@
 				]
 			},
 			{
-				"idol_name": "유이카",
-				"eng_name": "yuika",
+				"idol_ko_name": "유이카",
+				"idol_ja_name": "三峰 結華",
+				"idol_en_name": "Yuika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4404,8 +4486,9 @@
 				]
 			},
 			{
-				"idol_name": "키리코",
-				"eng_name": "kiriko",
+				"idol_ko_name": "키리코",
+				"idol_ja_name": "幽谷 霧子",
+				"idol_en_name": "Kiriko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4452,8 +4535,9 @@
 				]
 			},
 			{
-				"idol_name": "카호",
-				"eng_name": "kaho",
+				"idol_ko_name": "카호",
+				"idol_ja_name": "小宮 果穂",
+				"idol_en_name": "Kaho",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4481,8 +4565,8 @@
 					},
 					{
 						"card_name": "",
-						"card_type": "",
-						"card_date": "",
+						"card_type": "이벤트",
+						"card_date": "2021-07-10",
 						"card_addr": "kaho_s_sr4"
 					},
 					{
@@ -4500,8 +4584,9 @@
 				]
 			},
 			{
-				"idol_name": "치요코",
-				"eng_name": "chiyoko",
+				"idol_ko_name": "치요코",
+				"idol_ja_name": "園田 智代子",
+				"idol_en_name": "Chiyoko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4548,8 +4633,9 @@
 				]
 			},
 			{
-				"idol_name": "쥬리",
-				"eng_name": "juri",
+				"idol_ko_name": "쥬리",
+				"idol_ja_name": "西城 樹里",
+				"idol_en_name": "Juri",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4596,8 +4682,9 @@
 				]
 			},
 			{
-				"idol_name": "린제",
-				"eng_name": "rinze",
+				"idol_ko_name": "린제",
+				"idol_ja_name": "杜野 凛世",
+				"idol_en_name": "Rinze",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4644,8 +4731,9 @@
 				]
 			},
 			{
-				"idol_name": "나츠하",
-				"eng_name": "natsuha",
+				"idol_ko_name": "나츠하",
+				"idol_ja_name": "有栖川 夏葉",
+				"idol_en_name": "Natsuha",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4692,8 +4780,9 @@
 				]
 			},
 			{
-				"idol_name": "아마나",
-				"eng_name": "amana",
+				"idol_ko_name": "아마나",
+				"idol_ja_name": "大崎 甘奈",
+				"idol_en_name": "Amana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4740,8 +4829,9 @@
 				]
 			},
 			{
-				"idol_name": "텐카",
-				"eng_name": "tenka",
+				"idol_ko_name": "텐카",
+				"idol_ja_name": "大崎 甜花",
+				"idol_en_name": "Tenka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4788,8 +4878,9 @@
 				]
 			},
 			{
-				"idol_name": "치유키",
-				"eng_name": "chiyuki",
+				"idol_ko_name": "치유키",
+				"idol_ja_name": "桑山 千雪",
+				"idol_en_name": "Chiyuki",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4836,8 +4927,9 @@
 				]
 			},
 			{
-				"idol_name": "아사히",
-				"eng_name": "asahi",
+				"idol_ko_name": "아사히",
+				"idol_ja_name": "芹沢 あさひ",
+				"idol_en_name": "Asahi",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4884,8 +4976,9 @@
 				]
 			},
 			{
-				"idol_name": "후유코",
-				"eng_name": "fuyuko",
+				"idol_ko_name": "후유코",
+				"idol_ja_name": "黛 冬優子",
+				"idol_en_name": "Fuyuko",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4932,8 +5025,9 @@
 				]
 			},
 			{
-				"idol_name": "메이",
-				"eng_name": "mei",
+				"idol_ko_name": "메이",
+				"idol_ja_name": "和泉 愛依",
+				"idol_en_name": "Mei",
 				"card_data": [
 					{
 						"card_name": "",
@@ -4980,8 +5074,9 @@
 				]
 			},
 			{
-				"idol_name": "토오루",
-				"eng_name": "toru",
+				"idol_ko_name": "토오루",
+				"idol_ja_name": "浅倉 透",
+				"idol_en_name": "Toru",
 				"card_data": [
 					{
 						"card_name": "",
@@ -5028,8 +5123,9 @@
 				]
 			},
 			{
-				"idol_name": "마도카",
-				"eng_name": "madoka",
+				"idol_ko_name": "마도카",
+				"idol_ja_name": "樋口 円香",
+				"idol_en_name": "Madoka",
 				"card_data": [
 					{
 						"card_name": "",
@@ -5076,8 +5172,9 @@
 				]
 			},
 			{
-				"idol_name": "코이토",
-				"eng_name": "koito",
+				"idol_ko_name": "코이토",
+				"idol_ja_name": "福丸 小糸",
+				"idol_en_name": "Koito",
 				"card_data": [
 					{
 						"card_name": "",
@@ -5124,8 +5221,9 @@
 				]
 			},
 			{
-				"idol_name": "히나나",
-				"eng_name": "hinana",
+				"idol_ko_name": "히나나",
+				"idol_ja_name": "市川 雛菜",
+				"idol_en_name": "Hinana",
 				"card_data": [
 					{
 						"card_name": "",
@@ -5172,8 +5270,9 @@
 				]
 			},
 			{
-				"idol_name": "니치카",
-				"eng_name": "nichika",
+				"idol_ko_name": "니치카",
+				"idol_ja_name": "七草 にちか",
+				"idol_en_name": "Nichika",
 				"card_data": [
 					{
 						"card_name": "",
@@ -5220,8 +5319,9 @@
 				]
 			},
 			{
-				"idol_name": "미코토",
-				"eng_name": "mikoto",
+				"idol_ko_name": "미코토",
+				"idol_ja_name": "緋田 美琴",
+				"idol_en_name": "Mikoto",
 				"card_data": [
 					{
 						"card_name": "",
