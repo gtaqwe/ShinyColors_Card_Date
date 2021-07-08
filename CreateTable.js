@@ -72,11 +72,13 @@ function calTerm(totalData, totalLen) {
       var cardName = cardDataList[idx].card_name;
       var cardAddr = cardDataList[idx].card_addr;
 
-      // 한정, 이벤트, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
+      // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "한정") {
         resContent += '<td class="limit-card-cell" ';
       } else if (cardType == "이벤트") {
         resContent += '<td class="event-card-cell" ';
+      } else if (cardType == "페스") {
+        resContent += '<td class="gradeFes-card-cell" ';
       } else if (cardType == "캠페인") {
         resContent += '<td class="campaign-card-cell" ';
       } else {
