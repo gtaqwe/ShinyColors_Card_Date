@@ -1,255 +1,255 @@
 div {
-    margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 table {
-    text-align: center;
-    border-collapse: collapse;
-    border: 2px solid #000000;
+  text-align: center;
+  border-collapse: collapse;
+  border: 2px solid #000000;
 }
 
 th,
 td {
-    white-space: nowrap;
-    padding: 5px 5px;
-    border: 1px solid #d4d4d4;
-    cursor: default;
+  white-space: nowrap;
+  padding: 5px 5px;
+  border: 1px solid #d4d4d4;
+  cursor: default;
 }
 
 th {
-    border-right: 1px solid #d4d4d4;
-    border-left: 1px solid #d4d4d4;
-    border-bottom: 2px solid #000000;
+  border-right: 1px solid #d4d4d4;
+  border-left: 1px solid #d4d4d4;
+  border-bottom: 2px solid #000000;
 }
 
 footer {
-    text-align: center;
-    font-size: 10px;
+  text-align: center;
+  font-size: 10px;
 }
 
 .th-name-cell,
 .td-name-cell {
-    padding: 5px 10px;
-    border-right: 2px solid #000000;
+  padding: 5px 10px;
+  border-right: 2px solid #000000;
 }
 
 .limit-card-cell {
-    background-color: #92d050;
+  background-color: #92d050;
 }
 
 .event-card-cell {
-    background-color: #00b0f0;
+  background-color: #00b0f0;
 }
 
 .campaign-card-cell {
-    background-color: #ffc000;
+  background-color: #ffc000;
 }
 
 .now-term {
-    color: white;
-    font-weight: bold;
-    background-color: #ff0000;
+  color: white;
+  font-weight: bold;
+  background-color: #ff0000;
 }
 
 .pre-term {
-    background-color: #ffff00;
+  background-color: #ffff00;
 }
 
 .Pbutton {
-    background-color: #ff62a6;
-    border: none;
-    color: white;
-    width: 120px;
-    height: 50px;
-    font-weight: bold;
-    padding: 15px 32px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #ff62a6;
+  border: none;
+  color: white;
+  width: 120px;
+  height: 50px;
+  font-weight: bold;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .Pbutton:hover {
-    background-color: #ff74b6;
+  background-color: #ff74b6;
 }
 
 .Sbutton {
-    background-color: #4ca0f2;
-    border: none;
-    color: white;
-    width: 120px;
-    height: 50px;
-    font-weight: bold;
-    padding: 15px 32px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #4ca0f2;
+  border: none;
+  color: white;
+  width: 120px;
+  height: 50px;
+  font-weight: bold;
+  padding: 15px 32px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .Sbutton:hover {
-    background-color: #5cb4fe;
+  background-color: #5cb4fe;
 }
 
 .Capturebutton {
-    background-color: #333;
-    border: none;
-    color: white;
-    width: 120px;
-    white-space: normal;
-    height: 70px;
-    font-weight: bold;
-    padding: 15px 15px;
-    margin: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
+  background-color: #333;
+  border: none;
+  color: white;
+  width: 120px;
+  white-space: normal;
+  height: 70px;
+  font-weight: bold;
+  padding: 15px 15px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .Capturebutton:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 #preview {
-    position: absolute;
-    border: 1px solid #ccc;
-    background: #333;
-    padding: 5px;
-    display: none;
-    color: #fff;
+  position: absolute;
+  border: 1px solid #ccc;
+  background: #333;
+  padding: 5px;
+  display: none;
+  color: #fff;
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 22px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 4px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-    background-color: #2196f3;
+  background-color: #2196f3;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(16px);
-    -ms-transform: translateX(16px);
-    transform: translateX(16px);
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */
 .slider.round {
-    border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /*****************************************/
 
 /* The container */
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Hide the browser's default checkbox */
 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 /* Create a custom checkbox */
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ccc;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #aaa;
+  background-color: #aaa;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: #2196f3;
+  background-color: #2196f3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
-    display: block;
+  display: block;
 }
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

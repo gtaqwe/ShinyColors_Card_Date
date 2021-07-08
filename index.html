@@ -1,148 +1,143 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <title>Card Table</title>
-    </head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Card Table</title>
+  </head>
 
-    <body>
-        <div>
-            <input type="button" value="P-SSR" onclick="P_SSR()" class="Pbutton" />
-            <input type="button" value="S-SSR" onclick="S_SSR()" class="Sbutton" />
-            <br />
-            <input type="button" value="P-SR" onclick="P_SR()" class="Pbutton" />
-            <input type="button" value="S-SR" onclick="S_SR()" class="Sbutton" />
-        </div>
+  <body>
+    <div>
+      <input type="button" value="P-SSR" onclick="P_SSR()" class="Pbutton" />
+      <input type="button" value="S-SSR" onclick="S_SSR()" class="Sbutton" />
+      <br />
+      <input type="button" value="P-SR" onclick="P_SR()" class="Pbutton" />
+      <input type="button" value="S-SR" onclick="S_SR()" class="Sbutton" />
+    </div>
 
-        <div>
+    <div>
+      <input
+        type="button"
+        value="Main Capture"
+        onclick="captureScreen('TABLE')"
+        class="Capturebutton"
+      />
+      <input
+        type="button"
+        value="Rank List Capture"
+        onclick="captureScreen('RANK')"
+        class="Capturebutton"
+      />
+    </div>
+
+    <div id="CAPTURE_FRAME" style="width:max-content;">
+      <div id="VIEW_SELECT" style="width:max-content; overflow:hidden;">
+        <span id="generalChkSpan" style="margin:5px 10px; float:left">
+          <label class="container"
+            >통상
             <input
-                type="button"
-                value="Main Capture"
-                onclick="captureScreen('TABLE')"
-                class="Capturebutton"
+              type="checkbox"
+              id="permanentCardChkBox"
+              checked="checked"
+              onchange="updateDate(nowSelect)"
             />
+            <span class="checkmark"></span>
+          </label>
+        </span>
+
+        <span id="limitChkSpan" style="margin:5px 10px; float:left">
+          <label class="container"
+            >한정
             <input
-                type="button"
-                value="Rank List Capture"
-                onclick="captureScreen('RANK')"
-                class="Capturebutton"
+              type="checkbox"
+              id="limitedCardChkBox"
+              checked="checked"
+              onchange="updateDate(nowSelect)"
             />
-        </div>
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-        <div id="CAPTURE_FRAME" style="width:max-content;">
-            <div id="VIEW_SELECT" style="width:max-content; overflow:hidden;">
-                <span id="generalChkSpan" style="margin:5px 10px; float:left">
-                    <label class="container"
-                        >통상
-                        <input
-                            type="checkbox"
-                            id="permanentCardChkBox"
-                            checked="checked"
-                            onchange="updateDate(nowSelect)"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </span>
+        <span id="eventChkSpan" style="margin:5px 10px; float:left">
+          <label class="container"
+            >이벤트
+            <input
+              type="checkbox"
+              id="eventCardChkBox"
+              checked="checked"
+              onchange="updateDate(nowSelect)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-                <span id="limitChkSpan" style="margin:5px 10px; float:left">
-                    <label class="container"
-                        >한정
-                        <input
-                            type="checkbox"
-                            id="limitedCardChkBox"
-                            checked="checked"
-                            onchange="updateDate(nowSelect)"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </span>
+        <span id="fesChkSpan" style="margin:5px 10px; float:left">
+          <label class="container"
+            >페스
+            <input
+              type="checkbox"
+              id="gradeFesCardChkBox"
+              checked="checked"
+              onchange="updateDate(nowSelect)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-                <span id="eventChkSpan" style="margin:5px 10px; float:left">
-                    <label class="container"
-                        >이벤트
-                        <input
-                            type="checkbox"
-                            id="eventCardChkBox"
-                            checked="checked"
-                            onchange="updateDate(nowSelect)"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </span>
+        <span id="campaignChkSpan" style="margin:5px 10px; float:left">
+          <label class="container"
+            >캠페인
+            <input
+              type="checkbox"
+              id="campaignCardChkBox"
+              checked="checked"
+              onchange="updateDate(nowSelect)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-                <span id="fesChkSpan" style="margin:5px 10px; float:left">
-                    <label class="container"
-                        >페스
-                        <input
-                            type="checkbox"
-                            id="gradeFesCardChkBox"
-                            checked="checked"
-                            onchange="updateDate(nowSelect)"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </span>
+        <span id="convertSpan" style="margin:5px 10px; float:left">
+          <label class="switch">
+            <input
+              type="checkbox"
+              id="fesImgConvertBtn"
+              onchange="getToggleString($('#fesImgConvertBtn').is(':checked'))"
+            />
+            <span class="slider round"></span>
+          </label>
 
-                <span id="campaignChkSpan" style="margin:5px 10px; float:left">
-                    <label class="container"
-                        >캠페인
-                        <input
-                            type="checkbox"
-                            id="campaignCardChkBox"
-                            checked="checked"
-                            onchange="updateDate(nowSelect)"
-                        />
-                        <span class="checkmark"></span>
-                    </label>
-                </span>
+          <span id="toggleStr"></span>
+        </span>
+      </div>
 
-                <span id="convertSpan" style="margin:5px 10px; float:left">
-                    <label class="switch">
-                        <input
-                            type="checkbox"
-                            id="fesImgConvertBtn"
-                            onchange="getToggleString($('#fesImgConvertBtn').is(':checked'))"
-                        />
-                        <span class="slider round"></span>
-                    </label>
+      <div style="overflow:hidden;">
+        <label>기준일:</label>
+        <input type="date" id="TargetDate" name="TargetDate" onchange="updateDate(nowSelect)" />
+      </div>
 
-                    <span id="toggleStr"></span>
-                </span>
-            </div>
+      <div>
+        <table>
+          <th style="width: 100px">통상</th>
+          <th class="limit-card-cell" style="width: 100px">한정</th>
+          <th class="event-card-cell" style="width: 100px">이벤트</th>
+          <th class="campaign-card-cell" style="width: 100px">캠페인</th>
+        </table>
+      </div>
 
-            <div style="overflow:hidden;">
-                <label>기준일:</label>
-                <input
-                    type="date"
-                    id="TargetDate"
-                    name="TargetDate"
-                    onchange="updateDate(nowSelect)"
-                />
-            </div>
+      <div id="MAIN"></div>
+      <!-- <div id="MAIN_RANK" style="float:left; margin: 5px 10px 5px 0px;"></div> -->
 
-            <div>
-                <table>
-                    <th style="width: 100px">통상</th>
-                    <th class="limit-card-cell" style="width: 100px">한정</th>
-                    <th class="event-card-cell" style="width: 100px">이벤트</th>
-                    <th class="campaign-card-cell" style="width: 100px">캠페인</th>
-                </table>
-            </div>
+      <div id="NOTE_SPACE"></div>
+    </div>
 
-            <div id="MAIN"></div>
-            <!-- <div id="MAIN_RANK" style="float:left; margin: 5px 10px 5px 0px;"></div> -->
+    <div id="MAIN2" style="width:max-content">
+      <div id="RANK" style="float:left; margin: 5px 10px 5px 0px;"></div>
+    </div>
 
-            <div id="NOTE_SPACE"></div>
-        </div>
-
-        <div id="MAIN2" style="width:max-content">
-            <div id="RANK" style="float:left; margin: 5px 10px 5px 0px;"></div>
-        </div>
-
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-        <script src="CreateTable.js"></script>
-        <script src="IndexScripts.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="CreateTable.js"></script>
+    <script src="IndexScripts.js"></script>
+  </body>
 </html>
