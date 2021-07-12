@@ -171,11 +171,11 @@ function buildDataRank(termAry) {
   // old... : 오래된 순으로 랭킹 계산
   // new... : 최신 순으로 랭킹 계산
 
-  var oldFirst = termAry.slice().sort(function(a, b) {
+  var oldFirst = termAry.slice().sort(function (a, b) {
     return b[1] - a[1];
   });
   // var newFirst = termAry.slice().sort(function(a,b){return a-b});
-  var oldRanks = termAry.map(function(v) {
+  var oldRanks = termAry.map(function (v) {
     return oldFirst.indexOf(v) + 1;
   });
   // var newRanks = termAry.map(function(v){ return newFirst.indexOf(v)+1 });
@@ -183,7 +183,7 @@ function buildDataRank(termAry) {
   var borderStyle = {
     left: "border-left: 2px solid #000000;",
     top: "border-top: hidden;",
-    bottom: "border-bottom: hidden;"
+    bottom: "border-bottom: hidden;",
   };
 
   var tableType = document.getElementById("table-type").innerHTML;

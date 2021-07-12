@@ -4,7 +4,7 @@ var jsonData;
 document.body.addEventListener("onload", init());
 
 async function init() {
-  await getJSON("json/data.json").then(function(resp) {
+  await getJSON("json/data.json").then(function (resp) {
     jsonData = JSON.parse(resp);
   });
 
@@ -17,10 +17,10 @@ async function init() {
 
 function getJSON(jsonFile) {
   try {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       var request = new XMLHttpRequest();
       request.open("GET", jsonFile, true);
-      request.onload = function() {
+      request.onload = function () {
         if (request.status == 200) {
           resolve(request.responseText);
         } else {
@@ -28,7 +28,7 @@ function getJSON(jsonFile) {
         }
       };
 
-      request.onerror = function() {
+      request.onerror = function () {
         reject(Error("Error fetching data."));
       };
       request.send();
@@ -166,7 +166,7 @@ function idolDataProcess(jsonData) {
     var obj = {
       // 이름 언어 : idol_(ko, ja, en)_name
       idol_name: idolList[i].idol_ko_name,
-      card_data: targetList
+      card_data: targetList,
     };
     totalList.push(obj);
 
@@ -181,7 +181,7 @@ function idolDataProcess(jsonData) {
   var selectedData = {
     Title: tableTitle,
     Length: maxColumnLen,
-    Data: totalList
+    Data: totalList,
   };
 
   return selectedData;
@@ -213,13 +213,9 @@ function imgMapping() {
 
   // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
   $("#date-table td").hover(
-    function(e) {
-      var imgAddrAttr = $(this)
-        .closest("td")
-        .attr("addr"); // 이미지 파일명
-      var imgNameAttr = $(this)
-        .closest("td")
-        .attr("name"); // 카드명
+    function (e) {
+      var imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
+      var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
       var fesChk = $("#fesImgConvertBtn").is(":checked"); // 일러스트 표시 모드
 
       // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
@@ -247,13 +243,13 @@ function imgMapping() {
       }
     },
     // 마우스 포인트가 해당 셀에 위치하지 않으면 비표시
-    function() {
+    function () {
       $("#preview").remove();
     }
   );
 
   // 마우스 포인트 위치에 따라 프리뷰 이동
-  $("#date-table td").mousemove(function(e) {
+  $("#date-table td").mousemove(function (e) {
     var previewWidth = $("#preview").width();
     var previewHeight = $("#preview").height();
 
@@ -306,14 +302,21 @@ function captureScreen(frameName) {
 
     document.getElementById("convertSpan").style.display = "none";
 
+    document.getElementById("TargetDateStr").innerHTML = getTargetDate();
+    document.getElementById("TargetDate").style.display = "none";
+    document.getElementById("TargetDateStr").style.display = "";
+
     html2canvas(document.querySelector(frameId), {
       scrollY: -window.scrollY,
-      scrollX: -window.scrollX
-    }).then(canvas => {
+      scrollX: -window.scrollX,
+    }).then((canvas) => {
       downloadURI(canvas.toDataURL("image/png"), captureName);
     });
 
     document.getElementById("convertSpan").style.display = "";
+
+    document.getElementById("TargetDate").style.display = "";
+    document.getElementById("TargetDateStr").style.display = "none";
   }
 }
 
