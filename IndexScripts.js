@@ -15,6 +15,9 @@ async function init() {
   getToggleString(fesChk);
 }
 
+/**
+ * JSON 데이터 읽기
+ */
 function getJSON(jsonFile) {
   try {
     return new Promise(function (resolve, reject) {
@@ -38,13 +41,16 @@ function getJSON(jsonFile) {
   }
 }
 
+/**
+ * 당일 날짜를 yyyy-MM-dd 형식 String으로 Return
+ */
 function getToday() {
   var today = new Date();
   var nowYear = today.getFullYear();
   var nowMonth = today.getMonth() + 1;
   var nowDate = today.getDate();
 
-  // yyyy-mm-dd 형식
+  // yyyy-MM-dd 형식
   return (
     nowYear.toString() +
     "-" +
@@ -54,7 +60,9 @@ function getToday() {
   );
 }
 
-// VIEW_SELECT의 표시타입 체크 변경
+/**
+ * VIEW_SELECT의 표시타입 체크 변경
+ */
 function updateDate(nowSelect) {
   if (nowSelect == 1) {
     P_SSR();
@@ -69,6 +77,9 @@ function updateDate(nowSelect) {
   }
 }
 
+/**
+ * 사복과 페스 일러 토글 텍스트 표시
+ */
 function getToggleString(fesChk) {
   if (fesChk == true) {
     $("#toggleStr").html("페스");
@@ -77,8 +88,10 @@ function getToggleString(fesChk) {
   }
 }
 
-// 표시 일러스트 변경 (사복 - 페스)
-// S의 경우 사복으로 고정
+/**
+ * 표시 일러스트 변경 (사복 - 페스)
+ * S의 경우 사복으로 고정
+ */
 function CtlfesImgConvertBtn(ps) {
   if (ps == "p") {
     document.getElementById("fesImgConvertBtn").disabled = false;
@@ -89,6 +102,9 @@ function CtlfesImgConvertBtn(ps) {
   }
 }
 
+/**
+ * P-SSR 표시
+ */
 function P_SSR() {
   var idolData = idolDataProcess("P_SSR");
   buildTable(idolData);
@@ -99,6 +115,9 @@ function P_SSR() {
   CtlfesImgConvertBtn("p");
 }
 
+/**
+ * P-SR 표시
+ */
 function P_SR() {
   var idolData = idolDataProcess("P_SR");
   buildTable(idolData);
@@ -109,6 +128,9 @@ function P_SR() {
   CtlfesImgConvertBtn("p");
 }
 
+/**
+ * S-SSR 표시
+ */
 function S_SSR() {
   var idolData = idolDataProcess("S_SSR");
   buildTable(idolData);
@@ -120,6 +142,9 @@ function S_SSR() {
   CtlfesImgConvertBtn("s");
 }
 
+/**
+ * S-SR 표시
+ */
 function S_SR() {
   var idolData = idolDataProcess("S_SR");
   buildTable(idolData);
@@ -131,6 +156,9 @@ function S_SR() {
   CtlfesImgConvertBtn("s");
 }
 
+/**
+ * 모든 카드 표시
+ */
 function ALL_CARD() {
   var idolData = mergeAllCardData();
   buildTable(idolData);
@@ -143,7 +171,9 @@ function ALL_CARD() {
   CtlfesImgConvertBtn("p");
 }
 
-// 전체 카드 표시
+/**
+ * 전체 카드의 데이터를 추출, 재가공
+ */
 function mergeAllCardData() {
   var maxColumnLen = 0;
   var totalList = jsonData.map((idol) => {
@@ -172,7 +202,6 @@ function mergeAllCardData() {
       .filter((v) => v !== undefined)
       // 오래된 순으로 정렬
       .sort((a, b) => (a.card_date <= b.card_date ? -1 : 1));
-    console.log(cardList);
 
     var obj = {
       // 이름 언어 : idol_(ko, ja, en)_name
@@ -201,7 +230,7 @@ function mergeAllCardData() {
   return selectedData;
 }
 
-// Json파일의 데이터추출, 재가공
+// 각 타입의 카드 데이터추출, 재가공
 function idolDataProcess(cardGrade) {
   var maxColumnLen = 0;
   totalList = jsonData.map((idol) => {
@@ -256,16 +285,9 @@ function idolDataProcess(cardGrade) {
 }
 
 //////////////////////////////////////////////////
-/*
- * Image preview script
- * powered by jQuery (http://www.jquery.com)
- *
- * written by Alen Grakalic (http://cssglobe.com)
- *
- * for more info visit http://cssglobe.com/post/1695/easiest-tooltip-and-image-preview-using-jquery
- *
+/**
+ * 마우스 포인트 위치에 따라 이미지 프리뷰
  */
-
 function imgMapping() {
   /* CONFIG */
 
@@ -348,7 +370,9 @@ function imgMapping() {
 }
 //////////////////////////////////////////////////
 
-// Div 캡쳐 버튼 처리
+/**
+ * 표 캡쳐, 다운로드 처리
+ */
 function captureScreen(frameName) {
   if (nowSelect != 0) {
     var captureName;
