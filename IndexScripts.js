@@ -135,7 +135,9 @@ function ALL_CARD() {
   var idolData = mergeAllCardData();
   buildTable(idolData);
 
-  document.getElementById("NOTE_SPACE").innerText = `※ PS 통합의 첫 실장일은 「白いツバサ」 실장일`;
+  document.getElementById(
+    "NOTE_SPACE"
+  ).innerText = `※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일`;
   nowSelect = 5;
 
   CtlfesImgConvertBtn("p");
