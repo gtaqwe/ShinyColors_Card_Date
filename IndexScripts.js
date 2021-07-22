@@ -64,6 +64,8 @@ function updateDate(nowSelect) {
     P_SR();
   } else if (nowSelect == 4) {
     S_SR();
+  } else {
+    ALL_CARD();
   }
 }
 
@@ -129,18 +131,29 @@ function S_SR() {
   CtlfesImgConvertBtn("s");
 }
 
-// Json파일의 데이터추출, 재가공
-function idolDataProcess(cardGrade) {
+function ALL_CARD() {
+  var idolData = mergeAllCardData();
+  buildTable(idolData);
+
+  document.getElementById("NOTE_SPACE").innerText = `※ PS 통합의 첫 실장일은 「白いツバサ」 실장일`;
+  nowSelect = 5;
+
+  CtlfesImgConvertBtn("p");
+}
+
+// 전체 카드 표시
+function mergeAllCardData() {
   var maxColumnLen = 0;
-  totalList = jsonData.map((idol) => {
-    var cardList = idol[cardGrade]
-      .map((card) => {
+  var totalList = jsonData.map((idol) => {
+    var cardList = [...idol.P_SSR, ...idol.P_SR, ...idol.S_SSR, ...idol.S_SR]
+      .map((card, idx) => {
         var cardType = card.card_type;
-        if (cardType == "첫실장") {
+        // 가장 첫실장만 배열에 추가
+        if (cardType == "첫실장" && idx == 0) {
           return card;
         }
 
-        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Push
+        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
         if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
           return card;
         } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
@@ -153,6 +166,64 @@ function idolDataProcess(cardGrade) {
           return card;
         }
       })
+      // undefined 데이터 제거
+      .filter((v) => v !== undefined)
+      // 오래된 순으로 정렬
+      .sort((a, b) => (a.card_date <= b.card_date ? -1 : 1));
+    console.log(cardList);
+
+    var obj = {
+      // 이름 언어 : idol_(ko, ja, en)_name
+      idol_name: idol.idol_ko_name,
+      card_data: cardList,
+    };
+
+    // 표에 표시할 열의 개수를 설정
+    if (cardList.length > maxColumnLen) maxColumnLen = cardList.length;
+
+    return obj;
+  });
+
+  var tableTitle = "All";
+
+  // 표시할 데이터
+  // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
+  // Length : 최대 열 수
+  // Data : 표시할 카드 데이터
+  var selectedData = {
+    Title: tableTitle,
+    Length: maxColumnLen,
+    Data: totalList,
+  };
+
+  return selectedData;
+}
+
+// Json파일의 데이터추출, 재가공
+function idolDataProcess(cardGrade) {
+  var maxColumnLen = 0;
+  totalList = jsonData.map((idol) => {
+    var cardList = idol[cardGrade]
+      .map((card) => {
+        var cardType = card.card_type;
+        if (cardType == "첫실장") {
+          return card;
+        }
+
+        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
+        if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "이벤트" && $("#eventCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "페스" && $("#gradeFesCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "캠페인" && $("#campaignCardChkBox").is(":checked")) {
+          return card;
+        }
+      })
+      // undefined 데이터 제거
       .filter((v) => v !== undefined);
 
     var obj = {
@@ -213,13 +284,14 @@ function imgMapping() {
       var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
       var fesChk = $("#fesImgConvertBtn").is(":checked"); // 일러스트 표시 모드
 
-      // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
-      if (fesChk == true) {
-        imgAddrAttr += "_f";
-      }
-
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
       if (imgNameAttr != "" && imgNameAttr != undefined) {
+        // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
+        // 페스 일러 체크, P 카드인 경우에 파일명 추가
+        if (fesChk == true && imgAddrAttr.split("_")[1] == "p") {
+          imgAddrAttr += "_f";
+        }
+
         $("body").append(
           "<p id='preview'><img src='img/" +
             imgAddrAttr +
