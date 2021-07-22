@@ -88,7 +88,7 @@ function CtlfesImgConvertBtn(ps) {
 }
 
 function P_SSR() {
-  var idolData = idolDataProcess(jsonData.P_SSR);
+  var idolData = idolDataProcess("P_SSR");
   buildTable(idolData);
 
   document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
@@ -98,7 +98,7 @@ function P_SSR() {
 }
 
 function P_SR() {
-  var idolData = idolDataProcess(jsonData.P_SR);
+  var idolData = idolDataProcess("P_SR");
   buildTable(idolData);
 
   document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
@@ -108,7 +108,7 @@ function P_SR() {
 }
 
 function S_SSR() {
-  var idolData = idolDataProcess(jsonData.S_SSR);
+  var idolData = idolDataProcess("S_SSR");
   buildTable(idolData);
 
   document.getElementById("NOTE_SPACE").innerText =
@@ -119,7 +119,7 @@ function S_SSR() {
 }
 
 function S_SR() {
-  var idolData = idolDataProcess(jsonData.S_SR);
+  var idolData = idolDataProcess("S_SR");
   buildTable(idolData);
 
   document.getElementById("NOTE_SPACE").innerText =
@@ -130,49 +130,44 @@ function S_SR() {
 }
 
 // Json파일의 데이터추출, 재가공
-function idolDataProcess(jsonData) {
-  var tableTitle = jsonData.header_title;
+function idolDataProcess(cardGrade) {
   var maxColumnLen = 0;
-  var idolList = jsonData.idol_list;
-  var rowLength = idolList.length;
+  totalList = jsonData.map((idol) => {
+    var cardList = idol[cardGrade]
+      .map((card) => {
+        var cardType = card.card_type;
+        if (cardType == "첫실장") {
+          return card;
+        }
 
-  totalList = [];
-  // 아이돌 수
-  for (var i = 0; i < rowLength; i++) {
-    var targetList = [];
-
-    // 아이돌별 카드 수
-    for (var j = 0; j < idolList[i].card_data.length; j++) {
-      var cardType = idolList[i].card_data[j].card_type;
-
-      if (cardType == "첫실장") {
-        targetList.push(idolList[i].card_data[j]);
-      }
-
-      // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Push
-      if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
-        targetList.push(idolList[i].card_data[j]);
-      } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
-        targetList.push(idolList[i].card_data[j]);
-      } else if (cardType == "이벤트" && $("#eventCardChkBox").is(":checked")) {
-        targetList.push(idolList[i].card_data[j]);
-      } else if (cardType == "페스" && $("#gradeFesCardChkBox").is(":checked")) {
-        targetList.push(idolList[i].card_data[j]);
-      } else if (cardType == "캠페인" && $("#campaignCardChkBox").is(":checked")) {
-        targetList.push(idolList[i].card_data[j]);
-      }
-    }
+        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Push
+        if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "이벤트" && $("#eventCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "페스" && $("#gradeFesCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "캠페인" && $("#campaignCardChkBox").is(":checked")) {
+          return card;
+        }
+      })
+      .filter((v) => v !== undefined);
 
     var obj = {
       // 이름 언어 : idol_(ko, ja, en)_name
-      idol_name: idolList[i].idol_ko_name,
-      card_data: targetList,
+      idol_name: idol.idol_ko_name,
+      card_data: cardList,
     };
-    totalList.push(obj);
 
     // 표에 표시할 열의 개수를 설정
-    if (targetList.length > maxColumnLen) maxColumnLen = targetList.length;
-  }
+    if (cardList.length > maxColumnLen) maxColumnLen = cardList.length;
+
+    return obj;
+  });
+
+  var tableTitle = cardGrade.replace("_", "-");
 
   // 표시할 데이터
   // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
