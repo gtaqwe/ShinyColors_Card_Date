@@ -366,6 +366,7 @@ function captureScreen(frameName) {
     else if (nowSelect == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";
     else if (nowSelect == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
     else if (nowSelect == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
+    else if (nowSelect == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
 
     document.getElementById("convertSpan").style.display = "none";
 
