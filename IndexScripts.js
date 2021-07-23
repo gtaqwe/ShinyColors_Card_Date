@@ -72,7 +72,7 @@ function updateDate(nowSelect) {
     P_SR();
   } else if (nowSelect == 4) {
     S_SR();
-  } else {
+  } else if (nowSelect == 5) {
     ALL_CARD();
   }
 }
