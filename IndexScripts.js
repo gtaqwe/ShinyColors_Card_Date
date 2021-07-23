@@ -1,7 +1,12 @@
 var nowSelect = 0;
 var jsonData;
+var viewLanguage;
 
-document.body.addEventListener("onload", init());
+$().ready(function () {
+  init();
+});
+
+// document.body.addEventListener("onload", init());
 
 async function init() {
   await getJSON("json/data.json").then(function (resp) {
@@ -10,6 +15,14 @@ async function init() {
 
   nowSelect = 0;
   document.getElementById("TargetDate").valueAsDate = new Date(getToday());
+
+  viewLanguage = getLanguage();
+  if (getQuery().lang !== undefined) {
+    viewLanguage = getQuery().lang;
+    $("#languageSetting").css("display", "inline");
+  }
+  setLanguage(viewLanguage);
+  $("#languageSelect").val(viewLanguage).prop("selected", true);
 
   var fesChk = $("#fesImgConvertBtn").is(":checked");
   getToggleString(fesChk);
@@ -39,6 +52,47 @@ function getJSON(jsonFile) {
   } catch (err) {
     console.error(err);
   }
+}
+
+/**
+ * 브라우저 언어 설정 Return
+ */
+function getLanguage() {
+  return (navigator.language || navigator.userLanguage).substr(0, 2);
+}
+
+function setLanguage(currLang) {
+  $("[data-lang]").each(function () {
+    $(this).html($.lang[currLang][$(this).data("lang")]);
+  });
+}
+
+function setLanguageById(currLang, id, str) {
+  $(id).html($.lang[currLang][str]);
+}
+
+function changeLanguage() {
+  viewLanguage = $("#languageSelect").val();
+  setLanguage(viewLanguage);
+  var fesChk = $("#fesImgConvertBtn").is(":checked");
+  getToggleString(fesChk);
+  updateDate(nowSelect);
+}
+
+/**
+ * URL의 쿼리를 Object형식으로 취득
+ * ~~/?a=a1&b=ab2 -> {a: a1, b: ab2}
+ */
+function getQuery() {
+  var url = document.location.href;
+  if (url.indexOf("?") == -1) return;
+
+  var qs = url.substring(url.indexOf("?") + 1).split("&");
+  for (var i = 0, result = {}; i < qs.length; i++) {
+    qs[i] = qs[i].split("=");
+    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
+  }
+  return result;
 }
 
 /**
@@ -81,11 +135,15 @@ function updateDate(nowSelect) {
  * 사복과 페스 일러 토글 텍스트 표시
  */
 function getToggleString(fesChk) {
+  var str;
   if (fesChk == true) {
-    $("#toggleStr").html("페스");
+    str = "fes";
+    // $("#toggleStr").html("페스");
   } else {
-    $("#toggleStr").html("사복");
+    str = "casual";
+    // $("#toggleStr").html("사복");
   }
+  setLanguageById(viewLanguage, "#toggleStr", str);
 }
 
 /**
@@ -109,10 +167,12 @@ function P_SSR() {
   var idolData = idolDataProcess("P_SSR");
   buildTable(idolData);
 
-  document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
+  // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 1;
 
   CtlfesImgConvertBtn("p");
+  setLanguage(viewLanguage);
 }
 
 /**
@@ -122,10 +182,12 @@ function P_SR() {
   var idolData = idolDataProcess("P_SR");
   buildTable(idolData);
 
-  document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
+  // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 3;
 
   CtlfesImgConvertBtn("p");
+  setLanguage(viewLanguage);
 }
 
 /**
@@ -135,11 +197,13 @@ function S_SSR() {
   var idolData = idolDataProcess("S_SSR");
   buildTable(idolData);
 
-  document.getElementById("NOTE_SPACE").innerText =
-    "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
+  // document.getElementById("NOTE_SPACE").innerText =
+  //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 2;
 
   CtlfesImgConvertBtn("s");
+  setLanguage(viewLanguage);
 }
 
 /**
@@ -149,11 +213,13 @@ function S_SR() {
   var idolData = idolDataProcess("S_SR");
   buildTable(idolData);
 
-  document.getElementById("NOTE_SPACE").innerText =
-    "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
+  // document.getElementById("NOTE_SPACE").innerText =
+  //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 4;
 
   CtlfesImgConvertBtn("s");
+  setLanguage(viewLanguage);
 }
 
 /**
@@ -163,12 +229,14 @@ function ALL_CARD() {
   var idolData = mergeAllCardData();
   buildTable(idolData);
 
-  document.getElementById(
-    "NOTE_SPACE"
-  ).innerText = `※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일`;
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
+  // document.getElementById(
+  //   "NOTE_SPACE"
+  // ).innerText = `※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일`;
   nowSelect = 5;
 
   CtlfesImgConvertBtn("p");
+  setLanguage(viewLanguage);
 }
 
 /**
@@ -203,9 +271,14 @@ function mergeAllCardData() {
       // 오래된 순으로 정렬
       .sort((a, b) => (a.card_date <= b.card_date ? -1 : 1));
 
+    // 이름 언어 : idol_(ko, ja, en)_name
+    var idolName = idol.idol_ko_name;
+    if (viewLanguage == "ja") {
+      idolName = idol.idol_ja_name;
+    }
+
     var obj = {
-      // 이름 언어 : idol_(ko, ja, en)_name
-      idol_name: idol.idol_ko_name,
+      idol_name: idolName,
       card_data: cardList,
     };
 
@@ -257,9 +330,14 @@ function idolDataProcess(cardGrade) {
       // undefined 데이터 제거
       .filter((v) => v !== undefined);
 
+    // 이름 언어 : idol_(ko, ja, en)_name
+    var idolName = idol.idol_ko_name;
+    if (viewLanguage == "ja") {
+      idolName = idol.idol_ja_name;
+    }
+
     var obj = {
-      // 이름 언어 : idol_(ko, ja, en)_name
-      idol_name: idol.idol_ko_name,
+      idol_name: idolName,
       card_data: cardList,
     };
 

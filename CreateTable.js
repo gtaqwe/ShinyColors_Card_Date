@@ -29,7 +29,7 @@ function runBuildTable(idolData) {
   for (var row = 0; row < rowLength; row++) {
     table += "<tr>";
 
-    table += calTerm(idolData.Data[row], columnLength);
+    table += calinterval(idolData.Data[row], columnLength);
 
     table += "</tr>";
   }
@@ -50,10 +50,13 @@ function tableHeader(title, len) {
   var resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
 
   for (var i = 0; i < len; i++) {
-    cellTitle = i;
-    if (i == 0) cellTitle = "첫 실장";
-    resContent += `<th>${cellTitle}</th>`;
-    resContent += `<th class="pre-term">간격</th>`;
+    if (i == 0) {
+      resContent += `<th data-lang="firstImplementation">첫 실장</th>`;
+    } else {
+      resContent += `<th>${i}</th>`;
+    }
+
+    resContent += `<th class="pre-interval" data-lang="interval">간격</th>`;
   }
 
   return resContent;
@@ -62,7 +65,7 @@ function tableHeader(title, len) {
 /**
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
-function calTerm(totalData, totalLen) {
+function calinterval(totalData, totalLen) {
   var resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   cardDataList = totalData.card_data;
@@ -71,8 +74,8 @@ function calTerm(totalData, totalLen) {
     var date1; // Before
     var date2; // After
     var currDay = 24 * 60 * 60 * 1000;
-    var term;
-    var termCode;
+    var interval;
+    var intervalCode;
 
     if (idx < cardLen) {
       var cardDate = cardDataList[idx].card_date;
@@ -103,24 +106,24 @@ function calTerm(totalData, totalLen) {
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
           date2 = calDate(getTargetDate());
-          term = (date2 - date1) / currDay;
-          termCode = `<td class="now-term">${term}</td>`;
+          interval = (date2 - date1) / currDay;
+          intervalCode = `<td class="now-interval">${interval}</td>`;
         } else {
           date2 = calDate(cardDataList[idx + 1].card_date);
-          term = (date2 - date1) / currDay;
-          termCode = `<td class="pre-term">${term}</td>`;
+          interval = (date2 - date1) / currDay;
+          intervalCode = `<td class="pre-interval">${interval}</td>`;
         }
       }
       // 카드 일정 데이터가 없는 경우, Skip
       else {
-        termCode = "<td></td>";
+        intervalCode = "<td></td>";
       }
     } else {
       resContent += "<td></td>";
-      termCode = "<td></td>";
+      intervalCode = "<td></td>";
     }
 
-    resContent = resContent + termCode;
+    resContent = resContent + intervalCode;
   }
 
   return resContent;
@@ -162,38 +165,38 @@ function calDate(dateStr) {
  */
 function runBuildDateRank() {
   var targetTable = document.getElementById("date-table");
-  var termAry = [];
+  var intervalAry = [];
 
   var names = targetTable.getElementsByClassName("td-name-cell");
-  var terms = targetTable.getElementsByClassName("now-term");
+  var intervals = targetTable.getElementsByClassName("now-interval");
 
   for (var i = 0; i < names.length; i++) {
     nameStr = names[i].innerHTML;
 
     // 카드가 단 하나도 실장되지 않았을 경우 처리 (R카드도 없는 경우)
-    if (terms[i] === undefined) {
-      termAry.push([nameStr, ""]);
+    if (intervals[i] === undefined) {
+      intervalAry.push([nameStr, ""]);
     } else {
-      termAry.push([nameStr, terms[i].innerHTML]);
+      intervalAry.push([nameStr, intervals[i].innerHTML]);
     }
   }
 
-  buildDataRank(termAry);
+  buildDataRank(intervalAry);
 }
 
 /**
  * 랭킹 정렬 후 실제 랭킹표 작성
  */
-function buildDataRank(termAry) {
+function buildDataRank(intervalAry) {
   // old... : 오래된 순으로 랭킹 계산
   // new... : 최신 순으로 랭킹 계산
 
-  var oldFirst = termAry.slice().sort((a, b) => b[1] - a[1]);
-  // var newFirst = termAry.slice().sort(function(a,b){return a-b});
-  var oldRanks = termAry.map(function (v) {
+  var oldFirst = intervalAry.slice().sort((a, b) => b[1] - a[1]);
+  // var newFirst = intervalAry.slice().sort(function(a,b){return a-b});
+  var oldRanks = intervalAry.map(function (v) {
     return oldFirst.indexOf(v) + 1;
   });
-  // var newRanks = termAry.map(function(v){ return newFirst.indexOf(v)+1 });
+  // var newRanks = intervalAry.map(function(v){ return newFirst.indexOf(v)+1 });
 
   var borderStyle = {
     left: "border-left: 2px solid #000000;",
@@ -205,33 +208,33 @@ function buildDataRank(termAry) {
 
   // 0 : 메인표 옆에 표시 (아이돌의 위치는 바뀌지 않음)
   // 1 : 메인표와 별개로 표시 (아이돌의 위치가 바뀜)
-  buildRankTable0(tableType, termAry, oldRanks, borderStyle);
-  buildRankTable1(tableType, termAry, oldRanks, borderStyle);
+  buildRankTable0(tableType, intervalAry, oldRanks, borderStyle);
+  buildRankTable1(tableType, intervalAry, oldRanks, borderStyle);
 }
 
 /**
  * 메인표 옆의 랭킹표 (아이돌 순으로 랭킹 표시)
  */
-function buildRankTable0(table, termAry, oldRanks, borderStyle) {
+function buildRankTable0(table, intervalAry, oldRanks, borderStyle) {
   var table = $("#date-table");
   var tableRows = table.find("tr");
 
   $(tableRows[0]).append(
     '<th style="' + borderStyle.left + borderStyle.top + borderStyle.bottom + '"></th>'
   );
-  $(tableRows[0]).append(`<th style="${borderStyle.left}">이름</th>`);
-  $(tableRows[0]).append(`<th style="${borderStyle.left}">순위</th>`);
-  $(tableRows[0]).append(`<th style="${borderStyle.left}">간격일</th>`);
+  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="name">이름</th>`);
+  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="rank">순위</th>`);
+  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`);
 
-  for (var i = 0; i < termAry.length; i++) {
+  for (var i = 0; i < intervalAry.length; i++) {
     var rankStr = oldRanks[i];
-    var nameStr = termAry[i][0];
-    var termStr = termAry[i][1];
+    var nameStr = intervalAry[i][0];
+    var intervalStr = intervalAry[i][1];
     var tableIndex = i + 1;
 
     var styleStr = borderStyle.left;
 
-    if (termAry[i] == "") rankStr = "미실장";
+    if (intervalAry[i] == "") rankStr = "미실장";
     // Red
     if (rankStr == "1") styleStr += "background-color: rgba(255, 0, 0, 0.4); ";
     // Orange
@@ -252,14 +255,14 @@ function buildRankTable0(table, termAry, oldRanks, borderStyle) {
     );
     $(tableRows[tableIndex]).append(`<td style="${styleStr}">${nameStr}</td>`);
     $(tableRows[tableIndex]).append(`<td style="${styleStr}">${rankStr}</td>`);
-    $(tableRows[tableIndex]).append(`<td style="${styleStr}">${termStr}</td>`);
+    $(tableRows[tableIndex]).append(`<td style="${styleStr}">${intervalStr}</td>`);
   }
 }
 
 /**
  * 메인 표 아래의 랭킹표 (현재 간격일 순으로 표시)
  */
-function buildRankTable1(tableType, termAry, oldRanks, borderStyle) {
+function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   var table = '<table id="rank-table-2">';
   table += "<thead>";
   table += "<tr>";
@@ -303,23 +306,23 @@ function buildRankTable1(tableType, termAry, oldRanks, borderStyle) {
   table += "</tr>";
 
   table += "<tr>";
-  table += `<th style="${borderStyle.left}">이름</th>`;
-  table += `<th style="${borderStyle.left}">순위</th>`;
-  table += `<th style="${borderStyle.left}">간격일</th>`;
+  table += `<th style="${borderStyle.left}" data-lang="name">이름</th>`;
+  table += `<th style="${borderStyle.left}" data-lang="rank">순위</th>`;
+  table += `<th style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
   table += "</tr>";
   table += "</thead>";
 
   table += "<tbody>";
 
-  for (var i = 0; i < termAry.length; i++) {
+  for (var i = 0; i < intervalAry.length; i++) {
     var rankIndex = oldRanks.indexOf(i + 1);
     var rankStr = oldRanks[rankIndex];
-    var nameStr = termAry[rankIndex][0];
-    var termStr = termAry[rankIndex][1];
+    var nameStr = intervalAry[rankIndex][0];
+    var intervalStr = intervalAry[rankIndex][1];
 
     var styleStr = borderStyle.left;
 
-    if (termAry[rankIndex] == "") rankStr = "미실장";
+    if (intervalAry[rankIndex] == "") rankStr = "미실장";
     // Red
     if (rankStr == "1") styleStr += "background-color: rgba(255, 0, 0, 0.4); ";
     // Orange
@@ -338,7 +341,7 @@ function buildRankTable1(tableType, termAry, oldRanks, borderStyle) {
     table += "<tr>";
     table += `<td style="${styleStr}">${nameStr}</td>`;
     table += `<td style="${styleStr}">${rankStr}</td>`;
-    table += `<td style="${styleStr}">${termStr}</td>`;
+    table += `<td style="${styleStr}">${intervalStr}</td>`;
     table += "</tr>";
   }
 

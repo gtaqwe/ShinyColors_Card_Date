@@ -7,6 +7,14 @@
   </head>
 
   <body>
+    <div id="languageSetting" style="display: none">
+      <select id="languageSelect" style="height: 30px" onchange="changeLanguage()">
+        <option value="ko">한국어</option>
+        <option value="ja">日本語</option>
+      </select>
+      <hr />
+    </div>
+
     <div>
       <input type="button" value="P-SSR" onclick="P_SSR()" class="Pbutton" />
       <input type="button" value="S-SSR" onclick="S_SSR()" class="Sbutton" />
@@ -35,8 +43,8 @@
     <div id="CAPTURE_FRAME" style="width: max-content">
       <div id="VIEW_SELECT" style="width: max-content; overflow: hidden">
         <span id="generalChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container"
-            >통상
+          <label class="container">
+            <span data-lang="permanent">통상</span>
             <input
               type="checkbox"
               id="permanentCardChkBox"
@@ -48,8 +56,8 @@
         </span>
 
         <span id="limitChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container"
-            >한정
+          <label class="container">
+            <span data-lang="limited">한정</span>
             <input
               type="checkbox"
               id="limitedCardChkBox"
@@ -61,8 +69,8 @@
         </span>
 
         <span id="eventChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container"
-            >이벤트
+          <label class="container">
+            <span data-lang="event">이벤트</span>
             <input
               type="checkbox"
               id="eventCardChkBox"
@@ -74,8 +82,8 @@
         </span>
 
         <span id="fesChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container"
-            >페스
+          <label class="container">
+            <span data-lang="fes">페스</span>
             <input
               type="checkbox"
               id="gradeFesCardChkBox"
@@ -87,8 +95,8 @@
         </span>
 
         <span id="campaignChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container"
-            >캠페인
+          <label class="container">
+            <span data-lang="campaign">캠페인</span>
             <input
               type="checkbox"
               id="campaignCardChkBox"
@@ -114,25 +122,25 @@
       </div>
 
       <div style="overflow: hidden">
-        <label>기준일:</label>
+        <label data-lang="baseDate">기준일:</label>
         <input type="date" id="TargetDate" name="TargetDate" onchange="updateDate(nowSelect)" />
         <label id="TargetDateStr" style="display: none"></label>
       </div>
 
       <div>
         <table>
-          <th style="width: 100px">통상</th>
-          <th class="limit-card-cell" style="width: 100px">한정</th>
-          <th class="event-card-cell" style="width: 100px">이벤트</th>
-          <th class="gradeFes-card-cell" style="width: 100px">페스</th>
-          <th class="campaign-card-cell" style="width: 100px">캠페인</th>
+          <th style="width: 100px" data-lang="permanent">통상</th>
+          <th class="limit-card-cell" style="width: 100px" data-lang="limited">한정</th>
+          <th class="event-card-cell" style="width: 100px" data-lang="event">이벤트</th>
+          <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes">페스</th>
+          <th class="campaign-card-cell" style="width: 100px" data-lang="campaign">캠페인</th>
         </table>
       </div>
 
       <div id="MAIN"></div>
       <!-- <div id="MAIN_RANK" style="float:left; margin: 5px 10px 5px 0px;"></div> -->
 
-      <div id="NOTE_SPACE"></div>
+      <div><span id="NOTE_SPACE"></span></div>
     </div>
 
     <div id="MAIN2" style="width: max-content">
@@ -142,6 +150,7 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="CreateTable.js"></script>
+    <script src="lang.js"></script>
     <script src="IndexScripts.js"></script>
   </body>
 </html>
