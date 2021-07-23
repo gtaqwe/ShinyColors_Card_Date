@@ -17,9 +17,11 @@ async function init() {
   document.getElementById("TargetDate").valueAsDate = new Date(getToday());
 
   viewLanguage = getLanguage();
-  if (getQuery().lang !== undefined) {
-    viewLanguage = getQuery().lang;
-    $("#languageSetting").css("display", "inline");
+  if (getQuery() !== undefined && getQuery().lang !== undefined && getQuery().lang !== "") {
+    if (getQuery().lang in $.lang) {
+      viewLanguage = getQuery().lang;
+      $("#languageSetting").css("display", "inline");
+    }
   }
   setLanguage(viewLanguage);
   $("#languageSelect").val(viewLanguage).prop("selected", true);
