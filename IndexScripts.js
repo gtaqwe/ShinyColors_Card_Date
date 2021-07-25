@@ -133,6 +133,11 @@ function updateDate(nowSelect) {
   }
 }
 
+function setFesImg(fesChk) {
+  getToggleString(fesChk);
+  updateDate(nowSelect);
+}
+
 /**
  * 사복과 페스 일러 토글 텍스트 표시
  */
@@ -167,13 +172,13 @@ function CtlfesImgConvertBtn(ps) {
  */
 function P_SSR() {
   var idolData = idolDataProcess("P_SSR");
+  CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
   // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 1;
 
-  CtlfesImgConvertBtn("p");
   setLanguage(viewLanguage);
 }
 
@@ -182,13 +187,13 @@ function P_SSR() {
  */
 function P_SR() {
   var idolData = idolDataProcess("P_SR");
+  CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
   // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 3;
 
-  CtlfesImgConvertBtn("p");
   setLanguage(viewLanguage);
 }
 
@@ -197,6 +202,7 @@ function P_SR() {
  */
 function S_SSR() {
   var idolData = idolDataProcess("S_SSR");
+  CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
@@ -204,7 +210,6 @@ function S_SSR() {
   //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 2;
 
-  CtlfesImgConvertBtn("s");
   setLanguage(viewLanguage);
 }
 
@@ -213,6 +218,7 @@ function S_SSR() {
  */
 function S_SR() {
   var idolData = idolDataProcess("S_SR");
+  CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
@@ -220,7 +226,6 @@ function S_SR() {
   //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 4;
 
-  CtlfesImgConvertBtn("s");
   setLanguage(viewLanguage);
 }
 
@@ -229,6 +234,7 @@ function S_SR() {
  */
 function ALL_CARD() {
   var idolData = mergeAllCardData();
+  CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
@@ -237,7 +243,6 @@ function ALL_CARD() {
   // ).innerText = `※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일`;
   nowSelect = 5;
 
-  CtlfesImgConvertBtn("p");
   setLanguage(viewLanguage);
 }
 
@@ -387,25 +392,21 @@ function imgMapping() {
       var imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
       var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
       var fesChk = $("#fesImgConvertBtn").is(":checked"); // 일러스트 표시 모드
+      var imgPath = "card";
 
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
       if (imgNameAttr != "" && imgNameAttr != undefined) {
         // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
         // 페스 일러 체크, P 카드인 경우에 파일명 추가
         if (fesChk == true && imgAddrAttr.split("_")[1] == "p") {
-          imgAddrAttr += "_f";
+          imgPath += "_fes";
         }
 
         $("body").append(
-          "<p id='preview'><img src='img/" +
-            imgAddrAttr +
-            ".png' width='" +
-            imgWidth +
-            "' height='" +
-            imgHeight +
-            "'><br>" +
-            imgNameAttr +
-            "</p>"
+          `<p id="preview"><img src="${getImgSrc(
+            imgPath,
+            imgAddrAttr
+          )}" width="${imgWidth}" height="${imgHeight}"><br>${imgNameAttr}</p>`
         );
         $("#preview")
           .css("top", e.pageY - xOffset + "px")
@@ -448,6 +449,11 @@ function imgMapping() {
     }
   });
 }
+
+function getImgSrc(path, addr) {
+  return `./img/${path}/${addr}.png`;
+}
+
 //////////////////////////////////////////////////
 
 /**

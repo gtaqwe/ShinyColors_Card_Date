@@ -96,7 +96,18 @@ function setCardData(totalData, totalLen) {
         resContent += "<td ";
       }
 
-      resContent += `addr="${cardAddr}" name="${cardName}">${cardDate}</td>`;
+      resContent += `addr="${cardAddr}" name="${cardName}">`;
+
+      // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
+      if ($(iconImgConvertBtn).is(":checked") && cardAddr != "" && cardAddr != undefined) {
+        var imgPath = "icon";
+        if ($(fesImgConvertBtn).is(":checked") && cardAddr.split("_")[1] == "p") imgPath += "_fes";
+        resContent += `<img src="${getImgSrc(
+          imgPath,
+          cardAddr
+        )}" onerror = "this.src='./img/assets/Blank_Idol.png'" style= "width:96px; height:96px"><br>`;
+      }
+      resContent += `${cardDate}</td>`;
 
       // 카드 일정 데이터가 있는 경우, 간격일을 계산
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
