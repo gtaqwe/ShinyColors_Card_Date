@@ -71,8 +71,8 @@ function setCardData(totalData, totalLen) {
   cardDataList = totalData.card_data;
   cardLen = totalData.card_data.length;
   for (var idx = 0; idx < totalLen; idx++) {
-    var date1; // Before
-    var date2; // After
+    var dateBefore; // Before
+    var dateAfter; // After
     var currDay = 24 * 60 * 60 * 1000;
     var interval;
     var intervalCode;
@@ -113,15 +113,15 @@ function setCardData(totalData, totalLen) {
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
       // 최신 실장인 경우, 기준일과의 간격일 계산
       if (cardDate != "") {
-        date1 = calDate(cardDate);
+        dateBefore = calDate(cardDate);
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
-          date2 = calDate(getTargetDate());
-          interval = (date2 - date1) / currDay;
+          dateAfter = calDate(getTargetDate());
+          interval = (dateAfter - dateBefore) / currDay;
           intervalCode = `<td class="now-interval">${interval}</td>`;
         } else {
-          date2 = calDate(cardDataList[idx + 1].card_date);
-          interval = (date2 - date1) / currDay;
+          dateAfter = calDate(cardDataList[idx + 1].card_date);
+          interval = (dateAfter - dateBefore) / currDay;
           intervalCode = `<td class="pre-interval">${interval}</td>`;
         }
       }

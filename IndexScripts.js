@@ -133,6 +133,10 @@ function updateDate(nowSelect) {
   }
 }
 
+/**
+ * 페스 이미지 세팅
+ * (표, 프리뷰)
+ */
 function setFesImg(fesChk) {
   getToggleString(fesChk);
   updateDate(nowSelect);
@@ -145,10 +149,8 @@ function getToggleString(fesChk) {
   var str;
   if (fesChk == true) {
     str = "fes";
-    // $("#toggleStr").html("페스");
   } else {
     str = "casual";
-    // $("#toggleStr").html("사복");
   }
   setLanguageById(viewLanguage, "#toggleStr", str);
 }
@@ -176,7 +178,6 @@ function P_SSR() {
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 1;
 
   setLanguage(viewLanguage);
@@ -190,8 +191,6 @@ function P_SR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  // document.getElementById("NOTE_SPACE").innerText = "※ P카드의 첫 실장일은 「白いツバサ」 실장일";
   nowSelect = 3;
 
   setLanguage(viewLanguage);
@@ -206,8 +205,6 @@ function S_SSR() {
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
-  // document.getElementById("NOTE_SPACE").innerText =
-  //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 2;
 
   setLanguage(viewLanguage);
@@ -222,8 +219,6 @@ function S_SR() {
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
-  // document.getElementById("NOTE_SPACE").innerText =
-  //   "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일";
   nowSelect = 4;
 
   setLanguage(viewLanguage);
@@ -238,9 +233,6 @@ function ALL_CARD() {
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
-  // document.getElementById(
-  //   "NOTE_SPACE"
-  // ).innerText = `※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일`;
   nowSelect = 5;
 
   setLanguage(viewLanguage);
