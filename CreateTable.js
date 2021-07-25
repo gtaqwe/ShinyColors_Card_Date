@@ -29,7 +29,7 @@ function runBuildTable(idolData) {
   for (var row = 0; row < rowLength; row++) {
     table += "<tr>";
 
-    table += calinterval(idolData.Data[row], columnLength);
+    table += setCardData(idolData.Data[row], columnLength);
 
     table += "</tr>";
   }
@@ -65,7 +65,7 @@ function tableHeader(title, len) {
 /**
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
-function calinterval(totalData, totalLen) {
+function setCardData(totalData, totalLen) {
   var resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   cardDataList = totalData.card_data;
