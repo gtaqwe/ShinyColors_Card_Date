@@ -4,7 +4,9 @@ div {
 
 table {
   text-align: center;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
+  border-collapse: separate;
+  border-spacing: 0;
   border: 2px solid #000000;
 }
 
@@ -33,6 +35,25 @@ footer {
   border-right: 2px solid #000000;
 }
 
+.th-name-cell,
+.th-header-title-cell,
+.th-header-interval-cell {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.th-name-cell,
+.th-header-title-cell {
+  background-color: #fff;
+}
+
+.td-name-cell {
+  background-color: #fff;
+  position: sticky;
+  left: 0px;
+}
+
 .limit-card-cell {
   background-color: #92d050;
 }
@@ -55,6 +76,7 @@ footer {
   background-color: #ff0000;
 }
 
+.th-header-interval-cell,
 .pre-interval {
   background-color: #ffff00;
 }

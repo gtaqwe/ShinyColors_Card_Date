@@ -51,12 +51,12 @@ function tableHeader(title, len) {
 
   for (var i = 0; i < len; i++) {
     if (i == 0) {
-      resContent += `<th data-lang="firstImplementation">첫 실장</th>`;
+      resContent += `<th class="th-header-title-cell" data-lang="firstImplementation">첫 실장</th>`;
     } else {
-      resContent += `<th>${i}</th>`;
+      resContent += `<th class="th-header-title-cell">${i}</th>`;
     }
 
-    resContent += `<th class="pre-interval" data-lang="interval">간격</th>`;
+    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
   }
 
   return resContent;
@@ -230,9 +230,7 @@ function buildRankTable0(table, intervalAry, oldRanks, borderStyle) {
   var table = $("#date-table");
   var tableRows = table.find("tr");
 
-  $(tableRows[0]).append(
-    '<th style="' + borderStyle.left + borderStyle.top + borderStyle.bottom + '"></th>'
-  );
+  $(tableRows[0]).append(`<th style="${borderStyle.left}${borderStyle.bottom}"></th>`);
   $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="name">이름</th>`);
   $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="rank">순위</th>`);
   $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`);
@@ -262,7 +260,7 @@ function buildRankTable0(table, intervalAry, oldRanks, borderStyle) {
     else if (rankStr == "7") styleStr += "background-color: rgba(238, 130, 238, 0.4); ";
 
     $(tableRows[tableIndex]).append(
-      '<td style="' + borderStyle.left + borderStyle.bottom + '"></td>'
+      `<td style="${borderStyle.left}${borderStyle.top}${borderStyle.bottom}"></td>`
     );
     $(tableRows[tableIndex]).append(`<td style="${styleStr}">${nameStr}</td>`);
     $(tableRows[tableIndex]).append(`<td style="${styleStr}">${rankStr}</td>`);
