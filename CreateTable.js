@@ -105,7 +105,7 @@ function setCardData(totalData, totalLen) {
         resContent += `<img src="${getImgSrc(
           imgPath,
           cardAddr
-        )}" onerror = "this.src='./img/assets/Blank_Idol.png'" style= "width:96px; height:96px"><br>`;
+        )}" onerror = "this.src='./img/assets/Blank_Idol.png'" style= "width:72px; height:72px"><br>`;
       }
       resContent += `${cardDate}</td>`;
 
