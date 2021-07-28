@@ -268,7 +268,17 @@ function mergeAllCardData() {
       // undefined 데이터 제거
       .filter((v) => v !== undefined)
       // 오래된 순으로 정렬
-      .sort((a, b) => (a.card_date <= b.card_date ? -1 : 1));
+      // 단순 비교해서 소트시 브라우저 차이로
+      // 표시가 다를 수 있기에 「<」, 「>」, 「=」를 모두 확인
+      .sort((a, b) => {
+        if (a.card_date < b.card_date) {
+          return -1;
+        } else if (a.card_date > b.card_date) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
