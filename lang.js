@@ -1,6 +1,6 @@
-const langData = {};
+$.lang = {};
 
-langData.ko = {
+$.lang.ko = {
   permanent: "통상",
   limited: "한정",
   event: "이벤트",
@@ -19,7 +19,7 @@ langData.ko = {
   showIcon: "아이콘 표시",
 };
 
-langData.ja = {
+$.lang.ja = {
   permanent: "恒常",
   limited: "限定",
   event: "イベント",

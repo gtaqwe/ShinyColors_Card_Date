@@ -1,6 +1,7 @@
 var nowSelect = 0;
 var jsonData;
 var viewLanguage;
+const defalutLanguage = "ko";
 
 $().ready(function () {
   init();
@@ -17,8 +18,13 @@ async function init() {
   document.getElementById("TargetDate").valueAsDate = new Date(getToday());
 
   viewLanguage = getLanguage();
+
+  // 지원하는 언어가 아닌 경우 한국어로 표시
+  if (!(viewLanguage in $.lang)) viewLanguage = defalutLanguage;
+
+  // 수동으로 언어 설정시 선택한 언어로 표시
   if (getQuery() !== undefined && getQuery().lang !== undefined && getQuery().lang !== "") {
-    if (getQuery().lang in langData) {
+    if (getQuery().lang in $.lang) {
       viewLanguage = getQuery().lang;
       $("#languageSetting").css("display", "inline");
     }
@@ -65,12 +71,12 @@ function getLanguage() {
 
 function setLanguage(currLang) {
   $("[data-lang]").each(function () {
-    $(this).html(langData[currLang][$(this).data("lang")]);
+    $(this).html($.lang[currLang][$(this).data("lang")]);
   });
 }
 
 function setLanguageById(currLang, id, str) {
-  $(id).html(langData[currLang][str]);
+  $(id).html($.lang[currLang][str]);
 }
 
 function changeLanguage() {
