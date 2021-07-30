@@ -18,7 +18,7 @@ async function init() {
 
   viewLanguage = getLanguage();
   if (getQuery() !== undefined && getQuery().lang !== undefined && getQuery().lang !== "") {
-    if (getQuery().lang in $.lang) {
+    if (getQuery().lang in langData) {
       viewLanguage = getQuery().lang;
       $("#languageSetting").css("display", "inline");
     }
@@ -65,12 +65,12 @@ function getLanguage() {
 
 function setLanguage(currLang) {
   $("[data-lang]").each(function () {
-    $(this).html($.lang[currLang][$(this).data("lang")]);
+    $(this).html(langData[currLang][$(this).data("lang")]);
   });
 }
 
 function setLanguageById(currLang, id, str) {
-  $(id).html($.lang[currLang][str]);
+  $(id).html(langData[currLang][str]);
 }
 
 function changeLanguage() {
