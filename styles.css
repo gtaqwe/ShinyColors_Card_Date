@@ -21,12 +21,16 @@ td {
 th {
   border-right: 1px solid #d4d4d4;
   border-left: 1px solid #d4d4d4;
-  border-bottom: 2px solid #000000;
 }
 
 footer {
   text-align: center;
   font-size: 10px;
+}
+
+.th-head,
+.th-rank {
+  border-bottom: 2px solid #000000;
 }
 
 .th-name-cell,
@@ -38,6 +42,7 @@ footer {
 .th-name-cell,
 .th-header-title-cell,
 .th-header-interval-cell {
+  border-bottom: 2px solid #000000;
   position: sticky;
   top: 0px;
   z-index: 1;

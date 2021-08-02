@@ -37,7 +37,7 @@ function runBuildTable(idolData) {
   table += "</tbody>";
   table += "</table>";
 
-  document.getElementById("MAIN").innerHTML = table;
+  $("#MAIN").html(table);
 
   imgMapping(this);
 }
@@ -144,7 +144,7 @@ function setCardData(totalData, totalLen) {
  * 설정한 기준일을 Return
  */
 function getTargetDate() {
-  var targetDate = document.getElementById("TargetDate").valueAsDate;
+  var targetDate = new Date($("#TargetDate").val());
   var nowYear = targetDate.getFullYear();
   var nowMonth = targetDate.getMonth() + 1;
   var nowDate = targetDate.getDate();
@@ -210,12 +210,11 @@ function buildDataRank(intervalAry) {
   // var newRanks = intervalAry.map(function(v){ return newFirst.indexOf(v)+1 });
 
   var borderStyle = {
-    left: "border-left: 2px solid #000000;",
-    top: "border-top: hidden;",
-    bottom: "border-bottom: hidden;",
+    left: "border-left: 1px solid #000000;",
+    right: "border-right: 1px solid #000000;",
   };
 
-  var tableType = document.getElementById("table-type").innerHTML;
+  var tableType = $("#table-type").text();
 
   // 0 : 메인표 옆에 표시 (아이돌의 위치는 바뀌지 않음)
   // 1 : 메인표와 별개로 표시 (아이돌의 위치가 바뀜)
@@ -224,58 +223,69 @@ function buildDataRank(intervalAry) {
 }
 
 /**
+ * 랭킹에 따른 셀의 색 결정
+ */
+function selectCellColor(rankStr) {
+  // Red
+  if (rankStr == "1") return "background-color: rgba(255, 0, 0, 0.4); ";
+  // Orange
+  else if (rankStr == "2") return "background-color: rgba(255, 165, 0, 0.4); ";
+  // Yellow
+  else if (rankStr == "3") return "background-color: rgba(255, 255, 0, 0.4); ";
+  // Green
+  else if (rankStr == "4") return "background-color: rgba(0, 128, 0, 0.4); ";
+  // Blue
+  else if (rankStr == "5") return "background-color: rgba(0, 0, 255, 0.4); ";
+  // Indigo
+  else if (rankStr == "6") return "background-color: rgba(75, 0, 130, 0.4); ";
+  // Violet
+  else if (rankStr == "7") return "background-color: rgba(238, 130, 238, 0.4); ";
+}
+
+/**
  * 메인표 옆의 랭킹표 (아이돌 순으로 랭킹 표시)
  */
-function buildRankTable0(table, intervalAry, oldRanks, borderStyle) {
-  var table = $("#date-table");
-  var tableRows = table.find("tr");
+function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
+  var table = '<table id="rank-table-0">';
+  table += "<thead>";
 
-  $(tableRows[0]).append(`<th style="${borderStyle.left}${borderStyle.bottom}"></th>`);
-  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="name">이름</th>`);
-  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="rank">순위</th>`);
-  $(tableRows[0]).append(`<th style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`);
+  table += "<tr>";
+  table += `<th class="th-rank" style="${borderStyle.right}" data-lang="name">이름</th>`;
+  table += `<th class="th-rank" style="${borderStyle.right}${borderStyle.left}" data-lang="rank">순위</th>`;
+  table += `<th class="th-rank" style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
+  table += "</tr>";
+  table += "</thead>";
+
+  table += "<tbody>";
 
   for (var i = 0; i < intervalAry.length; i++) {
     var rankStr = oldRanks[i];
     var nameStr = intervalAry[i][0];
     var intervalStr = intervalAry[i][1];
-    var tableIndex = i + 1;
-
-    var styleStr = borderStyle.left;
 
     if (intervalAry[i] == "") rankStr = "미실장";
-    // Red
-    if (rankStr == "1") styleStr += "background-color: rgba(255, 0, 0, 0.4); ";
-    // Orange
-    else if (rankStr == "2") styleStr += "background-color: rgba(255, 165, 0, 0.4); ";
-    // Yellow
-    else if (rankStr == "3") styleStr += "background-color: rgba(255, 255, 0, 0.4); ";
-    // Green
-    else if (rankStr == "4") styleStr += "background-color: rgba(0, 128, 0, 0.4); ";
-    // Blue
-    else if (rankStr == "5") styleStr += "background-color: rgba(0, 0, 255, 0.4); ";
-    // Indigo
-    else if (rankStr == "6") styleStr += "background-color: rgba(75, 0, 130, 0.4); ";
-    // Violet
-    else if (rankStr == "7") styleStr += "background-color: rgba(238, 130, 238, 0.4); ";
+    var cellColor = selectCellColor(rankStr);
 
-    $(tableRows[tableIndex]).append(
-      `<td style="${borderStyle.left}${borderStyle.top}${borderStyle.bottom}"></td>`
-    );
-    $(tableRows[tableIndex]).append(`<td style="${styleStr}">${nameStr}</td>`);
-    $(tableRows[tableIndex]).append(`<td style="${styleStr}">${rankStr}</td>`);
-    $(tableRows[tableIndex]).append(`<td style="${styleStr}">${intervalStr}</td>`);
+    table += "<tr>";
+    table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;
+    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}">${rankStr}</td>`;
+    table += `<td style="${borderStyle.left}${cellColor}">${intervalStr}</td>`;
+    table += "</tr>";
   }
+
+  table += "</tbody>";
+  table += "</table>";
+  $("#MAIN_RANK").html(table);
 }
 
 /**
  * 메인 표 아래의 랭킹표 (현재 간격일 순으로 표시)
  */
 function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
-  var table = '<table id="rank-table-2">';
+  var table = '<table id="rank-table-1">';
   table += "<thead>";
   table += "<tr>";
-  table += `<th colspan="3">${tableType}</th>`;
+  table += `<th class="th-rank" colspan="3">${tableType}</th>`;
   table += "</tr>";
 
   // 선택한 카드타입 표시
@@ -307,17 +317,17 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   }
 
   table += "<tr>";
-  table += `<th colspan="3">${gachaTypeStr}</th>`;
+  table += `<th class="th-rank" colspan="3">${gachaTypeStr}</th>`;
   table += "</tr>";
 
   table += "<tr>";
-  table += `<th colspan="3">${getTargetDate()}</th>`;
+  table += `<th class="th-rank" colspan="3">${getTargetDate()}</th>`;
   table += "</tr>";
 
   table += "<tr>";
-  table += `<th style="${borderStyle.left}" data-lang="name">이름</th>`;
-  table += `<th style="${borderStyle.left}" data-lang="rank">순위</th>`;
-  table += `<th style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
+  table += `<th class="th-rank" style="${borderStyle.right}" data-lang="name">이름</th>`;
+  table += `<th class="th-rank" style="${borderStyle.right}${borderStyle.left}" data-lang="rank">순위</th>`;
+  table += `<th class="th-rank" style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
   table += "</tr>";
   table += "</thead>";
 
@@ -329,32 +339,17 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
     var nameStr = intervalAry[rankIndex][0];
     var intervalStr = intervalAry[rankIndex][1];
 
-    var styleStr = borderStyle.left;
-
     if (intervalAry[rankIndex] == "") rankStr = "미실장";
-    // Red
-    if (rankStr == "1") styleStr += "background-color: rgba(255, 0, 0, 0.4); ";
-    // Orange
-    else if (rankStr == "2") styleStr += "background-color: rgba(255, 165, 0, 0.4); ";
-    // Yellow
-    else if (rankStr == "3") styleStr += "background-color: rgba(255, 255, 0, 0.4); ";
-    // Green
-    else if (rankStr == "4") styleStr += "background-color: rgba(0, 128, 0, 0.4); ";
-    // Blue
-    else if (rankStr == "5") styleStr += "background-color: rgba(0, 0, 255, 0.4); ";
-    // Indigo
-    else if (rankStr == "6") styleStr += "background-color: rgba(75, 0, 130, 0.4); ";
-    // Violet
-    else if (rankStr == "7") styleStr += "background-color: rgba(238, 130, 238, 0.4); ";
+    var cellColor = selectCellColor(rankStr);
 
     table += "<tr>";
-    table += `<td style="${styleStr}">${nameStr}</td>`;
-    table += `<td style="${styleStr}">${rankStr}</td>`;
-    table += `<td style="${styleStr}">${intervalStr}</td>`;
+    table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;
+    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}">${rankStr}</td>`;
+    table += `<td style="${borderStyle.left}${cellColor}">${intervalStr}</td>`;
     table += "</tr>";
   }
 
   table += "</tbody>";
   table += "</table>";
-  document.getElementById("RANK").innerHTML = table;
+  $("#RANK").html(table);
 }
