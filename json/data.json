@@ -1017,6 +1017,12 @@
 				"card_type": "통상",
 				"card_date": "2020-11-10",
 				"card_addr": "yuika_p_ssr5"
+			},
+			{
+				"card_name": "【♡コメディ】三峰 結華",
+				"card_type": "통상",
+				"card_date": "2021-08-10",
+				"card_addr": "yuika_p_ssr6"
 			}
 		],
 		"P_SR": [
@@ -3179,6 +3185,12 @@
 				"card_type": "한정",
 				"card_date": "2020-06-30",
 				"card_addr": "hinana_s_ssr1"
+			},
+			{
+				"card_name": "【Re:BIRTH】市川 雛菜",
+				"card_type": "통상",
+				"card_date": "2021-08-10",
+				"card_addr": "hinana_s_ssr2"
 			}
 		],
 		"S_SR": [
@@ -3297,6 +3309,12 @@
 				"card_type": "첫실장",
 				"card_date": "2021-04-30",
 				"card_addr": ""
+			},
+			{
+				"card_name": "【FEEL】緋田 美琴",
+				"card_type": "이벤트",
+				"card_date": "2021-08-10",
+				"card_addr": "mikoto_s_sr1"
 			}
 		]
 	}
