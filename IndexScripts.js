@@ -488,11 +488,11 @@ function captureScreen(frameName) {
     else if (nowSelect == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
     else if (nowSelect == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
 
-    document.getElementById("convertSpan").style.display = "none";
-
-    document.getElementById("TargetDateStr").innerHTML = getTargetDate();
-    document.getElementById("TargetDate").style.display = "none";
-    document.getElementById("TargetDateStr").style.display = "";
+    $(frameId).css("overflow", "hidden");
+    $("#convertSpan").css("display", "none");
+    $("#TargetDateStr").text(getTargetDate());
+    $("#TargetDate").css("display", "none");
+    $("#TargetDateStr").css("display", "");
 
     html2canvas(document.querySelector(frameId), {
       scrollY: -window.scrollY,
@@ -501,10 +501,10 @@ function captureScreen(frameName) {
       downloadURI(canvas.toDataURL("image/png"), captureName);
     });
 
-    document.getElementById("convertSpan").style.display = "";
-
-    document.getElementById("TargetDate").style.display = "";
-    document.getElementById("TargetDateStr").style.display = "none";
+    $(frameId).css("overflow", "");
+    $("#convertSpan").css("display", "");
+    $("#TargetDate").css("display", "");
+    $("#TargetDateStr").css("display", "none");
   }
 }
 
