@@ -197,6 +197,7 @@ function P_SR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
   nowSelect = 3;
 
   setLanguage(viewLanguage);
