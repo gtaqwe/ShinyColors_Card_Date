@@ -797,6 +797,12 @@
 				"card_type": "한정",
 				"card_date": "2020-04-20",
 				"card_addr": "mamimi_s_ssr6"
+			},
+			{
+				"card_name": "【ソバニアル・サマー】田中 摩美々",
+				"card_type": "통상",
+				"card_date": "2021-08-20",
+				"card_addr": "mamimi_s_ssr7"
 			}
 		],
 		"S_SR": [
@@ -2237,6 +2243,12 @@
 				"card_type": "통상",
 				"card_date": "2021-02-10",
 				"card_addr": "tenka_p_ssr5"
+			},
+			{
+				"card_name": "【バス・タイムの気分で】大崎 甜花",
+				"card_type": "통상",
+				"card_date": "2021-08-20",
+				"card_addr": "tenka_p_ssr6"
 			}
 		],
 		"P_SR": [
@@ -3238,6 +3250,12 @@
 				"card_type": "첫실장",
 				"card_date": "2021-04-05",
 				"card_addr": ""
+			},
+			{
+				"card_name": "【一億回めくらいの、その夏】七草 にちか",
+				"card_type": "이벤트",
+				"card_date": "2021-08-20",
+				"card_addr": "nichika_p_sr1"
 			}
 		],
 		"S_SSR": [
