@@ -38,7 +38,7 @@ function runBuildTable(idolData) {
   table += "</table>";
 
   $("#MAIN").html(table);
-  $("#MAIN").append(`<div><span id="NOTE_SPACE"></span></div>`);
+  $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
 
   imgMapping(this);
 }
