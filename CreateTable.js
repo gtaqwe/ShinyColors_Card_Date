@@ -267,7 +267,9 @@ function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
     if (intervalAry[i] == "") rankStr = "미실장";
     var cellColor = selectCellColor(rankStr);
 
-    table += "<tr>";
+    table += `<tr style="height:${$("#date-table tr")
+      .eq(i + 1)
+      .height()}px">`;
     table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;
     table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}">${rankStr}</td>`;
     table += `<td style="${borderStyle.left}${cellColor}">${intervalStr}</td>`;
