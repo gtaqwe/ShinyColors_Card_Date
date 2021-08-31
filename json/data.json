@@ -2609,6 +2609,12 @@
 				"card_type": "이벤트",
 				"card_date": "2020-09-30",
 				"card_addr": "asahi_s_ssr4"
+			},
+			{
+				"card_name": "【秋の実りの配達係】芹沢 あさひ",
+				"card_type": "한정",
+				"card_date": "2021-08-31",
+				"card_addr": "asahi_s_ssr5"
 			}
 		],
 		"S_SR": [
@@ -2999,6 +3005,12 @@
 				"card_type": "한정",
 				"card_date": "2020-10-21",
 				"card_addr": "madoka_p_ssr2"
+			},
+			{
+				"card_name": "【ピトス・エルピス】樋口 円香",
+				"card_type": "한정",
+				"card_date": "2021-08-31",
+				"card_addr": "madoka_p_ssr3"
 			}
 		],
 		"P_SR": [
@@ -3118,6 +3130,12 @@
 				"card_type": "통상",
 				"card_date": "2021-04-12",
 				"card_addr": "koito_s_ssr2"
+			},
+			{
+				"card_name": "【傍白のあいだ】福丸 小糸",
+				"card_type": "이벤트",
+				"card_date": "2021-08-31",
+				"card_addr": "koito_s_ssr3"
 			}
 		],
 		"S_SR": [
