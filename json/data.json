@@ -872,6 +872,12 @@
 				"card_type": "통상",
 				"card_date": "2020-10-12",
 				"card_addr": "sakuya_p_ssr5"
+			},
+			{
+				"card_name": "【渦と淵】白瀬 咲耶",
+				"card_type": "통상",
+				"card_date": "2021-09-10",
+				"card_addr": "sakuya_p_ssr6"
 			}
 		],
 		"P_SR": [
@@ -2438,6 +2444,12 @@
 				"card_type": "이벤트",
 				"card_date": "2019-10-21",
 				"card_addr": "chiyuki_p_sr4"
+			},
+			{
+				"card_name": "【夏、イエー】桑山 千雪",
+				"card_type": "이벤트",
+				"card_date": "2021-09-10",
+				"card_addr": "chiyuki_p_sr5"
 			}
 		],
 		"S_SSR": [
@@ -3282,6 +3294,12 @@
 				"card_type": "첫실장",
 				"card_date": "2021-04-30",
 				"card_addr": ""
+			},
+			{
+				"card_name": "【間違いそうだ】七草 にちか",
+				"card_type": "통상",
+				"card_date": "2021-09-10",
+				"card_addr": "nichika_s_ssr1"
 			}
 		],
 		"S_SR": [
