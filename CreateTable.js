@@ -51,13 +51,14 @@ function tableHeader(title, len) {
   var resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
 
   for (var i = 0; i < len; i++) {
-    if (i == 0) {
+    if (i == 0 && $(noShowRCardConvertBtn).is(":checked")) {
+    } else if (i == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
       resContent += `<th class="th-header-title-cell" data-lang="firstImplementation">첫 실장</th>`;
+      resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
     } else {
       resContent += `<th class="th-header-title-cell">${i}</th>`;
+      resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
     }
-
-    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
   }
 
   return resContent;
@@ -83,6 +84,8 @@ function setCardData(totalData, totalLen) {
       var cardType = cardDataList[idx].card_type;
       var cardName = cardDataList[idx].card_name;
       var cardAddr = cardDataList[idx].card_addr;
+
+      if (cardType == "첫실장" && $(noShowRCardConvertBtn).is(":checked")) continue;
 
       // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "한정") {

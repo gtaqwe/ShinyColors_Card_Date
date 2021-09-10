@@ -36,8 +36,9 @@ async function init() {
   setLanguage(viewLanguage);
   $("#languageSelect").val(viewLanguage).prop("selected", true);
 
-  var fesChk = $("#fesImgConvertBtn").is(":checked");
-  getToggleString(fesChk);
+  getToggleString($("#fesImgConvertBtn").is(":checked"));
+
+  $(noShowRCardConvertBtn).prop("checked", $(noShowRCardConvertBtn).is(":checked"));
 }
 
 /**
@@ -149,11 +150,20 @@ function updateDate(nowSelect) {
  * 시작일이 종료일보다 클 경우 시작일을 종료일로 변경
  */
 function compareBaseDate() {
-  var baseStartDate = $("#BaseStartDate").val();
-  var baseEndDate = $("#BaseEndDate").val();
+  var serviceStartDate = new Date("2018-04-24");
+  var baseStartDate = new Date($("#BaseStartDate").val());
+  var baseEndDate = new Date($("#BaseEndDate").val());
 
-  if (baseStartDate > baseEndDate) {
+  if (baseStartDate.getTime() > baseEndDate.getTime()) {
     $("#BaseStartDate").val($("#BaseEndDate").val());
+  }
+
+  // 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
+  if (baseStartDate.getTime() < serviceStartDate.getTime()) {
+    $("#BaseStartDate").val("2018-04-24");
+  }
+  if (baseEndDate.getTime() < serviceStartDate.getTime()) {
+    $("#BaseEndDate").val("2018-04-24");
   }
 }
 
