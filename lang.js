@@ -18,7 +18,7 @@ $.lang.ko = {
   sFirstImplementNote: "※ S카드의 첫 실장일은 「283プロのヒナ」 실장일이 기준일",
   allFirstImplementNote: "※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일이 기준일",
   showIcon: "아이콘 표시",
-  showRCard: "첫 실장 (R) 비표시",
+  showRCard: "첫 실장 비표시",
 };
 
 $.lang.ja = {
@@ -39,5 +39,5 @@ $.lang.ja = {
   sFirstImplementNote: "※ Sカードの初実装日は「283プロのヒナ」の実装日が基準日",
   allFirstImplementNote: "※ すべてのカードの初実装日は「白いツバサ」の実装日が基準日",
   showIcon: "アイコン表示",
-  showRCard: "初実装 (R) 非表示",
+  showRCard: "初実装 非表示",
 };
