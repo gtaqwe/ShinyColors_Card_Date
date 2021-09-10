@@ -117,7 +117,7 @@ function setCardData(totalData, totalLen) {
         dateBefore = calDate(cardDate);
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
-          dateAfter = calDate(getTargetDate());
+          dateAfter = calDate(getBaseDate("#BaseEndDate"));
           interval = (dateAfter - dateBefore) / currDay;
           intervalCode = `<td class="now-interval">${interval}</td>`;
         } else {
@@ -144,11 +144,11 @@ function setCardData(totalData, totalLen) {
 /**
  * 설정한 기준일을 Return
  */
-function getTargetDate() {
-  var targetDate = new Date($("#TargetDate").val());
-  var nowYear = targetDate.getFullYear();
-  var nowMonth = targetDate.getMonth() + 1;
-  var nowDate = targetDate.getDate();
+function getBaseDate(dateId) {
+  var baseEndDate = new Date($(dateId).val());
+  var nowYear = baseEndDate.getFullYear();
+  var nowMonth = baseEndDate.getMonth() + 1;
+  var nowDate = baseEndDate.getDate();
 
   return (
     nowYear.toString() +
@@ -176,11 +176,10 @@ function calDate(dateStr) {
  * 랭킹표 작성 시작
  */
 function runBuildDateRank() {
-  var targetTable = document.getElementById("date-table");
   var intervalAry = [];
 
-  var names = targetTable.getElementsByClassName("td-name-cell");
-  var intervals = targetTable.getElementsByClassName("now-interval");
+  var names = $("#date-table .td-name-cell");
+  var intervals = $("#date-table .now-interval");
 
   for (var i = 0; i < names.length; i++) {
     nameStr = names[i].innerHTML;
@@ -324,7 +323,10 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   table += "</tr>";
 
   table += "<tr>";
-  table += `<th class="th-rank" colspan="3">${getTargetDate()}</th>`;
+  table += `<th class="th-rank" colspan="3">
+  ${getBaseDate("#BaseStartDate")}<br />
+  ~<br />
+  ${getBaseDate("#BaseEndDate")}</th>`;
   table += "</tr>";
 
   table += "<tr>";

@@ -15,7 +15,11 @@ async function init() {
   });
 
   nowSelect = 0;
-  document.getElementById("TargetDate").valueAsDate = new Date(getToday());
+  // 초기 기준일
+  // Start : 서비스 개시일
+  // End : 오늘
+  $("#BaseStartDate").val("2018-04-24");
+  $("#BaseEndDate").val(getToday());
 
   viewLanguage = getLanguage();
 
@@ -126,6 +130,7 @@ function getToday() {
  * VIEW_SELECT의 표시타입 체크 변경
  */
 function updateDate(nowSelect) {
+  compareBaseDate();
   if (nowSelect == 1) {
     P_SSR();
   } else if (nowSelect == 2) {
@@ -136,6 +141,19 @@ function updateDate(nowSelect) {
     S_SR();
   } else if (nowSelect == 5) {
     ALL_CARD();
+  }
+}
+
+/**
+ * 카드 표시 시작일과 종료일 비교
+ * 시작일이 종료일보다 클 경우 시작일을 종료일로 변경
+ */
+function compareBaseDate() {
+  var baseStartDate = $("#BaseStartDate").val();
+  var baseEndDate = $("#BaseEndDate").val();
+
+  if (baseStartDate > baseEndDate) {
+    $("#BaseStartDate").val($("#BaseEndDate").val());
   }
 }
 
@@ -246,15 +264,13 @@ function ALL_CARD() {
 }
 
 /**
- * 전체 카드의 데이터를 추출, 재가공
+ * 조건에 해당되는 카드를 Filter, Sort 후 리스트로 Return
  */
-function mergeAllCardData() {
-  var maxColumnLen = 0;
-  var totalList = jsonData.map((idol) => {
-    var cardList = [...idol.P_SSR, ...idol.P_SR, ...idol.S_SSR, ...idol.S_SR]
+function getCardList(cardAry) {
+  return (
+    cardAry
       .map((card, idx) => {
         var cardType = card.card_type;
-        // 가장 첫실장만 배열에 추가
         if (cardType == "첫실장" && idx == 0) {
           return card;
         }
@@ -274,6 +290,12 @@ function mergeAllCardData() {
       })
       // undefined 데이터 제거
       .filter((v) => v !== undefined)
+      .filter(
+        (v) =>
+          v.card_type == "첫실장" ||
+          (new Date(v.card_date) >= new Date($("#BaseStartDate").val()) &&
+            new Date(v.card_date) <= new Date($("#BaseEndDate").val()))
+      )
       // 오래된 순으로 정렬
       // 단순 비교해서 소트시 브라우저 차이로
       // 표시가 다를 수 있기에 「<」, 「>」, 「=」를 모두 확인
@@ -285,7 +307,17 @@ function mergeAllCardData() {
         } else {
           return 0;
         }
-      });
+      })
+  );
+}
+
+/**
+ * 전체 카드의 데이터를 추출, 재가공
+ */
+function mergeAllCardData() {
+  var maxColumnLen = 0;
+  var totalList = jsonData.map((idol) => {
+    var cardList = getCardList([...idol.P_SSR, ...idol.P_SR, ...idol.S_SSR, ...idol.S_SR]);
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
@@ -319,32 +351,13 @@ function mergeAllCardData() {
   return selectedData;
 }
 
-// 각 타입의 카드 데이터추출, 재가공
+/**
+ * 각 타입의 카드 데이터추출, 재가공
+ */
 function idolDataProcess(cardGrade) {
   var maxColumnLen = 0;
   totalList = jsonData.map((idol) => {
-    var cardList = idol[cardGrade]
-      .map((card) => {
-        var cardType = card.card_type;
-        if (cardType == "첫실장") {
-          return card;
-        }
-
-        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-        if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "이벤트" && $("#eventCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "페스" && $("#gradeFesCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "캠페인" && $("#campaignCardChkBox").is(":checked")) {
-          return card;
-        }
-      })
-      // undefined 데이터 제거
-      .filter((v) => v !== undefined);
+    var cardList = getCardList(idol[cardGrade]);
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
@@ -379,6 +392,7 @@ function idolDataProcess(cardGrade) {
 }
 
 //////////////////////////////////////////////////
+
 /**
  * 마우스 포인트 위치에 따라 이미지 프리뷰
  */
@@ -491,9 +505,14 @@ function captureScreen(frameName) {
 
     $(frameId).css("overflow", "hidden");
     $("#convertSpan").css("display", "none");
-    $("#TargetDateStr").text(getTargetDate());
-    $("#TargetDate").css("display", "none");
-    $("#TargetDateStr").css("display", "");
+
+    $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
+    $("#BaseStartDate").css("display", "none");
+    $("#BaseStartDateStr").css("display", "");
+
+    $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
+    $("#BaseEndDate").css("display", "none");
+    $("#BaseEndDateStr").css("display", "");
 
     html2canvas(document.querySelector(frameId), {
       scrollY: -window.scrollY,
@@ -504,8 +523,12 @@ function captureScreen(frameName) {
 
     $(frameId).css("overflow", "");
     $("#convertSpan").css("display", "");
-    $("#TargetDate").css("display", "");
-    $("#TargetDateStr").css("display", "none");
+
+    $("#BaseStartDate").css("display", "");
+    $("#BaseStartDateStr").css("display", "none");
+
+    $("#BaseEndDate").css("display", "");
+    $("#BaseEndDateStr").css("display", "none");
   }
 }
 

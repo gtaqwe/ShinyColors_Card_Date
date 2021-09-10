@@ -131,9 +131,20 @@
       </div>
 
       <div style="overflow: hidden">
-        <label data-lang="baseDate">기준일:</label>
-        <input type="date" id="TargetDate" name="TargetDate" onchange="updateDate(nowSelect)" />
-        <label id="TargetDateStr" style="display: none"></label>
+        <label data-lang="startBaseDate">시작일:</label>
+        <input
+          type="date"
+          id="BaseStartDate"
+          name="BaseStartDate"
+          onchange="updateDate(nowSelect)"
+        />
+        <label id="BaseStartDateStr" style="display: none"></label>
+      </div>
+
+      <div style="overflow: hidden">
+        <label data-lang="endBaseDate">종료일:</label>
+        <input type="date" id="BaseEndDate" name="BaseEndDate" onchange="updateDate(nowSelect)" />
+        <label id="BaseEndDateStr" style="display: none"></label>
       </div>
 
       <div>
