@@ -168,6 +168,14 @@ function compareBaseDate() {
 }
 
 /**
+ * 기준일을 재설정
+ */
+function baseDateReset(id, inputDate) {
+  $(`#${id}`).val(inputDate);
+  updateDate(nowSelect);
+}
+
+/**
  * 페스 이미지 세팅
  * (표, 프리뷰)
  */
@@ -517,11 +525,11 @@ function captureScreen(frameName) {
     $("#convertSpan").css("display", "none");
 
     $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
-    $("#BaseStartDate").css("display", "none");
+    $("#BaseStartSpan").css("display", "none");
     $("#BaseStartDateStr").css("display", "");
 
     $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
-    $("#BaseEndDate").css("display", "none");
+    $("#BaseEndSpan").css("display", "none");
     $("#BaseEndDateStr").css("display", "");
 
     html2canvas(document.querySelector(frameId), {
@@ -534,10 +542,10 @@ function captureScreen(frameName) {
     $(frameId).css("overflow", "");
     $("#convertSpan").css("display", "");
 
-    $("#BaseStartDate").css("display", "");
+    $("#BaseStartSpan").css("display", "");
     $("#BaseStartDateStr").css("display", "none");
 
-    $("#BaseEndDate").css("display", "");
+    $("#BaseEndSpan").css("display", "");
     $("#BaseEndDateStr").css("display", "none");
   }
 }

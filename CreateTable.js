@@ -18,7 +18,7 @@ function runBuildTable(idolData) {
   var table = '<table id="date-table">';
 
   table += "<thead>";
-  table += "<tr>";
+  table += `<tr class="tr-main-header">`;
 
   table += tableHeader(tableTitle, columnLength);
 
@@ -27,7 +27,7 @@ function runBuildTable(idolData) {
   table += "<tbody>";
 
   for (var row = 0; row < rowLength; row++) {
-    table += "<tr>";
+    table += `<tr class="tr-main-data">`;
 
     table += setCardData(idolData.Data[row], columnLength);
 
@@ -180,18 +180,17 @@ function calDate(dateStr) {
  */
 function runBuildDateRank() {
   var intervalAry = [];
+  var rows = $("#date-table .tr-main-data");
 
-  var names = $("#date-table .td-name-cell");
-  var intervals = $("#date-table .now-interval");
-
-  for (var i = 0; i < names.length; i++) {
-    nameStr = names[i].innerHTML;
+  for (var i = 0; i < rows.length; i++) {
+    nameStr = $(`#date-table .tr-main-data:eq(${i}) .td-name-cell`).text();
 
     // 카드가 단 하나도 실장되지 않았을 경우 처리 (R카드도 없는 경우)
-    if (intervals[i] === undefined) {
-      intervalAry.push([nameStr, ""]);
+    var nowInterval = $(`#date-table .tr-main-data:eq(${i}) .now-interval`);
+    if (nowInterval.length == 0) {
+      intervalAry.push([nameStr, Number.MIN_VALUE]);
     } else {
-      intervalAry.push([nameStr, intervals[i].innerHTML]);
+      intervalAry.push([nameStr, Number(nowInterval.text())]);
     }
   }
 
@@ -205,12 +204,15 @@ function buildDataRank(intervalAry) {
   // old... : 오래된 순으로 랭킹 계산
   // new... : 최신 순으로 랭킹 계산
 
+  // 원본 배열을 바꾸지 않도록 하기위해 slice()사용
   var oldFirst = intervalAry.slice().sort((a, b) => b[1] - a[1]);
   // var newFirst = intervalAry.slice().sort(function(a,b){return a-b});
   var oldRanks = intervalAry.map(function (v) {
     return oldFirst.indexOf(v) + 1;
   });
-  // var newRanks = intervalAry.map(function(v){ return newFirst.indexOf(v)+1 });
+  // var newRanks = intervalAry.map(function (v) {
+  //   return newFirst.indexOf(v) + 1;
+  // });
 
   var borderStyle = {
     left: "border-left: 1px solid #000000;",
@@ -262,9 +264,14 @@ function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
   table += "<tbody>";
 
   for (var i = 0; i < intervalAry.length; i++) {
-    var rankStr = oldRanks[i];
+    var rankStr = "-";
     var nameStr = intervalAry[i][0];
-    var intervalStr = intervalAry[i][1];
+    var intervalStr = "-";
+
+    if (Number(intervalAry[i][1]) != Number.MIN_VALUE) {
+      rankStr = oldRanks[i];
+      intervalStr = intervalAry[i][1];
+    }
 
     if (intervalAry[i] == "") rankStr = "미실장";
     var cellColor = selectCellColor(rankStr);
@@ -343,9 +350,14 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
 
   for (var i = 0; i < intervalAry.length; i++) {
     var rankIndex = oldRanks.indexOf(i + 1);
-    var rankStr = oldRanks[rankIndex];
+    var rankStr = "-";
     var nameStr = intervalAry[rankIndex][0];
-    var intervalStr = intervalAry[rankIndex][1];
+    var intervalStr = "-";
+
+    if (Number(intervalAry[rankIndex][1]) != Number.MIN_VALUE) {
+      rankStr = oldRanks[rankIndex];
+      intervalStr = intervalAry[rankIndex][1];
+    }
 
     if (intervalAry[rankIndex] == "") rankStr = "미실장";
     var cellColor = selectCellColor(rankStr);

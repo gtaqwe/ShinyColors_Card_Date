@@ -137,18 +137,34 @@
 
       <div style="overflow: hidden">
         <label data-lang="startBaseDate">시작일:</label>
-        <input
-          type="date"
-          id="BaseStartDate"
-          name="BaseStartDate"
-          onchange="updateDate(nowSelect)"
-        />
+        <span id="BaseStartSpan">
+          <input
+            type="date"
+            id="BaseStartDate"
+            name="BaseStartDate"
+            onchange="updateDate(nowSelect)"
+          />
+          <input
+            type="button"
+            value="Reset"
+            class="Resetbutton"
+            onclick="baseDateReset('BaseStartDate', '2018-04-24')"
+          />
+        </span>
         <label id="BaseStartDateStr" style="display: none"></label>
       </div>
 
       <div style="overflow: hidden">
         <label data-lang="endBaseDate">종료일:</label>
-        <input type="date" id="BaseEndDate" name="BaseEndDate" onchange="updateDate(nowSelect)" />
+        <span id="BaseEndSpan">
+          <input type="date" id="BaseEndDate" name="BaseEndDate" onchange="updateDate(nowSelect)" />
+          <input
+            type="button"
+            value="Reset"
+            class="Resetbutton"
+            onclick="baseDateReset('BaseEndDate', getToday())"
+          />
+        </span>
         <label id="BaseEndDateStr" style="display: none"></label>
       </div>
 
