@@ -142,7 +142,7 @@
             type="date"
             id="BaseStartDate"
             name="BaseStartDate"
-            onchange="updateDate(nowSelect)"
+            onchange="updateBaseDate('start', nowSelect)"
           />
           <input
             type="button"
@@ -157,7 +157,12 @@
       <div style="overflow: hidden">
         <label data-lang="endBaseDate">종료일:</label>
         <span id="BaseEndSpan">
-          <input type="date" id="BaseEndDate" name="BaseEndDate" onchange="updateDate(nowSelect)" />
+          <input
+            type="date"
+            id="BaseEndDate"
+            name="BaseEndDate"
+            onchange="updateBaseDate('end', nowSelect)"
+          />
           <input
             type="button"
             value="Reset"

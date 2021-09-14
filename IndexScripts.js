@@ -131,7 +131,6 @@ function getToday() {
  * VIEW_SELECT의 표시타입 체크 변경
  */
 function updateDate(nowSelect) {
-  compareBaseDate();
   if (nowSelect == 1) {
     P_SSR();
   } else if (nowSelect == 2) {
@@ -149,22 +148,27 @@ function updateDate(nowSelect) {
  * 카드 표시 시작일과 종료일 비교
  * 시작일이 종료일보다 클 경우 시작일을 종료일로 변경
  */
-function compareBaseDate() {
+function updateBaseDate(changedBase, nowSelect) {
   var serviceStartDate = new Date("2018-04-24");
   var baseStartDate = new Date($("#BaseStartDate").val());
   var baseEndDate = new Date($("#BaseEndDate").val());
 
-  if (baseStartDate.getTime() > baseEndDate.getTime()) {
+  // 시작일 변경 시 종료일 이후로 할 수 없음
+  if (changedBase == "start" && baseStartDate.getTime() > baseEndDate.getTime()) {
     $("#BaseStartDate").val($("#BaseEndDate").val());
   }
 
-  // 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
+  // 종료일 변경 시 시작일 이전으로 할 수 없음
+  if (changedBase == "end" && baseStartDate.getTime() > baseEndDate.getTime()) {
+    $("#BaseEndDate").val($("#BaseStartDate").val());
+  }
+
+  // 시작일이 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
   if (baseStartDate.getTime() < serviceStartDate.getTime()) {
     $("#BaseStartDate").val("2018-04-24");
   }
-  if (baseEndDate.getTime() < serviceStartDate.getTime()) {
-    $("#BaseEndDate").val("2018-04-24");
-  }
+
+  updateDate(nowSelect);
 }
 
 /**
