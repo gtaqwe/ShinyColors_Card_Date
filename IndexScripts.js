@@ -129,6 +129,16 @@ function getToday() {
 
 /**
  * VIEW_SELECT의 표시타입 체크 변경
+ * 0 : undefined
+ * 1 : P-SSR
+ * 2 : S-SSR
+ * 3 : P-SR
+ * 4 : S-SR
+ * 5 : ALL
+ * 6 : SSR
+ * 7 : SR
+ * 8 : P
+ * 9 : S
  */
 function updateDate(nowSelect) {
   if (nowSelect == 1) {
@@ -141,6 +151,14 @@ function updateDate(nowSelect) {
     S_SR();
   } else if (nowSelect == 5) {
     ALL_CARD();
+  } else if (nowSelect == 6) {
+    ALL_SSR();
+  } else if (nowSelect == 7) {
+    ALL_SR();
+  } else if (nowSelect == 8) {
+    ALL_P();
+  } else if (nowSelect == 9) {
+    ALL_S();
   }
 }
 
@@ -219,7 +237,7 @@ function CtlfesImgConvertBtn(ps) {
  * P-SSR 표시
  */
 function P_SSR() {
-  var idolData = idolDataProcess("P_SSR");
+  var idolData = mergeCardData("P-SSR", true, false, false, false);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -230,24 +248,10 @@ function P_SSR() {
 }
 
 /**
- * P-SR 표시
- */
-function P_SR() {
-  var idolData = idolDataProcess("P_SR");
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  nowSelect = 3;
-
-  setLanguage(viewLanguage);
-}
-
-/**
  * S-SSR 표시
  */
 function S_SSR() {
-  var idolData = idolDataProcess("S_SSR");
+  var idolData = mergeCardData("S-SSR", false, false, true, false);
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
@@ -258,10 +262,24 @@ function S_SSR() {
 }
 
 /**
+ * P-SR 표시
+ */
+function P_SR() {
+  var idolData = mergeCardData("P-SR", false, true, false, false);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
+  nowSelect = 3;
+
+  setLanguage(viewLanguage);
+}
+
+/**
  * S-SR 표시
  */
 function S_SR() {
-  var idolData = idolDataProcess("S_SR");
+  var idolData = mergeCardData("S-SR", false, false, false, true);
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
@@ -275,12 +293,68 @@ function S_SR() {
  * 모든 카드 표시
  */
 function ALL_CARD() {
-  var idolData = mergeAllCardData();
+  var idolData = mergeCardData("All", true, true, true, true);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
   setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
   nowSelect = 5;
+
+  setLanguage(viewLanguage);
+}
+
+/**
+ * 모든 SSR 표시
+ */
+function ALL_SSR() {
+  var idolData = mergeCardData("SSR", true, false, true, false);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
+  nowSelect = 6;
+
+  setLanguage(viewLanguage);
+}
+
+/**
+ * 모든 SR 표시
+ */
+function ALL_SR() {
+  var idolData = mergeCardData("SR", false, true, false, true);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
+  nowSelect = 7;
+
+  setLanguage(viewLanguage);
+}
+
+/**
+ * 모든 P 표시
+ */
+function ALL_P() {
+  var idolData = mergeCardData("P", true, true, false, false);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
+  nowSelect = 8;
+
+  setLanguage(viewLanguage);
+}
+
+/**
+ * 모든 S 표시
+ */
+function ALL_S() {
+  var idolData = mergeCardData("S", false, false, true, true);
+  CtlfesImgConvertBtn("s");
+  buildTable(idolData);
+
+  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
+  nowSelect = 9;
 
   setLanguage(viewLanguage);
 }
@@ -293,7 +367,7 @@ function getCardList(cardAry) {
     cardAry
       .map((card, idx) => {
         var cardType = card.card_type;
-        if (cardType == "첫실장" && idx == 0) {
+        if (cardType == "첫실장" && idx == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
           return card;
         }
 
@@ -336,10 +410,17 @@ function getCardList(cardAry) {
 /**
  * 전체 카드의 데이터를 추출, 재가공
  */
-function mergeAllCardData() {
+function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
   var maxColumnLen = 0;
   var totalList = jsonData.map((idol) => {
-    var cardList = getCardList([...idol.P_SSR, ...idol.P_SR, ...idol.S_SSR, ...idol.S_SR]);
+    var tempList = [];
+
+    if (pSSR) tempList = tempList.concat([...idol.P_SSR]);
+    if (pSR) tempList = tempList.concat([...idol.P_SR]);
+    if (sSSR) tempList = tempList.concat([...idol.S_SSR]);
+    if (sSR) tempList = tempList.concat([...idol.S_SR]);
+
+    var cardList = getCardList(tempList);
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
@@ -357,48 +438,6 @@ function mergeAllCardData() {
 
     return obj;
   });
-
-  var tableTitle = "All";
-
-  // 표시할 데이터
-  // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
-  // Length : 최대 열 수
-  // Data : 표시할 카드 데이터
-  var selectedData = {
-    Title: tableTitle,
-    Length: maxColumnLen,
-    Data: totalList,
-  };
-
-  return selectedData;
-}
-
-/**
- * 각 타입의 카드 데이터추출, 재가공
- */
-function idolDataProcess(cardGrade) {
-  var maxColumnLen = 0;
-  totalList = jsonData.map((idol) => {
-    var cardList = getCardList(idol[cardGrade]);
-
-    // 이름 언어 : idol_(ko, ja, en)_name
-    var idolName = idol.idol_ko_name;
-    if (viewLanguage == "ja") {
-      idolName = idol.idol_ja_name;
-    }
-
-    var obj = {
-      idol_name: idolName,
-      card_data: cardList,
-    };
-
-    // 표에 표시할 열의 개수를 설정
-    if (cardList.length > maxColumnLen) maxColumnLen = cardList.length;
-
-    return obj;
-  });
-
-  var tableTitle = cardGrade.replace("_", "-");
 
   // 표시할 데이터
   // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
@@ -524,6 +563,10 @@ function captureScreen(frameName) {
     else if (nowSelect == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
     else if (nowSelect == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
     else if (nowSelect == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
+    else if (nowSelect == 6) captureName = frameName + "_SSR_" + viewMode + ".png";
+    else if (nowSelect == 7) captureName = frameName + "_SR_" + viewMode + ".png";
+    else if (nowSelect == 8) captureName = frameName + "_P_" + viewMode + ".png";
+    else if (nowSelect == 9) captureName = frameName + "_S_" + viewMode + ".png";
 
     $(frameId).css("overflow", "hidden");
     $("#convertSpan").css("display", "none");
