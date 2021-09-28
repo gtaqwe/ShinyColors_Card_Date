@@ -104,12 +104,12 @@ function setCardData(totalData, totalLen) {
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($(iconImgConvertBtn).is(":checked") && cardAddr != "" && cardAddr != undefined) {
+        var style = `style= "width:72px; height:72px"`;
+        var onerror = `onerror = "this.src='./img/assets/Blank_Idol.png'"`;
+
         var imgPath = "icon";
         if ($(fesImgConvertBtn).is(":checked") && cardAddr.split("_")[1] == "p") imgPath += "_fes";
-        resContent += `<img src="${getImgSrc(
-          imgPath,
-          cardAddr
-        )}" onerror = "this.src='./img/assets/Blank_Idol.png'" style= "width:72px; height:72px"><br>`;
+        resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
       }
       resContent += `${cardDate}</td>`;
 
