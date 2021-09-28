@@ -91,11 +91,12 @@ footer {
   background-color: #ffff00;
 }
 
-.Pbutton {
-  background-color: #ff62a6;
+.Pbutton,
+.Sbutton,
+.ALLbutton {
   border: none;
   color: white;
-  width: 120px;
+  width: 130px;
   height: 50px;
   font-weight: bold;
   padding: 15px 32px;
@@ -105,6 +106,10 @@ footer {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+}
+
+.Pbutton {
+  background-color: #ff62a6;
 }
 
 .Pbutton:hover {
@@ -113,18 +118,6 @@ footer {
 
 .Sbutton {
   background-color: #4ca0f2;
-  border: none;
-  color: white;
-  width: 120px;
-  height: 50px;
-  font-weight: bold;
-  padding: 15px 32px;
-  margin: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .Sbutton:hover {
@@ -133,18 +126,6 @@ footer {
 
 .ALLbutton {
   background: linear-gradient(to bottom right, #ff62a6 50%, #4ca0f2 50%);
-  border: none;
-  color: white;
-  width: 120px;
-  height: 50px;
-  font-weight: bold;
-  padding: 15px 32px;
-  margin: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
 }
 
 .ALLbutton:hover {
