@@ -308,6 +308,12 @@
 				"card_type": "한정",
 				"card_date": "2020-10-31",
 				"card_addr": "hiori_s_ssr6"
+			},
+			{
+				"card_name": "【永遠の方程式】風野 灯織",
+				"card_type": "한정",
+				"card_date": "2021-09-30",
+				"card_addr": "hiori_s_ssr7"
 			}
 		],
 		"S_SR": [
@@ -1866,6 +1872,12 @@
 				"card_type": "한정",
 				"card_date": "2021-01-01",
 				"card_addr": "rinze_s_ssr6"
+			},
+			{
+				"card_name": "【をとめ条約】杜野 凛世",
+				"card_type": "페스",
+				"card_date": "2021-09-30",
+				"card_addr": "rinze_s_ssr7"
 			}
 		],
 		"S_SR": [
@@ -3205,6 +3217,12 @@
 				"card_type": "통상",
 				"card_date": "2021-02-19",
 				"card_addr": "hinana_p_ssr2"
+			},
+			{
+				"card_name": "【TRICK☆☆☆】市川 雛菜",
+				"card_type": "한정",
+				"card_date": "2021-09-30",
+				"card_addr": "hinana_p_ssr3"
 			}
 		],
 		"P_SR": [
@@ -3312,6 +3330,12 @@
 				"card_type": "통상",
 				"card_date": "2021-09-10",
 				"card_addr": "nichika_s_ssr1"
+			},
+			{
+				"card_name": "【死神リポート】七草 にちか",
+				"card_type": "이벤트",
+				"card_date": "2021-09-30",
+				"card_addr": "nichika_s_ssr2"
 			}
 		],
 		"S_SR": [
