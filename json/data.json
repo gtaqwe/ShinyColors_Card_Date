@@ -521,6 +521,12 @@
 				"card_type": "한정",
 				"card_date": "2019-07-19",
 				"card_addr": "meguru_s_sr4"
+			},
+			{
+				"card_name": "【スローリー・メモリー】八宮 めぐる",
+				"card_type": "이벤트",
+				"card_date": "2021-10-12",
+				"card_addr": "meguru_s_sr5"
 			}
 		]
 	},
@@ -1331,6 +1337,12 @@
 				"card_type": "한정",
 				"card_date": "2021-01-12",
 				"card_addr": "kaho_p_ssr5"
+			},
+			{
+				"card_name": "【フルスロットルエイジ！】小宮 果穂",
+				"card_type": "통상",
+				"card_date": "2021-10-12",
+				"card_addr": "kaho_p_ssr6"
 			}
 		],
 		"P_SR": [
@@ -2512,6 +2524,12 @@
 				"card_type": "한정",
 				"card_date": "2020-07-31",
 				"card_addr": "chiyuki_s_ssr6"
+			},
+			{
+				"card_name": "【黄昏時に会いましょう】桑山 千雪",
+				"card_type": "통상",
+				"card_date": "2021-10-12",
+				"card_addr": "chiyuki_s_ssr7"
 			}
 		],
 		"S_SR": [
