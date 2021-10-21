@@ -570,6 +570,12 @@
 				"card_type": "한정",
 				"card_date": "2020-11-30",
 				"card_addr": "kogane_p_ssr5"
+			},
+			{
+				"card_name": "【秋空ばくちずさんで】月岡 恋鐘",
+				"card_type": "한정",
+				"card_date": "2021-10-21",
+				"card_addr": "kogane_p_ssr6"
 			}
 		],
 		"P_SR": [
@@ -1890,6 +1896,12 @@
 				"card_type": "페스",
 				"card_date": "2021-09-30",
 				"card_addr": "rinze_s_ssr7"
+			},
+			{
+				"card_name": "【牛的情感盛り、一丁】杜野 凛世",
+				"card_type": "한정",
+				"card_date": "2021-10-21",
+				"card_addr": "rinze_s_ssr8"
 			}
 		],
 		"S_SR": [
@@ -2625,6 +2637,12 @@
 				"card_type": "이벤트",
 				"card_date": "2021-02-19",
 				"card_addr": "asahi_p_sr3"
+			},
+			{
+				"card_name": "【黄葉の冠】芹沢 あさひ",
+				"card_type": "이벤트",
+				"card_date": "2021-10-21",
+				"card_addr": "asahi_p_sr4"
 			}
 		],
 		"S_SSR": [
