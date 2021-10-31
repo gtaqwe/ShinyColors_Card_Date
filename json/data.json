@@ -2379,6 +2379,12 @@
 				"card_type": "이벤트",
 				"card_date": "2020-10-31",
 				"card_addr": "tenka_s_ssr6"
+			},
+			{
+				"card_name": "【キュン！とwith us】大崎 甜花",
+				"card_type": "한정",
+				"card_date": "2021-10-31",
+				"card_addr": "tenka_s_ssr7"
 			}
 		],
 		"S_SR": [
@@ -2808,6 +2814,12 @@
 				"card_type": "페스",
 				"card_date": "2021-07-20",
 				"card_addr": "fuyuko_s_ssr5"
+			},
+			{
+				"card_name": "【Wrong？】黛 冬優子",
+				"card_type": "이벤트",
+				"card_date": "2021-10-31",
+				"card_addr": "fuyuko_s_ssr6"
 			}
 		],
 		"S_SR": [
@@ -2865,6 +2877,12 @@
 				"card_type": "통상",
 				"card_date": "2021-06-11",
 				"card_addr": "mei_p_ssr4"
+			},
+			{
+				"card_name": "【ちょー早い！】和泉 愛依",
+				"card_type": "한정",
+				"card_date": "2021-10-31",
+				"card_addr": "mei_p_ssr5"
 			}
 		],
 		"P_SR": [
