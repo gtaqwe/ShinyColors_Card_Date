@@ -1544,6 +1544,12 @@
 				"card_type": "한정",
 				"card_date": "2020-01-10",
 				"card_addr": "chiyoko_p_sr3"
+			},
+			{
+				"card_name": "【フロイラインに心酔】園田 智代子",
+				"card_type": "이벤트",
+				"card_date": "2021-11-19",
+				"card_addr": "chiyoko_p_sr4"
 			}
 		],
 		"S_SSR": [
@@ -3435,6 +3441,12 @@
 				"card_type": "통상",
 				"card_date": "2021-05-20",
 				"card_addr": "mikoto_p_ssr1"
+			},
+			{
+				"card_name": "【CHILLY】緋田 美琴",
+				"card_type": "통상",
+				"card_date": "2021-11-19",
+				"card_addr": "mikoto_p_ssr2"
 			}
 		],
 		"P_SR": [
