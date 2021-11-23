@@ -123,11 +123,11 @@ function setCardData(totalData, totalLen) {
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
           dateAfter = calDate(getBaseDate("#BaseEndDate"));
-          interval = (dateAfter - dateBefore) / currDay;
+          interval = (dateAfter.getTime() - dateBefore.getTime()) / currDay;
           intervalCode = `<td class="now-interval">${interval}</td>`;
         } else {
           dateAfter = calDate(cardDataList[idx + 1].card_date);
-          interval = (dateAfter - dateBefore) / currDay;
+          interval = (dateAfter.getTime() - dateBefore.getTime()) / currDay;
           intervalCode = `<td class="pre-interval">${interval}</td>`;
         }
       }
@@ -151,30 +151,15 @@ function setCardData(totalData, totalLen) {
  */
 function getBaseDate(dateId) {
   var baseEndDate = new Date($(dateId).val());
-  var nowYear = baseEndDate.getFullYear();
-  var nowMonth = baseEndDate.getMonth() + 1;
-  var nowDate = baseEndDate.getDate();
 
-  return (
-    nowYear.toString() +
-    "-" +
-    nowMonth.toString().padStart(2, "0") +
-    "-" +
-    nowDate.toString().padStart(2, "0")
-  );
+  return baseEndDate.toISOString().slice(0, 10);
 }
 
 /**
  * 입력한 날짜 문자열을 Date형으로 Return
  */
 function calDate(dateStr) {
-  var dateAry = dateStr.split("-");
-  var y = dateAry[0] - 1900;
-  var m = dateAry[1] - 1;
-  var d = dateAry[2];
-  var date = new Date(y, m, d);
-
-  return date;
+  return new Date(dateStr);
 }
 
 /**
