@@ -1004,6 +1004,12 @@
 				"card_type": "통상",
 				"card_date": "2019-01-21",
 				"card_addr": "sakuya_s_sr3"
+			},
+			{
+				"card_name": "【当日じゃない日】白瀬 咲耶",
+				"card_type": "이벤트",
+				"card_date": "2021-11-30",
+				"card_addr": "sakuya_s_sr4"
 			}
 		]
 	},
@@ -1751,6 +1757,12 @@
 				"card_type": "한정",
 				"card_date": "2020-11-30",
 				"card_addr": "juri_s_ssr5"
+			},
+			{
+				"card_name": "【Hearty!Holy!Party!】西城 樹里",
+				"card_type": "한정",
+				"card_date": "2021-11-30",
+				"card_addr": "juri_s_ssr6"
 			}
 		],
 		"S_SR": [
@@ -2158,6 +2170,12 @@
 				"card_type": "한정",
 				"card_date": "2021-03-12",
 				"card_addr": "amana_p_ssr6"
+			},
+			{
+				"card_name": "【雪空セパレート】大崎 甘奈",
+				"card_type": "한정",
+				"card_date": "2021-11-30",
+				"card_addr": "amana_p_ssr7"
 			}
 		],
 		"P_SR": [
