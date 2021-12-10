@@ -739,6 +739,12 @@
 				"card_type": "통상",
 				"card_date": "2021-07-10",
 				"card_addr": "mamimi_p_ssr6"
+			},
+			{
+				"card_name": "【Have a bad day♥】田中 摩美々",
+				"card_type": "한정",
+				"card_date": "2021-12-10",
+				"card_addr": "mamimi_p_ssr7"
 			}
 		],
 		"P_SR": [
@@ -1135,6 +1141,12 @@
 				"card_type": "통상",
 				"card_date": "2021-05-20",
 				"card_addr": "yuika_s_ssr6"
+			},
+			{
+				"card_name": "【ヒトトキ／トワ】三峰 結華",
+				"card_type": "이벤트",
+				"card_date": "2021-12-10",
+				"card_addr": "yuika_s_ssr7"
 			}
 		],
 		"S_SR": [
@@ -3432,6 +3444,12 @@
 				"card_type": "이벤트",
 				"card_date": "2021-09-30",
 				"card_addr": "nichika_s_ssr2"
+			},
+			{
+				"card_name": "【浪漫キャメラ0号】七草 にちか",
+				"card_type": "한정",
+				"card_date": "2021-12-10",
+				"card_addr": "nichika_s_ssr3"
 			}
 		],
 		"S_SR": [
