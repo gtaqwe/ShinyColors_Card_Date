@@ -489,6 +489,12 @@
 				"card_type": "이벤트",
 				"card_date": "2021-04-01",
 				"card_addr": "meguru_s_ssr7"
+			},
+			{
+				"card_name": "【ワン・デイ】八宮 めぐる",
+				"card_type": "통상",
+				"card_date": "2021-12-22",
+				"card_addr": "meguru_s_ssr8"
 			}
 		],
 		"S_SR": [
@@ -3240,6 +3246,12 @@
 				"card_type": "한정",
 				"card_date": "2021-01-01",
 				"card_addr": "koito_p_ssr2"
+			},
+			{
+				"card_name": "【てのひらの答え】福丸 小糸",
+				"card_type": "통상",
+				"card_date": "2021-12-22",
+				"card_addr": "koito_p_ssr3"
 			}
 		],
 		"P_SR": [
@@ -3491,6 +3503,12 @@
 				"card_type": "첫실장",
 				"card_date": "2021-04-08",
 				"card_addr": ""
+			},
+			{
+				"card_name": "【SEASON】緋田 美琴",
+				"card_type": "이벤트",
+				"card_date": "2021-12-22",
+				"card_addr": "mikoto_p_sr1"
 			}
 		],
 		"S_SSR": [
