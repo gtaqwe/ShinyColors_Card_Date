@@ -664,6 +664,12 @@
 				"card_type": "이벤트",
 				"card_date": "2021-07-31",
 				"card_addr": "kogane_s_ssr7"
+			},
+			{
+				"card_name": "【あけまして、大吉～！】月岡 恋鐘",
+				"card_type": "한정",
+				"card_date": "2022-01-01",
+				"card_addr": "kogane_s_ssr8"
 			}
 		],
 		"S_SR": [
@@ -1862,6 +1868,12 @@
 				"card_type": "통상",
 				"card_date": "2021-03-22",
 				"card_addr": "rinze_p_ssr6"
+			},
+			{
+				"card_name": "【さよならごつこ】杜野 凛世",
+				"card_type": "한정",
+				"card_date": "2022-01-01",
+				"card_addr": "rinze_p_ssr7"
 			}
 		],
 		"P_SR": [
@@ -2445,6 +2457,12 @@
 				"card_type": "한정",
 				"card_date": "2021-10-31",
 				"card_addr": "tenka_s_ssr7"
+			},
+			{
+				"card_name": "【エンドレス・ゲーム】大崎 甜花",
+				"card_type": "페스",
+				"card_date": "2022-01-01",
+				"card_addr": "tenka_s_ssr8"
 			}
 		],
 		"S_SR": [
@@ -3383,6 +3401,12 @@
 				"card_type": "통상",
 				"card_date": "2021-08-10",
 				"card_addr": "hinana_s_ssr2"
+			},
+			{
+				"card_name": "【♡like】市川 雛菜",
+				"card_type": "이벤트",
+				"card_date": "2022-01-01",
+				"card_addr": "hinana_s_ssr3"
 			}
 		],
 		"S_SR": [
