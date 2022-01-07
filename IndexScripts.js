@@ -476,14 +476,14 @@ function imgMapping() {
       var imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
       var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
       var fesChk = $("#fesImgConvertBtn").is(":checked"); // 일러스트 표시 모드
-      var imgPath = "card";
+      var imgPath = "card_normal";
 
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
       if (imgNameAttr != "" && imgNameAttr != undefined) {
         // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
         // 페스 일러 체크, P 카드인 경우에 파일명 추가
         if (fesChk == true && imgAddrAttr.split("_")[1] == "p") {
-          imgPath += "_fes";
+          imgPath = "card_fes";
         }
 
         $("body").append(

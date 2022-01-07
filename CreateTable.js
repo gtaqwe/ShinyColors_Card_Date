@@ -109,8 +109,10 @@ function setCardData(totalData, totalLen) {
         var style = `style= "width:72px; height:72px"`;
         var onerror = `onerror = "this.src='./img/assets/Blank_Idol.png'"`;
 
-        var imgPath = "icon";
-        if ($(fesImgConvertBtn).is(":checked") && cardAddr.split("_")[1] == "p") imgPath += "_fes";
+        var imgPath = "icon_normal";
+        if ($(fesImgConvertBtn).is(":checked") && cardAddr.split("_")[1] == "p") {
+          imgPath = "icon_fes";
+        }
         resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
       }
       resContent += `${cardDate}</td>`;
