@@ -1310,6 +1310,12 @@
 				"card_type": "한정",
 				"card_date": "2020-10-21",
 				"card_addr": "kiriko_s_ssr5"
+			},
+			{
+				"card_name": "【午・燦・娘・娘】幽谷 霧子",
+				"card_type": "한정",
+				"card_date": "2022-01-11",
+				"card_addr": "kiriko_s_ssr6"
 			}
 		],
 		"S_SR": [
@@ -2489,6 +2495,12 @@
 				"card_type": "이벤트",
 				"card_date": "2020-08-21",
 				"card_addr": "tenka_s_sr3"
+			},
+			{
+				"card_name": "【Fallin' Snow in】大崎 甜花",
+				"card_type": "이벤트",
+				"card_date": "2022-01-11",
+				"card_addr": "tenka_s_sr4"
 			}
 		]
 	},
@@ -2695,6 +2707,12 @@
 				"card_type": "한정",
 				"card_date": "2021-01-31",
 				"card_addr": "asahi_p_ssr4"
+			},
+			{
+				"card_name": "【Howling】芹沢 あさひ",
+				"card_type": "한정",
+				"card_date": "2022-01-11",
+				"card_addr": "asahi_p_ssr5"
 			}
 		],
 		"P_SR": [
