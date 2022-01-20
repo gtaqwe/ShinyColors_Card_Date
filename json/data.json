@@ -45,6 +45,12 @@
 				"card_type": "한정",
 				"card_date": "2021-04-01",
 				"card_addr": "mano_p_ssr6"
+			},
+			{
+				"card_name": "【ひとつ、はたたく】櫻木 真乃",
+				"card_type": "통상",
+				"card_date": "2022-01-20",
+				"card_addr": "mano_p_ssr7"
 			}
 		],
 		"P_SR": [
@@ -1429,6 +1435,12 @@
 				"card_type": "이벤트",
 				"card_date": "2019-11-11",
 				"card_addr": "kaho_p_sr4"
+			},
+			{
+				"card_name": "【ソー・ディフィカルト！】小宮 果穂",
+				"card_type": "이벤트",
+				"card_date": "2022-01-20",
+				"card_addr": "kaho_p_sr5"
 			}
 		],
 		"S_SSR": [
@@ -3211,6 +3223,12 @@
 				"card_type": "이벤트",
 				"card_date": "2021-07-20",
 				"card_addr": "madoka_p_sr1"
+			},
+			{
+				"card_name": "【カラメル】樋口 円香",
+				"card_type": "통상",
+				"card_date": "2022-01-20",
+				"card_addr": "madoka_p_sr2"
 			}
 		],
 		"S_SSR": [
