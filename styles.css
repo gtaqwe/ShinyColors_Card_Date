@@ -64,8 +64,13 @@ footer {
   left: 0px;
 }
 
+.limit-card-rerun-cell,
 .limit-card-cell {
   background-color: #92d050;
+}
+
+.limit-card-rerun-cell {
+  box-shadow: 0 0 0 3px #ff0000 inset;
 }
 
 .event-card-cell {

@@ -58,6 +58,39 @@
       <span data-lang="showRCard">첫 실장 비표시</span>
     </div>
 
+    <div>
+      <fieldset style="width: max-content">
+        <legend data-lang="showRerun">한정 복각 표시</legend>
+        <input
+          type="radio"
+          id="showRerun0"
+          name="showRerun"
+          value=""
+          onclick="updateDate(nowSelect)"
+          checked
+        />
+        <label for="showRerun0" data-lang="selShowRerun0">비표시</label>
+
+        <input
+          type="radio"
+          id="showRerun1"
+          name="showRerun"
+          value="true"
+          onclick="updateDate(nowSelect)"
+        />
+        <label for="showRerun1" data-lang="selShowRerun1">복각 표시</label>
+
+        <input
+          type="radio"
+          id="showRerun2"
+          name="showRerun"
+          value="false"
+          onclick="updateDate(nowSelect)"
+        />
+        <label for="showRerun2" data-lang="selShowRerun2">미복각 표시</label>
+      </fieldset>
+    </div>
+
     <div id="CAPTURE_FRAME" style="width: max-content; height: max-content">
       <div id="VIEW_SELECT" style="width: max-content; overflow: hidden">
         <span id="generalChkSpan" style="margin: 5px 10px; float: left">

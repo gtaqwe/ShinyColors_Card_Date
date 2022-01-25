@@ -19,6 +19,10 @@ $.lang.ko = {
   allFirstImplementNote: "※ 모든 카드의 첫 실장일은 「白いツバサ」 실장일이 기준일",
   showIcon: "아이콘 표시",
   showRCard: "첫 실장 비표시",
+  showRerun: "한정 복각 표시",
+  selShowRerun0: "비표시",
+  selShowRerun1: "복각 표시",
+  selShowRerun2: "미복각 표시",
 };
 
 $.lang.ja = {
@@ -40,4 +44,8 @@ $.lang.ja = {
   allFirstImplementNote: "※ すべてのカードの初実装日は「白いツバサ」の実装日が基準日",
   showIcon: "アイコン表示",
   showRCard: "初実装 非表示",
+  showRerun: "限定復刻表示",
+  selShowRerun0: "非表示",
+  selShowRerun1: "復刻あり表示",
+  selShowRerun2: "復刻なし表示",
 };

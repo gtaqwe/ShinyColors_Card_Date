@@ -88,10 +88,17 @@ function setCardData(totalData, totalLen) {
       var cardType = cardDataList[idx].card_type;
       var cardName = cardDataList[idx].card_name;
       var cardAddr = cardDataList[idx].card_addr;
+      var cardRerun = cardDataList[idx].card_rerun;
 
       // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "한정") {
-        resContent += '<td class="limit-card-cell" ';
+        // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
+        var rerunVal = $(`input[name="showRerun"]:checked`).val();
+        if (rerunVal != "" && rerunVal == cardRerun.toString()) {
+          resContent += '<td class="limit-card-rerun-cell" ';
+        } else {
+          resContent += '<td class="limit-card-cell" ';
+        }
       } else if (cardType == "이벤트") {
         resContent += '<td class="event-card-cell" ';
       } else if (cardType == "페스") {
