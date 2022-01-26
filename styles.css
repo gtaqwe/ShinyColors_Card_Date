@@ -64,12 +64,17 @@ footer {
   left: 0px;
 }
 
-.limit-card-rerun-cell,
-.limit-card-cell {
+.limit-card-cell,
+.limit-card-rerun-true-cell,
+.limit-card-rerun-false-cell {
   background-color: #92d050;
 }
 
-.limit-card-rerun-cell {
+.limit-card-rerun-true-cell {
+  box-shadow: 0 0 0 3px #0000ff inset;
+}
+
+.limit-card-rerun-false-cell {
   box-shadow: 0 0 0 3px #ff0000 inset;
 }
 

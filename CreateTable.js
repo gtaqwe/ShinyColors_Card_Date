@@ -94,8 +94,9 @@ function setCardData(totalData, totalLen) {
       if (cardType == "한정") {
         // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
         var rerunVal = $(`input[name="showRerun"]:checked`).val();
-        if (rerunVal != "" && rerunVal == cardRerun.toString()) {
-          resContent += '<td class="limit-card-rerun-cell" ';
+        var cardRerunStr = cardRerun.toString();
+        if (rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
+          resContent += `<td class="limit-card-rerun-${cardRerunStr}-cell" `;
         } else {
           resContent += '<td class="limit-card-cell" ';
         }

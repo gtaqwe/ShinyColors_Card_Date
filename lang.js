@@ -23,6 +23,7 @@ $.lang.ko = {
   selShowRerun0: "비표시",
   selShowRerun1: "복각 표시",
   selShowRerun2: "미복각 표시",
+  selShowRerun3: "모두 표시",
 };
 
 $.lang.ja = {
@@ -48,4 +49,5 @@ $.lang.ja = {
   selShowRerun0: "非表示",
   selShowRerun1: "復刻あり表示",
   selShowRerun2: "復刻なし表示",
+  selShowRerun3: "すべて表示",
 };
