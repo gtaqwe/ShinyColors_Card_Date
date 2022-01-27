@@ -90,11 +90,12 @@ function setCardData(totalData, totalLen) {
       var cardAddr = cardDataList[idx].card_addr;
       var cardRerun = cardDataList[idx].card_rerun;
 
+      var rerunVal = $(`input[name="showRerun"]:checked`).val();
+      var cardRerunStr = cardRerun.toString();
+
       // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "한정") {
         // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
-        var rerunVal = $(`input[name="showRerun"]:checked`).val();
-        var cardRerunStr = cardRerun.toString();
         if (rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
           resContent += `<td class="limit-card-rerun-${cardRerunStr}-cell" `;
         } else {
@@ -112,6 +113,14 @@ function setCardData(totalData, totalLen) {
 
       resContent += `addr="${cardAddr}" name="${cardName}">`;
 
+      // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
+      // 캡쳐시 box-shadow에 버그가 있기 때문에 div로 스타일 변경
+      if (cardType == "한정" && rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
+        resContent += `<div class="cell-div-limit">`;
+      } else {
+        resContent += `<div class="cell-div">`;
+      }
+
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($(iconImgConvertBtn).is(":checked") && cardAddr != "" && cardAddr != undefined) {
         var style = `style= "width:72px; height:72px"`;
@@ -123,7 +132,7 @@ function setCardData(totalData, totalLen) {
         }
         resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
       }
-      resContent += `${cardDate}</td>`;
+      resContent += `${cardDate}</div></td>`;
 
       // 카드 일정 데이터가 있는 경우, 간격일을 계산
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
@@ -276,9 +285,9 @@ function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
     table += `<tr style="height:${$("#date-table tr")
       .eq(i + 1)
       .height()}px">`;
-    table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;
-    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}">${rankStr}</td>`;
-    table += `<td style="${borderStyle.left}${cellColor}">${intervalStr}</td>`;
+    table += `<td style="${borderStyle.right}${cellColor}"><div class="cell-div">${nameStr}</div></td>`;
+    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}"><div class="cell-div">${rankStr}</div></td>`;
+    table += `<td style="${borderStyle.left}${cellColor}"><div class="cell-div">${intervalStr}</div></td>`;
     table += "</tr>";
   }
 

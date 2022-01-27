@@ -29,13 +29,19 @@ footer {
 }
 
 .th-head,
+.th-rank,
+.th-name-cell,
+.td-name-cell {
+  padding: 5px 10px;
+}
+
+.th-head,
 .th-rank {
   border-bottom: 2px solid #000000;
 }
 
 .th-name-cell,
 .td-name-cell {
-  padding: 5px 10px;
   border-right: 2px solid #000000;
 }
 
@@ -64,18 +70,22 @@ footer {
   left: 0px;
 }
 
-.limit-card-cell,
-.limit-card-rerun-true-cell,
-.limit-card-rerun-false-cell {
+.cell-div,
+.cell-div-limit {
+  margin: 0px;
+}
+
+.cell-div-limit,
+.limit-card-cell {
   background-color: #92d050;
 }
 
 .limit-card-rerun-true-cell {
-  box-shadow: 0 0 0 3px #0000ff inset;
+  background-color: #0000ff;
 }
 
 .limit-card-rerun-false-cell {
-  box-shadow: 0 0 0 3px #ff0000 inset;
+  background-color: #ff0000;
 }
 
 .event-card-cell {
