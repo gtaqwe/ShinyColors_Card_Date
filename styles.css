@@ -13,7 +13,7 @@ table {
 th,
 td {
   white-space: nowrap;
-  padding: 5px 5px;
+  padding: 5px;
   border: 1px solid #d4d4d4;
   cursor: default;
 }

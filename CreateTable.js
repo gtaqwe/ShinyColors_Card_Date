@@ -251,6 +251,7 @@ function selectCellColor(rankStr) {
   else if (rankStr == "6") return "background-color: rgba(75, 0, 130, 0.4); ";
   // Violet
   else if (rankStr == "7") return "background-color: rgba(238, 130, 238, 0.4); ";
+  else return "";
 }
 
 /**
