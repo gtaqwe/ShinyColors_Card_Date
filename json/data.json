@@ -370,6 +370,13 @@
 				"card_date": "2021-09-30",
 				"card_addr": "hiori_s_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【WtoW】風野 灯織",
+				"card_type": "이벤트",
+				"card_date": "2022-01-31",
+				"card_addr": "hiori_s_ssr8",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -476,6 +483,13 @@
 				"card_type": "통상",
 				"card_date": "2021-06-21",
 				"card_addr": "meguru_p_ssr6",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【きゅん♡コメ】八宮 めぐる",
+				"card_type": "한정",
+				"card_date": "2022-01-31",
+				"card_addr": "meguru_p_ssr7",
 				"card_rerun": false
 			}
 		],
@@ -3641,6 +3655,13 @@
 				"card_type": "이벤트",
 				"card_date": "2021-01-01",
 				"card_addr": "toru_s_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【チョコレー党、起立！】浅倉 透",
+				"card_type": "한정",
+				"card_date": "2022-01-31",
+				"card_addr": "toru_s_ssr4",
 				"card_rerun": false
 			}
 		],
