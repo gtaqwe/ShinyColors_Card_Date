@@ -3,6 +3,9 @@ var JSON_DATA;
 var VIEW_LANGUAGE;
 const DEFALUT_LANGUAGE = "ko";
 
+// 통상, 한정, 이벤트, 페스, 캠페인
+var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0];
+
 $().ready(function () {
   init();
 });
@@ -36,9 +39,12 @@ async function init() {
   setLanguage(VIEW_LANGUAGE);
   $("#languageSelect").val(VIEW_LANGUAGE).prop("selected", true);
 
+  // 사복, 페스의상 토글
   getToggleString($("#fesImgConvertBtn").is(":checked"));
 
-  $(noShowRCardConvertBtn).prop("checked", $(noShowRCardConvertBtn).is(":checked"));
+  // 카드 수 리셋
+  setCardTypeCountList();
+  convertShowCardCount();
 }
 
 /**
@@ -141,6 +147,8 @@ function getToday() {
  * 9 : S
  */
 function updateDate(nowSelect) {
+  resetCardTypeCountList();
+
   if (nowSelect == 1) {
     P_SSR();
   } else if (nowSelect == 2) {
@@ -159,6 +167,47 @@ function updateDate(nowSelect) {
     ALL_P();
   } else if (nowSelect == 9) {
     ALL_S();
+  }
+
+  setCardTypeCountList();
+  convertShowCardCount();
+}
+
+// CARD_TYPE_COUNT_LIST를 리셋
+function resetCardTypeCountList() {
+  CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0];
+}
+
+// 카드 타입 확인 후 CARD_TYPE_COUNT_LIST에 카운트
+function countCardType(cardType) {
+  if (cardType == "통상") {
+    CARD_TYPE_COUNT_LIST[0] += 1;
+  } else if (cardType == "한정") {
+    CARD_TYPE_COUNT_LIST[1] += 1;
+  } else if (cardType == "이벤트") {
+    CARD_TYPE_COUNT_LIST[2] += 1;
+  } else if (cardType == "페스") {
+    CARD_TYPE_COUNT_LIST[3] += 1;
+  } else if (cardType == "캠페인") {
+    CARD_TYPE_COUNT_LIST[4] += 1;
+  }
+}
+
+function setCardTypeCountList() {
+  $(cardCount_permanent).text(CARD_TYPE_COUNT_LIST[0]);
+  $(cardCount_limited).text(CARD_TYPE_COUNT_LIST[1]);
+  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[2]);
+  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[3]);
+  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[4]);
+
+  // if($(showCardCountConvertBtn).is(":checked"))
+}
+
+function convertShowCardCount() {
+  if ($(showCardCountConvertBtn).is(":checked")) {
+    $(cardCountTR).css("display", "");
+  } else {
+    $(cardCountTR).css("display", "none");
   }
 }
 

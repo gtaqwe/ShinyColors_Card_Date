@@ -56,6 +56,12 @@
         <span class="slider round"></span>
       </label>
       <span data-lang="showRCard">첫 실장 비표시</span>
+
+      <label class="switch" style="margin: 5px 10px">
+        <input type="checkbox" id="showCardCountConvertBtn" onchange="updateDate(NOW_SELECT)" />
+        <span class="slider round"></span>
+      </label>
+      <span data-lang="showCardCount">카드 수 표시</span>
     </div>
 
     <div>
@@ -219,13 +225,22 @@
         <label id="BaseEndDateStr" style="display: none"></label>
       </div>
 
-      <div>
+      <div style="max-width: max-content">
         <table>
-          <th style="width: 100px" data-lang="permanent">통상</th>
-          <th class="limit-card-cell" style="width: 100px" data-lang="limited">한정</th>
-          <th class="event-card-cell" style="width: 100px" data-lang="event">이벤트</th>
-          <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes">페스</th>
-          <th class="campaign-card-cell" style="width: 100px" data-lang="campaign">캠페인</th>
+          <tr>
+            <th style="width: 100px" data-lang="permanent">통상</th>
+            <th class="limit-card-cell" style="width: 100px" data-lang="limited">한정</th>
+            <th class="event-card-cell" style="width: 100px" data-lang="event">이벤트</th>
+            <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes">페스</th>
+            <th class="campaign-card-cell" style="width: 100px" data-lang="campaign">캠페인</th>
+          </tr>
+          <tr id="cardCountTR" style="display: none">
+            <td id="cardCount_permanent"></td>
+            <td id="cardCount_limited" class="limit-card-cell"></td>
+            <td id="cardCount_event" class="event-card-cell"></td>
+            <td id="cardCount_fes" class="gradeFes-card-cell"></td>
+            <td id="cardCount_campaign" class="campaign-card-cell"></td>
+          </tr>
         </table>
       </div>
 

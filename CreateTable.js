@@ -38,7 +38,9 @@ function runBuildTable(idolData) {
   table += "</table>";
 
   $("#MAIN").html(table);
-  $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
+  if (!$(`#NOTE_SPACE`).length) {
+    $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
+  }
 
   imgMapping(this);
 }
@@ -92,6 +94,8 @@ function setCardData(totalData, totalLen) {
 
       var rerunVal = $(`input[name="showRerun"]:checked`).val();
       var cardRerunStr = cardRerun.toString();
+
+      countCardType(cardType);
 
       // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "한정") {

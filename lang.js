@@ -24,6 +24,7 @@ $.lang.ko = {
   selShowRerun1: "복각 표시",
   selShowRerun2: "미복각 표시",
   selShowRerun3: "모두 표시",
+  showCardCount: "카드 수 표시",
 };
 
 $.lang.ja = {
@@ -50,4 +51,5 @@ $.lang.ja = {
   selShowRerun1: "復刻あり表示",
   selShowRerun2: "復刻なし表示",
   selShowRerun3: "すべて表示",
+  showCardCount: "カード数表示",
 };
