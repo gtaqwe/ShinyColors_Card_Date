@@ -1,7 +1,7 @@
-var nowSelect = 0;
-var jsonData;
-var viewLanguage;
-const defalutLanguage = "ko";
+var NOW_SELECT = 0;
+var JSON_DATA;
+var VIEW_LANGUAGE;
+const DEFALUT_LANGUAGE = "ko";
 
 $().ready(function () {
   init();
@@ -11,30 +11,30 @@ $().ready(function () {
 
 async function init() {
   await getJSON("json/data.json").then(function (resp) {
-    jsonData = JSON.parse(resp);
+    JSON_DATA = JSON.parse(resp);
   });
 
-  nowSelect = 0;
+  NOW_SELECT = 0;
   // 초기 기준일
   // Start : 서비스 개시일
   // End : 오늘
   $("#BaseStartDate").val("2018-04-24");
   $("#BaseEndDate").val(getToday());
 
-  viewLanguage = getLanguage();
+  VIEW_LANGUAGE = getLanguage();
 
   // 지원하는 언어가 아닌 경우 한국어로 표시
-  if (!(viewLanguage in $.lang)) viewLanguage = defalutLanguage;
+  if (!(VIEW_LANGUAGE in $.lang)) VIEW_LANGUAGE = DEFALUT_LANGUAGE;
 
   // 수동으로 언어 설정시 선택한 언어로 표시
   if (getQuery() !== undefined && getQuery().lang !== undefined && getQuery().lang !== "") {
     if (getQuery().lang in $.lang) {
-      viewLanguage = getQuery().lang;
+      VIEW_LANGUAGE = getQuery().lang;
       $("#languageSetting").css("display", "inline");
     }
   }
-  setLanguage(viewLanguage);
-  $("#languageSelect").val(viewLanguage).prop("selected", true);
+  setLanguage(VIEW_LANGUAGE);
+  $("#languageSelect").val(VIEW_LANGUAGE).prop("selected", true);
 
   getToggleString($("#fesImgConvertBtn").is(":checked"));
 
@@ -85,11 +85,11 @@ function setLanguageById(currLang, id, str) {
 }
 
 function changeLanguage() {
-  viewLanguage = $("#languageSelect").val();
-  setLanguage(viewLanguage);
+  VIEW_LANGUAGE = $("#languageSelect").val();
+  setLanguage(VIEW_LANGUAGE);
   var fesChk = $("#fesImgConvertBtn").is(":checked");
   getToggleString(fesChk);
-  updateDate(nowSelect);
+  updateDate(NOW_SELECT);
 }
 
 /**
@@ -194,7 +194,7 @@ function updateBaseDate(changedBase, nowSelect) {
  */
 function baseDateReset(id, inputDate) {
   $(`#${id}`).val(inputDate);
-  updateDate(nowSelect);
+  updateDate(NOW_SELECT);
 }
 
 /**
@@ -203,7 +203,7 @@ function baseDateReset(id, inputDate) {
  */
 function setFesImg(fesChk) {
   getToggleString(fesChk);
-  updateDate(nowSelect);
+  updateDate(NOW_SELECT);
 }
 
 /**
@@ -216,7 +216,7 @@ function getToggleString(fesChk) {
   } else {
     str = "casual";
   }
-  setLanguageById(viewLanguage, "#toggleStr", str);
+  setLanguageById(VIEW_LANGUAGE, "#toggleStr", str);
 }
 
 /**
@@ -241,10 +241,10 @@ function P_SSR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  nowSelect = 1;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
+  NOW_SELECT = 1;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -255,10 +255,10 @@ function S_SSR() {
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
-  nowSelect = 2;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
+  NOW_SELECT = 2;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -269,10 +269,10 @@ function P_SR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  nowSelect = 3;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
+  NOW_SELECT = 3;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -283,10 +283,10 @@ function S_SR() {
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
-  nowSelect = 4;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
+  NOW_SELECT = 4;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -297,10 +297,10 @@ function ALL_CARD() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
-  nowSelect = 5;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
+  NOW_SELECT = 5;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -311,10 +311,10 @@ function ALL_SSR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
-  nowSelect = 6;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
+  NOW_SELECT = 6;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -325,10 +325,10 @@ function ALL_SR() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "allFirstImplementNote");
-  nowSelect = 7;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
+  NOW_SELECT = 7;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -339,10 +339,10 @@ function ALL_P() {
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "pFirstImplementNote");
-  nowSelect = 8;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
+  NOW_SELECT = 8;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -353,10 +353,10 @@ function ALL_S() {
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
-  setLanguageById(viewLanguage, "#NOTE_SPACE", "sFirstImplementNote");
-  nowSelect = 9;
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
+  NOW_SELECT = 9;
 
-  setLanguage(viewLanguage);
+  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -412,7 +412,7 @@ function getCardList(cardAry) {
  */
 function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
   var maxColumnLen = 0;
-  var totalList = jsonData.map((idol) => {
+  var totalList = JSON_DATA.map((idol) => {
     var tempList = [];
 
     if (pSSR) tempList = tempList.concat([...idol.P_SSR]);
@@ -424,7 +424,7 @@ function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
-    if (viewLanguage == "ja") {
+    if (VIEW_LANGUAGE == "ja") {
       idolName = idol.idol_ja_name;
     }
 
@@ -544,7 +544,7 @@ function getImgSrc(path, addr) {
  * 표 캡쳐, 다운로드 처리
  */
 function captureScreen(frameName) {
-  if (nowSelect != 0) {
+  if (NOW_SELECT != 0) {
     var captureName;
     var frameId;
     var viewMode = "";
@@ -558,15 +558,15 @@ function captureScreen(frameName) {
     if ($("#gradeFesCardChkBox").is(":checked")) viewMode += "F";
     if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";
 
-    if (nowSelect == 1) captureName = frameName + "_P_SSR_" + viewMode + ".png";
-    else if (nowSelect == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";
-    else if (nowSelect == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
-    else if (nowSelect == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
-    else if (nowSelect == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
-    else if (nowSelect == 6) captureName = frameName + "_SSR_" + viewMode + ".png";
-    else if (nowSelect == 7) captureName = frameName + "_SR_" + viewMode + ".png";
-    else if (nowSelect == 8) captureName = frameName + "_P_" + viewMode + ".png";
-    else if (nowSelect == 9) captureName = frameName + "_S_" + viewMode + ".png";
+    if (NOW_SELECT == 1) captureName = frameName + "_P_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
+    else if (NOW_SELECT == 6) captureName = frameName + "_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 7) captureName = frameName + "_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 8) captureName = frameName + "_P_" + viewMode + ".png";
+    else if (NOW_SELECT == 9) captureName = frameName + "_S_" + viewMode + ".png";
 
     $(frameId).css("overflow", "hidden");
     $("#convertSpan").css("display", "none");

@@ -16,17 +16,17 @@
     </div>
 
     <div>
-      <input type="button" value="P-SSR" onclick="P_SSR()" class="Pbutton" />
-      <input type="button" value="S-SSR" onclick="S_SSR()" class="Sbutton" />
-      <input type="button" value="All SSR" onclick="ALL_SSR()" class="ALLbutton" />
+      <input type="button" value="P-SSR" onclick="updateDate(1)" class="Pbutton" />
+      <input type="button" value="S-SSR" onclick="updateDate(2)" class="Sbutton" />
+      <input type="button" value="All SSR" onclick="updateDate(6)" class="ALLbutton" />
       <br />
-      <input type="button" value="P-SR" onclick="P_SR()" class="Pbutton" />
-      <input type="button" value="S-SR" onclick="S_SR()" class="Sbutton" />
-      <input type="button" value="All SR" onclick="ALL_SR()" class="ALLbutton" />
+      <input type="button" value="P-SR" onclick="updateDate(3)" class="Pbutton" />
+      <input type="button" value="S-SR" onclick="updateDate(4)" class="Sbutton" />
+      <input type="button" value="All SR" onclick="updateDate(7)" class="ALLbutton" />
       <br />
-      <input type="button" value="All P" onclick="ALL_P()" class="Pbutton" />
-      <input type="button" value="All S" onclick="ALL_S()" class="Sbutton" />
-      <input type="button" value="All" onclick="ALL_CARD()" class="ALLbutton" />
+      <input type="button" value="All P" onclick="updateDate(8)" class="Pbutton" />
+      <input type="button" value="All S" onclick="updateDate(9)" class="Sbutton" />
+      <input type="button" value="All" onclick="updateDate(5)" class="ALLbutton" />
     </div>
 
     <div>
@@ -46,13 +46,13 @@
 
     <div>
       <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="iconImgConvertBtn" onchange="updateDate(nowSelect)" />
+        <input type="checkbox" id="iconImgConvertBtn" onchange="updateDate(NOW_SELECT)" />
         <span class="slider round"></span>
       </label>
       <span data-lang="showIcon">아이콘 표시</span>
 
       <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="noShowRCardConvertBtn" onchange="updateDate(nowSelect)" />
+        <input type="checkbox" id="noShowRCardConvertBtn" onchange="updateDate(NOW_SELECT)" />
         <span class="slider round"></span>
       </label>
       <span data-lang="showRCard">첫 실장 비표시</span>
@@ -66,7 +66,7 @@
           id="showRerun0"
           name="showRerun"
           value=""
-          onclick="updateDate(nowSelect)"
+          onclick="updateDate(NOW_SELECT)"
           checked
         />
         <label for="showRerun0" data-lang="selShowRerun0">비표시</label>
@@ -76,7 +76,7 @@
           id="showRerun1"
           name="showRerun"
           value="true"
-          onclick="updateDate(nowSelect)"
+          onclick="updateDate(NOW_SELECT)"
         />
         <label for="showRerun1" data-lang="selShowRerun1">복각 표시</label>
 
@@ -85,7 +85,7 @@
           id="showRerun2"
           name="showRerun"
           value="false"
-          onclick="updateDate(nowSelect)"
+          onclick="updateDate(NOW_SELECT)"
         />
         <label for="showRerun2" data-lang="selShowRerun2">미복각 표시</label>
 
@@ -94,7 +94,7 @@
           id="showRerun3"
           name="showRerun"
           value="all"
-          onclick="updateDate(nowSelect)"
+          onclick="updateDate(NOW_SELECT)"
         />
         <label for="showRerun3" data-lang="selShowRerun3">모두 표시</label>
       </fieldset>
@@ -109,7 +109,7 @@
               type="checkbox"
               id="permanentCardChkBox"
               checked="checked"
-              onchange="updateDate(nowSelect)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -122,7 +122,7 @@
               type="checkbox"
               id="limitedCardChkBox"
               checked="checked"
-              onchange="updateDate(nowSelect)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -135,7 +135,7 @@
               type="checkbox"
               id="eventCardChkBox"
               checked="checked"
-              onchange="updateDate(nowSelect)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -148,7 +148,7 @@
               type="checkbox"
               id="gradeFesCardChkBox"
               checked="checked"
-              onchange="updateDate(nowSelect)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -161,7 +161,7 @@
               type="checkbox"
               id="campaignCardChkBox"
               checked="checked"
-              onchange="updateDate(nowSelect)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -188,7 +188,7 @@
             type="date"
             id="BaseStartDate"
             name="BaseStartDate"
-            onchange="updateBaseDate('start', nowSelect)"
+            onchange="updateBaseDate('start', NOW_SELECT)"
           />
           <input
             type="button"
@@ -207,7 +207,7 @@
             type="date"
             id="BaseEndDate"
             name="BaseEndDate"
-            onchange="updateBaseDate('end', nowSelect)"
+            onchange="updateBaseDate('end', NOW_SELECT)"
           />
           <input
             type="button"
