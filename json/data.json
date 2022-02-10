@@ -730,6 +730,13 @@
 				"card_date": "2020-09-23",
 				"card_addr": "kogane_p_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【雪、えとせとら】月岡 恋鐘",
+				"card_type": "이벤트",
+				"card_date": "2022-02-10",
+				"card_addr": "kogane_p_sr5",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -2391,6 +2398,13 @@
 				"card_type": "한정",
 				"card_date": "2021-04-30",
 				"card_addr": "natsuha_p_ssr6",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【マイバレンタイン】有栖川 夏葉        ",
+				"card_type": "한정",
+				"card_date": "2022-02-10",
+				"card_addr": "natsuha_p_ssr7",
 				"card_rerun": false
 			}
 		],
@@ -4161,6 +4175,13 @@
 				"card_type": "캠페인",
 				"card_date": "2021-12-28",
 				"card_addr": "mikoto_s_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【LATE】緋田 美琴",
+				"card_type": "한정",
+				"card_date": "2022-02-10",
+				"card_addr": "mikoto_s_ssr4",
 				"card_rerun": false
 			}
 		],
