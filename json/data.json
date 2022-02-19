@@ -2984,6 +2984,13 @@
 				"card_date": "2021-05-31",
 				"card_addr": "chiyuki_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【つよがりのためのララバイ】桑山 千雪",
+				"card_type": "통상",
+				"card_date": "2022-02-19",
+				"card_addr": "chiyuki_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -3699,6 +3706,13 @@
 				"card_type": "통상",
 				"card_date": "2021-02-19",
 				"card_addr": "toru_s_sr2",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【殴打、その他の夢について】浅倉 透",
+				"card_type": "이벤트",
+				"card_date": "2022-02-19",
+				"card_addr": "toru_s_sr3",
 				"card_rerun": false
 			}
 		]
