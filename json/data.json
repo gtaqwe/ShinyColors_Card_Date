@@ -1027,6 +1027,13 @@
 				"card_date": "2021-01-12",
 				"card_addr": "mamimi_s_sr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【episode：Cool】田中 摩美々",
+				"card_type": "이벤트",
+				"card_date": "2022-03-10",
+				"card_addr": "mamimi_s_sr4",
+				"card_rerun": false
 			}
 		]
 	},
@@ -3580,6 +3587,13 @@
 				"card_date": "2021-04-20",
 				"card_addr": "mei_s_ssr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【左選んで～！】和泉 愛依",
+				"card_type": "통상",
+				"card_date": "2022-03-10",
+				"card_addr": "mei_s_ssr6",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -3769,6 +3783,13 @@
 				"card_type": "한정",
 				"card_date": "2021-08-31",
 				"card_addr": "madoka_p_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【オイサラバエル】樋口 円香",
+				"card_type": "통상",
+				"card_date": "2022-03-10",
+				"card_addr": "madoka_p_ssr4",
 				"card_rerun": false
 			}
 		],
