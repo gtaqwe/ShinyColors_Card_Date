@@ -989,7 +989,7 @@
 				"card_type": "한정",
 				"card_date": "2020-04-20",
 				"card_addr": "mamimi_s_ssr6",
-				"card_rerun": false
+				"card_rerun": true
 			},
 			{
 				"card_name": "【ソバニアル・サマー】田中 摩美々",
@@ -2600,7 +2600,7 @@
 				"card_type": "한정",
 				"card_date": "2020-02-29",
 				"card_addr": "amana_p_ssr4",
-				"card_rerun": false
+				"card_rerun": true
 			},
 			{
 				"card_name": "【叶えて☆ゴールドフィッシュ】大崎 甘奈",
@@ -2795,7 +2795,7 @@
 				"card_type": "한정",
 				"card_date": "2020-04-20",
 				"card_addr": "tenka_p_ssr4",
-				"card_rerun": false
+				"card_rerun": true
 			},
 			{
 				"card_name": "【BON・BON・DAY！】大崎 甜花",
@@ -2897,7 +2897,7 @@
 				"card_type": "한정",
 				"card_date": "2020-02-29",
 				"card_addr": "tenka_s_ssr5",
-				"card_rerun": false
+				"card_rerun": true
 			},
 			{
 				"card_name": "【リトル・スターズ】大崎 甜花",
