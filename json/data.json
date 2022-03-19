@@ -182,6 +182,13 @@
 				"card_date": "2021-06-30",
 				"card_addr": "mano_s_ssr10",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【春日影、さんならび】櫻木 真乃",
+				"card_type": "한정",
+				"card_date": "2022-03-19",
+				"card_addr": "mano_s_ssr11",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -2269,6 +2276,13 @@
 				"card_date": "2021-05-20",
 				"card_addr": "rinze_p_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【春告窓】杜野 凛世",
+				"card_type": "이벤트",
+				"card_date": "2022-03-19",
+				"card_addr": "rinze_p_sr6",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -3359,6 +3373,13 @@
 				"card_type": "한정",
 				"card_date": "2021-07-31",
 				"card_addr": "fuyuko_p_ssr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【multi-angle】黛 冬優子",
+				"card_type": "한정",
+				"card_date": "2022-03-19",
+				"card_addr": "fuyuko_p_ssr5",
 				"card_rerun": false
 			}
 		],
