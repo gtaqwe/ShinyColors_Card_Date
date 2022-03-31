@@ -2824,6 +2824,13 @@
 				"card_date": "2021-08-20",
 				"card_addr": "tenka_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【Feel Like Flower】大崎 甜花",
+				"card_type": "한정",
+				"card_date": "2022-04-01",
+				"card_addr": "tenka_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -3134,6 +3141,13 @@
 				"card_type": "통상",
 				"card_date": "2021-10-12",
 				"card_addr": "chiyuki_s_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【signal】桑山 千雪",
+				"card_type": "이벤트",
+				"card_date": "2022-04-01",
+				"card_addr": "chiyuki_s_ssr8",
 				"card_rerun": false
 			}
 		],
@@ -3865,6 +3879,13 @@
 				"card_date": "2021-05-31",
 				"card_addr": "madoka_s_ssr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【射陽】樋口 円香",
+				"card_type": "페스",
+				"card_date": "2022-04-01",
+				"card_addr": "madoka_s_ssr4",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -3968,6 +3989,13 @@
 				"card_type": "이벤트",
 				"card_date": "2021-08-31",
 				"card_addr": "koito_s_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【はるとあめ】福丸 小糸",
+				"card_type": "한정",
+				"card_date": "2022-04-01",
+				"card_addr": "koito_s_ssr4",
 				"card_rerun": false
 			}
 		],
