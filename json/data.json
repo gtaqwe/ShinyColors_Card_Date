@@ -103,6 +103,13 @@
 				"card_date": "2020-11-30",
 				"card_addr": "mano_p_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【ピックアップ・スプリング】櫻木 真乃",
+				"card_type": "이벤트",
+				"card_date": "2022-04-11",
+				"card_addr": "mano_p_sr6",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -2044,6 +2051,13 @@
 				"card_date": "2021-04-12",
 				"card_addr": "juri_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【花染む街で、君と】西城 樹里",
+				"card_type": "통상",
+				"card_date": "2022-04-11",
+				"card_addr": "juri_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -3475,6 +3489,13 @@
 				"card_type": "이벤트",
 				"card_date": "2021-10-31",
 				"card_addr": "fuyuko_s_ssr6",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【二律背反sweet】黛 冬優子",
+				"card_type": "통상",
+				"card_date": "2022-04-11",
+				"card_addr": "fuyuko_s_ssr7",
 				"card_rerun": false
 			}
 		],
