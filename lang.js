@@ -1,11 +1,16 @@
 $.lang = {};
 
 $.lang.ko = {
-  permanent: "통상",
-  limited: "한정",
-  event: "이벤트",
-  fes: "페스",
-  campaign: "캠페인",
+  permanent_1: "통상",
+  limited_1: "한정",
+  event_1: "이벤트",
+  fes_1: "페스",
+  campaign_1: "캠페인",
+  permanent_2: "통상 (P)",
+  limited_2: "한정 (L)",
+  event_2: "이벤트 (E)",
+  fes_2: "페스 (F)",
+  campaign_2: "캠페인 (C)",
   startBaseDate: "시작일:",
   endBaseDate: "종료일:",
   firstImplementation: "첫 실장",
@@ -28,11 +33,16 @@ $.lang.ko = {
 };
 
 $.lang.ja = {
-  permanent: "恒常",
-  limited: "限定",
-  event: "イベント",
-  fes: "フェス",
-  campaign: "キャンペーン",
+  permanent_1: "恒常",
+  limited_1: "限定",
+  event_1: "イベント",
+  fes_1: "フェス",
+  campaign_1: "キャンペーン",
+  permanent_2: "恒常 (P)",
+  limited_2: "限定 (L)",
+  event_2: "イベント (E)",
+  fes_2: "フェス (F)",
+  campaign_2: "キャンペーン (C)",
   startBaseDate: "開始日:",
   endBaseDate: "終了日:",
   firstImplementation: "初実装",
