@@ -80,12 +80,17 @@ footer {
   background-color: #92d050;
 }
 
-.limit-card-rerun-true-cell {
+.card-rerun-true-cell {
   background-color: #0000ff;
 }
 
-.limit-card-rerun-false-cell {
+.card-rerun-false-cell {
   background-color: #ff0000;
+}
+
+.twilight-card-cell {
+  background-color: #8833ff;
+  color: #ffffff;
 }
 
 .event-card-cell {

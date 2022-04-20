@@ -98,18 +98,20 @@ function setCardData(totalData, totalLen) {
       countCardType(cardType);
 
       // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
-      if (cardType == "한정") {
+      if (cardType == "limited") {
         // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
         if (rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
-          resContent += `<td class="limit-card-rerun-${cardRerunStr}-cell" `;
+          resContent += `<td class="card-rerun-${cardRerunStr}-cell" `;
         } else {
           resContent += '<td class="limit-card-cell" ';
         }
-      } else if (cardType == "이벤트") {
+      } else if (cardType == "twilight") {
+        resContent += '<td class="twilight-card-cell" ';
+      } else if (cardType == "event") {
         resContent += '<td class="event-card-cell" ';
-      } else if (cardType == "페스") {
+      } else if (cardType == "fes") {
         resContent += '<td class="gradeFes-card-cell" ';
-      } else if (cardType == "캠페인") {
+      } else if (cardType == "campaign") {
         resContent += '<td class="campaign-card-cell" ';
       } else {
         resContent += "<td ";
@@ -119,7 +121,11 @@ function setCardData(totalData, totalLen) {
 
       // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
       // 캡쳐시 box-shadow에 버그가 있기 때문에 div로 스타일 변경
-      if (cardType == "한정" && rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
+      if (
+        cardType == "limited" &&
+        rerunVal != "" &&
+        (rerunVal == "all" || rerunVal == cardRerunStr)
+      ) {
         resContent += `<div class="cell-div-limit">`;
       } else {
         resContent += `<div class="cell-div">`;
@@ -322,6 +328,11 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
     else gachaTypeStr = "";
     gachaTypeStr += "L";
+  }
+  if ($("#twilightCardChkBox").is(":checked")) {
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    else gachaTypeStr = "";
+    gachaTypeStr += "T";
   }
   if ($("#eventCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";

@@ -134,6 +134,19 @@
           </label>
         </span>
 
+        <span id="twilightChkSpan" style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="twilight_1">트와코레</span>
+            <input
+              type="checkbox"
+              id="twilightCardChkBox"
+              checked="checked"
+              onchange="updateDate(NOW_SELECT)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
+
         <span id="eventChkSpan" style="margin: 5px 10px; float: left">
           <label class="container">
             <span data-lang="event_1">이벤트</span>
@@ -230,6 +243,9 @@
           <tr>
             <th style="width: 100px" data-lang="permanent_2">통상 (P)</th>
             <th class="limit-card-cell" style="width: 100px" data-lang="limited_2">한정 (L)</th>
+            <th class="twilight-card-cell" style="width: 100px" data-lang="twilight_2">
+              트와코레 (T)
+            </th>
             <th class="event-card-cell" style="width: 100px" data-lang="event_2">이벤트 (E)</th>
             <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes_2">페스 (F)</th>
             <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">
@@ -239,6 +255,7 @@
           <tr id="cardCountTR" style="display: none">
             <td id="cardCount_permanent"></td>
             <td id="cardCount_limited" class="limit-card-cell"></td>
+            <td id="cardCount_twilight" class="twilight-card-cell"></td>
             <td id="cardCount_event" class="event-card-cell"></td>
             <td id="cardCount_fes" class="gradeFes-card-cell"></td>
             <td id="cardCount_campaign" class="campaign-card-cell"></td>

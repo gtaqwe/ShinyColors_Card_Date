@@ -3,8 +3,8 @@ var JSON_DATA;
 var VIEW_LANGUAGE;
 const DEFALUT_LANGUAGE = "ko";
 
-// 통상, 한정, 이벤트, 페스, 캠페인
-var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0];
+// 통상, 한정, 트와코레, 이벤트, 페스, 캠페인
+var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0];
 
 $().ready(function () {
   init();
@@ -175,30 +175,33 @@ function updateDate(nowSelect) {
 
 // CARD_TYPE_COUNT_LIST를 리셋
 function resetCardTypeCountList() {
-  CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0];
+  CARD_TYPE_COUNT_LIST = Array(CARD_TYPE_COUNT_LIST.length).fill(0);
 }
 
 // 카드 타입 확인 후 CARD_TYPE_COUNT_LIST에 카운트
 function countCardType(cardType) {
-  if (cardType == "통상") {
+  if (cardType == "permanent") {
     CARD_TYPE_COUNT_LIST[0] += 1;
-  } else if (cardType == "한정") {
+  } else if (cardType == "limited") {
     CARD_TYPE_COUNT_LIST[1] += 1;
-  } else if (cardType == "이벤트") {
+  } else if (cardType == "twilight") {
     CARD_TYPE_COUNT_LIST[2] += 1;
-  } else if (cardType == "페스") {
+  } else if (cardType == "event") {
     CARD_TYPE_COUNT_LIST[3] += 1;
-  } else if (cardType == "캠페인") {
+  } else if (cardType == "fes") {
     CARD_TYPE_COUNT_LIST[4] += 1;
+  } else if (cardType == "campaign") {
+    CARD_TYPE_COUNT_LIST[5] += 1;
   }
 }
 
 function setCardTypeCountList() {
   $(cardCount_permanent).text(CARD_TYPE_COUNT_LIST[0]);
   $(cardCount_limited).text(CARD_TYPE_COUNT_LIST[1]);
-  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[2]);
-  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[3]);
-  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[4]);
+  $(cardCount_twilight).text(CARD_TYPE_COUNT_LIST[2]);
+  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[3]);
+  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[4]);
+  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[5]);
 
   // if($(showCardCountConvertBtn).is(":checked"))
 }
@@ -416,20 +419,22 @@ function getCardList(cardAry) {
     cardAry
       .map((card, idx) => {
         var cardType = card.card_type;
-        if (cardType == "첫실장" && idx == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
+        if (cardType == "first" && idx == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
           return card;
         }
 
         // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-        if (cardType == "통상" && $("#permanentCardChkBox").is(":checked")) {
+        if (cardType == "permanent" && $("#permanentCardChkBox").is(":checked")) {
           return card;
-        } else if (cardType == "한정" && $("#limitedCardChkBox").is(":checked")) {
+        } else if (cardType == "limited" && $("#limitedCardChkBox").is(":checked")) {
           return card;
-        } else if (cardType == "이벤트" && $("#eventCardChkBox").is(":checked")) {
+        } else if (cardType == "twilight" && $("#twilightCardChkBox").is(":checked")) {
           return card;
-        } else if (cardType == "페스" && $("#gradeFesCardChkBox").is(":checked")) {
+        } else if (cardType == "event" && $("#eventCardChkBox").is(":checked")) {
           return card;
-        } else if (cardType == "캠페인" && $("#campaignCardChkBox").is(":checked")) {
+        } else if (cardType == "fes" && $("#gradeFesCardChkBox").is(":checked")) {
+          return card;
+        } else if (cardType == "campaign" && $("#campaignCardChkBox").is(":checked")) {
           return card;
         }
       })
@@ -437,7 +442,7 @@ function getCardList(cardAry) {
       .filter((v) => v !== undefined)
       .filter(
         (v) =>
-          v.card_type == "첫실장" ||
+          v.card_type == "first" ||
           (new Date(v.card_date) >= new Date($("#BaseStartDate").val()) &&
             new Date(v.card_date) <= new Date($("#BaseEndDate").val()))
       )
@@ -603,6 +608,7 @@ function captureScreen(frameName) {
 
     if ($("#permanentCardChkBox").is(":checked")) viewMode += "P";
     if ($("#limitedCardChkBox").is(":checked")) viewMode += "L";
+    if ($("#twilightCardChkBox").is(":checked")) viewMode += "T";
     if ($("#eventCardChkBox").is(":checked")) viewMode += "E";
     if ($("#gradeFesCardChkBox").is(":checked")) viewMode += "F";
     if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";
