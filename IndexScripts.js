@@ -264,7 +264,7 @@ function setFesImg(fesChk) {
 function getToggleString(fesChk) {
   var str;
   if (fesChk == true) {
-    str = "fes";
+    str = "fes_1";
   } else {
     str = "casual";
   }
