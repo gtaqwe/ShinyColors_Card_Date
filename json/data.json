@@ -240,6 +240,13 @@
 				"card_date": "2020-09-11",
 				"card_addr": "mano_s_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【空は澄み、今を越えて。】櫻木 真乃",
+				"card_type": "campaign",
+				"card_date": "2022-04-24",
+				"card_addr": "mano_s_sr5",
+				"card_rerun": false
 			}
 		]
 	},
@@ -859,6 +866,13 @@
 				"card_type": "permanent",
 				"card_date": "2019-12-26",
 				"card_addr": "kogane_s_sr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【空は澄み、今を越えて。】月岡 恋鐘",
+				"card_type": "campaign",
+				"card_date": "2022-04-24",
+				"card_addr": "kogane_s_sr5",
 				"card_rerun": false
 			}
 		]
@@ -1820,6 +1834,13 @@
 				"card_type": "event",
 				"card_date": "2021-07-10",
 				"card_addr": "kaho_s_sr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【空は澄み、今を越えて。】小宮果穂",
+				"card_type": "campaign",
+				"card_date": "2022-04-23",
+				"card_addr": "kaho_s_sr5",
 				"card_rerun": false
 			}
 		]
