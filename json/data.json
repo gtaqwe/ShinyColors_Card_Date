@@ -2794,6 +2794,13 @@
 				"card_date": "2021-07-20",
 				"card_addr": "amana_s_ssr8",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【デビルたちの夜会☆】大崎 甘奈",
+				"card_type": "limited",
+				"card_date": "2022-04-30",
+				"card_addr": "amana_s_ssr9",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -4261,6 +4268,13 @@
 				"card_date": "2021-12-10",
 				"card_addr": "nichika_s_ssr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【あっかい】七草 にちか",
+				"card_type": "event",
+				"card_date": "2022-04-30",
+				"card_addr": "nichika_s_ssr4",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -4297,6 +4311,13 @@
 				"card_type": "permanent",
 				"card_date": "2021-11-19",
 				"card_addr": "mikoto_p_ssr2",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【CONTRAIL】緋田 美琴",
+				"card_type": "limited",
+				"card_date": "2022-04-30",
+				"card_addr": "mikoto_p_ssr3",
 				"card_rerun": false
 			}
 		],
