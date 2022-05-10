@@ -874,6 +874,13 @@
 				"card_date": "2022-04-24",
 				"card_addr": "kogane_s_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【ばら色ハーモニー】月岡 恋鐘",
+				"card_type": "event",
+				"card_date": "2022-05-10",
+				"card_addr": "kogane_s_sr6",
+				"card_rerun": false
 			}
 		]
 	},
@@ -1312,6 +1319,13 @@
 				"card_type": "permanent",
 				"card_date": "2021-08-10",
 				"card_addr": "yuika_p_ssr6",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【kaleidoscope-pinball】三峰 結華",
+				"card_type": "permanent",
+				"card_date": "2022-05-10",
+				"card_addr": "yuika_p_ssr7",
 				"card_rerun": false
 			}
 		],
@@ -2591,6 +2605,13 @@
 				"card_type": "event",
 				"card_date": "2022-02-28",
 				"card_addr": "natsuha_s_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【ベリー・ストロベリー】有栖川 夏葉",
+				"card_type": "permanent",
+				"card_date": "2022-05-10",
+				"card_addr": "natsuha_s_ssr8",
 				"card_rerun": false
 			}
 		],
