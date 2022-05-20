@@ -2959,6 +2959,13 @@
 				"card_date": "2019-12-26",
 				"card_addr": "tenka_p_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【U♥DOLL】大崎 甜花",
+				"card_type": "event",
+				"card_date": "2022-05-20",
+				"card_addr": "tenka_p_sr6",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -4242,6 +4249,13 @@
 				"card_type": "limited",
 				"card_date": "2021-06-30",
 				"card_addr": "nichika_p_ssr2",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【夜よこノ窓は塗らないデ】七草 にちか",
+				"card_type": "permanent",
+				"card_date": "2022-05-20",
+				"card_addr": "nichika_p_ssr3",
 				"card_rerun": false
 			}
 		],
