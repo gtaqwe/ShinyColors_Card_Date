@@ -1227,6 +1227,13 @@
 				"card_date": "2021-04-30",
 				"card_addr": "sakuya_s_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【かわいいひと】白瀬 咲耶",
+				"card_type": "limited",
+				"card_date": "2022-05-31",
+				"card_addr": "sakuya_s_ssr8",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -3792,6 +3799,13 @@
 				"card_date": "2021-04-20",
 				"card_addr": "toru_p_ssr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【国道沿いに、憶光年】浅倉 透",
+				"card_type": "limited",
+				"card_date": "2022-05-31",
+				"card_addr": "toru_p_ssr4",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -3983,6 +3997,13 @@
 				"card_type": "fes",
 				"card_date": "2022-04-01",
 				"card_addr": "madoka_s_ssr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【洒落】樋口 円香",
+				"card_type": "event",
+				"card_date": "2022-05-31",
+				"card_addr": "madoka_s_ssr5",
 				"card_rerun": false
 			}
 		],
