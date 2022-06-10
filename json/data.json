@@ -2657,6 +2657,13 @@
 				"card_date": "2019-11-20",
 				"card_addr": "natsuha_s_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【ナチュラルデイズ】有栖川 夏葉",
+				"card_type": "event",
+				"card_date": "2022-06-10",
+				"card_addr": "natsuha_s_sr5",
+				"card_rerun": false
 			}
 		]
 	},
@@ -2719,6 +2726,13 @@
 				"card_type": "limited",
 				"card_date": "2021-11-30",
 				"card_addr": "amana_p_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【longing】大崎 甘奈",
+				"card_type": "permanent",
+				"card_date": "2022-06-10",
+				"card_addr": "amana_p_ssr8",
 				"card_rerun": false
 			}
 		],
@@ -4004,6 +4018,13 @@
 				"card_type": "event",
 				"card_date": "2022-05-31",
 				"card_addr": "madoka_s_ssr5",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【ハシルウマ】樋口 円香",
+				"card_type": "permanent",
+				"card_date": "2022-06-10",
+				"card_addr": "madoka_s_ssr6",
 				"card_rerun": false
 			}
 		],
