@@ -981,6 +981,13 @@
 				"card_date": "2020-02-20",
 				"card_addr": "mamimi_p_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【irodori-corridor】田中 摩美々",
+				"card_type": "event",
+				"card_date": "2022-06-20",
+				"card_addr": "mamimi_p_sr5",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -1918,6 +1925,13 @@
 				"card_type": "permanent",
 				"card_date": "2021-09-21",
 				"card_addr": "chiyoko_p_ssr6",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【トコハレ☀コメディ】園田 智代子",
+				"card_type": "limited",
+				"card_date": "2022-06-20",
+				"card_addr": "chiyoko_p_ssr7",
 				"card_rerun": false
 			}
 		],
@@ -3260,6 +3274,13 @@
 				"card_type": "event",
 				"card_date": "2022-04-01",
 				"card_addr": "chiyuki_s_ssr8",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【そらカラフル、幾千の】桑山 千雪",
+				"card_type": "limited",
+				"card_date": "2022-06-20",
+				"card_addr": "chiyuki_s_ssr9",
 				"card_rerun": false
 			}
 		],
