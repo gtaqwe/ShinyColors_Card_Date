@@ -3463,6 +3463,13 @@
 				"card_date": "2021-08-31",
 				"card_addr": "asahi_s_ssr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【とても、とても静かな雨】芹沢 あさひ",
+				"card_type": "permanent",
+				"card_date": "2022-07-11",
+				"card_addr": "asahi_s_ssr6",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -4133,6 +4140,13 @@
 				"card_date": "2021-12-22",
 				"card_addr": "koito_p_ssr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【なつやすみ学校】福丸 小糸",
+				"card_type": "permanent",
+				"card_date": "2022-07-11",
+				"card_addr": "koito_p_ssr4",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -4409,6 +4423,13 @@
 				"card_type": "first",
 				"card_date": "2021-04-30",
 				"card_addr": "",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【夏葬灯】七草 にちか",
+				"card_type": "event",
+				"card_date": "2022-07-11",
+				"card_addr": "nichika_s_sr1",
 				"card_rerun": false
 			}
 		]
