@@ -728,6 +728,13 @@
 				"card_date": "2021-10-21",
 				"card_addr": "kogane_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【あなたと、月の満ちる頃】月岡 恋鐘",
+				"card_type": "permanent",
+				"card_date": "2022-07-21",
+				"card_addr": "kogane_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -2799,6 +2806,13 @@
 				"card_date": "2020-04-20",
 				"card_addr": "amana_p_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【竜宮城へご招待☆】大崎 甘奈",
+				"card_type": "event",
+				"card_date": "2022-07-21",
+				"card_addr": "amana_p_sr5",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -4481,6 +4495,13 @@
 				"card_type": "event",
 				"card_date": "2021-12-22",
 				"card_addr": "mikoto_p_sr1",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【MANNEQUIN】緋田 美琴",
+				"card_type": "permanent",
+				"card_date": "2022-07-21",
+				"card_addr": "mikoto_p_sr2",
 				"card_rerun": false
 			}
 		],
