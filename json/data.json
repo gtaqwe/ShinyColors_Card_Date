@@ -1060,6 +1060,13 @@
 				"card_date": "2021-08-20",
 				"card_addr": "mamimi_s_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【murmurmaid】田中 摩美々",
+				"card_type": "limited",
+				"card_date": "2022-07-31",
+				"card_addr": "mamimi_s_ssr8",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -1847,6 +1854,13 @@
 				"card_date": "2022-04-20",
 				"card_addr": "kaho_s_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【ロング・ショート・タイム！】小宮 果穂",
+				"card_type": "event",
+				"card_date": "2022-07-31",
+				"card_addr": "kaho_s_ssr8",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -2155,6 +2169,13 @@
 				"card_type": "permanent",
 				"card_date": "2022-04-11",
 				"card_addr": "juri_p_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【sparkle,,,】西城 樹里",
+				"card_type": "limited",
+				"card_date": "2022-07-31",
+				"card_addr": "juri_p_ssr8",
 				"card_rerun": false
 			}
 		],
