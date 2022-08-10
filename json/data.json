@@ -303,6 +303,13 @@
 				"card_date": "2021-07-20",
 				"card_addr": "hiori_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【洸】風野 灯織",
+				"card_type": "permanent",
+				"card_date": "2022-08-10",
+				"card_addr": "hiori_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -1493,6 +1500,13 @@
 				"card_type": "event",
 				"card_date": "2019-02-28",
 				"card_addr": "yuika_s_sr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【翻弄by♡time】三峰 結華",
+				"card_type": "event",
+				"card_date": "2022-08-10",
+				"card_addr": "yuika_s_sr4",
 				"card_rerun": false
 			}
 		]
@@ -3971,6 +3985,13 @@
 				"card_date": "2022-01-31",
 				"card_addr": "toru_s_ssr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【かっとばし党の長い夏】浅倉 透",
+				"card_type": "permanent",
+				"card_date": "2022-08-10",
+				"card_addr": "toru_s_ssr5",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -4361,6 +4382,13 @@
 				"card_type": "event",
 				"card_date": "2021-04-20",
 				"card_addr": "hinana_s_sr1",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【SETSUNA BEAT】市川 雛菜",
+				"card_type": "campaign",
+				"card_date": "2022-08-10",
+				"card_addr": "hinana_s_sr2",
 				"card_rerun": false
 			}
 		]
