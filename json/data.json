@@ -1564,6 +1564,13 @@
 				"card_date": "2021-11-10",
 				"card_addr": "kiriko_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【縷・縷・屡・来】幽谷 霧子",
+				"card_type": "twilight",
+				"card_date": "2022-08-19",
+				"card_addr": "kiriko_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -3816,6 +3823,13 @@
 				"card_date": "2020-05-22",
 				"card_addr": "mei_p_sr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【見つかっちゃった♪】和泉 愛依",
+				"card_type": "event",
+				"card_date": "2022-08-19",
+				"card_addr": "mei_p_sr4",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -4380,6 +4394,13 @@
 				"card_type": "event",
 				"card_date": "2022-01-01",
 				"card_addr": "hinana_s_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【DIVEIN!】市川 雛菜",
+				"card_type": "twilight",
+				"card_date": "2022-08-19",
+				"card_addr": "hinana_s_ssr4",
 				"card_rerun": false
 			}
 		],
