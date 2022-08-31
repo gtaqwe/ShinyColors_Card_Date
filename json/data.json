@@ -203,6 +203,13 @@
 				"card_date": "2022-03-19",
 				"card_addr": "mano_s_ssr11",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【私のレンズの先のこと】櫻木 真乃",
+				"card_type": "event",
+				"card_date": "2022-08-31",
+				"card_addr": "mano_s_ssr12",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -525,6 +532,13 @@
 				"card_type": "limited",
 				"card_date": "2022-01-31",
 				"card_addr": "meguru_p_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【たそかれスワッグ】八宮 めぐる",
+				"card_type": "limited",
+				"card_date": "2022-08-31",
+				"card_addr": "meguru_p_ssr8",
 				"card_rerun": false
 			}
 		],
@@ -2501,6 +2515,13 @@
 				"card_type": "limited",
 				"card_date": "2021-10-21",
 				"card_addr": "rinze_s_ssr8",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【珈琲の牛乳いれたん】杜野 凛世",
+				"card_type": "limited",
+				"card_date": "2022-08-31",
+				"card_addr": "rinze_s_ssr9",
 				"card_rerun": false
 			}
 		],
