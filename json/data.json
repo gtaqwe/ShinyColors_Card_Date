@@ -419,6 +419,13 @@
 				"card_date": "2022-01-31",
 				"card_addr": "hiori_s_ssr8",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【Can't give up】風野 灯織",
+				"card_type": "permanent",
+				"card_date": "2022-09-10",
+				"card_addr": "hiori_s_ssr9",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -2985,6 +2992,13 @@
 				"card_date": "2019-11-30",
 				"card_addr": "amana_s_sr3",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【初風Nostalgia】大崎 甘奈",
+				"card_type": "event",
+				"card_date": "2022-09-10",
+				"card_addr": "amana_s_sr4",
+				"card_rerun": false
 			}
 		]
 	},
@@ -4362,6 +4376,13 @@
 				"card_type": "limited",
 				"card_date": "2021-09-30",
 				"card_addr": "hinana_p_ssr3",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【S!GNATURE】市川 雛菜",
+				"card_type": "permanent",
+				"card_date": "2022-09-10",
+				"card_addr": "hinana_p_ssr4",
 				"card_rerun": false
 			}
 		],
