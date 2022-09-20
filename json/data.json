@@ -354,6 +354,13 @@
 				"card_date": "2020-10-12",
 				"card_addr": "hiori_p_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【足りない隙間】風野 灯織",
+				"card_type": "event",
+				"card_date": "2022-09-20",
+				"card_addr": "hiori_p_sr5",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -3486,6 +3493,13 @@
 				"card_type": "limited",
 				"card_date": "2022-01-11",
 				"card_addr": "asahi_p_ssr5",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【光は光へ】芹沢 あさひ",
+				"card_type": "permanent",
+				"card_date": "2022-09-20",
+				"card_addr": "asahi_p_ssr6",
 				"card_rerun": false
 			}
 		],
