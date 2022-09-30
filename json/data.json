@@ -663,6 +663,13 @@
 				"card_date": "2022-06-30",
 				"card_addr": "meguru_s_ssr9",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【シェア・シェア・ハピネス】八宮 めぐる",
+				"card_type": "fes",
+				"card_date": "2022-09-30",
+				"card_addr": "meguru_s_ssr10",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -1195,6 +1202,13 @@
 				"card_date": "2021-09-10",
 				"card_addr": "sakuya_p_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【はらりひらり結ぶ】白瀬 咲耶",
+				"card_type": "limited",
+				"card_date": "2022-09-30",
+				"card_addr": "sakuya_p_ssr7",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -1700,6 +1714,13 @@
 				"card_type": "fes",
 				"card_date": "2022-06-30",
 				"card_addr": "kiriko_s_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【吼・吼・熱・々】幽谷 霧子",
+				"card_type": "event",
+				"card_date": "2022-09-30",
+				"card_addr": "kiriko_s_ssr8",
 				"card_rerun": false
 			}
 		],
@@ -3184,6 +3205,13 @@
 				"card_type": "fes",
 				"card_date": "2022-01-01",
 				"card_addr": "tenka_s_ssr8",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【満開、うまストロメリア】大崎 甜花",
+				"card_type": "limited",
+				"card_date": "2022-09-30",
+				"card_addr": "tenka_s_ssr9",
 				"card_rerun": false
 			}
 		],
