@@ -2658,6 +2658,13 @@
 				"card_date": "2022-02-10",
 				"card_addr": "natsuha_p_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【Fall】有栖川 夏葉",
+				"card_type": "permanent",
+				"card_date": "2022-10-11",
+				"card_addr": "natsuha_p_ssr8",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -4053,6 +4060,13 @@
 				"card_date": "2021-07-10",
 				"card_addr": "toru_p_sr2",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【聞こえててよ、babe】浅倉 透",
+				"card_type": "event",
+				"card_date": "2022-10-11",
+				"card_addr": "toru_p_sr3",
+				"card_rerun": false
 			}
 		],
 		"S_SSR": [
@@ -4360,6 +4374,13 @@
 				"card_type": "limited",
 				"card_date": "2022-04-01",
 				"card_addr": "koito_s_ssr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【きっと色褪せるけど】福丸 小糸",
+				"card_type": "permanent",
+				"card_date": "2022-10-11",
+				"card_addr": "koito_s_ssr5",
 				"card_rerun": false
 			}
 		],
