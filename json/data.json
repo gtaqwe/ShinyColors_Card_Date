@@ -2595,6 +2595,13 @@
 				"card_date": "2022-08-13",
 				"card_addr": "rinze_s_sr4",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【別冊をとめ】杜野 凛世",
+				"card_type": "event",
+				"card_date": "2022-10-20",
+				"card_addr": "rinze_s_sr5",
+				"card_rerun": false
 			}
 		]
 	},
@@ -3703,6 +3710,13 @@
 				"card_date": "2022-03-19",
 				"card_addr": "fuyuko_p_ssr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【幕間、沸々と高温】黛 冬優子",
+				"card_type": "twilight",
+				"card_date": "2022-10-20",
+				"card_addr": "fuyuko_p_ssr6",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -4617,6 +4631,13 @@
 				"card_type": "event",
 				"card_date": "2022-04-30",
 				"card_addr": "nichika_s_ssr4",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【こんなのホラーでしょ最悪】七草 にちか",
+				"card_type": "twilight",
+				"card_date": "2022-10-20",
+				"card_addr": "nichika_s_ssr5",
 				"card_rerun": false
 			}
 		],
