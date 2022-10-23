@@ -714,6 +714,13 @@
 				"card_date": "2021-10-12",
 				"card_addr": "meguru_s_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【MUGEN BEAT】八宮 めぐる",
+				"card_type": "campaign",
+				"card_date": "2022-10-24",
+				"card_addr": "meguru_s_sr6",
+				"card_rerun": false
 			}
 		]
 	},
@@ -4668,6 +4675,13 @@
 				"card_type": "event",
 				"card_date": "2022-07-11",
 				"card_addr": "nichika_s_sr1",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【MUGEN BEAT】七草 にちか",
+				"card_type": "campaign",
+				"card_date": "2022-10-24",
+				"card_addr": "nichika_s_sr2",
 				"card_rerun": false
 			}
 		]
