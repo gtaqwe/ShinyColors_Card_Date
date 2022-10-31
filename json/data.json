@@ -1729,6 +1729,13 @@
 				"card_date": "2022-09-30",
 				"card_addr": "kiriko_s_ssr8",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【煌・煌・星・娘】幽谷 霧子",
+				"card_type": "limited",
+				"card_date": "2022-10-31",
+				"card_addr": "kiriko_s_ssr9",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -2349,6 +2356,13 @@
 				"card_date": "2021-11-30",
 				"card_addr": "juri_s_ssr6",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【日々の灯り】西城 樹里",
+				"card_type": "event",
+				"card_date": "2022-10-31",
+				"card_addr": "juri_s_ssr7",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -2448,6 +2462,13 @@
 				"card_type": "limited",
 				"card_date": "2022-01-01",
 				"card_addr": "rinze_p_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【晩秋ろまんす】杜野 凛世",
+				"card_type": "limited",
+				"card_date": "2022-10-31",
+				"card_addr": "rinze_p_ssr8",
 				"card_rerun": false
 			}
 		],
