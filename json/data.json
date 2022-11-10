@@ -66,6 +66,13 @@
 				"card_date": "2022-04-20",
 				"card_addr": "mano_p_ssr8",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【きみと巡り行く】櫻木 真乃",
+				"card_type": "permanent",
+				"card_date": "2022-11-10",
+				"card_addr": "mano_p_ssr9",
+				"card_rerun": false
 			}
 		],
 		"P_SR": [
@@ -2363,6 +2370,13 @@
 				"card_date": "2022-10-31",
 				"card_addr": "juri_s_ssr7",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【はずむ息、夜を縫って】西城 樹里",
+				"card_type": "permanent",
+				"card_date": "2022-11-10",
+				"card_addr": "juri_s_ssr8",
+				"card_rerun": false
 			}
 		],
 		"S_SR": [
@@ -4460,6 +4474,13 @@
 				"card_type": "permanent",
 				"card_date": "2020-11-20",
 				"card_addr": "koito_s_sr2",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【学割キャンペーン】福丸 小糸",
+				"card_type": "event",
+				"card_date": "2022-11-10",
+				"card_addr": "koito_s_sr3",
 				"card_rerun": false
 			}
 		]
