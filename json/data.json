@@ -261,6 +261,13 @@
 				"card_date": "2022-04-24",
 				"card_addr": "mano_s_sr5",
 				"card_rerun": false
+			},
+			{
+				"card_name": "【ふわり気持ち、秋かおり】櫻木 真乃",
+				"card_type": "event",
+				"card_date": "2022-11-18",
+				"card_addr": "mano_s_sr6",
+				"card_rerun": false
 			}
 		]
 	},
@@ -1013,6 +1020,13 @@
 				"card_type": "limited",
 				"card_date": "2021-12-10",
 				"card_addr": "mamimi_p_ssr7",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【リバーシブル・トースト】田中 摩美々",
+				"card_type": "permanent",
+				"card_date": "2022-11-18",
+				"card_addr": "mamimi_p_ssr8",
 				"card_rerun": false
 			}
 		],
@@ -4657,6 +4671,13 @@
 				"card_type": "event",
 				"card_date": "2021-08-20",
 				"card_addr": "nichika_p_sr1",
+				"card_rerun": false
+			},
+			{
+				"card_name": "【泣けよ洗濯機】七草 にちか",
+				"card_type": "permanent",
+				"card_date": "2022-11-18",
+				"card_addr": "nichika_p_sr2",
 				"card_rerun": false
 			}
 		],
