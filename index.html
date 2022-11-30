@@ -186,6 +186,19 @@
           </label>
         </span>
 
+        <span id="otherChkSpan" style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="other_1">기타</span>
+            <input
+              type="checkbox"
+              id="otherCardChkBox"
+              checked="checked"
+              onchange="updateDate(NOW_SELECT)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
+
         <span id="convertSpan" style="margin: 5px 10px; float: left">
           <label class="switch">
             <input
@@ -251,6 +264,7 @@
             <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">
               캠페인 (C)
             </th>
+            <th class="other-card-cell" style="width: 100px" data-lang="other_2">기타 (O)</th>
           </tr>
           <tr id="cardCountTR" style="display: none">
             <td id="cardCount_permanent"></td>
@@ -259,6 +273,7 @@
             <td id="cardCount_event" class="event-card-cell"></td>
             <td id="cardCount_fes" class="gradeFes-card-cell"></td>
             <td id="cardCount_campaign" class="campaign-card-cell"></td>
+            <td id="cardCount_other" class="other-card-cell"></td>
           </tr>
         </table>
       </div>

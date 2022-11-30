@@ -97,7 +97,7 @@ function setCardData(totalData, totalLen) {
 
       countCardType(cardType);
 
-      // 한정, 이벤트, 페스, 캠페인 카드의 경우, 셀 색상을 타입에 맞춰 변경
+      // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "limited") {
         // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
         if (rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
@@ -113,6 +113,8 @@ function setCardData(totalData, totalLen) {
         resContent += '<td class="gradeFes-card-cell" ';
       } else if (cardType == "campaign") {
         resContent += '<td class="campaign-card-cell" ';
+      } else if (cardType == "other") {
+        resContent += '<td class="other-card-cell" ';
       } else {
         resContent += "<td ";
       }

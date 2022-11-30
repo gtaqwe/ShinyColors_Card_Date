@@ -3,8 +3,8 @@ var JSON_DATA;
 var VIEW_LANGUAGE;
 const DEFALUT_LANGUAGE = "ko";
 
-// 통상, 한정, 트와코레, 이벤트, 페스, 캠페인
-var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0];
+// 통상, 한정, 트와코레, 이벤트, 페스, 캠페인, 기타
+var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0];
 
 $().ready(function () {
   init();
@@ -192,6 +192,8 @@ function countCardType(cardType) {
     CARD_TYPE_COUNT_LIST[4] += 1;
   } else if (cardType == "campaign") {
     CARD_TYPE_COUNT_LIST[5] += 1;
+  } else if (cardType == "other") {
+    CARD_TYPE_COUNT_LIST[6] += 1;
   }
 }
 
@@ -202,6 +204,7 @@ function setCardTypeCountList() {
   $(cardCount_event).text(CARD_TYPE_COUNT_LIST[3]);
   $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[4]);
   $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[5]);
+  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[6]);
 
   // if($(showCardCountConvertBtn).is(":checked"))
 }
@@ -436,6 +439,8 @@ function getCardList(cardAry) {
           return card;
         } else if (cardType == "campaign" && $("#campaignCardChkBox").is(":checked")) {
           return card;
+        } else if (cardType == "other" && $("#otherCardChkBox").is(":checked")) {
+          return card;
         }
       })
       // undefined 데이터 제거
@@ -612,6 +617,7 @@ function captureScreen(frameName) {
     if ($("#eventCardChkBox").is(":checked")) viewMode += "E";
     if ($("#gradeFesCardChkBox").is(":checked")) viewMode += "F";
     if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";
+    if ($("#otherCardChkBox").is(":checked")) viewMode += "O";
 
     if (NOW_SELECT == 1) captureName = frameName + "_P_SSR_" + viewMode + ".png";
     else if (NOW_SELECT == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";

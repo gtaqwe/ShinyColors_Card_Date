@@ -105,6 +105,10 @@ footer {
   background-color: #ffc000;
 }
 
+.other-card-cell {
+  background-color: #ff9933;
+}
+
 .now-interval {
   color: white;
   font-weight: bold;
