@@ -12,8 +12,8 @@ function buildTable(idolData) {
  */
 function runBuildTable(idolData) {
   var tableTitle = idolData.Title; // 카드 타입
-  var rowLength = idolData.Data.length; // 최대 카드 데이터 수
-  var columnLength = idolData.Length; // 아이돌 수
+  var rowLength = idolData.Data.length; // 아이돌 수
+  var columnLength = idolData.Length; // 최대 카드 데이터 수
 
   var table = '<table id="date-table">';
 
@@ -49,22 +49,21 @@ function runBuildTable(idolData) {
  * 메인표의 헤더 작성
  * (타이틀) | 첫 실장 | 간격 | 1 | 간격 | 2 | 간격 | ... | n | 간격 |
  */
-function tableHeader(title, len) {
+function tableHeader(title, columnLength) {
   var resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
 
-  for (var i = 0; i < len; i++) {
-    // 첫 실장 비표시
-    if ($(noShowRCardConvertBtn).is(":checked")) {
-      resContent += `<th class="th-header-title-cell">${i + 1}</th>`;
-      resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
-    }
-    // 첫 실장 표시
-    else {
-      if (i == 0)
-        resContent += `<th class="th-header-title-cell" data-lang="firstImplementation">첫 실장</th>`;
-      else resContent += `<th class="th-header-title-cell">${i}</th>`;
-      resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
-    }
+  // 첫 실장 표시/비표시 설정
+  if (!$(noShowRCardConvertBtn).is(":checked")) {
+    resContent += `<th class="th-header-title-cell" data-lang="firstImplementation">첫 실장</th>`;
+    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
+
+    columnLength--;
+  }
+
+  for (var i = 0; i < columnLength; i++) {
+    resContent += `<th class="th-header-title-cell">${i + 1}</th>`;
+
+    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
   }
 
   return resContent;
