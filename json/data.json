@@ -505,6 +505,13 @@
         "card_date": "2021-05-10",
         "card_addr": "hiori_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【GR@DATE WING 01】風野 灯織",
+        "card_type": "other",
+        "card_date": "2022-12-09",
+        "card_addr": "hiori_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -1345,6 +1352,13 @@
         "card_type": "limited",
         "card_date": "2022-05-31",
         "card_addr": "sakuya_s_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【冬の隙間】白瀬 咲耶",
+        "card_type": "event",
+        "card_date": "2022-12-09",
+        "card_addr": "sakuya_s_ssr9",
         "card_rerun": false
       }
     ],
@@ -3701,6 +3715,13 @@
         "card_date": "2022-07-11",
         "card_addr": "asahi_s_ssr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ひかりしめすは】芹沢 あさひ",
+        "card_type": "twilight",
+        "card_date": "2022-12-09",
+        "card_addr": "asahi_s_ssr7",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4287,6 +4308,13 @@
         "card_type": "permanent",
         "card_date": "2022-03-10",
         "card_addr": "madoka_p_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Merry】樋口 円香",
+        "card_type": "twilight",
+        "card_date": "2022-12-09",
+        "card_addr": "madoka_p_ssr5",
         "card_rerun": false
       }
     ],
