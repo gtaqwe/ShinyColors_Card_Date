@@ -90,6 +90,12 @@ function setLanguageById(currLang, id, str) {
   $(id).html($.lang[currLang][str]);
 }
 
+function setLanguageInTable(currLang, tableName) {
+  $(`#${tableName} [data-lang]`).each(function () {
+    $(this).html($.lang[currLang][$(this).data("lang")]);
+  });
+}
+
 function changeLanguage() {
   VIEW_LANGUAGE = $("#languageSelect").val();
   setLanguage(VIEW_LANGUAGE);
@@ -149,24 +155,33 @@ function getToday() {
 function updateDate(nowSelect) {
   resetCardTypeCountList();
 
-  if (nowSelect == 1) {
+  if (nowSelect == 11) {
     P_SSR();
-  } else if (nowSelect == 2) {
+    NOW_SELECT = 11;
+  } else if (nowSelect == 12) {
     S_SSR();
-  } else if (nowSelect == 3) {
-    P_SR();
-  } else if (nowSelect == 4) {
-    S_SR();
-  } else if (nowSelect == 5) {
-    ALL_CARD();
-  } else if (nowSelect == 6) {
+    NOW_SELECT = 12;
+  } else if (nowSelect == 13) {
     ALL_SSR();
-  } else if (nowSelect == 7) {
+    NOW_SELECT = 13;
+  } else if (nowSelect == 21) {
+    P_SR();
+    NOW_SELECT = 21;
+  } else if (nowSelect == 22) {
+    S_SR();
+    NOW_SELECT = 22;
+  } else if (nowSelect == 23) {
     ALL_SR();
-  } else if (nowSelect == 8) {
+    NOW_SELECT = 23;
+  } else if (nowSelect == 31) {
     ALL_P();
-  } else if (nowSelect == 9) {
+    NOW_SELECT = 31;
+  } else if (nowSelect == 32) {
     ALL_S();
+    NOW_SELECT = 32;
+  } else if (nowSelect == 33) {
+    ALL_CARD();
+    NOW_SELECT = 33;
   }
 
   setCardTypeCountList();
@@ -297,9 +312,6 @@ function P_SSR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-  NOW_SELECT = 1;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -311,9 +323,6 @@ function S_SSR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-  NOW_SELECT = 2;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -325,9 +334,6 @@ function P_SR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-  NOW_SELECT = 3;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -339,9 +345,6 @@ function S_SR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-  NOW_SELECT = 4;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -353,9 +356,6 @@ function ALL_CARD() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-  NOW_SELECT = 5;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -367,9 +367,6 @@ function ALL_SSR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-  NOW_SELECT = 6;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -381,9 +378,6 @@ function ALL_SR() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-  NOW_SELECT = 7;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -395,9 +389,6 @@ function ALL_P() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-  NOW_SELECT = 8;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -409,9 +400,6 @@ function ALL_S() {
   buildTable(idolData);
 
   setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-  NOW_SELECT = 9;
-
-  setLanguage(VIEW_LANGUAGE);
 }
 
 /**

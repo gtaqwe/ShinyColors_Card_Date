@@ -4,7 +4,10 @@
  */
 function buildTable(idolData) {
   runBuildTable(idolData); // 메인표
+  // setLanguage(VIEW_LANGUAGE);
+
   runBuildDateRank(); // 랭킹표
+  // setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -15,7 +18,9 @@ function runBuildTable(idolData) {
   var rowLength = idolData.Data.length; // 아이돌 수
   var columnLength = idolData.Length; // 최대 카드 데이터 수
 
-  var table = '<table id="date-table">';
+  const tableName = "date-table";
+
+  var table = `<table id="${tableName}">`;
 
   table += "<thead>";
   table += `<tr class="tr-main-header">`;
@@ -41,6 +46,8 @@ function runBuildTable(idolData) {
   if (!$(`#NOTE_SPACE`).length) {
     $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
   }
+
+  setLanguageInTable(VIEW_LANGUAGE, tableName);
 
   imgMapping(this);
 }
@@ -269,10 +276,11 @@ function selectCellColor(rankStr) {
  * 메인표 옆의 랭킹표 (아이돌 순으로 랭킹 표시)
  */
 function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
-  var table = '<table id="rank-table-0">';
+  const tableName = "rank-table-0";
+  var table = `<table id="${tableName}">`;
   table += "<thead>";
 
-  table += "<tr>";
+  table += `<tr style="height:${$("#date-table tr").eq(0).height()}px">`;
   table += `<th class="th-rank" style="${borderStyle.right}" data-lang="name">이름</th>`;
   table += `<th class="th-rank" style="${borderStyle.right}${borderStyle.left}" data-lang="rank">순위</th>`;
   table += `<th class="th-rank" style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
@@ -306,13 +314,16 @@ function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
   table += "</tbody>";
   table += "</table>";
   $("#MAIN_RANK").html(table);
+
+  setLanguageInTable(VIEW_LANGUAGE, tableName);
 }
 
 /**
  * 메인 표 아래의 랭킹표 (현재 간격일 순으로 표시)
  */
 function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
-  var table = '<table id="rank-table-1">';
+  const tableName = "rank-table-1";
+  var table = `<table id="${tableName}">`;
   table += "<thead>";
   table += "<tr>";
   table += `<th class="th-rank" colspan="3">${tableType}</th>`;
@@ -395,4 +406,6 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   table += "</tbody>";
   table += "</table>";
   $("#RANK").html(table);
+
+  setLanguageInTable(VIEW_LANGUAGE, tableName);
 }
