@@ -619,6 +619,13 @@
         "card_date": "2020-03-19",
         "card_addr": "meguru_p_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【セツナ/n】八宮 めぐる",
+        "card_type": "event",
+        "card_date": "2022-12-20",
+        "card_addr": "meguru_p_sr5",
+        "card_rerun": false
       }
     ],
     "S_SSR": [
@@ -1599,6 +1606,13 @@
         "card_date": "2022-08-10",
         "card_addr": "yuika_s_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【SE@SONAL WINTER】三峰 結華",
+        "card_type": "other",
+        "card_date": "2022-12-20",
+        "card_addr": "yuika_s_sr5",
+        "card_rerun": false
       }
     ]
   },
@@ -1884,6 +1898,13 @@
         "card_type": "limited",
         "card_date": "2022-02-28",
         "card_addr": "kaho_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【スノードーム・シンドローム】小宮 果穂",
+        "card_type": "permanent",
+        "card_date": "2022-12-20",
+        "card_addr": "kaho_p_ssr8",
         "card_rerun": false
       }
     ],
