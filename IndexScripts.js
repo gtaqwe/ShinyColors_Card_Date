@@ -607,15 +607,15 @@ function captureScreen(frameName) {
     if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";
     if ($("#otherCardChkBox").is(":checked")) viewMode += "O";
 
-    if (NOW_SELECT == 1) captureName = frameName + "_P_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 2) captureName = frameName + "_S_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 3) captureName = frameName + "_P_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 4) captureName = frameName + "_S_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 5) captureName = frameName + "_ALL_" + viewMode + ".png";
-    else if (NOW_SELECT == 6) captureName = frameName + "_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 7) captureName = frameName + "_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 8) captureName = frameName + "_P_" + viewMode + ".png";
-    else if (NOW_SELECT == 9) captureName = frameName + "_S_" + viewMode + ".png";
+    if (NOW_SELECT == 11) captureName = frameName + "_P_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 12) captureName = frameName + "_S_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 13) captureName = frameName + "_SSR_" + viewMode + ".png";
+    else if (NOW_SELECT == 21) captureName = frameName + "_P_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 22) captureName = frameName + "_S_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 23) captureName = frameName + "_SR_" + viewMode + ".png";
+    else if (NOW_SELECT == 31) captureName = frameName + "_P_" + viewMode + ".png";
+    else if (NOW_SELECT == 32) captureName = frameName + "_S_" + viewMode + ".png";
+    else if (NOW_SELECT == 33) captureName = frameName + "_ALL_" + viewMode + ".png";
 
     $(frameId).css("overflow", "hidden");
     $("#convertSpan").css("display", "none");
