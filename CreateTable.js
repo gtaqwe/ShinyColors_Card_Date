@@ -361,6 +361,11 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
     else gachaTypeStr = "";
     gachaTypeStr += "C";
   }
+  if ($("#otherCardChkBox").is(":checked")) {
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    else gachaTypeStr = "";
+    gachaTypeStr += "O";
+  }
 
   table += "<tr>";
   table += `<th class="th-rank" colspan="3">${gachaTypeStr}</th>`;
