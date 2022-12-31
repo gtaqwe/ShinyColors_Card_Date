@@ -2217,6 +2217,13 @@
         "card_date": "2021-11-10",
         "card_addr": "chiyoko_s_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【◎もちもちよこ◎】園田 智代子",
+        "card_type": "limited",
+        "card_date": "2023-01-01",
+        "card_addr": "chiyoko_s_ssr8",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3332,6 +3339,13 @@
         "card_date": "2022-09-30",
         "card_addr": "tenka_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【My lyrics】大崎 甜花",
+        "card_type": "event",
+        "card_date": "2023-01-01",
+        "card_addr": "tenka_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3431,6 +3445,13 @@
         "card_type": "permanent",
         "card_date": "2022-02-19",
         "card_addr": "chiyuki_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ひとひらで紡ぐ世界】桑山 千雪",
+        "card_type": "limited",
+        "card_date": "2023-01-01",
+        "card_addr": "chiyuki_p_ssr8",
         "card_rerun": false
       }
     ],
