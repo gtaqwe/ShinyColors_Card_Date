@@ -83,8 +83,17 @@ function tableHeader(title, columnLength) {
 /**
  * 카드 차수 변경
  */
-function changeCardLapCount(nowSel, idolNum, inputVal) {
-  TABLE_BLANK_LAP_LIST[idolNum] = inputVal;
+function changeCardLapCount(nowSel, idolNum, inputObj) {
+  let val = inputObj.value;
+
+  if (val > inputObj.max) {
+    val = inputObj.max;
+  }
+  if (val < inputObj.min) {
+    val = inputObj.min;
+  }
+
+  TABLE_BLANK_LAP_LIST[idolNum] = val;
 
   updateDate(nowSel);
 }
@@ -98,7 +107,7 @@ function setCardData(totalData, totalLen, idolNum) {
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
     resContent += `<td class="td-seq-cell"><input type="number" min="0" max="10" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
-    style="height:10px; width:50px" onchange="changeCardLapCount(${NOW_SELECT},${idolNum},this.value)"></td>`;
+    style="height:10px; width:50px" onchange="changeCardLapCount(${NOW_SELECT},${idolNum},this)"></td>`;
   }
 
   cardDataList = totalData.card_data;
