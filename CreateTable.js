@@ -84,13 +84,13 @@ function tableHeader(title, columnLength) {
  * 카드 차수 변경
  */
 function changeCardLapCount(nowSel, idolNum, inputObj) {
-  let val = inputObj.value;
+  let val = Number(inputObj.value);
 
-  if (val > inputObj.max) {
-    val = inputObj.max;
+  if (val > Number(inputObj.max)) {
+    val = Number(inputObj.max);
   }
-  if (val < inputObj.min) {
-    val = inputObj.min;
+  if (val < Number(inputObj.min)) {
+    val = Number(inputObj.min);
   }
 
   TABLE_BLANK_LAP_LIST[idolNum] = val;
