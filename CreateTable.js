@@ -4,10 +4,8 @@
  */
 function buildTable(idolData) {
   runBuildTable(idolData); // 메인표
-  // setLanguage(VIEW_LANGUAGE);
 
   runBuildDateRank(); // 랭킹표
-  // setLanguage(VIEW_LANGUAGE);
 }
 
 /**
@@ -16,7 +14,10 @@ function buildTable(idolData) {
 function runBuildTable(idolData) {
   var tableTitle = idolData.Title; // 카드 타입
   var rowLength = idolData.Data.length; // 아이돌 수
-  var columnLength = idolData.Length; // 최대 카드 데이터 수
+
+  var maxColumnLength = Math.max(
+    ...idolData.Data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
+  );
 
   const tableName = "date-table";
 
@@ -25,16 +26,15 @@ function runBuildTable(idolData) {
   table += "<thead>";
   table += `<tr class="tr-main-header">`;
 
-  table += tableHeader(tableTitle, columnLength);
+  table += tableHeader(tableTitle, maxColumnLength);
 
   table += "</tr>";
   table += "</thead>";
   table += "<tbody>";
-
   for (var row = 0; row < rowLength; row++) {
     table += `<tr class="tr-main-data">`;
 
-    table += setCardData(idolData.Data[row], columnLength);
+    table += setCardData(idolData.Data[row], maxColumnLength, row);
 
     table += "</tr>";
   }
@@ -54,10 +54,15 @@ function runBuildTable(idolData) {
 
 /**
  * 메인표의 헤더 작성
- * (타이틀) | 첫 실장 | 간격 | 1 | 간격 | 2 | 간격 | ... | n | 간격 |
+ * (타이틀) | 차수변경(옵션) | 첫 실장 | 간격 | 1 | 간격 | 2 | 간격 | ... | n | 간격 |
  */
 function tableHeader(title, columnLength) {
   var resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
+
+  // 카드 차수 변경
+  if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
+    resContent += `<th class="th-seq-cell"></th>`;
+  }
 
   // 첫 실장 표시/비표시 설정
   if (!$(noShowRCardConvertBtn).is(":checked")) {
@@ -69,7 +74,6 @@ function tableHeader(title, columnLength) {
 
   for (var i = 0; i < columnLength; i++) {
     resContent += `<th class="th-header-title-cell">${i + 1}</th>`;
-
     resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
   }
 
@@ -77,19 +81,49 @@ function tableHeader(title, columnLength) {
 }
 
 /**
+ * 카드 차수 변경
+ */
+function changeCardLapCount(nowSel, idolNum, inputVal) {
+  TABLE_BLANK_LAP_LIST[idolNum] = inputVal;
+
+  updateDate(nowSel);
+}
+
+/**
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
-function setCardData(totalData, totalLen) {
+function setCardData(totalData, totalLen, idolNum) {
   var resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
+
+  // 카드 차수 밀어내기
+  if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
+    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="10" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
+    style="height:10px; width:50px" onchange="changeCardLapCount(${NOW_SELECT},${idolNum},this.value)"></td>`;
+  }
 
   cardDataList = totalData.card_data;
   cardLen = totalData.card_data.length;
+
+  for (let i = 0; i < TABLE_BLANK_LAP_LIST[idolNum]; i++) {
+    totalLen--;
+  }
+
   for (var idx = 0; idx < totalLen; idx++) {
     var dateBefore; // Before
     var dateAfter; // After
     var currDay = 24 * 60 * 60 * 1000;
     var interval;
     var intervalCode;
+
+    // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
+    if (
+      (!$(noShowRCardConvertBtn).is(":checked") && idx == 1) ||
+      ($(noShowRCardConvertBtn).is(":checked") && idx == 0)
+    ) {
+      for (let i = 0; i < TABLE_BLANK_LAP_LIST[idolNum]; i++) {
+        resContent += "<td></td><td></td>";
+      }
+    }
 
     if (idx < cardLen) {
       var cardDate = cardDataList[idx].card_date;

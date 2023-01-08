@@ -35,13 +35,16 @@ footer {
   padding: 5px 10px;
 }
 
+.th-seq-cell,
 .th-head,
 .th-rank {
   border-bottom: 2px solid #000000;
 }
 
 .th-name-cell,
-.td-name-cell {
+.th-seq-cell,
+.td-name-cell,
+.td-seq-cell {
   border-right: 2px solid #000000;
 }
 

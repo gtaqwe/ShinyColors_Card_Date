@@ -34,6 +34,7 @@ $.lang.ko = {
   selShowRerun2: "미복각 표시",
   selShowRerun3: "모두 표시",
   showCardCount: "카드 수 표시",
+  showChangeCardLap: "카드 차수 변경 표시",
 };
 
 $.lang.ja = {
@@ -70,4 +71,5 @@ $.lang.ja = {
   selShowRerun2: "復刻なし表示",
   selShowRerun3: "すべて表示",
   showCardCount: "カード数表示",
+  showChangeCardLap: "カード周目変更表示",
 };

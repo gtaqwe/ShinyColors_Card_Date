@@ -5,6 +5,7 @@ const DEFALUT_LANGUAGE = "ko";
 
 // 통상, 한정, 트와코레, 이벤트, 페스, 캠페인, 기타
 var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0];
+var TABLE_BLANK_LAP_LIST = Array(25).fill(0);
 
 $().ready(function () {
   init();
@@ -156,32 +157,32 @@ function updateDate(nowSelect) {
   resetCardTypeCountList();
 
   if (nowSelect == 11) {
-    P_SSR();
     NOW_SELECT = 11;
+    P_SSR();
   } else if (nowSelect == 12) {
-    S_SSR();
     NOW_SELECT = 12;
+    S_SSR();
   } else if (nowSelect == 13) {
-    ALL_SSR();
     NOW_SELECT = 13;
+    ALL_SSR();
   } else if (nowSelect == 21) {
-    P_SR();
     NOW_SELECT = 21;
+    P_SR();
   } else if (nowSelect == 22) {
-    S_SR();
     NOW_SELECT = 22;
+    S_SR();
   } else if (nowSelect == 23) {
-    ALL_SR();
     NOW_SELECT = 23;
+    ALL_SR();
   } else if (nowSelect == 31) {
-    ALL_P();
     NOW_SELECT = 31;
+    ALL_P();
   } else if (nowSelect == 32) {
-    ALL_S();
     NOW_SELECT = 32;
+    ALL_S();
   } else if (nowSelect == 33) {
-    ALL_CARD();
     NOW_SELECT = 33;
+    ALL_CARD();
   }
 
   setCardTypeCountList();
@@ -458,7 +459,6 @@ function getCardList(cardAry) {
  * 전체 카드의 데이터를 추출, 재가공
  */
 function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
-  var maxColumnLen = 0;
   var totalList = JSON_DATA.map((idol) => {
     var tempList = [];
 
@@ -480,19 +480,14 @@ function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
       card_data: cardList,
     };
 
-    // 표에 표시할 열의 개수를 설정
-    if (cardList.length > maxColumnLen) maxColumnLen = cardList.length;
-
     return obj;
   });
 
   // 표시할 데이터
   // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
-  // Length : 최대 열 수
   // Data : 표시할 카드 데이터
   var selectedData = {
     Title: tableTitle,
-    Length: maxColumnLen,
     Data: totalList,
   };
 
