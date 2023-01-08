@@ -591,6 +591,13 @@ function captureScreen(frameName) {
     var frameId;
     var viewMode = "";
 
+    let nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
+
+    if (nowChangeLapFlag == true) {
+      $(`#showChangeCardLapConvertBtn`).prop("checked", false);
+      updateDate(NOW_SELECT);
+    }
+
     if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
     else if (frameName == "RANK") frameId = "#RANK";
 
@@ -629,6 +636,11 @@ function captureScreen(frameName) {
     }).then((canvas) => {
       downloadURI(canvas.toDataURL("image/png"), captureName);
     });
+
+    if (nowChangeLapFlag == true) {
+      $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
+      updateDate(NOW_SELECT);
+    }
 
     $(frameId).css("overflow", "");
     $("#convertSpan").css("display", "");
