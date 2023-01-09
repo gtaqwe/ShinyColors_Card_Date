@@ -31,10 +31,16 @@ function runBuildTable(idolData) {
   table += "</tr>";
   table += "</thead>";
   table += "<tbody>";
+
+  let maxLap = Math.max(
+    ...idolData.Data.map(
+      (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
+    )
+  );
   for (var row = 0; row < rowLength; row++) {
     table += `<tr class="tr-main-data">`;
 
-    table += setCardData(idolData.Data[row], maxColumnLength, row);
+    table += setCardData(idolData.Data[row], maxColumnLength, row, maxLap);
 
     table += "</tr>";
   }
@@ -101,12 +107,12 @@ function changeCardLapCount(nowSel, idolNum, inputObj) {
 /**
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
-function setCardData(totalData, totalLen, idolNum) {
+function setCardData(totalData, totalLen, idolNum, maxLap) {
   var resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
-    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="10" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
+    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
     style="height:10px; width:50px" onchange="changeCardLapCount(${NOW_SELECT},${idolNum},this)"></td>`;
   }
 

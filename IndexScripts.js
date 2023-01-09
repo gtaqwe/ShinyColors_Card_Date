@@ -153,8 +153,12 @@ function getToday() {
  * 8 : P
  * 9 : S
  */
-function updateDate(nowSelect) {
+function updateDate(nowSelect, blankLapReset = false) {
   resetCardTypeCountList();
+
+  if (blankLapReset) {
+    TABLE_BLANK_LAP_LIST = Array(25).fill(0);
+  }
 
   if (nowSelect == 11) {
     NOW_SELECT = 11;
