@@ -1836,6 +1836,13 @@
         "card_date": "2022-10-23",
         "card_addr": "kiriko_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【犬・猿・雉・霧】幽谷 霧子",
+        "card_type": "event",
+        "card_date": "2023-01-10",
+        "card_addr": "kiriko_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -4126,6 +4133,13 @@
         "card_date": "2022-03-10",
         "card_addr": "mei_s_ssr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【本気！餅つき！】和泉 愛依",
+        "card_type": "limited",
+        "card_date": "2023-01-10",
+        "card_addr": "mei_s_ssr7",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4628,6 +4642,13 @@
         "card_type": "permanent",
         "card_date": "2022-09-10",
         "card_addr": "hinana_p_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【DE-S!GN】市川 雛菜",
+        "card_type": "limited",
+        "card_date": "2023-01-10",
+        "card_addr": "hinana_p_ssr5",
         "card_rerun": false
       }
     ],
