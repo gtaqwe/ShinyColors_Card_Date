@@ -1474,6 +1474,13 @@
         "card_date": "2022-05-10",
         "card_addr": "yuika_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ノー・ライフ】三峰 結華",
+        "card_type": "permanent",
+        "card_date": "2023-01-20",
+        "card_addr": "yuika_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -2389,6 +2396,13 @@
         "card_date": "2020-06-19",
         "card_addr": "juri_p_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【#3738 Custom Order】西城 樹里",
+        "card_type": "event",
+        "card_date": "2023-01-20",
+        "card_addr": "juri_p_sr5",
+        "card_rerun": false
       }
     ],
     "S_SSR": [
@@ -3129,6 +3143,13 @@
         "card_type": "limited",
         "card_date": "2022-04-30",
         "card_addr": "amana_s_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【走るっ！！！！】大崎 甘奈",
+        "card_type": "permanent",
+        "card_date": "2023-01-20",
+        "card_addr": "amana_s_ssr10",
         "card_rerun": false
       }
     ],
