@@ -96,6 +96,11 @@ footer {
   color: #ffffff;
 }
 
+.mysongs-card-cell {
+  background-color: #bc84cf;
+  color: #ffffff;
+}
+
 .event-card-cell {
   background-color: #00b0f0;
 }

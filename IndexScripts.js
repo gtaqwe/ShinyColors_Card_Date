@@ -3,8 +3,8 @@ var JSON_DATA;
 var VIEW_LANGUAGE;
 const DEFALUT_LANGUAGE = "ko";
 
-// 통상, 한정, 트와코레, 이벤트, 페스, 캠페인, 기타
-var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0];
+// 통상, 한정, 트와코레, 마이코레, 이벤트, 페스, 캠페인, 기타
+var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0, 0];
 var TABLE_BLANK_LAP_LIST = Array(25).fill(0);
 
 $().ready(function () {
@@ -206,14 +206,16 @@ function countCardType(cardType) {
     CARD_TYPE_COUNT_LIST[1] += 1;
   } else if (cardType == "twilight") {
     CARD_TYPE_COUNT_LIST[2] += 1;
-  } else if (cardType == "event") {
+  } else if (cardType == "mysongs") {
     CARD_TYPE_COUNT_LIST[3] += 1;
-  } else if (cardType == "fes") {
+  } else if (cardType == "event") {
     CARD_TYPE_COUNT_LIST[4] += 1;
-  } else if (cardType == "campaign") {
+  } else if (cardType == "fes") {
     CARD_TYPE_COUNT_LIST[5] += 1;
-  } else if (cardType == "other") {
+  } else if (cardType == "campaign") {
     CARD_TYPE_COUNT_LIST[6] += 1;
+  } else if (cardType == "other") {
+    CARD_TYPE_COUNT_LIST[7] += 1;
   }
 }
 
@@ -221,10 +223,11 @@ function setCardTypeCountList() {
   $(cardCount_permanent).text(CARD_TYPE_COUNT_LIST[0]);
   $(cardCount_limited).text(CARD_TYPE_COUNT_LIST[1]);
   $(cardCount_twilight).text(CARD_TYPE_COUNT_LIST[2]);
-  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[3]);
-  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[4]);
-  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[5]);
-  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[6]);
+  $(cardCount_mysongs).text(CARD_TYPE_COUNT_LIST[3]);
+  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[4]);
+  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[5]);
+  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[6]);
+  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[7]);
 
   // if($(showCardCountConvertBtn).is(":checked"))
 }
@@ -426,6 +429,8 @@ function getCardList(cardAry) {
           return card;
         } else if (cardType == "twilight" && $("#twilightCardChkBox").is(":checked")) {
           return card;
+        } else if (cardType == "mysongs" && $("#mysongsCardChkBox").is(":checked")) {
+          return card;
         } else if (cardType == "event" && $("#eventCardChkBox").is(":checked")) {
           return card;
         } else if (cardType == "fes" && $("#gradeFesCardChkBox").is(":checked")) {
@@ -608,6 +613,7 @@ function captureScreen(frameName) {
     if ($("#permanentCardChkBox").is(":checked")) viewMode += "P";
     if ($("#limitedCardChkBox").is(":checked")) viewMode += "L";
     if ($("#twilightCardChkBox").is(":checked")) viewMode += "T";
+    if ($("#mysongsCardChkBox").is(":checked")) viewMode += "M";
     if ($("#eventCardChkBox").is(":checked")) viewMode += "E";
     if ($("#gradeFesCardChkBox").is(":checked")) viewMode += "F";
     if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";

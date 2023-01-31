@@ -162,6 +162,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
         }
       } else if (cardType == "twilight") {
         resContent += '<td class="twilight-card-cell" ';
+      } else if (cardType == "mysongs") {
+        resContent += '<td class="mysongs-card-cell" ';
       } else if (cardType == "event") {
         resContent += '<td class="event-card-cell" ';
       } else if (cardType == "fes") {
@@ -386,32 +388,37 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
     gachaTypeStr += "P";
   }
   if ($("#limitedCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "L";
   }
   if ($("#twilightCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "T";
   }
+  if ($("#mysongsCardChkBox").is(":checked")) {
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
+    else gachaTypeStr = "";
+    gachaTypeStr += "M";
+  }
   if ($("#eventCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "E";
   }
   if ($("#gradeFesCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "F";
   }
   if ($("#campaignCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "C";
   }
   if ($("#otherCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += " ";
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
     gachaTypeStr += "O";
   }
@@ -447,7 +454,6 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
       intervalStr = intervalAry[rankIndex][1];
     }
 
-    if (intervalAry[rankIndex] == "") rankStr = "미실장";
     var cellColor = selectCellColor(rankStr);
 
     table += "<tr>";
@@ -462,4 +468,8 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   $("#RANK").html(table);
 
   setLanguageInTable(VIEW_LANGUAGE, tableName);
+}
+
+function getGachaTypeSeparateChar(){
+  return " "
 }

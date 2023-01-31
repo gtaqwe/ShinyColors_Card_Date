@@ -153,6 +153,19 @@
           </label>
         </span>
 
+        <span id="mysongsChkSpan" style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="mysongs_1">마이코레</span>
+            <input
+              type="checkbox"
+              id="mysongsCardChkBox"
+              checked="checked"
+              onchange="updateDate(NOW_SELECT, true)"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
+
         <span id="eventChkSpan" style="margin: 5px 10px; float: left">
           <label class="container">
             <span data-lang="event_1">이벤트</span>
@@ -265,6 +278,7 @@
             <th class="twilight-card-cell" style="width: 100px" data-lang="twilight_2">
               트와코레 (T)
             </th>
+            <th class="mysongs-card-cell" style="width: 100px" data-lang="mysongs_2">마이코레 (M)</th>
             <th class="event-card-cell" style="width: 100px" data-lang="event_2">이벤트 (E)</th>
             <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes_2">페스 (F)</th>
             <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">
@@ -276,6 +290,7 @@
             <td id="cardCount_permanent"></td>
             <td id="cardCount_limited" class="limit-card-cell"></td>
             <td id="cardCount_twilight" class="twilight-card-cell"></td>
+            <td id="cardCount_mysongs" class="mysongs-card-cell"></td>
             <td id="cardCount_event" class="event-card-cell"></td>
             <td id="cardCount_fes" class="gradeFes-card-cell"></td>
             <td id="cardCount_campaign" class="campaign-card-cell"></td>
