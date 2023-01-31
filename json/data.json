@@ -589,6 +589,13 @@
         "card_date": "2022-08-31",
         "card_addr": "meguru_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ずっと・グッド・ラック】八宮 めぐる",
+        "card_type": "mysongs",
+        "card_date": "2023-01-31",
+        "card_addr": "meguru_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -2914,6 +2921,13 @@
         "card_date": "2022-05-10",
         "card_addr": "natsuha_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Cool＆Warm】有栖川 夏葉",
+        "card_type": "limited",
+        "card_date": "2023-01-31",
+        "card_addr": "natsuha_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3704,6 +3718,13 @@
         "card_date": "2022-09-20",
         "card_addr": "asahi_p_ssr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Boiling Sky】芹沢 あさひ",
+        "card_type": "mysongs",
+        "card_date": "2023-01-31",
+        "card_addr": "asahi_p_ssr7",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4167,6 +4188,13 @@
         "card_type": "limited",
         "card_date": "2023-01-10",
         "card_addr": "mei_s_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【なんでもない～】和泉 愛依",
+        "card_type": "event",
+        "card_date": "2023-01-31",
+        "card_addr": "mei_s_ssr8",
         "card_rerun": false
       }
     ],
@@ -4795,6 +4823,13 @@
         "card_type": "permanent",
         "card_date": "2022-05-20",
         "card_addr": "nichika_p_ssr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【↓ろウTea】七草 にちか",
+        "card_type": "limited",
+        "card_date": "2023-01-31",
+        "card_addr": "nichika_p_ssr4",
         "card_rerun": false
       }
     ],
