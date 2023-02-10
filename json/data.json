@@ -2043,6 +2043,13 @@
         "card_date": "2022-07-31",
         "card_addr": "kaho_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【グロウン・メイク・アップ！】小宮 果穂",
+        "card_type": "permanent",
+        "card_date": "2023-02-10",
+        "card_addr": "kaho_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3662,6 +3669,13 @@
         "card_date": "2022-08-14",
         "card_addr": "chiyuki_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Noir】桑山 千雪",
+        "card_type": "event",
+        "card_date": "2023-02-10",
+        "card_addr": "chiyuki_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -4274,6 +4288,13 @@
         "card_type": "limited",
         "card_date": "2022-05-31",
         "card_addr": "toru_p_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【夜はなにいろ】浅倉 透",
+        "card_type": "permanent",
+        "card_date": "2023-02-10",
+        "card_addr": "toru_p_ssr5",
         "card_rerun": false
       }
     ],
