@@ -942,6 +942,13 @@
         "card_date": "2022-01-01",
         "card_addr": "kogane_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【にゃんにゃんにゃ～ん♡】月岡 恋鐘",
+        "card_type": "twilight",
+        "card_date": "2023-02-19",
+        "card_addr": "kogane_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3272,6 +3279,13 @@
         "card_date": "2022-04-01",
         "card_addr": "tenka_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【甜ing Room】大崎 甜花",
+        "card_type": "twilight",
+        "card_date": "2023-02-19",
+        "card_addr": "tenka_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4603,6 +4617,13 @@
         "card_type": "event",
         "card_date": "2021-03-22",
         "card_addr": "koito_p_sr1",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【福はうち】福丸 小糸",
+        "card_type": "event",
+        "card_date": "2023-02-19",
+        "card_addr": "koito_p_sr2",
         "card_rerun": false
       }
     ],
