@@ -461,6 +461,13 @@
         "card_date": "2022-09-10",
         "card_addr": "hiori_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ふたりといる夜のこと】風野 灯織",
+        "card_type": "limited",
+        "card_date": "2023-02-28",
+        "card_addr": "hiori_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3753,6 +3760,13 @@
         "card_date": "2023-01-31",
         "card_addr": "asahi_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Anti-Gravity】芹沢 あさひ",
+        "card_type": "limited",
+        "card_date": "2023-02-28",
+        "card_addr": "asahi_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5071,6 +5085,13 @@
         "card_type": "fes",
         "card_date": "2023-01-01",
         "card_addr": "mikoto_s_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【STAGE】緋田 美琴",
+        "card_type": "event",
+        "card_date": "2023-02-28",
+        "card_addr": "mikoto_s_ssr7",
         "card_rerun": false
       }
     ],
