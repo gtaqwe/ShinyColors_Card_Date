@@ -2387,6 +2387,13 @@
         "card_date": "2022-07-31",
         "card_addr": "juri_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【陽の光、透かせば】西城 樹里",
+        "card_type": "mysongs",
+        "card_date": "2023-03-03",
+        "card_addr": "juri_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4476,6 +4483,13 @@
         "card_type": "twilight",
         "card_date": "2022-12-09",
         "card_addr": "madoka_p_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【バグ・ル】樋口 円香",
+        "card_type": "mysongs",
+        "card_date": "2023-03-03",
+        "card_addr": "madoka_p_ssr6",
         "card_rerun": false
       }
     ],
