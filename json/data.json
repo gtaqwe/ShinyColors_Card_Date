@@ -1395,6 +1395,13 @@
         "card_date": "2022-12-09",
         "card_addr": "sakuya_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【純粋・fall into a trap】白瀬 咲耶",
+        "card_type": "permanent",
+        "card_date": "2023-03-10",
+        "card_addr": "sakuya_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2170,6 +2177,13 @@
         "card_type": "limited",
         "card_date": "2022-06-20",
         "card_addr": "chiyoko_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【うつくしいあした】園田 智代子",
+        "card_type": "permanent",
+        "card_date": "2023-03-10",
+        "card_addr": "chiyoko_p_ssr8",
         "card_rerun": false
       }
     ],
@@ -4587,6 +4601,13 @@
         "card_type": "event",
         "card_date": "2021-02-10",
         "card_addr": "madoka_s_sr2",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ダ・カラ】樋口 円香",
+        "card_type": "event",
+        "card_date": "2023-03-10",
+        "card_addr": "madoka_s_sr3",
         "card_rerun": false
       }
     ]
