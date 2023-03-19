@@ -526,6 +526,13 @@
         "card_date": "2022-12-09",
         "card_addr": "hiori_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【If I_wings.】風野 灯織",
+        "card_type": "other",
+        "card_date": "2023-03-20",
+        "card_addr": "hiori_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -839,6 +846,13 @@
         "card_type": "permanent",
         "card_date": "2022-07-21",
         "card_addr": "kogane_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【よか匂いのする陽気やけん】月岡 恋鐘",
+        "card_type": "permanent",
+        "card_date": "2023-03-20",
+        "card_addr": "kogane_p_ssr8",
         "card_rerun": false
       }
     ],
@@ -3824,6 +3838,13 @@
         "card_type": "event",
         "card_date": "2021-10-21",
         "card_addr": "asahi_p_sr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ちぐはぐ姫】芹沢 あさひ",
+        "card_type": "event",
+        "card_date": "2023-03-20",
+        "card_addr": "asahi_p_sr5",
         "card_rerun": false
       }
     ],
