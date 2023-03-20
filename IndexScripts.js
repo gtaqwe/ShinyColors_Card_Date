@@ -2,10 +2,11 @@ var NOW_SELECT = 0;
 var JSON_DATA;
 var VIEW_LANGUAGE;
 const DEFALUT_LANGUAGE = "ko";
+const IDOL_TOTAL_COUNT = 25;
 
 // 통상, 한정, 트와코레, 마이코레, 이벤트, 페스, 캠페인, 기타
 var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0, 0];
-var TABLE_BLANK_LAP_LIST = Array(25).fill(0);
+var TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
 $().ready(function () {
   init();
@@ -42,6 +43,8 @@ async function init() {
 
   // 사복, 페스의상 토글
   getToggleString($("#fesImgConvertBtn").is(":checked"));
+
+  readTableBlankLapList();
 
   // 카드 수 리셋
   setCardTypeCountList();
@@ -141,6 +144,66 @@ function getToday() {
 }
 
 /**
+ * 카드 차수 변경이 True인 경우, localStorage에 저장된 데이터를 읽어서 반영
+ * False인 경우, localStorage의 값을 반영하지 않음
+ */
+function readTableBlankLapList() {
+  let nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
+
+  if (nowChangeLapFlag) {
+    let localList = localStorage.getItem("TABLE_BLANK_LAP_LIST");
+    if (localList !== null) {
+      TABLE_BLANK_LAP_LIST = localList.split(",");
+    }
+  }
+}
+
+/**
+ * TABLE_BLANK_LAP_LIST를 초기화(모든 데이터를 0으로 초기화)
+ */
+function resetTableBlankLapList() {
+  TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
+}
+
+/**
+ * TABLE_BLANK_LAP_LIST테이터를 localStorage에 저장
+ */
+function saveTableBlankLapListInStorage() {
+  localStorage.setItem("TABLE_BLANK_LAP_LIST", TABLE_BLANK_LAP_LIST);
+}
+
+/**
+ * localStorage를 Clear
+ */
+function clearStorage() {
+  localStorage.clear();
+}
+
+/**
+ * 카드 차수 변경 표시를 On/Off시의 동작
+ * readTableBlankLapList를 실행 후
+ * 표를 다시 읽기
+ */
+function changeCardLapConvertBtnValue() {
+  readTableBlankLapList();
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 카드 차수 변경 표시를 초기화 했을 경우의 동작
+ * localStorage를 Clear, TABLE_BLANK_LAP_LIST 초기화후
+ * 표를 다시 읽기
+ */
+function clearTableBlankLapList() {
+  clearStorage();
+
+  resetTableBlankLapList();
+
+  updateDate(NOW_SELECT);
+}
+
+/**
  * VIEW_SELECT의 표시타입 체크 변경
  * 0 : undefined
  * 1 : P-SSR
@@ -153,12 +216,8 @@ function getToday() {
  * 8 : P
  * 9 : S
  */
-function updateDate(nowSelect, blankLapReset = false) {
+function updateDate(nowSelect) {
   resetCardTypeCountList();
-
-  if (blankLapReset) {
-    TABLE_BLANK_LAP_LIST = Array(25).fill(0);
-  }
 
   if (nowSelect == 11) {
     NOW_SELECT = 11;

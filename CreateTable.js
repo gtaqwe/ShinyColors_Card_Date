@@ -101,6 +101,8 @@ function changeCardLapCount(nowSel, idolNum, inputObj) {
 
   TABLE_BLANK_LAP_LIST[idolNum] = val;
 
+  saveTableBlankLapListInStorage();
+
   updateDate(nowSel);
 }
 
@@ -470,6 +472,6 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   setLanguageInTable(VIEW_LANGUAGE, tableName);
 }
 
-function getGachaTypeSeparateChar(){
-  return " "
+function getGachaTypeSeparateChar() {
+  return " ";
 }

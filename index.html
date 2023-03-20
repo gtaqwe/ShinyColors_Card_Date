@@ -16,17 +16,17 @@
     </div>
 
     <div>
-      <input type="button" value="P-SSR" onclick="updateDate(11, true)" class="Pbutton" />
-      <input type="button" value="S-SSR" onclick="updateDate(12, true)" class="Sbutton" />
-      <input type="button" value="All SSR" onclick="updateDate(13, true)" class="ALLbutton" />
+      <input type="button" value="P-SSR" onclick="updateDate(11)" class="Pbutton" />
+      <input type="button" value="S-SSR" onclick="updateDate(12)" class="Sbutton" />
+      <input type="button" value="All SSR" onclick="updateDate(13)" class="ALLbutton" />
       <br />
-      <input type="button" value="P-SR" onclick="updateDate(21, true)" class="Pbutton" />
-      <input type="button" value="S-SR" onclick="updateDate(22, true)" class="Sbutton" />
-      <input type="button" value="All SR" onclick="updateDate(23, true)" class="ALLbutton" />
+      <input type="button" value="P-SR" onclick="updateDate(21)" class="Pbutton" />
+      <input type="button" value="S-SR" onclick="updateDate(22)" class="Sbutton" />
+      <input type="button" value="All SR" onclick="updateDate(23)" class="ALLbutton" />
       <br />
-      <input type="button" value="All P" onclick="updateDate(31, true)" class="Pbutton" />
-      <input type="button" value="All S" onclick="updateDate(32, true)" class="Sbutton" />
-      <input type="button" value="All" onclick="updateDate(33, true)" class="ALLbutton" />
+      <input type="button" value="All P" onclick="updateDate(31)" class="Pbutton" />
+      <input type="button" value="All S" onclick="updateDate(32)" class="Sbutton" />
+      <input type="button" value="All" onclick="updateDate(33)" class="ALLbutton" />
     </div>
 
     <div>
@@ -64,10 +64,17 @@
       <span data-lang="showCardCount">카드 수 표시</span>
 
       <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="showChangeCardLapConvertBtn" onchange="updateDate(NOW_SELECT)" />
+        <input
+          type="checkbox"
+          id="showChangeCardLapConvertBtn"
+          onchange="changeCardLapConvertBtnValue()"
+        />
         <span class="slider round"></span>
       </label>
       <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
+
+      <!-- 카드 차수 변경을 리셋 -->
+      <input type="button" value="Reset" class="Resetbutton" onclick="clearTableBlankLapList()" />
     </div>
 
     <div>
@@ -121,7 +128,7 @@
               type="checkbox"
               id="permanentCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -134,7 +141,7 @@
               type="checkbox"
               id="limitedCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -147,7 +154,7 @@
               type="checkbox"
               id="twilightCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -160,7 +167,7 @@
               type="checkbox"
               id="mysongsCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -173,7 +180,7 @@
               type="checkbox"
               id="eventCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -186,7 +193,7 @@
               type="checkbox"
               id="gradeFesCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -199,7 +206,7 @@
               type="checkbox"
               id="campaignCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -212,7 +219,7 @@
               type="checkbox"
               id="otherCardChkBox"
               checked="checked"
-              onchange="updateDate(NOW_SELECT, true)"
+              onchange="updateDate(NOW_SELECT)"
             />
             <span class="checkmark"></span>
           </label>
@@ -278,7 +285,9 @@
             <th class="twilight-card-cell" style="width: 100px" data-lang="twilight_2">
               트와코레 (T)
             </th>
-            <th class="mysongs-card-cell" style="width: 100px" data-lang="mysongs_2">마이코레 (M)</th>
+            <th class="mysongs-card-cell" style="width: 100px" data-lang="mysongs_2">
+              마이코레 (M)
+            </th>
             <th class="event-card-cell" style="width: 100px" data-lang="event_2">이벤트 (E)</th>
             <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes_2">페스 (F)</th>
             <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">
