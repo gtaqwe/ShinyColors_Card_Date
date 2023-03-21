@@ -345,6 +345,13 @@
         "card_date": "2022-11-30",
         "card_addr": "hiori_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【耿耿】風野 灯織",
+        "card_type": "mysongs",
+        "card_date": "2023-03-22",
+        "card_addr": "hiori_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4817,6 +4824,13 @@
         "card_type": "limited",
         "card_date": "2023-01-10",
         "card_addr": "hinana_p_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【UNCHARTE:D】市川 雛菜",
+        "card_type": "mysongs",
+        "card_date": "2023-03-22",
+        "card_addr": "hinana_p_ssr6",
         "card_rerun": false
       }
     ],
