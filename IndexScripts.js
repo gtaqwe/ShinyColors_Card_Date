@@ -1,12 +1,15 @@
 var NOW_SELECT = 0;
 var JSON_DATA;
 var VIEW_LANGUAGE;
+var IDOL_TOTAL_COUNT;
 const DEFALUT_LANGUAGE = "ko";
-const IDOL_TOTAL_COUNT = 25;
+const GACHA_CATEGORY_COUNT = 8;
+
+// 카드 차수 변경 데이터의 배열
+var TABLE_BLANK_LAP_LIST;
 
 // 통상, 한정, 트와코레, 마이코레, 이벤트, 페스, 캠페인, 기타
-var CARD_TYPE_COUNT_LIST = [0, 0, 0, 0, 0, 0, 0, 0];
-var TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
+var CARD_TYPE_COUNT_LIST = Array(GACHA_CATEGORY_COUNT).fill(0);
 
 $().ready(function () {
   init();
@@ -18,6 +21,9 @@ async function init() {
   await getJSON("json/data.json").then(function (resp) {
     JSON_DATA = JSON.parse(resp);
   });
+
+  IDOL_TOTAL_COUNT = JSON_DATA.length;
+  TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
   NOW_SELECT = 0;
   // 초기 기준일

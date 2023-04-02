@@ -4447,6 +4447,13 @@
         "card_date": "2022-08-10",
         "card_addr": "toru_s_ssr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【裏声であいつら】浅倉 透",
+        "card_type": "fes",
+        "card_date": "2023-04-02",
+        "card_addr": "toru_s_ssr6",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4679,6 +4686,13 @@
         "card_date": "2022-07-11",
         "card_addr": "koito_p_ssr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【セピア色の孤独】福丸 小糸",
+        "card_type": "limited",
+        "card_date": "2023-04-02",
+        "card_addr": "koito_p_ssr5",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4892,6 +4906,13 @@
         "card_date": "2022-08-19",
         "card_addr": "hinana_s_ssr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【THE W♡RLD】市川 雛菜",
+        "card_type": "event",
+        "card_date": "2023-04-02",
+        "card_addr": "hinana_s_ssr5",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5023,6 +5044,13 @@
         "card_type": "twilight",
         "card_date": "2022-10-20",
         "card_addr": "nichika_s_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【短二度、一番線】七草 にちか",
+        "card_type": "limited",
+        "card_date": "2023-04-02",
+        "card_addr": "nichika_s_ssr6",
         "card_rerun": false
       }
     ],
@@ -5188,5 +5216,30 @@
         "card_rerun": false
       }
     ]
+  },
+  {
+    "idol_ko_name": "루카",
+    "idol_ja_name": "斑鳩ルカ",
+    "idol_en_name": "Luca",
+    "P_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-04-02",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "P_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-04-02",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SSR": [],
+    "S_SR": []
   }
 ]
