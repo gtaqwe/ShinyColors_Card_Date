@@ -3119,6 +3119,13 @@
         "card_date": "2022-06-10",
         "card_addr": "amana_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【聞いてマイハート】大崎 甘奈",
+        "card_type": "mysongs",
+        "card_date": "2023-04-13",
+        "card_addr": "amana_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4010,6 +4017,13 @@
         "card_type": "twilight",
         "card_date": "2022-10-20",
         "card_addr": "fuyuko_p_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【名モナキ夜ノ標ニ】黛 冬優子",
+        "card_type": "mysongs",
+        "card_date": "2023-04-13",
+        "card_addr": "fuyuko_p_ssr7",
         "card_rerun": false
       }
     ],
