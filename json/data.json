@@ -3035,6 +3035,20 @@
         "card_date": "2022-06-10",
         "card_addr": "natsuha_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【アオハルランナーズ】有栖川 夏葉",
+        "card_type": "event",
+        "card_date": "2023-04-12",
+        "card_addr": "natsuha_s_sr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【If I_wings.】有栖川 夏葉",
+        "card_type": "other",
+        "card_date": "2023-04-12",
+        "card_addr": "natsuha_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -5227,6 +5241,13 @@
         "card_type": "first",
         "card_date": "2023-04-02",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【broken shout】斑鳩 ルカ",
+        "card_type": "permanent",
+        "card_date": "2023-04-12",
+        "card_addr": "luca_p_ssr1",
         "card_rerun": false
       }
     ],
