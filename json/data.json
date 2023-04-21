@@ -1207,6 +1207,13 @@
         "card_date": "2022-07-31",
         "card_addr": "mamimi_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【COOL JOKERS】田中 摩美々",
+        "card_type": "twilight",
+        "card_date": "2023-04-21",
+        "card_addr": "mamimi_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2645,6 +2652,13 @@
         "card_date": "2022-10-31",
         "card_addr": "rinze_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【花は】杜野 凛世",
+        "card_type": "twilight",
+        "card_date": "2023-04-21",
+        "card_addr": "rinze_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3285,6 +3299,13 @@
         "card_type": "event",
         "card_date": "2022-09-10",
         "card_addr": "amana_s_sr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【For worker】大崎 甘奈",
+        "card_type": "event",
+        "card_date": "2023-04-21",
+        "card_addr": "amana_s_sr5",
         "card_rerun": false
       }
     ]
@@ -5274,7 +5295,23 @@
         "card_rerun": false
       }
     ],
-    "S_SSR": [],
-    "S_SR": []
+    "S_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-04-21",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-04-21",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ]
   }
 ]
