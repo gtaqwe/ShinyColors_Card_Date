@@ -352,6 +352,13 @@
         "card_date": "2023-03-22",
         "card_addr": "hiori_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【エバー・リメンバー・ネバー】風野 灯織",
+        "card_type": "limited",
+        "card_date": "2023-04-30",
+        "card_addr": "hiori_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -739,6 +746,13 @@
         "card_type": "fes",
         "card_date": "2022-09-30",
         "card_addr": "meguru_s_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【青風、駆けていく】八宮 めぐる",
+        "card_type": "event",
+        "card_date": "2023-04-30",
+        "card_addr": "meguru_s_ssr11",
         "card_rerun": false
       }
     ],
@@ -2098,6 +2112,13 @@
         "card_type": "permanent",
         "card_date": "2023-02-10",
         "card_addr": "kaho_s_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【オルター！】小宮 果穂",
+        "card_type": "limited",
+        "card_date": "2023-04-30",
+        "card_addr": "kaho_s_ssr10",
         "card_rerun": false
       }
     ],
