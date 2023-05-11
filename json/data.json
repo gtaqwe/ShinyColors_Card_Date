@@ -1328,6 +1328,13 @@
         "card_date": "2022-09-30",
         "card_addr": "sakuya_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【私をときめかせて】白瀬 咲耶",
+        "card_type": "permanent",
+        "card_date": "2023-05-11",
+        "card_addr": "sakuya_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5144,6 +5151,13 @@
         "card_type": "other",
         "card_date": "2022-10-24",
         "card_addr": "nichika_s_sr2",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【羽なしたちの長い日】七草 にちか",
+        "card_type": "event",
+        "card_date": "2023-05-11",
+        "card_addr": "nichika_s_sr3",
         "card_rerun": false
       }
     ]
