@@ -1112,6 +1112,13 @@
         "card_date": "2022-11-18",
         "card_addr": "mamimi_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【PURPLE M】田中 摩美々",
+        "card_type": "mysongs",
+        "card_date": "2023-05-17",
+        "card_addr": "mamimi_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -2240,6 +2247,13 @@
         "card_type": "permanent",
         "card_date": "2023-03-10",
         "card_addr": "chiyoko_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【チョコ for Y♡U】園田 智代子",
+        "card_type": "mysongs",
+        "card_date": "2023-05-17",
+        "card_addr": "chiyoko_p_ssr9",
         "card_rerun": false
       }
     ],
