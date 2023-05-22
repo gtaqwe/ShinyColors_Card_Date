@@ -2624,6 +2624,13 @@
         "card_date": "2021-01-22",
         "card_addr": "juri_s_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ゆらりゆられて】西城 樹里",
+        "card_type": "event",
+        "card_date": "2023-05-22",
+        "card_addr": "juri_s_sr5",
+        "card_rerun": false
       }
     ]
   },
@@ -3772,6 +3779,13 @@
         "card_date": "2022-06-20",
         "card_addr": "chiyuki_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一瞬を閉じ込め、あなたに】桑山 千雪",
+        "card_type": "permanent",
+        "card_date": "2023-05-22",
+        "card_addr": "chiyuki_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4275,6 +4289,13 @@
         "card_type": "limited",
         "card_date": "2022-06-30",
         "card_addr": "mei_p_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【うちと幸せ】和泉 愛依",
+        "card_type": "permanent",
+        "card_date": "2023-05-22",
+        "card_addr": "mei_p_ssr7",
         "card_rerun": false
       }
     ],
