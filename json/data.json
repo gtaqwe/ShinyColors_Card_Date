@@ -1667,6 +1667,13 @@
         "card_date": "2022-02-28",
         "card_addr": "yuika_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【焦】三峰 結華",
+        "card_type": "event",
+        "card_date": "2023-05-31",
+        "card_addr": "yuika_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1773,6 +1780,13 @@
         "card_type": "twilight",
         "card_date": "2022-08-19",
         "card_addr": "kiriko_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【空・風・明・鳴】幽谷 霧子",
+        "card_type": "limited",
+        "card_date": "2023-05-31",
+        "card_addr": "kiriko_p_ssr8",
         "card_rerun": false
       }
     ],
@@ -4725,6 +4739,13 @@
         "card_type": "permanent",
         "card_date": "2022-06-10",
         "card_addr": "madoka_s_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【漠漠】樋口 円香",
+        "card_type": "limited",
+        "card_date": "2023-05-31",
+        "card_addr": "madoka_s_ssr7",
         "card_rerun": false
       }
     ],
