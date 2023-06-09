@@ -2959,6 +2959,13 @@
         "card_date": "2022-10-11",
         "card_addr": "natsuha_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Birdy BUddy】有栖川 夏葉",
+        "card_type": "permanent",
+        "card_date": "2023-06-09",
+        "card_addr": "natsuha_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4052,6 +4059,13 @@
         "card_type": "event",
         "card_date": "2021-06-11",
         "card_addr": "asahi_s_sr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【月に向かって吠えろ】芹沢 あさひ",
+        "card_type": "event",
+        "card_date": "2023-06-09",
+        "card_addr": "asahi_s_sr4",
         "card_rerun": false
       }
     ]
@@ -5399,6 +5413,13 @@
         "card_type": "first",
         "card_date": "2023-04-21",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Splinter】斑鳩 ルカ",
+        "card_type": "permanent",
+        "card_date": "2023-06-09",
+        "card_addr": "luca_s_ssr1",
         "card_rerun": false
       }
     ],
