@@ -47,8 +47,7 @@ async function init() {
   setLanguage(VIEW_LANGUAGE);
   $("#languageSelect").val(VIEW_LANGUAGE).prop("selected", true);
 
-  // 사복, 페스의상 토글
-  getToggleString($("#fesImgConvertBtn").is(":checked"));
+  setViewCheckboxSetting();
 
   readTableBlankLapList();
 
@@ -109,8 +108,6 @@ function setLanguageInTable(currLang, tableName) {
 function changeLanguage() {
   VIEW_LANGUAGE = $("#languageSelect").val();
   setLanguage(VIEW_LANGUAGE);
-  var fesChk = $("#fesImgConvertBtn").is(":checked");
-  getToggleString(fesChk);
   updateDate(NOW_SELECT);
 }
 
@@ -162,6 +159,36 @@ function readTableBlankLapList() {
       TABLE_BLANK_LAP_LIST = localList.split(",");
     }
   }
+}
+
+function setViewCheckboxSetting() {
+  // 모두선택 클릭 시
+  $("input:checkbox[name='showCardAllTypeChk']").click(function () {
+    if ($("input:checkbox[name='showCardAllTypeChk']").is(":checked") == true) {
+      $("input:checkbox[name='showCardTypeChk']").prop("checked", true);
+    } else {
+      $("input:checkbox[name='showCardTypeChk']").prop("checked", false);
+    }
+    updateDate(NOW_SELECT);
+  });
+
+  // 체크박스 클릭 시
+  $("input:checkbox[name='showCardTypeChk']").click(function () {
+    var allCnt = $("input:checkbox[name='showCardTypeChk']").length; // chk 전체갯수
+    var selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // chk 선택갯수
+
+    if (allCnt == selCnt) {
+      $("input:checkbox[name='showCardAllTypeChk']").prop("checked", true);
+    } else {
+      $("input:checkbox[name='showCardAllTypeChk']").prop("checked", false);
+    }
+    updateDate(NOW_SELECT);
+  });
+
+  // View Option
+  $("input:checkbox[name='viewOptionChk']").click(function () {
+    updateDate(NOW_SELECT);
+  });
 }
 
 /**
@@ -344,22 +371,8 @@ function baseDateReset(id, inputDate) {
  * 페스 이미지 세팅
  * (표, 프리뷰)
  */
-function setFesImg(fesChk) {
-  getToggleString(fesChk);
+function setFesImg() {
   updateDate(NOW_SELECT);
-}
-
-/**
- * 사복과 페스 일러 토글 텍스트 표시
- */
-function getToggleString(fesChk) {
-  var str;
-  if (fesChk == true) {
-    str = "fes_1";
-  } else {
-    str = "casual";
-  }
-  setLanguageById(VIEW_LANGUAGE, "#toggleStr", str);
 }
 
 /**
@@ -372,7 +385,6 @@ function CtlfesImgConvertBtn(ps) {
   } else if (ps == "s") {
     document.getElementById("fesImgConvertBtn").checked = false;
     document.getElementById("fesImgConvertBtn").disabled = true;
-    getToggleString(false);
   }
 }
 
@@ -705,6 +717,8 @@ function captureScreen(frameName) {
     $("#BaseEndSpan").css("display", "none");
     $("#BaseEndDateStr").css("display", "");
 
+    $("#ALL_TYPE_SELECT").css("display", "none");
+
     html2canvas(document.querySelector(frameId), {
       scrollY: -window.scrollY,
       scrollX: -window.scrollX,
@@ -725,6 +739,8 @@ function captureScreen(frameName) {
 
     $("#BaseEndSpan").css("display", "");
     $("#BaseEndDateStr").css("display", "none");
+
+    $("#ALL_TYPE_SELECT").css("display", "");
   }
 }
 

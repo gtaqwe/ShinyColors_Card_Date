@@ -45,36 +45,61 @@
     </div>
 
     <div>
-      <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="iconImgConvertBtn" onchange="updateDate(NOW_SELECT)" />
-        <span class="slider round"></span>
-      </label>
-      <span data-lang="showIcon">아이콘 표시</span>
+      <fieldset style="width: max-content">
+        <span style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="showIcon">아이콘 표시</span>
+            <input type="checkbox" id="iconImgConvertBtn" name="viewOptionChk" />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-      <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="noShowRCardConvertBtn" onchange="updateDate(NOW_SELECT)" />
-        <span class="slider round"></span>
-      </label>
-      <span data-lang="showRCard">첫 실장 비표시</span>
+        <span style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="showRCard">첫 실장 비표시</span>
+            <input type="checkbox" id="noShowRCardConvertBtn" name="viewOptionChk" />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-      <label class="switch" style="margin: 5px 10px">
-        <input type="checkbox" id="showCardCountConvertBtn" onchange="updateDate(NOW_SELECT)" />
-        <span class="slider round"></span>
-      </label>
-      <span data-lang="showCardCount">카드 수 표시</span>
+        <span style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="showCardCount">카드 수 표시</span>
+            <input type="checkbox" id="showCardCountConvertBtn" name="viewOptionChk" />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-      <label class="switch" style="margin: 5px 10px">
-        <input
-          type="checkbox"
-          id="showChangeCardLapConvertBtn"
-          onchange="changeCardLapConvertBtnValue()"
-        />
-        <span class="slider round"></span>
-      </label>
-      <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
+        <span style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
+            <input
+              type="checkbox"
+              id="showChangeCardLapConvertBtn"
+              onchange="changeCardLapConvertBtnValue()"
+            />
+            <span class="checkmark"></span>
+          </label>
+        </span>
 
-      <!-- 카드 차수 변경을 리셋 -->
-      <input type="button" value="Reset" class="Resetbutton" onclick="clearTableBlankLapList()" />
+        <!-- 카드 차수 변경을 리셋 -->
+        <span style="margin: 5px 0px; float: left">
+          <input
+            type="button"
+            value="Reset"
+            class="Resetbutton"
+            onclick="clearTableBlankLapList()"
+          />
+        </span>
+
+        <span id="convertSpan" style="margin: 5px 10px; float: left">
+          <label class="container">
+            <span data-lang="showFesIcon">페스 일러스트로 표시</span>
+            <input type="checkbox" id="fesImgConvertBtn" onchange="setFesImg()" />
+            <span class="checkmark"></span>
+          </label>
+        </span>
+      </fieldset>
     </div>
 
     <div>
@@ -121,122 +146,126 @@
 
     <div id="CAPTURE_FRAME" style="width: max-content; height: max-content">
       <div id="VIEW_SELECT" style="width: max-content; overflow: hidden">
-        <span id="generalChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="permanent_1">통상</span>
-            <input
-              type="checkbox"
-              id="permanentCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+        <fieldset style="width: max-content">
+          <span id="generalChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="permanent_1">통상</span>
+              <input
+                type="checkbox"
+                id="permanentCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="limitChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="limited_1">한정</span>
-            <input
-              type="checkbox"
-              id="limitedCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="limitChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="limited_1">한정</span>
+              <input
+                type="checkbox"
+                id="limitedCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="twilightChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="twilight_1">트와코레</span>
-            <input
-              type="checkbox"
-              id="twilightCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="twilightChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="twilight_1">트와코레</span>
+              <input
+                type="checkbox"
+                id="twilightCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="mysongsChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="mysongs_1">마이코레</span>
-            <input
-              type="checkbox"
-              id="mysongsCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="mysongsChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="mysongs_1">마이코레</span>
+              <input
+                type="checkbox"
+                id="mysongsCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="eventChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="event_1">이벤트</span>
-            <input
-              type="checkbox"
-              id="eventCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="eventChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="event_1">이벤트</span>
+              <input
+                type="checkbox"
+                id="eventCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="fesChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="fes_1">페스</span>
-            <input
-              type="checkbox"
-              id="gradeFesCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="fesChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="fes_1">페스</span>
+              <input
+                type="checkbox"
+                id="gradeFesCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="campaignChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="campaign_1">캠페인</span>
-            <input
-              type="checkbox"
-              id="campaignCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="campaignChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="campaign_1">캠페인</span>
+              <input
+                type="checkbox"
+                id="campaignCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
 
-        <span id="otherChkSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="other_1">기타</span>
-            <input
-              type="checkbox"
-              id="otherCardChkBox"
-              checked="checked"
-              onchange="updateDate(NOW_SELECT)"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
+          <span id="otherChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="other_1">기타</span>
+              <input
+                type="checkbox"
+                id="otherCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+        </fieldset>
 
-        <span id="convertSpan" style="margin: 5px 10px; float: left">
-          <label class="switch">
-            <input
-              type="checkbox"
-              id="fesImgConvertBtn"
-              onchange="setFesImg($('#fesImgConvertBtn').is(':checked'))"
-            />
-            <span class="slider round"></span>
-          </label>
-
-          <span id="toggleStr"></span>
-        </span>
+        <div id="ALL_TYPE_SELECT" style="width: max-content">
+          <span id="allChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="allChk">전체 체크</span>
+              <input
+                type="checkbox"
+                id="allTypeCardChkBox"
+                checked="checked"
+                name="showCardAllTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+        </div>
       </div>
 
       <div style="overflow: hidden; max-width: max-content">

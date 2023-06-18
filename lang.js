@@ -22,7 +22,7 @@ $.lang.ko = {
   firstImplementation: "첫 실장",
   interval: "간격",
   intervalDate: "간격일",
-  casual: "사복",
+  showFesIcon: "페스 일러스트로 표시",
   name: "이름",
   rank: "순위",
   pFirstImplementNote: "※ P카드의 첫 실장일은 「白いツバサ」 실장일이 기준일",
@@ -37,6 +37,7 @@ $.lang.ko = {
   selShowRerun3: "모두 표시",
   showCardCount: "카드 수 표시",
   showChangeCardLap: "카드 차수 변경 표시",
+  allChk: "전체 체크",
 };
 
 $.lang.ja = {
@@ -61,7 +62,7 @@ $.lang.ja = {
   firstImplementation: "初実装",
   interval: "間隔",
   intervalDate: "間隔日",
-  casual: "私服",
+  showFesIcon: "フェスイラストで表示",
   name: "名前",
   rank: "順位",
   pFirstImplementNote: "※ Pカードの初実装日は「白いツバサ」の実装日が基準日",
@@ -76,4 +77,5 @@ $.lang.ja = {
   selShowRerun3: "すべて表示",
   showCardCount: "カード数表示",
   showChangeCardLap: "カード周目変更表示",
+  allChk: "すべてチェック",
 };
