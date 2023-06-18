@@ -161,8 +161,11 @@ function readTableBlankLapList() {
   }
 }
 
+/**
+ * 체크박스 동작 설정
+ */
 function setViewCheckboxSetting() {
-  // 모두선택 클릭 시
+  // 전체 체크 클릭 시
   $("input:checkbox[name='showCardAllTypeChk']").click(function () {
     if ($("input:checkbox[name='showCardAllTypeChk']").is(":checked") == true) {
       $("input:checkbox[name='showCardTypeChk']").prop("checked", true);
@@ -172,10 +175,10 @@ function setViewCheckboxSetting() {
     updateDate(NOW_SELECT);
   });
 
-  // 체크박스 클릭 시
+  // 카드타입 클릭 시
   $("input:checkbox[name='showCardTypeChk']").click(function () {
-    var allCnt = $("input:checkbox[name='showCardTypeChk']").length; // chk 전체갯수
-    var selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // chk 선택갯수
+    var allCnt = $("input:checkbox[name='showCardTypeChk']").length; // 카드타입 전체갯수
+    var selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // 카드타입 선택갯수
 
     if (allCnt == selCnt) {
       $("input:checkbox[name='showCardAllTypeChk']").prop("checked", true);
@@ -185,7 +188,7 @@ function setViewCheckboxSetting() {
     updateDate(NOW_SELECT);
   });
 
-  // View Option
+  // 표시 옵션 클릭
   $("input:checkbox[name='viewOptionChk']").click(function () {
     updateDate(NOW_SELECT);
   });
