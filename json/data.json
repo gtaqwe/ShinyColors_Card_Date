@@ -2601,6 +2601,13 @@
         "card_date": "2022-11-10",
         "card_addr": "juri_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【心に浮かぶもの】西城 樹里",
+        "card_type": "limited",
+        "card_date": "2023-06-20",
+        "card_addr": "juri_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3446,6 +3453,13 @@
         "card_type": "twilight",
         "card_date": "2023-02-19",
         "card_addr": "tenka_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Eve】大崎 甜花",
+        "card_type": "limited",
+        "card_date": "2023-06-20",
+        "card_addr": "tenka_p_ssr9",
         "card_rerun": false
       }
     ],
@@ -4630,6 +4644,13 @@
         "card_type": "event",
         "card_date": "2022-02-19",
         "card_addr": "toru_s_sr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【みずになりかけ】浅倉 透",
+        "card_type": "event",
+        "card_date": "2023-06-20",
+        "card_addr": "toru_s_sr4",
         "card_rerun": false
       }
     ]
