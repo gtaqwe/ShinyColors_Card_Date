@@ -2371,6 +2371,13 @@
         "card_date": "2023-01-01",
         "card_addr": "chiyoko_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【chocolate next door】園田 智代子",
+        "card_type": "event",
+        "card_date": "2023-06-30",
+        "card_addr": "chiyoko_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5088,6 +5095,13 @@
         "card_date": "2023-04-02",
         "card_addr": "hinana_s_ssr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【CR-EAT-I♡N】市川 雛菜",
+        "card_type": "limited",
+        "card_date": "2023-06-30",
+        "card_addr": "hinana_s_ssr6",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5291,6 +5305,13 @@
         "card_type": "limited",
         "card_date": "2022-04-30",
         "card_addr": "mikoto_p_ssr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【DIVA】緋田 美琴",
+        "card_type": "limited",
+        "card_date": "2023-06-30",
+        "card_addr": "mikoto_p_ssr4",
         "card_rerun": false
       }
     ],
