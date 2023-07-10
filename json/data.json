@@ -1042,6 +1042,13 @@
         "card_date": "2022-05-10",
         "card_addr": "kogane_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【夏空商店街】月岡 恋鐘",
+        "card_type": "event",
+        "card_date": "2023-07-10",
+        "card_addr": "kogane_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -2024,6 +2031,13 @@
         "card_type": "permanent",
         "card_date": "2022-12-20",
         "card_addr": "kaho_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【両手に兄！】小宮 果穂",
+        "card_type": "permanent",
+        "card_date": "2023-07-10",
+        "card_addr": "kaho_p_ssr9",
         "card_rerun": false
       }
     ],
