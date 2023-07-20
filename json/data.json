@@ -624,6 +624,13 @@
         "card_date": "2023-01-31",
         "card_addr": "meguru_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【こころレイヤリング】八宮 めぐる",
+        "card_type": "permanent",
+        "card_date": "2023-07-20",
+        "card_addr": "meguru_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -2873,6 +2880,13 @@
         "card_date": "2022-08-31",
         "card_addr": "rinze_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【夏彩フレア】杜野 凛世",
+        "card_type": "permanent",
+        "card_date": "2023-07-20",
+        "card_addr": "rinze_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4992,6 +5006,13 @@
         "card_type": "event",
         "card_date": "2022-11-10",
         "card_addr": "koito_s_sr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【おおきなひと口】福丸 小糸",
+        "card_type": "event",
+        "card_date": "2023-07-20",
+        "card_addr": "koito_s_sr4",
         "card_rerun": false
       }
     ]
