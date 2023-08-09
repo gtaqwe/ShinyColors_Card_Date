@@ -1286,6 +1286,13 @@
         "card_date": "2022-03-10",
         "card_addr": "mamimi_s_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【コミケ102】田中 摩美々",
+        "card_type": "other",
+        "card_date": "2023-08-09",
+        "card_addr": "mamimi_s_sr5",
+        "card_rerun": false
       }
     ]
   },
@@ -1355,6 +1362,13 @@
         "card_type": "permanent",
         "card_date": "2023-05-11",
         "card_addr": "sakuya_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【落ちる音がする】白瀬 咲耶",
+        "card_type": "permanent",
+        "card_date": "2023-08-09",
+        "card_addr": "sakuya_p_ssr9",
         "card_rerun": false
       }
     ],
@@ -2219,6 +2233,13 @@
         "card_type": "other",
         "card_date": "2022-04-23",
         "card_addr": "kaho_s_sr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【『大天使カホエル』】小宮 果穂",
+        "card_type": "event",
+        "card_date": "2023-08-09",
+        "card_addr": "kaho_s_sr6",
         "card_rerun": false
       }
     ]
@@ -5470,6 +5491,13 @@
         "card_type": "event",
         "card_date": "2023-02-28",
         "card_addr": "mikoto_s_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【overlap】緋田 美琴",
+        "card_type": "permanent",
+        "card_date": "2023-08-09",
+        "card_addr": "mikoto_s_ssr8",
         "card_rerun": false
       }
     ],
