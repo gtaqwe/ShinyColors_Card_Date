@@ -2067,6 +2067,13 @@
         "card_date": "2023-07-10",
         "card_addr": "kaho_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【カラーズキャッチ！】小宮 果穂",
+        "card_type": "mysongs",
+        "card_date": "2023-08-15",
+        "card_addr": "kaho_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5264,6 +5271,13 @@
         "card_type": "limited",
         "card_date": "2023-01-31",
         "card_addr": "nichika_p_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ふラiとぅTHE】七草 にちか",
+        "card_type": "mysongs",
+        "card_date": "2023-08-15",
+        "card_addr": "nichika_p_ssr5",
         "card_rerun": false
       }
     ],
