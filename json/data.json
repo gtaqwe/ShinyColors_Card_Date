@@ -1702,6 +1702,13 @@
         "card_date": "2023-05-31",
         "card_addr": "yuika_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一夏・泡沫・ギフテッド】三峰 結華",
+        "card_type": "twilight",
+        "card_date": "2023-08-21",
+        "card_addr": "yuika_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -3768,6 +3775,13 @@
         "card_date": "2023-01-01",
         "card_addr": "chiyuki_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ネームレス・ヘヴンに憧れて】桑山 千雪",
+        "card_type": "twilight",
+        "card_date": "2023-08-21",
+        "card_addr": "chiyuki_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5581,6 +5595,13 @@
         "card_type": "permanent",
         "card_date": "2023-06-09",
         "card_addr": "luca_s_ssr1",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【杖たちの足跡】斑鳩 ルカ",
+        "card_type": "event",
+        "card_date": "2023-08-21",
+        "card_addr": "luca_s_ssr2",
         "card_rerun": false
       }
     ],
