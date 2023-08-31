@@ -2562,6 +2562,13 @@
         "card_date": "2023-03-03",
         "card_addr": "juri_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Clashmade】西城 樹里",
+        "card_type": "limited",
+        "card_date": "2023-08-31",
+        "card_addr": "juri_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3668,6 +3675,13 @@
         "card_date": "2023-01-01",
         "card_addr": "tenka_s_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【楽しいがたくさん】大崎 甜花",
+        "card_type": "event",
+        "card_date": "2023-08-31",
+        "card_addr": "tenka_s_ssr11",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4705,6 +4719,13 @@
         "card_type": "fes",
         "card_date": "2023-04-02",
         "card_addr": "toru_s_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【floooat】浅倉 透",
+        "card_type": "limited",
+        "card_date": "2023-08-31",
+        "card_addr": "toru_s_ssr7",
         "card_rerun": false
       }
     ],
