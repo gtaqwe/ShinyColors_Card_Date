@@ -217,6 +217,13 @@
         "card_date": "2022-08-31",
         "card_addr": "mano_s_ssr12",
         "card_rerun": false
+      },
+      {
+        "card_name": "【2,640のきせき】櫻木 真乃",
+        "card_type": "permanent",
+        "card_date": "2023-09-11",
+        "card_addr": "mano_s_ssr13",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1829,6 +1836,13 @@
         "card_type": "limited",
         "card_date": "2023-05-31",
         "card_addr": "kiriko_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【窓・送・巡・歌】幽谷 霧子",
+        "card_type": "permanent",
+        "card_date": "2023-09-11",
+        "card_addr": "kiriko_p_ssr9",
         "card_rerun": false
       }
     ],
@@ -4589,6 +4603,13 @@
         "card_type": "other",
         "card_date": "2022-11-30",
         "card_addr": "mei_s_sr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【志道の覚悟】和泉 愛依",
+        "card_type": "event",
+        "card_date": "2023-09-11",
+        "card_addr": "mei_s_sr5",
         "card_rerun": false
       }
     ]
