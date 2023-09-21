@@ -1530,6 +1530,13 @@
         "card_date": "2021-11-30",
         "card_addr": "sakuya_s_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【back to back】白瀬 咲耶",
+        "card_type": "event",
+        "card_date": "2023-09-21",
+        "card_addr": "sakuya_s_sr5",
+        "card_rerun": false
       }
     ]
   },
@@ -3314,6 +3321,13 @@
         "card_type": "mysongs",
         "card_date": "2023-04-13",
         "card_addr": "amana_p_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【すれちがいシアター】大崎 甘奈",
+        "card_type": "permanent",
+        "card_date": "2023-09-21",
+        "card_addr": "amana_p_ssr10",
         "card_rerun": false
       }
     ],
@@ -5621,6 +5635,13 @@
         "card_type": "first",
         "card_date": "2023-04-02",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Blind Driver】斑鳩 ルカ",
+        "card_type": "permanent",
+        "card_date": "2023-09-21",
+        "card_addr": "luca_p_sr1",
         "card_rerun": false
       }
     ],
