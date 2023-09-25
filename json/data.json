@@ -1607,6 +1607,13 @@
         "card_date": "2023-01-20",
         "card_addr": "yuika_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【鏡界フィクションレイン】三峰 結華",
+        "card_type": "mysongs",
+        "card_date": "2023-09-25",
+        "card_addr": "yuika_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5028,6 +5035,13 @@
         "card_type": "limited",
         "card_date": "2023-04-02",
         "card_addr": "koito_p_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【雲のかなたまで】福丸 小糸",
+        "card_type": "mysongs",
+        "card_date": "2023-09-25",
+        "card_addr": "koito_p_ssr6",
         "card_rerun": false
       }
     ],
