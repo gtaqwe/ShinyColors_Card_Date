@@ -2469,6 +2469,13 @@
         "card_date": "2023-06-30",
         "card_addr": "chiyoko_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【歪-twst-罅割-brk】園田 智代子",
+        "card_type": "limited",
+        "card_date": "2023-09-30",
+        "card_addr": "chiyoko_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5363,6 +5370,13 @@
         "card_date": "2023-08-15",
         "card_addr": "nichika_p_ssr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【とキどき間氷期】七草 にちか",
+        "card_type": "limited",
+        "card_date": "2023-09-30",
+        "card_addr": "nichika_p_ssr6",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5596,6 +5610,13 @@
         "card_type": "permanent",
         "card_date": "2023-08-09",
         "card_addr": "mikoto_s_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【AWAKE】緋田 美琴",
+        "card_type": "event",
+        "card_date": "2023-09-30",
+        "card_addr": "mikoto_s_ssr9",
         "card_rerun": false
       }
     ],
