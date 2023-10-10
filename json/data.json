@@ -1140,6 +1140,13 @@
         "card_date": "2023-05-17",
         "card_addr": "mamimi_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【まみみスイッチ】田中 摩美々",
+        "card_type": "permanent",
+        "card_date": "2023-10-10",
+        "card_addr": "mamimi_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -1973,6 +1980,13 @@
         "card_type": "limited",
         "card_date": "2022-10-31",
         "card_addr": "kiriko_s_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【楓・風・娘・娘】幽谷 霧子",
+        "card_type": "permanent",
+        "card_date": "2023-10-10",
+        "card_addr": "kiriko_s_ssr10",
         "card_rerun": false
       }
     ],
@@ -3014,6 +3028,13 @@
         "card_type": "event",
         "card_date": "2022-10-20",
         "card_addr": "rinze_s_sr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【竜想譚】杜野 凛世",
+        "card_type": "event",
+        "card_date": "2023-10-10",
+        "card_addr": "rinze_s_sr6",
         "card_rerun": false
       }
     ]
