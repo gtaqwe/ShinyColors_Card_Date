@@ -3113,6 +3113,13 @@
         "card_date": "2023-06-09",
         "card_addr": "natsuha_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ビューティ/フル】有栖川 夏葉",
+        "card_type": "mysongs",
+        "card_date": "2023-10-15",
+        "card_addr": "natsuha_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4513,6 +4520,13 @@
         "card_type": "permanent",
         "card_date": "2023-05-22",
         "card_addr": "mei_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【何度転んだって】和泉 愛依",
+        "card_type": "mysongs",
+        "card_date": "2023-10-15",
+        "card_addr": "mei_p_ssr8",
         "card_rerun": false
       }
     ],
