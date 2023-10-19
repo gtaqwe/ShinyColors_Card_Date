@@ -554,6 +554,13 @@
         "card_date": "2023-03-19",
         "card_addr": "hiori_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【混ぜ込む気持ち】風野 灯織",
+        "card_type": "event",
+        "card_date": "2023-10-19",
+        "card_addr": "hiori_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -5244,6 +5251,13 @@
         "card_type": "mysongs",
         "card_date": "2023-03-22",
         "card_addr": "hinana_p_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Keep→it up♡】市川 雛菜",
+        "card_type": "permanent",
+        "card_date": "2023-10-19",
+        "card_addr": "hinana_p_ssr7",
         "card_rerun": false
       }
     ],
