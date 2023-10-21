@@ -5759,6 +5759,13 @@
         "card_date": "2023-04-21",
         "card_addr": "",
         "card_rerun": false
+      },
+      {
+        "card_name": "【星が見上げた空】斑鳩 ルカ",
+        "card_type": "other",
+        "card_date": "2023-10-21",
+        "card_addr": "luca_s_sr1",
+        "card_rerun": false
       }
     ]
   }
