@@ -621,7 +621,7 @@ function imgMapping() {
           `<p id="preview"><img src="${getImgSrc(
             imgPath,
             imgAddrAttr
-          )}" width="${imgWidth}" height="${imgHeight}"><br>${imgNameAttr}</p>`
+          )}" width="${imgWidth}" height="${imgHeight}" onerror = "this.src='./img/assets/Blank_Card.png'"><br>${imgNameAttr}</p>`
         );
         $("#preview")
           .css("top", e.pageY - xOffset + "px")
@@ -640,14 +640,12 @@ function imgMapping() {
     var previewWidth = $("#preview").width();
     var previewHeight = $("#preview").height();
 
-    // console.log ((e.pageY + previewHeight) + ":" + ($(window).innerHeight() + $(document).scrollTop()))
     if (e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop()) {
       $("#preview").css("top", e.pageY - xOffset - previewHeight + "px");
     } else {
       $("#preview").css("top", e.pageY - xOffset + "px");
     }
 
-    // console.log ((e.pageX + previewWidth) + ":" + ($(window).innerWidth() + $(document).scrollLeft()))
     if (e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()) {
       $("#preview").css("left", e.pageX - yOffset - previewWidth + "px");
     } else {
