@@ -224,6 +224,13 @@
         "card_date": "2023-09-11",
         "card_addr": "mano_s_ssr13",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "mano_s_ssr14",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1270,6 +1277,13 @@
         "card_date": "2023-04-21",
         "card_addr": "mamimi_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】田中 摩美々",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "mamimi_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1995,6 +2009,13 @@
         "card_date": "2023-10-10",
         "card_addr": "kiriko_s_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】幽谷 霧子",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "kiriko_s_ssr11",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2497,6 +2518,13 @@
         "card_date": "2023-09-30",
         "card_addr": "chiyoko_s_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】園田 智代子",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "chiyoko_s_ssr11",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2740,6 +2768,13 @@
         "card_type": "limited",
         "card_date": "2023-06-20",
         "card_addr": "juri_s_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】西城 樹里",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "juri_s_ssr10",
         "card_rerun": false
       }
     ],
@@ -3500,6 +3535,13 @@
         "card_type": "permanent",
         "card_date": "2023-01-20",
         "card_addr": "amana_s_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【一人分の空、一枚の羽】大崎 甘奈",
+        "card_type": "other",
+        "card_date": "2023-10-27",
+        "card_addr": "amana_s_ssr11",
         "card_rerun": false
       }
     ],
