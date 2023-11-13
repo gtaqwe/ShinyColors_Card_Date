@@ -1556,6 +1556,13 @@
         "card_date": "2023-10-27",
         "card_addr": "sakuya_s_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【silver◎lining】白瀬 咲耶",
+        "card_type": "limited",
+        "card_date": "2023-11-13",
+        "card_addr": "sakuya_s_ssr12",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1850,6 +1857,13 @@
         "card_type": "other",
         "card_date": "2023-07-23",
         "card_addr": "yuika_s_sr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【こんな顔して実は】三峰 結華",
+        "card_type": "event",
+        "card_date": "2023-11-13",
+        "card_addr": "yuika_s_sr7",
         "card_rerun": false
       }
     ]
@@ -4473,6 +4487,13 @@
         "card_date": "2023-04-13",
         "card_addr": "fuyuko_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【三文ノワール】黛 冬優子",
+        "card_type": "limited",
+        "card_date": "2023-11-13",
+        "card_addr": "fuyuko_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5849,7 +5870,7 @@
   },
   {
     "idol_ko_name": "루카",
-    "idol_ja_name": "斑鳩ルカ",
+    "idol_ja_name": "斑鳩 ルカ",
     "idol_en_name": "Luca",
     "P_SSR": [
       {
