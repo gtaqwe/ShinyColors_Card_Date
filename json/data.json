@@ -4041,6 +4041,13 @@
         "card_date": "2023-08-21",
         "card_addr": "chiyuki_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【剥がされて、虚ろ】桑山 千雪",
+        "card_type": "permanent",
+        "card_date": "2023-11-29",
+        "card_addr": "chiyuki_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5231,6 +5238,13 @@
         "card_type": "event",
         "card_date": "2023-03-10",
         "card_addr": "madoka_s_sr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【無色】樋口 円香",
+        "card_type": "event",
+        "card_date": "2023-11-29",
+        "card_addr": "madoka_s_sr4",
         "card_rerun": false
       }
     ]
