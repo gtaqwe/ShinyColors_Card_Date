@@ -2974,6 +2974,13 @@
         "card_date": "2023-04-21",
         "card_addr": "rinze_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【染光満月】杜野 凛世",
+        "card_type": "mysongs",
+        "card_date": "2023-12-03",
+        "card_addr": "rinze_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4932,6 +4939,13 @@
         "card_type": "permanent",
         "card_date": "2023-02-10",
         "card_addr": "toru_p_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【あてもなく、風】浅倉 透",
+        "card_type": "mysongs",
+        "card_date": "2023-12-03",
+        "card_addr": "toru_p_ssr6",
         "card_rerun": false
       }
     ],
