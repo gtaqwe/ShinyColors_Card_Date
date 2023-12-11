@@ -931,6 +931,13 @@
         "card_date": "2023-03-20",
         "card_addr": "kogane_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ふりそそぐもの】月岡 恋鐘",
+        "card_type": "limited",
+        "card_date": "2023-12-11",
+        "card_addr": "kogane_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3383,6 +3390,13 @@
         "card_date": "2023-10-30",
         "card_addr": "natsuha_s_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ヒイラギの窓辺に】有栖川 夏葉",
+        "card_type": "event",
+        "card_date": "2023-12-11",
+        "card_addr": "natsuha_s_ssr12",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4428,6 +4442,13 @@
         "card_type": "event",
         "card_date": "2023-10-30",
         "card_addr": "asahi_s_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【吹雪舞う地でのひと時】芹沢 あさひ",
+        "card_type": "limited",
+        "card_date": "2023-12-11",
+        "card_addr": "asahi_s_ssr9",
         "card_rerun": false
       }
     ],
@@ -5999,5 +6020,55 @@
         "card_rerun": false
       }
     ]
+  },
+  {
+    "idol_ko_name": "하나",
+    "idol_ja_name": "鈴木 羽那",
+    "idol_en_name": "Hana",
+    "P_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "P_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SSR": [],
+    "S_SR": []
+  },
+  {
+    "idol_ko_name": "하루키",
+    "idol_ja_name": "郁田 はるき",
+    "idol_en_name": "Haruki",
+    "P_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "P_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SSR": [],
+    "S_SR": []
   }
 ]
