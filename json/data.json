@@ -2144,6 +2144,13 @@
         "card_date": "2023-01-10",
         "card_addr": "kiriko_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【赤・巾・狼・娘】幽谷 霧子",
+        "card_type": "event",
+        "card_date": "2023-12-20",
+        "card_addr": "kiriko_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -6032,6 +6039,13 @@
         "card_date": "2023-12-11",
         "card_addr": "",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Eyes On You】鈴木 羽那",
+        "card_type": "permanent",
+        "card_date": "2023-12-20",
+        "card_addr": "hana_p_ssr1",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6056,6 +6070,13 @@
         "card_type": "first",
         "card_date": "2023-12-11",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Hopeland】郁田 はるき",
+        "card_type": "permanent",
+        "card_date": "2023-12-20",
+        "card_addr": "haruki_p_ssr1",
         "card_rerun": false
       }
     ],
