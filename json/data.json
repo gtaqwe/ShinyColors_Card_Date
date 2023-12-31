@@ -810,6 +810,13 @@
         "card_date": "2023-10-27",
         "card_addr": "meguru_s_ssr12",
         "card_rerun": false
+      },
+      {
+        "card_name": "【春待ちララバイ】八宮 めぐる",
+        "card_type": "limited",
+        "card_date": "2024-01-01",
+        "card_addr": "meguru_s_ssr13",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5970,6 +5977,13 @@
         "card_date": "2023-04-12",
         "card_addr": "luca_p_ssr1",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Noisy Rush】斑鳩 ルカ",
+        "card_type": "limited",
+        "card_date": "2024-01-01",
+        "card_addr": "luca_p_ssr2",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6057,8 +6071,31 @@
         "card_rerun": false
       }
     ],
-    "S_SSR": [],
-    "S_SR": []
+    "S_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【黒色彗星】鈴木 羽那",
+        "card_type": "event",
+        "card_date": "2024-01-01",
+        "card_addr": "hana_s_ssr1",
+        "card_rerun": false
+      }
+    ],
+    "S_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ]
   },
   {
     "idol_ko_name": "하루키",
@@ -6089,7 +6126,30 @@
         "card_rerun": false
       }
     ],
-    "S_SSR": [],
-    "S_SR": []
+    "S_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【specially made】郁田 はるき",
+        "card_type": "other",
+        "card_date": "2024-01-01",
+        "card_addr": "haruki_s_sr1",
+        "card_rerun": false
+      }
+    ]
   }
 ]
