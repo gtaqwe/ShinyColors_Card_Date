@@ -2674,6 +2674,13 @@
         "card_date": "2022-04-20",
         "card_addr": "chiyoko_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ラフ？ガール】園田 智代子",
+        "card_type": "event",
+        "card_date": "2024-01-12",
+        "card_addr": "chiyoko_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -3689,6 +3696,13 @@
         "card_type": "fes",
         "card_date": "2023-10-30",
         "card_addr": "amana_s_ssr12",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【おそろしいかぐ！】大崎 甘奈",
+        "card_type": "twilight",
+        "card_date": "2024-01-12",
+        "card_addr": "amana_s_ssr13",
         "card_rerun": false
       }
     ],
@@ -5357,6 +5371,13 @@
         "card_type": "mysongs",
         "card_date": "2023-09-25",
         "card_addr": "koito_p_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【あなた様へ紡ぐ】福丸 小糸",
+        "card_type": "twilight",
+        "card_date": "2024-01-12",
+        "card_addr": "koito_p_ssr7",
         "card_rerun": false
       }
     ],
