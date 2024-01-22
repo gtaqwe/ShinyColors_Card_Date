@@ -1377,6 +1377,13 @@
         "card_date": "2023-08-09",
         "card_addr": "mamimi_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ひまな白銀】田中 摩美々",
+        "card_type": "event",
+        "card_date": "2024-01-22",
+        "card_addr": "mamimi_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -5003,6 +5010,13 @@
         "card_date": "2023-12-03",
         "card_addr": "toru_p_ssr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【雪あたりの季節】浅倉 透",
+        "card_type": "permanent",
+        "card_date": "2024-01-22",
+        "card_addr": "toru_p_ssr7",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6105,6 +6119,13 @@
         "card_type": "event",
         "card_date": "2024-01-01",
         "card_addr": "hana_s_ssr1",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Colorless Mirror】鈴木 羽那",
+        "card_type": "permanent",
+        "card_date": "2024-01-22",
+        "card_addr": "hana_s_ssr2",
         "card_rerun": false
       }
     ],
