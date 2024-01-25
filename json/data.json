@@ -1970,6 +1970,13 @@
         "card_date": "2023-09-11",
         "card_addr": "kiriko_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【唯・唯・寧・詠】幽谷 霧子",
+        "card_type": "mysongs",
+        "card_date": "2024-01-26",
+        "card_addr": "kiriko_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3838,6 +3845,13 @@
         "card_type": "limited",
         "card_date": "2023-06-20",
         "card_addr": "tenka_p_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【きみは相棒】大崎 甜花",
+        "card_type": "mysongs",
+        "card_date": "2024-01-26",
+        "card_addr": "tenka_p_ssr10",
         "card_rerun": false
       }
     ],
