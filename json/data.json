@@ -503,6 +503,13 @@
         "card_date": "2023-10-27",
         "card_addr": "hiori_s_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【守って！スターリー☆ナイト】風野 灯織",
+        "card_type": "fes",
+        "card_date": "2024-01-30",
+        "card_addr": "hiori_s_ssr12",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1067,6 +1074,13 @@
         "card_type": "other",
         "card_date": "2023-10-27",
         "card_addr": "kogane_s_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【春風来たりて】月岡 恋鐘",
+        "card_type": "limited",
+        "card_date": "2024-01-30",
+        "card_addr": "kogane_s_ssr11",
         "card_rerun": false
       }
     ],
@@ -2255,6 +2269,13 @@
         "card_type": "mysongs",
         "card_date": "2023-08-15",
         "card_addr": "kaho_p_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【きみだけ！】小宮 果穂",
+        "card_type": "limited",
+        "card_date": "2024-01-30",
+        "card_addr": "kaho_p_ssr11",
         "card_rerun": false
       }
     ],
@@ -3718,6 +3739,13 @@
         "card_date": "2024-01-12",
         "card_addr": "amana_s_ssr13",
         "card_rerun": false
+      },
+      {
+        "card_name": "【OT♡NAメイクヘンシン☆】大崎 甘奈",
+        "card_type": "limited",
+        "card_date": "2024-01-30",
+        "card_addr": "amana_s_ssr14",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5118,6 +5146,13 @@
         "card_type": "limited",
         "card_date": "2023-08-31",
         "card_addr": "toru_s_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【たすものについて】浅倉 透",
+        "card_type": "event",
+        "card_date": "2024-01-30",
+        "card_addr": "toru_s_ssr8",
         "card_rerun": false
       }
     ],
