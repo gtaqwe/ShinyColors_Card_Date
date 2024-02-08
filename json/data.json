@@ -2967,6 +2967,13 @@
         "card_date": "2023-05-22",
         "card_addr": "juri_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【祈って、分け合って】西城 樹里",
+        "card_type": "event",
+        "card_date": "2024-02-08",
+        "card_addr": "juri_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -4633,6 +4640,13 @@
         "card_type": "limited",
         "card_date": "2023-11-13",
         "card_addr": "fuyuko_p_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ノンセンス・プロンプ】黛 冬優子",
+        "card_type": "permanent",
+        "card_date": "2024-02-08",
+        "card_addr": "fuyuko_p_ssr9",
         "card_rerun": false
       }
     ],
