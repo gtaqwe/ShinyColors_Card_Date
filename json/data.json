@@ -4794,6 +4794,13 @@
         "card_date": "2022-10-22",
         "card_addr": "fuyuko_s_sr3",
         "card_rerun": false
+      },
+      {
+        "card_name": "【三つ数えて】黛 冬優子",
+        "card_type": "event",
+        "card_date": "2024-02-19",
+        "card_addr": "fuyuko_s_sr4",
+        "card_rerun": false
       }
     ]
   },
@@ -5267,6 +5274,13 @@
         "card_type": "limited",
         "card_date": "2023-07-31",
         "card_addr": "madoka_p_ssr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【フリークス・アリー】樋口 円香",
+        "card_type": "permanent",
+        "card_date": "2024-02-19",
+        "card_addr": "madoka_p_ssr8",
         "card_rerun": false
       }
     ],
@@ -6166,6 +6180,13 @@
         "card_type": "first",
         "card_date": "2023-12-11",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【優You】鈴木 羽那",
+        "card_type": "permanent",
+        "card_date": "2024-02-19",
+        "card_addr": "hana_p_sr1",
         "card_rerun": false
       }
     ],
