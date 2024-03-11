@@ -231,6 +231,13 @@
         "card_date": "2023-10-27",
         "card_addr": "mano_s_ssr14",
         "card_rerun": false
+      },
+      {
+        "card_name": "【お手をどうぞ】櫻木 真乃",
+        "card_type": "limited",
+        "card_date": "2024-03-11",
+        "card_addr": "mano_s_ssr15",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1732,6 +1739,13 @@
         "card_type": "mysongs",
         "card_date": "2023-09-25",
         "card_addr": "yuika_p_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Good-bye ラブレター】三峰 結華",
+        "card_type": "limited",
+        "card_date": "2024-03-11",
+        "card_addr": "yuika_p_ssr10",
         "card_rerun": false
       }
     ],
@@ -3273,6 +3287,13 @@
         "card_type": "event",
         "card_date": "2023-10-10",
         "card_addr": "rinze_s_sr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【超純情和菓子専科】杜野 凛世",
+        "card_type": "event",
+        "card_date": "2024-03-11",
+        "card_addr": "rinze_s_sr7",
         "card_rerun": false
       }
     ]
