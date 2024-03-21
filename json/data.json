@@ -296,6 +296,13 @@
         "card_date": "2023-01-16",
         "card_addr": "mano_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【月へようこそ】櫻木 真乃",
+        "card_type": "event",
+        "card_date": "2024-03-21",
+        "card_addr": "mano_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -4934,6 +4941,13 @@
         "card_date": "2023-10-15",
         "card_addr": "mei_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【あたし・マスト】和泉 愛依",
+        "card_type": "permanent",
+        "card_date": "2024-03-21",
+        "card_addr": "mei_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -5780,6 +5794,13 @@
         "card_type": "limited",
         "card_date": "2023-06-30",
         "card_addr": "hinana_s_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【spare☆☆☆☆time】市川 雛菜",
+        "card_type": "permanent",
+        "card_date": "2024-03-21",
+        "card_addr": "hinana_s_ssr7",
         "card_rerun": false
       }
     ],
