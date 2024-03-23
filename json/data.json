@@ -966,6 +966,13 @@
         "card_date": "2023-12-11",
         "card_addr": "kogane_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【hurray for...】月岡 恋鐘",
+        "card_type": "mysongs",
+        "card_date": "2024-03-23",
+        "card_addr": "kogane_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6040,6 +6047,13 @@
         "card_type": "limited",
         "card_date": "2023-06-30",
         "card_addr": "mikoto_p_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【YOU＆I】緋田 美琴",
+        "card_type": "mysongs",
+        "card_date": "2024-03-23",
+        "card_addr": "mikoto_p_ssr5",
         "card_rerun": false
       }
     ],
