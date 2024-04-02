@@ -1503,6 +1503,13 @@
         "card_date": "2024-02-23",
         "card_addr": "sakuya_p_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【記憶が降る街】白瀬 咲耶",
+        "card_type": "twilight",
+        "card_date": "2024-04-02",
+        "card_addr": "sakuya_p_ssr11",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4611,6 +4618,13 @@
         "card_date": "2024-03-29",
         "card_addr": "asahi_s_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【夕日に照らされ光るもの】芹沢 あさひ",
+        "card_type": "event",
+        "card_date": "2024-04-02",
+        "card_addr": "asahi_s_ssr11",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5265,6 +5279,13 @@
         "card_type": "event",
         "card_date": "2024-01-30",
         "card_addr": "toru_s_ssr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【てやんでぇ】浅倉 透",
+        "card_type": "twilight",
+        "card_date": "2024-04-02",
+        "card_addr": "toru_s_ssr9",
         "card_rerun": false
       }
     ],
