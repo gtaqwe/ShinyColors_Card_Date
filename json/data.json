@@ -310,6 +310,13 @@
         "card_date": "2024-04-06",
         "card_addr": "mano_s_sr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ツバサグラビティ】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2024-04-10",
+        "card_addr": "mano_s_sr10",
+        "card_rerun": false
       }
     ]
   },
@@ -1381,6 +1388,13 @@
         "card_type": "other",
         "card_date": "2023-10-27",
         "card_addr": "mamimi_s_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【パッチ・リコレクション】田中 摩美々",
+        "card_type": "limited",
+        "card_date": "2024-04-10",
+        "card_addr": "mamimi_s_ssr11",
         "card_rerun": false
       }
     ],
@@ -5540,6 +5554,13 @@
         "card_date": "2024-03-02",
         "card_addr": "madoka_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【fuka】樋口 円香",
+        "card_type": "event",
+        "card_date": "2024-04-10",
+        "card_addr": "madoka_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -6394,6 +6415,13 @@
         "card_type": "twilight",
         "card_date": "2024-02-28",
         "card_addr": "haruki_p_ssr2",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【桜花拾】郁田 はるき",
+        "card_type": "limited",
+        "card_date": "2024-04-10",
+        "card_addr": "haruki_p_ssr3",
         "card_rerun": false
       }
     ],
