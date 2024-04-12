@@ -73,6 +73,13 @@
         "card_date": "2022-11-10",
         "card_addr": "mano_p_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【私のハルモニア】櫻木 真乃",
+        "card_type": "mysongs",
+        "card_date": "2024-04-13",
+        "card_addr": "mano_p_ssr10",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6263,6 +6270,13 @@
         "card_type": "limited",
         "card_date": "2024-01-01",
         "card_addr": "luca_p_ssr2",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【BLUES】斑鳩 ルカ",
+        "card_type": "mysongs",
+        "card_date": "2024-04-13",
+        "card_addr": "luca_p_ssr3",
         "card_rerun": false
       }
     ],
