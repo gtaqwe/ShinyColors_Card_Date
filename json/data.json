@@ -1454,6 +1454,13 @@
         "card_date": "2024-01-22",
         "card_addr": "mamimi_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【みんなと一緒に】田中 摩美々",
+        "card_type": "other",
+        "card_date": "2024-04-13",
+        "card_addr": "mamimi_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -1983,6 +1990,13 @@
         "card_type": "event",
         "card_date": "2023-11-13",
         "card_addr": "yuika_s_sr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ウタという炎】三峰 結華",
+        "card_type": "other",
+        "card_date": "2024-04-13",
+        "card_addr": "yuika_s_sr8",
         "card_rerun": false
       }
     ]
