@@ -166,6 +166,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
         resContent += '<td class="twilight-card-cell" ';
       } else if (cardType == "mysongs") {
         resContent += '<td class="mysongs-card-cell" ';
+      } else if (cardType == "parallel") {
+        resContent += '<td class="parallel-card-cell" ';
       } else if (cardType == "event") {
         resContent += '<td class="event-card-cell" ';
       } else if (cardType == "fes") {
@@ -387,42 +389,47 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   var gachaTypeStr = notSelectStr;
   if ($("#permanentCardChkBox").is(":checked")) {
     gachaTypeStr = "";
-    gachaTypeStr += "P";
+    gachaTypeStr += CARD_TYPE_CHAR.permanent;
   }
   if ($("#limitedCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "L";
+    gachaTypeStr += CARD_TYPE_CHAR.limited;
   }
   if ($("#twilightCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "T";
+    gachaTypeStr += CARD_TYPE_CHAR.twilight;
   }
   if ($("#mysongsCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "M";
+    gachaTypeStr += CARD_TYPE_CHAR.mysongs;
+  }
+  if ($("#parallelCardChkBox").is(":checked")) {
+    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
+    else gachaTypeStr = "";
+    gachaTypeStr += CARD_TYPE_CHAR.parallel;
   }
   if ($("#eventCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "E";
+    gachaTypeStr += CARD_TYPE_CHAR.event;
   }
   if ($("#gradeFesCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "F";
+    gachaTypeStr += CARD_TYPE_CHAR.fes;
   }
   if ($("#campaignCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "C";
+    gachaTypeStr += CARD_TYPE_CHAR.campaign;
   }
   if ($("#otherCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += "O";
+    gachaTypeStr += CARD_TYPE_CHAR.other;
   }
 
   table += "<tr>";

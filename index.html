@@ -199,6 +199,19 @@
             </label>
           </span>
 
+          <span id="parallelChkSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="parallel_1">파라코레</span>
+              <input
+                type="checkbox"
+                id="parallelCardChkBox"
+                checked="checked"
+                name="showCardTypeChk"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+
           <span id="eventChkSpan" style="margin: 5px 10px; float: left">
             <label class="container">
               <span data-lang="event_1">이벤트</span>
@@ -309,26 +322,22 @@
       <div style="max-width: max-content">
         <table>
           <tr>
-            <th style="width: 100px" data-lang="permanent_2">통상 (P)</th>
-            <th class="limit-card-cell" style="width: 100px" data-lang="limited_2">한정 (L)</th>
-            <th class="twilight-card-cell" style="width: 100px" data-lang="twilight_2">
-              트와코레 (T)
-            </th>
-            <th class="mysongs-card-cell" style="width: 100px" data-lang="mysongs_2">
-              마이코레 (M)
-            </th>
-            <th class="event-card-cell" style="width: 100px" data-lang="event_2">이벤트 (E)</th>
-            <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes_2">페스 (F)</th>
-            <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">
-              캠페인 (C)
-            </th>
-            <th class="other-card-cell" style="width: 100px" data-lang="other_2">기타 (O)</th>
+            <th style="width: 100px" data-lang="permanent_2">통상</th>
+            <th class="limit-card-cell" style="width: 100px" data-lang="limited_2">한정</th>
+            <th class="twilight-card-cell" style="width: 100px" data-lang="twilight_2">트와코레</th>
+            <th class="mysongs-card-cell" style="width: 100px" data-lang="mysongs_2">마이코레</th>
+            <th class="parallel-card-cell" style="width: 100px" data-lang="parallel_2">파라코레</th>
+            <th class="event-card-cell" style="width: 100px" data-lang="event_2">이벤트</th>
+            <th class="gradeFes-card-cell" style="width: 100px" data-lang="fes_2">페스</th>
+            <th class="campaign-card-cell" style="width: 100px" data-lang="campaign_2">캠페인</th>
+            <th class="other-card-cell" style="width: 100px" data-lang="other_2">기타</th>
           </tr>
           <tr id="cardCountTR" style="display: none">
             <td id="cardCount_permanent"></td>
             <td id="cardCount_limited" class="limit-card-cell"></td>
             <td id="cardCount_twilight" class="twilight-card-cell"></td>
             <td id="cardCount_mysongs" class="mysongs-card-cell"></td>
+            <td id="cardCount_parallel" class="parallel-card-cell"></td>
             <td id="cardCount_event" class="event-card-cell"></td>
             <td id="cardCount_fes" class="gradeFes-card-cell"></td>
             <td id="cardCount_campaign" class="campaign-card-cell"></td>
@@ -347,9 +356,9 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="IndexScripts.js"></script>
     <script src="CreateTable.js"></script>
     <script src="lang.js"></script>
-    <script src="IndexScripts.js"></script>
   </body>
   <footer>
     <hr />

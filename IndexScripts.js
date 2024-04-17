@@ -3,7 +3,18 @@ var JSON_DATA;
 var VIEW_LANGUAGE;
 var IDOL_TOTAL_COUNT;
 const DEFALUT_LANGUAGE = "ko";
-const GACHA_CATEGORY_COUNT = 8;
+const CARD_TYPE_CHAR = {
+  permanent: "P",
+  limited: "L",
+  twilight: "Tw",
+  mysongs: "My",
+  parallel: "Pa",
+  event: "E",
+  fes: "F",
+  campaign: "C",
+  other: "O",
+};
+const GACHA_CATEGORY_COUNT = Object.keys(CARD_TYPE_CHAR).length;
 
 // 카드 차수 변경 데이터의 배열
 var TABLE_BLANK_LAP_LIST;
@@ -303,14 +314,16 @@ function countCardType(cardType) {
     CARD_TYPE_COUNT_LIST[2] += 1;
   } else if (cardType == "mysongs") {
     CARD_TYPE_COUNT_LIST[3] += 1;
-  } else if (cardType == "event") {
+  } else if (cardType == "parallel") {
     CARD_TYPE_COUNT_LIST[4] += 1;
-  } else if (cardType == "fes") {
+  } else if (cardType == "event") {
     CARD_TYPE_COUNT_LIST[5] += 1;
-  } else if (cardType == "campaign") {
+  } else if (cardType == "fes") {
     CARD_TYPE_COUNT_LIST[6] += 1;
-  } else if (cardType == "other") {
+  } else if (cardType == "campaign") {
     CARD_TYPE_COUNT_LIST[7] += 1;
+  } else if (cardType == "other") {
+    CARD_TYPE_COUNT_LIST[8] += 1;
   }
 }
 
@@ -319,12 +332,11 @@ function setCardTypeCountList() {
   $(cardCount_limited).text(CARD_TYPE_COUNT_LIST[1]);
   $(cardCount_twilight).text(CARD_TYPE_COUNT_LIST[2]);
   $(cardCount_mysongs).text(CARD_TYPE_COUNT_LIST[3]);
-  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[4]);
-  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[5]);
-  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[6]);
-  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[7]);
-
-  // if($(showCardCountConvertBtn).is(":checked"))
+  $(cardCount_parallel).text(CARD_TYPE_COUNT_LIST[4]);
+  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[5]);
+  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[6]);
+  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[7]);
+  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[8]);
 }
 
 function convertShowCardCount() {
@@ -511,6 +523,8 @@ function getCardList(cardAry) {
           return card;
         } else if (cardType == "mysongs" && $("#mysongsCardChkBox").is(":checked")) {
           return card;
+        } else if (cardType == "parallel" && $("#parallelCardChkBox").is(":checked")) {
+          return card;
         } else if (cardType == "event" && $("#eventCardChkBox").is(":checked")) {
           return card;
         } else if (cardType == "fes" && $("#gradeFesCardChkBox").is(":checked")) {
@@ -688,14 +702,15 @@ function captureScreen(frameName) {
     if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
     else if (frameName == "RANK") frameId = "#RANK";
 
-    if ($("#permanentCardChkBox").is(":checked")) viewMode += "P";
-    if ($("#limitedCardChkBox").is(":checked")) viewMode += "L";
-    if ($("#twilightCardChkBox").is(":checked")) viewMode += "T";
-    if ($("#mysongsCardChkBox").is(":checked")) viewMode += "M";
-    if ($("#eventCardChkBox").is(":checked")) viewMode += "E";
-    if ($("#gradeFesCardChkBox").is(":checked")) viewMode += "F";
-    if ($("#campaignCardChkBox").is(":checked")) viewMode += "C";
-    if ($("#otherCardChkBox").is(":checked")) viewMode += "O";
+    if ($("#permanentCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.permanent;
+    if ($("#limitedCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.limited;
+    if ($("#twilightCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.twilight;
+    if ($("#mysongsCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.mysongs;
+    if ($("#parallelCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.parallel;
+    if ($("#eventCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.event;
+    if ($("#gradeFesCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.fes;
+    if ($("#campaignCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.campaign;
+    if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
 
     if (NOW_SELECT == 11) captureName = frameName + "_P_SSR_" + viewMode + ".png";
     else if (NOW_SELECT == 12) captureName = frameName + "_S_SSR_" + viewMode + ".png";

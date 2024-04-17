@@ -101,6 +101,10 @@ footer {
   color: #ffffff;
 }
 
+.parallel-card-cell {
+  background-color: #43F8ed;
+}
+
 .event-card-cell {
   background-color: #00b0f0;
 }
