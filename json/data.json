@@ -3930,6 +3930,13 @@
         "card_date": "2023-10-22",
         "card_addr": "amana_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【みんなと一緒に】大崎 甘奈",
+        "card_type": "other",
+        "card_date": "2024-04-20",
+        "card_addr": "amana_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -4208,6 +4215,13 @@
         "card_type": "event",
         "card_date": "2024-04-18",
         "card_addr": "tenka_s_sr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【未来への憧れ】大崎 甜花",
+        "card_type": "other",
+        "card_date": "2024-04-20",
+        "card_addr": "tenka_s_sr6",
         "card_rerun": false
       }
     ]
