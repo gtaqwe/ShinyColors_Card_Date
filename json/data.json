@@ -2570,6 +2570,13 @@
         "card_date": "2023-08-09",
         "card_addr": "kaho_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【みんなと一緒に】小宮 果穂",
+        "card_type": "other",
+        "card_date": "2024-04-27",
+        "card_addr": "kaho_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -3092,6 +3099,13 @@
         "card_type": "event",
         "card_date": "2024-02-08",
         "card_addr": "juri_s_sr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【本当のヒーロー！】西城 樹里",
+        "card_type": "other",
+        "card_date": "2024-04-27",
+        "card_addr": "juri_s_sr7",
         "card_rerun": false
       }
     ]
