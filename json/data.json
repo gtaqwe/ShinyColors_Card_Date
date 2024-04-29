@@ -80,6 +80,13 @@
         "card_date": "2024-04-13",
         "card_addr": "mano_p_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【あなたと、いただきます】櫻木 真乃",
+        "card_type": "limited",
+        "card_date": "2024-04-29",
+        "card_addr": "mano_p_ssr11",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -858,6 +865,13 @@
         "card_type": "limited",
         "card_date": "2024-01-01",
         "card_addr": "meguru_s_ssr13",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【王と蚤】八宮 めぐる",
+        "card_type": "event",
+        "card_date": "2024-04-29",
+        "card_addr": "meguru_s_ssr14",
         "card_rerun": false
       }
     ],
@@ -1932,6 +1946,13 @@
         "card_type": "other",
         "card_date": "2023-10-27",
         "card_addr": "yuika_s_ssr11",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【宝鈿玉釵】三峰 結華",
+        "card_type": "limited",
+        "card_date": "2024-04-29",
+        "card_addr": "yuika_s_ssr12",
         "card_rerun": false
       }
     ],
