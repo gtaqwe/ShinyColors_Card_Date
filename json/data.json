@@ -331,6 +331,13 @@
         "card_date": "2024-04-10",
         "card_addr": "mano_s_sr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【３人だけのフォーメーション】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2024-05-04",
+        "card_addr": "mano_s_sr11",
+        "card_rerun": false
       }
     ]
   },
@@ -630,6 +637,13 @@
         "card_type": "other",
         "card_date": "2023-12-09",
         "card_addr": "hiori_s_sr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【みんなと一緒に】風野 灯織",
+        "card_type": "other",
+        "card_date": "2024-05-04",
+        "card_addr": "hiori_s_sr11",
         "card_rerun": false
       }
     ]
