@@ -1754,6 +1754,13 @@
         "card_date": "2023-09-21",
         "card_addr": "sakuya_s_sr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【スイッチ・デイズ】白瀬 咲耶",
+        "card_type": "event",
+        "card_date": "2024-05-09",
+        "card_addr": "sakuya_s_sr6",
+        "card_rerun": false
       }
     ]
   },
@@ -3225,6 +3232,13 @@
         "card_type": "mysongs",
         "card_date": "2023-12-03",
         "card_addr": "rinze_p_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【硝子少女】杜野 凛世",
+        "card_type": "permanent",
+        "card_date": "2024-05-09",
+        "card_addr": "rinze_p_ssr11",
         "card_rerun": false
       }
     ],
@@ -6566,6 +6580,13 @@
         "card_type": "first",
         "card_date": "2024-01-01",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【遠き明滅】郁田 はるき",
+        "card_type": "permanent",
+        "card_date": "2024-05-09",
+        "card_addr": "haruki_s_ssr1",
         "card_rerun": false
       }
     ],
