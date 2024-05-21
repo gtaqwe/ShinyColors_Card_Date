@@ -3714,6 +3714,13 @@
         "card_date": "2023-04-12",
         "card_addr": "natsuha_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【夢境カスタマイズ】有栖川 夏葉",
+        "card_type": "event",
+        "card_date": "2024-05-21",
+        "card_addr": "natsuha_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -4391,6 +4398,13 @@
         "card_date": "2024-02-23",
         "card_addr": "chiyuki_p_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【切り拓いて・茨】桑山 千雪",
+        "card_type": "parallel",
+        "card_date": "2024-05-21",
+        "card_addr": "chiyuki_p_ssr12",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -4906,6 +4920,13 @@
         "card_type": "permanent",
         "card_date": "2024-02-08",
         "card_addr": "fuyuko_p_ssr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【紅茶夢現】黛 冬優子",
+        "card_type": "parallel",
+        "card_date": "2024-05-21",
+        "card_addr": "fuyuko_p_ssr10",
         "card_rerun": false
       }
     ],
