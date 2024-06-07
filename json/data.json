@@ -945,6 +945,13 @@
         "card_date": "2024-04-06",
         "card_addr": "meguru_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【花火のヒカリ】八宮 めぐる",
+        "card_type": "other",
+        "card_date": "2024-06-08",
+        "card_addr": "meguru_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -3748,6 +3755,13 @@
         "card_type": "event",
         "card_date": "2024-05-21",
         "card_addr": "natsuha_s_sr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【色とりどりのイメージ】有栖川 夏葉",
+        "card_type": "other",
+        "card_date": "2024-06-08",
+        "card_addr": "natsuha_s_sr9",
         "card_rerun": false
       }
     ]
