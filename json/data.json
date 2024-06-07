@@ -2131,6 +2131,13 @@
         "card_date": "2024-01-26",
         "card_addr": "kiriko_p_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【白・架・祝・幻】幽谷 霧子",
+        "card_type": "permanent",
+        "card_date": "2024-06-07",
+        "card_addr": "kiriko_p_ssr11",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3390,6 +3397,13 @@
         "card_type": "other",
         "card_date": "2023-10-27",
         "card_addr": "rinze_s_ssr11",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【白木槿】杜野 凛世",
+        "card_type": "permanent",
+        "card_date": "2024-06-07",
+        "card_addr": "rinze_s_ssr12",
         "card_rerun": false
       }
     ],
@@ -6673,6 +6687,13 @@
         "card_type": "other",
         "card_date": "2024-01-01",
         "card_addr": "haruki_s_sr1",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【猫と犬みたいな雨】郁田 はるき",
+        "card_type": "event",
+        "card_date": "2024-06-07",
+        "card_addr": "haruki_s_sr2",
         "card_rerun": false
       }
     ]
