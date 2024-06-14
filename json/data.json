@@ -2354,6 +2354,13 @@
         "card_date": "2024-04-20",
         "card_addr": "kiriko_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ライブ前】幽谷 霧子",
+        "card_type": "other",
+        "card_date": "2024-06-15",
+        "card_addr": "kiriko_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -4062,6 +4069,13 @@
         "card_type": "other",
         "card_date": "2024-04-20",
         "card_addr": "amana_s_sr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【バトンをつないで】大崎 甘奈",
+        "card_type": "other",
+        "card_date": "2024-06-15",
+        "card_addr": "amana_s_sr8",
         "card_rerun": false
       }
     ]
