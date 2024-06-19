@@ -1503,6 +1503,13 @@
         "card_date": "2024-04-13",
         "card_addr": "mamimi_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【レイニーじゃんじゃん】田中 摩美々",
+        "card_type": "event",
+        "card_date": "2024-06-19",
+        "card_addr": "mamimi_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -5316,6 +5323,13 @@
         "card_date": "2023-01-31",
         "card_addr": "mei_s_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【誓う～！】和泉 愛依",
+        "card_type": "twilight",
+        "card_date": "2024-06-19",
+        "card_addr": "mei_s_ssr9",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -6341,6 +6355,13 @@
         "card_type": "mysongs",
         "card_date": "2024-03-23",
         "card_addr": "mikoto_p_ssr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【This way】緋田 美琴",
+        "card_type": "twilight",
+        "card_date": "2024-06-19",
+        "card_addr": "mikoto_p_ssr6",
         "card_rerun": false
       }
     ],
