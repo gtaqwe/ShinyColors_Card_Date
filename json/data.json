@@ -1524,6 +1524,13 @@
         "card_date": "2024-06-19",
         "card_addr": "mamimi_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【サマーアイドル2022】田中 摩美々",
+        "card_type": "other",
+        "card_date": "2024-06-29",
+        "card_addr": "mamimi_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -4033,6 +4040,13 @@
         "card_date": "2024-01-30",
         "card_addr": "amana_s_ssr14",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ウォーターパーク☆リポート】大崎 甘奈",
+        "card_type": "limited",
+        "card_date": "2024-06-29",
+        "card_addr": "amana_s_ssr15",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -6472,6 +6486,13 @@
         "card_date": "2023-09-30",
         "card_addr": "mikoto_s_ssr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【BLUE SKY】緋田 美琴",
+        "card_type": "event",
+        "card_date": "2024-06-29",
+        "card_addr": "mikoto_s_ssr10",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -6529,6 +6550,13 @@
         "card_type": "mysongs",
         "card_date": "2024-04-13",
         "card_addr": "luca_p_ssr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【SMASH】斑鳩 ルカ",
+        "card_type": "limited",
+        "card_date": "2024-06-29",
+        "card_addr": "luca_p_ssr4",
         "card_rerun": false
       }
     ],
