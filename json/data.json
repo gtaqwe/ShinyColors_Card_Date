@@ -1180,6 +1180,13 @@
         "card_date": "2024-01-30",
         "card_addr": "kogane_s_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【いんすたんとバケーション！】月岡 恋鐘",
+        "card_type": "permanent",
+        "card_date": "2024-07-09",
+        "card_addr": "kogane_s_ssr12",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2082,6 +2089,13 @@
         "card_date": "2024-04-13",
         "card_addr": "yuika_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【IN THE MOOD VOL.3】三峰 結華",
+        "card_type": "event",
+        "card_date": "2024-07-09",
+        "card_addr": "yuika_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -2939,6 +2953,13 @@
         "card_type": "other",
         "card_date": "2024-05-25",
         "card_addr": "chiyoko_s_sr7",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【サマーアイドル2022】園田 智代子",
+        "card_type": "other",
+        "card_date": "2024-07-09",
+        "card_addr": "chiyoko_s_sr8",
         "card_rerun": false
       }
     ]
@@ -4195,6 +4216,13 @@
         "card_type": "mysongs",
         "card_date": "2024-01-26",
         "card_addr": "tenka_p_ssr10",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【甜der Dream Show】大崎 甜花",
+        "card_type": "permanent",
+        "card_date": "2024-07-09",
+        "card_addr": "tenka_p_ssr11",
         "card_rerun": false
       }
     ],
