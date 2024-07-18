@@ -2494,6 +2494,13 @@
         "card_date": "2024-01-30",
         "card_addr": "kaho_p_ssr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ななひゃくさんじゅう　えん】小宮 果穂",
+        "card_type": "parallel",
+        "card_date": "2024-07-18",
+        "card_addr": "kaho_p_ssr12",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -3532,6 +3539,13 @@
         "card_type": "other",
         "card_date": "2024-05-11",
         "card_addr": "rinze_s_sr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【なつおもひ】杜野 凛世",
+        "card_type": "event",
+        "card_date": "2024-07-18",
+        "card_addr": "rinze_s_sr9",
         "card_rerun": false
       }
     ]
@@ -5702,6 +5716,13 @@
         "card_date": "2024-02-19",
         "card_addr": "madoka_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ジャンク・ション】樋口 円香",
+        "card_type": "parallel",
+        "card_date": "2024-07-18",
+        "card_addr": "madoka_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6362,6 +6383,13 @@
         "card_type": "event",
         "card_date": "2023-05-11",
         "card_addr": "nichika_s_sr3",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【サマーアイドル2022】七草 にちか",
+        "card_type": "other",
+        "card_date": "2024-07-18",
+        "card_addr": "nichika_s_sr4",
         "card_rerun": false
       }
     ]
