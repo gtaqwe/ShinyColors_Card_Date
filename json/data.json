@@ -5904,6 +5904,13 @@
         "card_date": "2024-04-10",
         "card_addr": "madoka_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【露光】樋口 円香",
+        "card_type": "event",
+        "card_date": "2024-08-07",
+        "card_addr": "madoka_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -6314,6 +6321,13 @@
         "card_type": "limited",
         "card_date": "2023-09-30",
         "card_addr": "nichika_p_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【伝えテ niiid U】七草 にちか",
+        "card_type": "permanent",
+        "card_date": "2024-08-07",
+        "card_addr": "nichika_p_ssr7",
         "card_rerun": false
       }
     ],
