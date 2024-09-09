@@ -422,6 +422,13 @@
         "card_date": "2023-04-30",
         "card_addr": "hiori_p_ssr10",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ベター・ザン・ベスト】風野 灯織",
+        "card_type": "limited",
+        "card_date": "2024-09-09",
+        "card_addr": "hiori_p_ssr11",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6083,6 +6090,13 @@
         "card_date": "2022-10-11",
         "card_addr": "koito_s_ssr5",
         "card_rerun": false
+      },
+      {
+        "card_name": "【さよならメランコリー】福丸 小糸",
+        "card_type": "limited",
+        "card_date": "2024-09-09",
+        "card_addr": "koito_s_ssr6",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -6481,6 +6495,13 @@
         "card_type": "other",
         "card_date": "2024-07-18",
         "card_addr": "nichika_s_sr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【僥倖、色付く】七草 にちか",
+        "card_type": "event",
+        "card_date": "2024-09-09",
+        "card_addr": "nichika_s_sr5",
         "card_rerun": false
       }
     ]
