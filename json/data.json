@@ -4859,6 +4859,13 @@
         "card_date": "2023-02-28",
         "card_addr": "asahi_p_ssr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ムーンライト・ガーデン】芹沢 あさひ",
+        "card_type": "permanent",
+        "card_date": "2024-09-18",
+        "card_addr": "asahi_p_ssr9",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6134,6 +6141,13 @@
         "card_date": "2023-07-20",
         "card_addr": "koito_s_sr4",
         "card_rerun": false
+      },
+      {
+        "card_name": "【翅がみえた】福丸 小糸",
+        "card_type": "event",
+        "card_date": "2024-09-18",
+        "card_addr": "koito_s_sr5",
+        "card_rerun": false
       }
     ]
   },
@@ -6458,6 +6472,13 @@
         "card_type": "limited",
         "card_date": "2023-04-02",
         "card_addr": "nichika_s_ssr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【なけなしホリデー】七草 にちか",
+        "card_type": "permanent",
+        "card_date": "2024-09-18",
+        "card_addr": "nichika_s_ssr7",
         "card_rerun": false
       }
     ],
