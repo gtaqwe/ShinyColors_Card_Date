@@ -973,6 +973,13 @@
         "card_date": "2024-06-22",
         "card_addr": "meguru_s_sr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【プレゼント大作戦１】八宮 めぐる",
+        "card_type": "other",
+        "card_date": "2024-09-20",
+        "card_addr": "meguru_s_sr10",
+        "card_rerun": false
       }
     ]
   },
@@ -1544,6 +1551,13 @@
         "card_type": "other",
         "card_date": "2024-06-29",
         "card_addr": "mamimi_s_sr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【プレゼント大作戦２】田中 摩美々",
+        "card_type": "other",
+        "card_date": "2024-09-20",
+        "card_addr": "mamimi_s_sr10",
         "card_rerun": false
       }
     ]
@@ -3002,6 +3016,13 @@
         "card_type": "other",
         "card_date": "2024-07-09",
         "card_addr": "chiyoko_s_sr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【プレゼント大作戦３】園田 智代子",
+        "card_type": "other",
+        "card_date": "2024-09-20",
+        "card_addr": "chiyoko_s_sr9",
         "card_rerun": false
       }
     ]
@@ -4788,6 +4809,13 @@
         "card_type": "other",
         "card_date": "2024-05-18",
         "card_addr": "chiyuki_s_sr8",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【プレゼント大作戦４】桑山 千雪",
+        "card_type": "other",
+        "card_date": "2024-09-20",
+        "card_addr": "chiyuki_s_sr9",
         "card_rerun": false
       }
     ]
