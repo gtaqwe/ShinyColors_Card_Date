@@ -40,6 +40,7 @@ $.lang.ko = {
   showCardCount: "카드 수 표시",
   showChangeCardLap: "카드 차수 변경 표시",
   allChk: "전체 체크",
+  datePreset: "기준일 설정 프리셋",
 };
 
 $.lang.ja = {
@@ -82,4 +83,5 @@ $.lang.ja = {
   showCardCount: "カード数表示",
   showChangeCardLap: "カード周目変更表示",
   allChk: "すべてチェック",
+  datePreset: "基準日設定プリセット",
 };

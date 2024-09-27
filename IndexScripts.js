@@ -65,6 +65,9 @@ async function init() {
   // 카드 수 리셋
   setCardTypeCountList();
   convertShowCardCount();
+
+  // 연도 프리셋 추가
+  initDatePresetButton();
 }
 
 /**
@@ -169,6 +172,31 @@ function readTableBlankLapList() {
     if (localList !== null) {
       TABLE_BLANK_LAP_LIST = localList.split(",");
     }
+  }
+}
+
+/**
+ * 연도 프리셋 버튼 초기화
+ */
+function initDatePresetButton() {
+  const startYear = 2018;
+  const today = new Date();
+  const nowYear = today.getFullYear();
+
+  for (let i = 0; i < nowYear - startYear + 1; i++) {
+    const targetYear = startYear + i;
+
+    const startDate = `${targetYear}-01-01`;
+    const endDate = targetYear == nowYear ? getToday() : `${targetYear}-12-31`;
+
+    // 프리셋 버튼 추가
+    $(`#datePresetField`).append(`
+      <input
+        type="button"
+        value="${targetYear}"
+        class="DatePresetButton"
+        onclick="baseDateFullReset('BaseStartDate', '${startDate}','BaseEndDate', '${endDate}')"
+      />`);
   }
 }
 
@@ -379,6 +407,15 @@ function updateBaseDate(changedBase, nowSelect) {
  */
 function baseDateReset(id, inputDate) {
   $(`#${id}`).val(inputDate);
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 시작일 / 종료일을 모두 재설정
+ */
+function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
+  $(`#${startId}`).val(startInputDate);
+  $(`#${endtId}`).val(endInputDate);
   updateDate(NOW_SELECT);
 }
 
@@ -734,6 +771,7 @@ function captureScreen(frameName) {
     $("#BaseEndDateStr").css("display", "");
 
     $("#ALL_TYPE_SELECT").css("display", "none");
+    $("#DATE_PRESET").css("display", "none");
 
     html2canvas(document.querySelector(frameId), {
       scrollY: -window.scrollY,
@@ -757,6 +795,7 @@ function captureScreen(frameName) {
     $("#BaseEndDateStr").css("display", "none");
 
     $("#ALL_TYPE_SELECT").css("display", "");
+    $("#DATE_PRESET").css("display", "");
   }
 }
 

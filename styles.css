@@ -173,7 +173,8 @@ footer {
   background: linear-gradient(to bottom right, #ff74b6 50%, #5cb4fe 50%);
 }
 
-.Resetbutton {
+.Resetbutton,
+.DatePresetButton {
   background-color: #e7e7e7;
   border: 1px solid;
   color: black;
@@ -182,11 +183,12 @@ footer {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   cursor: pointer;
 }
 
-.Resetbutton:hover {
+.Resetbutton:hover,
+.DatePresetButton:hover {
   background-color: #d0d0d0;
 }
 
