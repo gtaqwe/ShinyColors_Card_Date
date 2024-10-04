@@ -252,6 +252,13 @@
         "card_date": "2024-03-11",
         "card_addr": "mano_s_ssr15",
         "card_rerun": false
+      },
+      {
+        "card_name": "【プリズムフレア】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2024-10-05",
+        "card_addr": "mano_s_ssr16",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -5096,6 +5103,13 @@
         "card_date": "2024-07-28",
         "card_addr": "asahi_s_sr6",
         "card_rerun": false
+      },
+      {
+        "card_name": "【迷光、生じる】芹沢 あさひ",
+        "card_type": "other",
+        "card_date": "2024-10-05",
+        "card_addr": "asahi_s_sr7",
+        "card_rerun": false
       }
     ]
   },
@@ -5569,6 +5583,13 @@
         "card_type": "event",
         "card_date": "2023-09-11",
         "card_addr": "mei_s_sr5",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【飛んでく先を決めるのは】和泉 愛依",
+        "card_type": "other",
+        "card_date": "2024-10-05",
+        "card_addr": "mei_s_sr6",
         "card_rerun": false
       }
     ]
