@@ -345,6 +345,13 @@
         "card_date": "2024-05-04",
         "card_addr": "mano_s_sr11",
         "card_rerun": false
+      },
+      {
+        "card_name": "【やさしい夜に】櫻木 真乃",
+        "card_type": "event",
+        "card_date": "2024-10-09",
+        "card_addr": "mano_s_sr12",
+        "card_rerun": false
       }
     ]
   },
@@ -5661,6 +5668,13 @@
         "card_date": "2024-01-22",
         "card_addr": "toru_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【ヘブンリーブルーをつかまえて】浅倉 透",
+        "card_type": "limited",
+        "card_date": "2024-10-09",
+        "card_addr": "toru_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -6876,6 +6890,13 @@
         "card_type": "twilight",
         "card_date": "2024-08-19",
         "card_addr": "luca_s_ssr4",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【※CAUTION※】斑鳩 ルカ",
+        "card_type": "limited",
+        "card_date": "2024-10-09",
+        "card_addr": "luca_s_ssr5",
         "card_rerun": false
       }
     ],
