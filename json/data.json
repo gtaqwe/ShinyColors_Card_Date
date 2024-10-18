@@ -580,6 +580,13 @@
         "card_date": "2024-01-30",
         "card_addr": "hiori_s_ssr12",
         "card_rerun": false
+      },
+      {
+        "card_name": "【レンズの先に見えたもの】風野 灯織",
+        "card_type": "twilight",
+        "card_date": "2024-10-18",
+        "card_addr": "hiori_s_ssr13",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4245,6 +4252,13 @@
         "card_date": "2024-06-15",
         "card_addr": "amana_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【D★wner】大崎 甘奈",
+        "card_type": "event",
+        "card_date": "2024-10-18",
+        "card_addr": "amana_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -6955,6 +6969,13 @@
         "card_type": "limited",
         "card_date": "2024-05-30",
         "card_addr": "hana_p_ssr2",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Scene With You】鈴木 羽那",
+        "card_type": "twilight",
+        "card_date": "2024-10-18",
+        "card_addr": "hana_p_ssr3",
         "card_rerun": false
       }
     ],
