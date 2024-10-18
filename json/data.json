@@ -3331,6 +3331,13 @@
         "card_date": "2024-04-27",
         "card_addr": "juri_s_sr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【混ざりあえば新しい光】西城 樹里",
+        "card_type": "other",
+        "card_date": "2024-10-19",
+        "card_addr": "juri_s_sr8",
+        "card_rerun": false
       }
     ]
   },
@@ -3637,6 +3644,13 @@
         "card_type": "event",
         "card_date": "2024-07-18",
         "card_addr": "rinze_s_sr9",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【交雑する心、合わせて】杜野 凛世",
+        "card_type": "other",
+        "card_date": "2024-10-19",
+        "card_addr": "rinze_s_sr10",
         "card_rerun": false
       }
     ]
