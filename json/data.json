@@ -7138,5 +7138,45 @@
         "card_rerun": false
       }
     ]
+  },
+  {
+    "idol_ko_name": "하즈키",
+    "idol_ja_name": "七草 はづき",
+    "idol_en_name": "Hazuki",
+    "P_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "P_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ],
+    "S_SSR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-10-24",
+        "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【２８３プロの日常】七草 はづき",
+        "card_type": "limited",
+        "card_date": "2024-10-24",
+        "card_addr": "hazuki_s_ssr1",
+        "card_rerun": false
+      }
+    ],
+    "S_SR": []
   }
 ]
