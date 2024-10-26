@@ -587,6 +587,13 @@
         "card_date": "2024-10-18",
         "card_addr": "hiori_s_ssr13",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Poison Berry Daughters】風野灯織",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "hiori_s_ssr14",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -1294,6 +1301,13 @@
         "card_date": "2024-06-01",
         "card_addr": "kogane_s_sr8",
         "card_rerun": false
+      },
+      {
+        "card_name": "【Happy Surprise Trick!】月岡恋鐘",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "kogane_s_sr9",
+        "card_rerun": false
       }
     ]
   },
@@ -1507,6 +1521,13 @@
         "card_type": "limited",
         "card_date": "2024-04-10",
         "card_addr": "mamimi_s_ssr11",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【Midnight parade!】田中摩美々",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "mamimi_s_ssr12",
         "card_rerun": false
       }
     ],
@@ -2701,6 +2722,13 @@
         "card_date": "2024-08-30",
         "card_addr": "kaho_s_ssr13",
         "card_rerun": false
+      },
+      {
+        "card_name": "【CANDY UNIVERSE】小宮果穂",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "kaho_s_ssr14",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -2979,6 +3007,13 @@
         "card_type": "fes",
         "card_date": "2024-07-30",
         "card_addr": "chiyoko_s_ssr12",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【ねぇ、ねぇ、ねぇ】園田智代子",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "chiyoko_s_ssr13",
         "card_rerun": false
       }
     ],
@@ -3866,6 +3901,13 @@
         "card_date": "2023-12-11",
         "card_addr": "natsuha_s_ssr12",
         "card_rerun": false
+      },
+      {
+        "card_name": "【OPEN the New world】有栖川夏葉",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "natsuha_s_ssr13",
+        "card_rerun": false
       }
     ],
     "S_SR": [
@@ -4572,6 +4614,13 @@
         "card_type": "other",
         "card_date": "2024-04-20",
         "card_addr": "tenka_s_sr6",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【化けストロメリア】大崎甜花",
+        "card_type": "other",
+        "card_date": "2024-10-26",
+        "card_addr": "tenka_s_sr7",
         "card_rerun": false
       }
     ]
