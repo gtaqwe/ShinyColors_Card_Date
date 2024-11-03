@@ -581,8 +581,8 @@ function getCardList(cardAry) {
             new Date(v.card_date) <= new Date($("#BaseEndDate").val()))
       )
       // 오래된 순으로 정렬
-      // 단순 비교해서 소트시 브라우저 차이로
-      // 표시가 다를 수 있기에 「<」, 「>」, 「=」를 모두 확인
+      // 단순 비교로 정렬하는 경우
+      // 브라우저 차이로 인한 표시의 차이가 있을 가능성이 있기에 「<」, 「>」, 「=」를 모두 확인
       .sort((a, b) => {
         if (a.card_date < b.card_date) {
           return -1;
@@ -600,14 +600,55 @@ function getCardList(cardAry) {
  */
 function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
   var totalList = JSON_DATA.map((idol) => {
-    var tempList = [];
+    var firstList = [];
+    var tempCardList = [];
 
-    if (pSSR) tempList = tempList.concat([...idol.P_SSR]);
-    if (pSR) tempList = tempList.concat([...idol.P_SR]);
-    if (sSSR) tempList = tempList.concat([...idol.S_SSR]);
-    if (sSR) tempList = tempList.concat([...idol.S_SR]);
+    // P SSR
+    if (pSSR) {
+      let idolList = [...idol.P_SSR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
 
-    var cardList = getCardList(tempList);
+    // P SR
+    if (pSR) {
+      let idolList = [...idol.P_SR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
+
+    // S SSR
+    if (sSSR) {
+      let idolList = [...idol.S_SSR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
+
+    // S SR
+    if (sSR) {
+      let idolList = [...idol.S_SR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
+
+    // 첫실장 데이터가 복수 있을시, 최초의 첫실장만 취득
+    let firstImplementation = firstList
+      .filter((v) => v !== undefined)
+      .sort((a, b) => {
+        if (a.card_date > b.card_date) {
+          return -1;
+        } else if (a.card_date < b.card_date) {
+          return 1;
+        } else {
+          return 0;
+        }
+      })
+      .shift();
+
+    // 첫실장을 카드 리스트의 처음에 추가
+    tempCardList.unshift(firstImplementation);
+
+    var cardList = getCardList(tempCardList);
 
     // 이름 언어 : idol_(ko, ja, en)_name
     var idolName = idol.idol_ko_name;
@@ -617,6 +658,7 @@ function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
 
     var obj = {
       idol_name: idolName,
+      display_ranking: idol.display_ranking,
       card_data: cardList,
     };
 

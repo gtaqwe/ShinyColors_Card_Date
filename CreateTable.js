@@ -1,3 +1,5 @@
+const NONE_INTERVAL = Number.MIN_SAFE_INTEGER;
+
 /**
  * 표 생성
  * idolData : IndexScripts.js의 function idolDataProcess참조
@@ -5,7 +7,7 @@
 function buildTable(idolData) {
   runBuildTable(idolData); // 메인표
 
-  runBuildDateRank(); // 랭킹표
+  runBuildDateRank(idolData); // 랭킹표
 }
 
 /**
@@ -257,17 +259,19 @@ function calDate(dateStr) {
 /**
  * 랭킹표 작성 시작
  */
-function runBuildDateRank() {
+function runBuildDateRank(idolData) {
   var intervalAry = [];
   var rows = $("#date-table .tr-main-data");
 
-  for (var i = 0; i < rows.length; i++) {
-    nameStr = $(`#date-table .tr-main-data:eq(${i}) .td-name-cell`).text();
+  for (var rowIdx = 0; rowIdx < rows.length; rowIdx++) {
+    nameStr = $(`#date-table .tr-main-data:eq(${rowIdx}) .td-name-cell`).text();
 
-    // 카드가 단 하나도 실장되지 않았을 경우 처리 (R카드도 없는 경우)
-    var nowInterval = $(`#date-table .tr-main-data:eq(${i}) .now-interval`);
-    if (nowInterval.length == 0) {
-      intervalAry.push([nameStr, Number.MIN_VALUE]);
+    // 이하의 경우에는 랭킹 표시를 하지 않음 (「-」로 표시)
+    // 1. 카드가 단 하나도 실장되지 않았을 경우 (R카드도 없는 경우)
+    // 2. 랭킹표시 플래그가 False인 경우
+    var nowInterval = $(`#date-table .tr-main-data:eq(${rowIdx}) .now-interval`);
+    if (nowInterval.length == 0 || idolData.Data[rowIdx].display_ranking == false) {
+      intervalAry.push([nameStr, NONE_INTERVAL]);
     } else {
       intervalAry.push([nameStr, Number(nowInterval.text())]);
     }
@@ -349,7 +353,7 @@ function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
     var nameStr = intervalAry[i][0];
     var intervalStr = "-";
 
-    if (Number(intervalAry[i][1]) != Number.MIN_VALUE) {
+    if (Number(intervalAry[i][1]) != NONE_INTERVAL) {
       rankStr = oldRanks[i];
       intervalStr = intervalAry[i][1];
     }
@@ -458,7 +462,7 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
     var nameStr = intervalAry[rankIndex][0];
     var intervalStr = "-";
 
-    if (Number(intervalAry[rankIndex][1]) != Number.MIN_VALUE) {
+    if (Number(intervalAry[rankIndex][1]) != NONE_INTERVAL) {
       rankStr = oldRanks[rankIndex];
       intervalStr = intervalAry[rankIndex][1];
     }

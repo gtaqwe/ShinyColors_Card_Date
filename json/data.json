@@ -3,6 +3,7 @@
     "idol_ko_name": "마노",
     "idol_ja_name": "櫻木 真乃",
     "idol_en_name": "Mano",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -359,6 +360,7 @@
     "idol_ko_name": "히오리",
     "idol_ja_name": "風野 灯織",
     "idol_en_name": "Hiori",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -694,6 +696,7 @@
     "idol_ko_name": "메구루",
     "idol_ja_name": "八宮 めぐる",
     "idol_en_name": "Meguru",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -1015,6 +1018,7 @@
     "idol_ko_name": "코가네",
     "idol_ja_name": "月岡 恋鐘",
     "idol_en_name": "Kogane",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -1322,6 +1326,7 @@
     "idol_ko_name": "마미미",
     "idol_ja_name": "田中 摩美々",
     "idol_en_name": "Mamimi",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -1629,6 +1634,7 @@
     "idol_ko_name": "사쿠야",
     "idol_ja_name": "白瀬 咲耶",
     "idol_en_name": "Sakuya",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -1901,6 +1907,7 @@
     "idol_ko_name": "유이카",
     "idol_ja_name": "三峰 結華",
     "idol_en_name": "Yuika",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -2194,6 +2201,7 @@
     "idol_ko_name": "키리코",
     "idol_ja_name": "幽谷 霧子",
     "idol_en_name": "Kiriko",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -2508,6 +2516,7 @@
     "idol_ko_name": "카호",
     "idol_ja_name": "小宮 果穂",
     "idol_en_name": "Kaho",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -2815,6 +2824,7 @@
     "idol_ko_name": "치요코",
     "idol_ja_name": "園田 智代子",
     "idol_en_name": "Chiyoko",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -3122,6 +3132,7 @@
     "idol_ko_name": "쥬리",
     "idol_ja_name": "西城 樹里",
     "idol_en_name": "Juri",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -3408,6 +3419,7 @@
     "idol_ko_name": "린제",
     "idol_ja_name": "杜野 凛世",
     "idol_en_name": "Rinze",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -3729,6 +3741,7 @@
     "idol_ko_name": "나츠하",
     "idol_ja_name": "有栖川 夏葉",
     "idol_en_name": "Natsuha",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -4029,6 +4042,7 @@
     "idol_ko_name": "아마나",
     "idol_ja_name": "大崎 甘奈",
     "idol_en_name": "Amana",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -4357,6 +4371,7 @@
     "idol_ko_name": "텐카",
     "idol_ja_name": "大崎 甜花",
     "idol_en_name": "Tenka",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -4664,6 +4679,7 @@
     "idol_ko_name": "치유키",
     "idol_ja_name": "桑山 千雪",
     "idol_en_name": "Chiyuki",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -4978,6 +4994,7 @@
     "idol_ko_name": "아사히",
     "idol_ja_name": "芹沢 あさひ",
     "idol_en_name": "Asahi",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -5250,6 +5267,7 @@
     "idol_ko_name": "후유코",
     "idol_ja_name": "黛 冬優子",
     "idol_en_name": "Fuyuko",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -5501,6 +5519,7 @@
     "idol_ko_name": "메이",
     "idol_ja_name": "和泉 愛依",
     "idol_en_name": "Mei",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -5738,6 +5757,7 @@
     "idol_ko_name": "토오루",
     "idol_ja_name": "浅倉 透",
     "idol_en_name": "Toru",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -5961,6 +5981,7 @@
     "idol_ko_name": "마도카",
     "idol_ja_name": "樋口 円香",
     "idol_en_name": "Madoka",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -6205,6 +6226,7 @@
     "idol_ko_name": "코이토",
     "idol_ja_name": "福丸 小糸",
     "idol_en_name": "Koito",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -6386,6 +6408,7 @@
     "idol_ko_name": "히나나",
     "idol_ja_name": "市川 雛菜",
     "idol_en_name": "Hinana",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -6581,6 +6604,7 @@
     "idol_ko_name": "니치카",
     "idol_ja_name": "七草 にちか",
     "idol_en_name": "Nichika",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -6769,6 +6793,7 @@
     "idol_ko_name": "미코토",
     "idol_ja_name": "緋田 美琴",
     "idol_en_name": "Mikoto",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -6950,6 +6975,7 @@
     "idol_ko_name": "루카",
     "idol_ja_name": "斑鳩 ルカ",
     "idol_en_name": "Luca",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -7068,6 +7094,7 @@
     "idol_ko_name": "하나",
     "idol_ja_name": "鈴木 羽那",
     "idol_en_name": "Hana",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -7165,6 +7192,7 @@
     "idol_ko_name": "하루키",
     "idol_ja_name": "郁田 はるき",
     "idol_en_name": "Haruki",
+    "display_ranking": true,
     "P_SSR": [
       {
         "card_name": "",
@@ -7248,6 +7276,7 @@
     "idol_ko_name": "하즈키",
     "idol_ja_name": "七草 はづき",
     "idol_en_name": "Hazuki",
+    "display_ranking": false,
     "P_SSR": [
       {
         "card_name": "",
@@ -7282,6 +7311,14 @@
         "card_rerun": false
       }
     ],
-    "S_SR": []
+    "S_SR": [
+      {
+        "card_name": "",
+        "card_type": "first",
+        "card_date": "2024-10-24",
+        "card_addr": "",
+        "card_rerun": false
+      }
+    ]
   }
 ]
