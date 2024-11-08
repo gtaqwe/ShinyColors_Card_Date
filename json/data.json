@@ -3125,6 +3125,13 @@
         "card_date": "2024-09-20",
         "card_addr": "chiyoko_s_sr9",
         "card_rerun": false
+      },
+      {
+        "card_name": "【キス♡ミーなんて！？】園田 智代子",
+        "card_type": "event",
+        "card_date": "2024-11-08",
+        "card_addr": "chiyoko_s_sr10",
+        "card_rerun": false
       }
     ]
   },
@@ -6283,6 +6290,13 @@
         "card_date": "2024-01-12",
         "card_addr": "koito_p_ssr7",
         "card_rerun": false
+      },
+      {
+        "card_name": "【窓をあけて】福丸 小糸",
+        "card_type": "permanent",
+        "card_date": "2024-11-08",
+        "card_addr": "koito_p_ssr8",
+        "card_rerun": false
       }
     ],
     "P_SR": [
@@ -7229,6 +7243,13 @@
         "card_type": "first",
         "card_date": "2023-12-11",
         "card_addr": "",
+        "card_rerun": false
+      },
+      {
+        "card_name": "【漂白花火】郁田 はるき",
+        "card_type": "permanent",
+        "card_date": "2024-11-08",
+        "card_addr": "haruki_p_sr1",
         "card_rerun": false
       }
     ],
