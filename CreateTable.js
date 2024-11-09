@@ -149,7 +149,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       var cardType = cardDataList[idx].card_type;
       var cardName = cardDataList[idx].card_name;
       var cardAddr = cardDataList[idx].card_addr;
-      var cardRerun = cardDataList[idx].card_rerun;
+      var cardRerun = ""; // 복각 데이터 삭제에 따른 변경
 
       var rerunVal = $(`input[name="showRerun"]:checked`).val();
       var cardRerunStr = cardRerun.toString();
