@@ -3804,6 +3804,12 @@
         "card_type": "event",
         "card_date": "2024-10-18",
         "card_addr": "amana_s_sr9"
+      },
+      {
+        "card_name": "【３人で】大崎 甘奈",
+        "card_type": "other",
+        "card_date": "2024-11-23",
+        "card_addr": "amana_s_sr10"
       }
     ]
   },
@@ -4026,6 +4032,12 @@
         "card_type": "limited",
         "card_date": "2024-11-19",
         "card_addr": "tenka_s_ssr14"
+      },
+      {
+        "card_name": "【With you】大崎 甜花",
+        "card_type": "other",
+        "card_date": "2024-11-23",
+        "card_addr": "tenka_s_ssr15"
       }
     ],
     "S_SR": [
@@ -4348,6 +4360,12 @@
         "card_type": "other",
         "card_date": "2024-10-05",
         "card_addr": "chiyuki_s_sr10"
+      },
+      {
+        "card_name": "【アルストロメリア、なんて】桑山 千雪",
+        "card_type": "other",
+        "card_date": "2024-11-23",
+        "card_addr": "chiyuki_s_sr11"
       }
     ]
   },
