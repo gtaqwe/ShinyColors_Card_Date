@@ -4620,6 +4620,12 @@
         "card_type": "other",
         "card_date": "2024-10-12",
         "card_addr": "asahi_s_sr8"
+      },
+      {
+        "card_name": "【うちとあたしのひとつの結論】芹沢 あさひ",
+        "card_type": "other",
+        "card_date": "2024-11-30",
+        "card_addr": "asahi_s_sr9"
       }
     ]
   },
@@ -5012,6 +5018,12 @@
         "card_type": "twilight",
         "card_date": "2024-06-19",
         "card_addr": "mei_s_ssr9"
+      },
+      {
+        "card_name": "【Future Designer】和泉 愛依",
+        "card_type": "other",
+        "card_date": "2024-11-30",
+        "card_addr": "mei_s_ssr10"
       }
     ],
     "S_SR": [
@@ -5056,6 +5068,12 @@
         "card_type": "other",
         "card_date": "2024-10-05",
         "card_addr": "mei_s_sr6"
+      },
+      {
+        "card_name": "【Q.E.D. 証明終了】和泉 愛依",
+        "card_type": "other",
+        "card_date": "2024-11-30",
+        "card_addr": "mei_s_sr7"
       }
     ]
   },
