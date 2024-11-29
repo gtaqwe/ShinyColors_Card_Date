@@ -674,6 +674,12 @@
         "card_type": "twilight",
         "card_date": "2023-10-30",
         "card_addr": "meguru_p_ssr11"
+      },
+      {
+        "card_name": "【そらあいスウィング】八宮 めぐる",
+        "card_type": "parallel",
+        "card_date": "2024-11-29",
+        "card_addr": "meguru_p_ssr12"
       }
     ],
     "P_SR": [
@@ -2462,6 +2468,12 @@
         "card_type": "other",
         "card_date": "2024-04-27",
         "card_addr": "kaho_s_sr7"
+      },
+      {
+        "card_name": "【選んでる？選ばれてる？】小宮 果穂",
+        "card_type": "event",
+        "card_date": "2024-11-29",
+        "card_addr": "kaho_s_sr8"
       }
     ]
   },
@@ -3062,6 +3074,12 @@
         "card_type": "permanent",
         "card_date": "2024-05-09",
         "card_addr": "rinze_p_ssr11"
+      },
+      {
+        "card_name": "【ラヴ・レター】杜野 凛世",
+        "card_type": "parallel",
+        "card_date": "2024-11-29",
+        "card_addr": "rinze_p_ssr12"
       }
     ],
     "P_SR": [
