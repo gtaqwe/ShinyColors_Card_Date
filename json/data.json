@@ -2746,6 +2746,12 @@
         "card_type": "event",
         "card_date": "2024-11-08",
         "card_addr": "chiyoko_s_sr10"
+      },
+      {
+        "card_name": "【それが私の夢だって】園田 智代子",
+        "card_type": "other",
+        "card_date": "2024-12-07",
+        "card_addr": "chiyoko_s_sr11"
       }
     ]
   },
@@ -2938,6 +2944,12 @@
         "card_type": "event",
         "card_date": "2024-09-29",
         "card_addr": "juri_s_ssr12"
+      },
+      {
+        "card_name": "【さあ舞い上がれ】西城 樹里",
+        "card_type": "other",
+        "card_date": "2024-12-07",
+        "card_addr": "juri_s_ssr13"
       }
     ],
     "S_SR": [
@@ -3538,6 +3550,12 @@
         "card_type": "event",
         "card_date": "2024-08-19",
         "card_addr": "natsuha_s_sr10"
+      },
+      {
+        "card_name": "【これが私の気持ちだから】有栖川 夏葉",
+        "card_type": "other",
+        "card_date": "2024-12-07",
+        "card_addr": "natsuha_s_sr11"
       }
     ]
   },
