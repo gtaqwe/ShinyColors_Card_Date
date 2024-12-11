@@ -6052,6 +6052,12 @@
         "card_type": "twilight",
         "card_date": "2024-06-19",
         "card_addr": "mikoto_p_ssr6"
+      },
+      {
+        "card_name": "【SUGARLESS】緋田 美琴",
+        "card_type": "limited",
+        "card_date": "2024-12-11",
+        "card_addr": "mikoto_p_ssr7"
       }
     ],
     "P_SR": [
@@ -6140,6 +6146,12 @@
         "card_type": "event",
         "card_date": "2024-06-29",
         "card_addr": "mikoto_s_ssr10"
+      },
+      {
+        "card_name": "【GIFT】緋田 美琴",
+        "card_type": "event",
+        "card_date": "2024-12-11",
+        "card_addr": "mikoto_s_ssr11"
       }
     ],
     "S_SR": [
@@ -6330,6 +6342,12 @@
         "card_type": "permanent",
         "card_date": "2024-01-22",
         "card_addr": "hana_s_ssr2"
+      },
+      {
+        "card_name": "【聖なれ】鈴木 羽那",
+        "card_type": "limited",
+        "card_date": "2024-12-11",
+        "card_addr": "hana_s_ssr3"
       }
     ],
     "S_SR": [
@@ -6466,6 +6484,12 @@
         "card_type": "limited",
         "card_date": "2024-10-24",
         "card_addr": "hazuki_s_ssr1"
+      },
+      {
+        "card_name": "【ケーキブレイク】七草 はづき",
+        "card_type": "limited",
+        "card_date": "2024-12-11",
+        "card_addr": "hazuki_s_ssr2"
       }
     ],
     "S_SR": [
