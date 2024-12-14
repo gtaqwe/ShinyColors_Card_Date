@@ -5292,6 +5292,18 @@
         "card_type": "other",
         "card_date": "2024-11-09",
         "card_addr": "toru_s_sr6"
+      },
+      {
+        "card_name": "【私にできること】浅倉 透",
+        "card_type": "other",
+        "card_date": "2024-12-14",
+        "card_addr": "toru_s_sr7"
+      },
+      {
+        "card_name": "【くじら】浅倉 透",
+        "card_type": "other",
+        "card_date": "2024-12-14",
+        "card_addr": "toru_s_sr8"
       }
     ]
   },
@@ -5504,6 +5516,12 @@
         "card_type": "other",
         "card_date": "2024-11-02",
         "card_addr": "madoka_s_sr8"
+      },
+      {
+        "card_name": "【アイマスEXPO】樋口 円香",
+        "card_type": "other",
+        "card_date": "2024-12-14",
+        "card_addr": "madoka_s_sr9"
       }
     ]
   },
@@ -5630,6 +5648,12 @@
         "card_type": "limited",
         "card_date": "2024-09-09",
         "card_addr": "koito_s_ssr6"
+      },
+      {
+        "card_name": "【未来へのSign】福丸 小糸",
+        "card_type": "other",
+        "card_date": "2024-12-14",
+        "card_addr": "koito_s_ssr7"
       }
     ],
     "S_SR": [
