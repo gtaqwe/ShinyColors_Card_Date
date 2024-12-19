@@ -3364,6 +3364,12 @@
         "card_type": "mysongs",
         "card_date": "2023-10-15",
         "card_addr": "natsuha_p_ssr10"
+      },
+      {
+        "card_name": "【TOTTを誓って】有栖川 夏葉",
+        "card_type": "parallel",
+        "card_date": "2024-12-19",
+        "card_addr": "natsuha_p_ssr11"
       }
     ],
     "P_SR": [
@@ -4476,6 +4482,12 @@
         "card_type": "permanent",
         "card_date": "2024-09-18",
         "card_addr": "asahi_p_ssr9"
+      },
+      {
+        "card_name": "【さよならカイト】芹沢 あさひ",
+        "card_type": "parallel",
+        "card_date": "2024-12-19",
+        "card_addr": "asahi_p_ssr10"
       }
     ],
     "P_SR": [
@@ -4880,6 +4892,12 @@
         "card_type": "other",
         "card_date": "2024-11-09",
         "card_addr": "fuyuko_s_sr6"
+      },
+      {
+        "card_name": "【散光白書】黛 冬優子",
+        "card_type": "event",
+        "card_date": "2024-12-19",
+        "card_addr": "fuyuko_s_sr7"
       }
     ]
   },
