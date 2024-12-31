@@ -2690,6 +2690,12 @@
         "card_type": "limited",
         "card_date": "2024-10-31",
         "card_addr": "chiyoko_s_ssr14"
+      },
+      {
+        "card_name": "【クライマックス↑↓大貧民】園田 智代子",
+        "card_type": "event",
+        "card_date": "2025-01-01",
+        "card_addr": "chiyoko_s_ssr15"
       }
     ],
     "S_SR": [
@@ -2838,6 +2844,12 @@
         "card_type": "limited",
         "card_date": "2023-08-31",
         "card_addr": "juri_p_ssr10"
+      },
+      {
+        "card_name": "【あなた色アンダンテ】西城 樹里",
+        "card_type": "twilight",
+        "card_date": "2025-01-01",
+        "card_addr": "juri_p_ssr11"
       }
     ],
     "P_SR": [
@@ -5514,6 +5526,12 @@
         "card_type": "limited",
         "card_date": "2024-10-25",
         "card_addr": "madoka_s_ssr10"
+      },
+      {
+        "card_name": "【ナカキヨノ】樋口 円香",
+        "card_type": "twilight",
+        "card_date": "2025-01-01",
+        "card_addr": "madoka_s_ssr11"
       }
     ],
     "S_SR": [
