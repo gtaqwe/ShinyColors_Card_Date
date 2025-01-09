@@ -964,6 +964,12 @@
         "card_type": "parallel",
         "card_date": "2024-09-29",
         "card_addr": "kogane_p_ssr11"
+      },
+      {
+        "card_name": "【純雪エモーショナル】月岡 恋鐘",
+        "card_type": "permanent",
+        "card_date": "2025-01-09",
+        "card_addr": "kogane_p_ssr12"
       }
     ],
     "P_SR": [
@@ -4376,6 +4382,12 @@
         "card_type": "event",
         "card_date": "2024-08-30",
         "card_addr": "chiyuki_s_ssr12"
+      },
+      {
+        "card_name": "【あたたかく、癒されて】桑山 千雪",
+        "card_type": "permanent",
+        "card_date": "2025-01-09",
+        "card_addr": "chiyuki_s_ssr13"
       }
     ],
     "S_SR": [
@@ -5532,6 +5544,12 @@
         "card_type": "twilight",
         "card_date": "2025-01-01",
         "card_addr": "madoka_s_ssr11"
+      },
+      {
+        "card_name": "【湯巡】樋口 円香",
+        "card_type": "limited",
+        "card_date": "2025-01-09",
+        "card_addr": "madoka_s_ssr12"
       }
     ],
     "S_SR": [
@@ -6476,6 +6494,12 @@
         "card_type": "other",
         "card_date": "2024-10-06",
         "card_addr": "hana_s_sr2"
+      },
+      {
+        "card_name": "【ダブルホワイト】鈴木羽那",
+        "card_type": "event",
+        "card_date": "2025-01-09",
+        "card_addr": "hana_s_sr3"
       }
     ]
   },
