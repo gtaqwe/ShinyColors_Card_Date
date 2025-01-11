@@ -6298,6 +6298,12 @@
         "card_type": "other",
         "card_date": "2022-11-30",
         "card_addr": "mikoto_s_sr2"
+      },
+      {
+        "card_name": "【liminal;marginal;eternal】緋田 美琴",
+        "card_type": "other",
+        "card_date": "2025-01-11",
+        "card_addr": "mikoto_s_sr3"
       }
     ]
   },
@@ -6586,6 +6592,12 @@
         "card_type": "event",
         "card_date": "2024-06-07",
         "card_addr": "haruki_s_sr2"
+      },
+      {
+        "card_name": "【liminal;marginal;eternal】郁田 はるき",
+        "card_type": "other",
+        "card_date": "2025-01-11",
+        "card_addr": "haruki_s_sr3"
       }
     ]
   },
