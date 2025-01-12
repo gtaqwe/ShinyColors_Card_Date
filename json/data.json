@@ -6128,6 +6128,12 @@
         "card_type": "event",
         "card_date": "2024-09-09",
         "card_addr": "nichika_s_sr5"
+      },
+      {
+        "card_name": "【liminal;marginal;eternal】七草 にちか",
+        "card_type": "other",
+        "card_date": "2025-01-12",
+        "card_addr": "nichika_s_sr6"
       }
     ]
   },
@@ -6408,6 +6414,12 @@
         "card_type": "other",
         "card_date": "2023-10-21",
         "card_addr": "luca_s_sr1"
+      },
+      {
+        "card_name": "【liminal;marginal;eternal】斑鳩 ルカ",
+        "card_type": "other",
+        "card_date": "2025-01-12",
+        "card_addr": "luca_s_sr2"
       }
     ]
   },
