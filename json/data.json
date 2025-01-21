@@ -384,6 +384,12 @@
         "card_type": "limited",
         "card_date": "2024-09-09",
         "card_addr": "hiori_p_ssr11"
+      },
+      {
+        "card_name": "【The thing is】風野 灯織",
+        "card_type": "parallel",
+        "card_date": "2025-01-21",
+        "card_addr": "hiori_p_ssr12"
       }
     ],
     "P_SR": [
@@ -1162,6 +1168,12 @@
         "card_type": "other",
         "card_date": "2024-10-26",
         "card_addr": "kogane_s_sr9"
+      },
+      {
+        "card_name": "【届け♡こん気持ち】月岡 恋鐘",
+        "card_type": "event",
+        "card_date": "2025-01-21",
+        "card_addr": "kogane_s_sr10"
       }
     ]
   },
@@ -6020,6 +6032,12 @@
         "card_type": "permanent",
         "card_date": "2024-08-07",
         "card_addr": "nichika_p_ssr7"
+      },
+      {
+        "card_name": "【日々、想】七草 にちか",
+        "card_type": "parallel",
+        "card_date": "2025-01-21",
+        "card_addr": "nichika_p_ssr8"
       }
     ],
     "P_SR": [
