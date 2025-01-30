@@ -822,6 +822,12 @@
         "card_type": "other",
         "card_date": "2024-12-21",
         "card_addr": "meguru_s_ssr15"
+      },
+      {
+        "card_name": "【わがままサンライズ】八宮 めぐる",
+        "card_type": "limited",
+        "card_date": "2025-01-30",
+        "card_addr": "meguru_s_ssr16"
       }
     ],
     "S_SR": [
@@ -3412,6 +3418,12 @@
         "card_type": "parallel",
         "card_date": "2024-12-19",
         "card_addr": "natsuha_p_ssr11"
+      },
+      {
+        "card_name": "【ユアバレンタイン】有栖川 夏葉",
+        "card_type": "limited",
+        "card_date": "2025-01-30",
+        "card_addr": "natsuha_p_ssr12"
       }
     ],
     "P_SR": [
@@ -4660,6 +4672,12 @@
         "card_type": "event",
         "card_date": "2024-04-02",
         "card_addr": "asahi_s_ssr11"
+      },
+      {
+        "card_name": "【コウカンシンケイドールズ】芹沢 あさひ",
+        "card_type": "fes",
+        "card_date": "2025-01-30",
+        "card_addr": "asahi_s_ssr12"
       }
     ],
     "S_SR": [
@@ -5132,6 +5150,12 @@
         "card_type": "other",
         "card_date": "2024-11-30",
         "card_addr": "mei_s_ssr10"
+      },
+      {
+        "card_name": "【獲るよ！】和泉 愛依",
+        "card_type": "event",
+        "card_date": "2025-01-30",
+        "card_addr": "mei_s_ssr11"
       }
     ],
     "S_SR": [
