@@ -3140,6 +3140,12 @@
         "card_type": "parallel",
         "card_date": "2024-11-29",
         "card_addr": "rinze_p_ssr12"
+      },
+      {
+        "card_name": "【片恋はあと】杜野 凛世",
+        "card_type": "permanent",
+        "card_date": "2025-02-07",
+        "card_addr": "rinze_p_ssr13"
       }
     ],
     "P_SR": [
@@ -6006,6 +6012,12 @@
         "card_type": "other",
         "card_date": "2024-11-02",
         "card_addr": "hinana_s_sr5"
+      },
+      {
+        "card_name": "【MY：♡ur Castle】市川 雛菜",
+        "card_type": "event",
+        "card_date": "2025-02-07",
+        "card_addr": "hinana_s_sr6"
       }
     ]
   },
