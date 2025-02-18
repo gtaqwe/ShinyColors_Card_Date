@@ -600,6 +600,12 @@
         "card_type": "other",
         "card_date": "2024-06-22",
         "card_addr": "hiori_s_sr12"
+      },
+      {
+        "card_name": "【優雅に願いをかけて】風野 灯織",
+        "card_type": "event",
+        "card_date": "2025-02-18",
+        "card_addr": "hiori_s_sr13"
       }
     ]
   },
@@ -5062,6 +5068,12 @@
         "card_type": "permanent",
         "card_date": "2024-03-21",
         "card_addr": "mei_p_ssr9"
+      },
+      {
+        "card_name": "【今、できることを全て】和泉 愛依",
+        "card_type": "parallel",
+        "card_date": "2025-02-18",
+        "card_addr": "mei_p_ssr10"
       }
     ],
     "P_SR": [
@@ -6414,6 +6426,12 @@
         "card_type": "limited",
         "card_date": "2024-06-29",
         "card_addr": "luca_p_ssr4"
+      },
+      {
+        "card_name": "【Could Be】斑鳩 ルカ",
+        "card_type": "parallel",
+        "card_date": "2025-02-18",
+        "card_addr": "luca_p_ssr5"
       }
     ],
     "P_SR": [
