@@ -4696,6 +4696,12 @@
         "card_type": "fes",
         "card_date": "2025-01-30",
         "card_addr": "asahi_s_ssr12"
+      },
+      {
+        "card_name": "【三月三十三日】芹沢 あさひ",
+        "card_type": "limited",
+        "card_date": "2025-02-28",
+        "card_addr": "asahi_s_ssr13"
       }
     ],
     "S_SR": [
@@ -5392,6 +5398,12 @@
         "card_type": "limited",
         "card_date": "2025-01-25",
         "card_addr": "toru_s_ssr11"
+      },
+      {
+        "card_name": "【caaaaaaall】浅倉 透",
+        "card_type": "event",
+        "card_date": "2025-02-28",
+        "card_addr": "toru_s_ssr12"
       }
     ],
     "S_SR": [
@@ -5922,6 +5934,12 @@
         "card_type": "parallel",
         "card_date": "2024-04-18",
         "card_addr": "hinana_p_ssr8"
+      },
+      {
+        "card_name": "【d!scovery】市川 雛菜",
+        "card_type": "limited",
+        "card_date": "2025-02-28",
+        "card_addr": "hinana_p_ssr9"
       }
     ],
     "P_SR": [
