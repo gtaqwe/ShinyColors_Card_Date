@@ -2800,6 +2800,12 @@
         "card_type": "other",
         "card_date": "2024-12-07",
         "card_addr": "chiyoko_s_sr11"
+      },
+      {
+        "card_name": "【Over the prism】園田 智代子",
+        "card_type": "other",
+        "card_date": "2025-03-02",
+        "card_addr": "chiyoko_s_sr12"
       }
     ]
   },
@@ -6016,6 +6022,12 @@
         "card_type": "permanent",
         "card_date": "2024-03-21",
         "card_addr": "hinana_s_ssr7"
+      },
+      {
+        "card_name": "【ひな♡まつり】市川 雛菜",
+        "card_type": "limited",
+        "card_date": "2025-03-03",
+        "card_addr": "hinana_s_ssr8"
       }
     ],
     "S_SR": [
