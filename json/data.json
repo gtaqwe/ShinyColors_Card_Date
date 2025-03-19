@@ -224,6 +224,12 @@
         "card_type": "other",
         "card_date": "2024-10-05",
         "card_addr": "mano_s_ssr16"
+      },
+      {
+        "card_name": "【春風、ふわり】櫻木 真乃",
+        "card_type": "limited",
+        "card_date": "2025-03-19",
+        "card_addr": "mano_s_ssr17"
       }
     ],
     "S_SR": [
@@ -390,6 +396,12 @@
         "card_type": "parallel",
         "card_date": "2025-01-21",
         "card_addr": "hiori_p_ssr12"
+      },
+      {
+        "card_name": "【キミと今旅立つ】風野 灯織",
+        "card_type": "permanent",
+        "card_date": "2025-03-19",
+        "card_addr": "hiori_p_ssr13"
       }
     ],
     "P_SR": [
@@ -3078,6 +3090,12 @@
         "card_type": "other",
         "card_date": "2024-10-19",
         "card_addr": "juri_s_sr8"
+      },
+      {
+        "card_name": "【新緑に響く】西城 樹里",
+        "card_type": "event",
+        "card_date": "2025-03-19",
+        "card_addr": "juri_s_sr9"
       }
     ]
   },
@@ -6636,6 +6654,12 @@
         "card_type": "limited",
         "card_date": "2024-12-11",
         "card_addr": "hana_s_ssr3"
+      },
+      {
+        "card_name": "【スクーリー・フラッシュ】鈴木 羽那",
+        "card_type": "limited",
+        "card_date": "2025-03-19",
+        "card_addr": "hana_s_ssr4"
       }
     ],
     "S_SR": [
