@@ -914,6 +914,12 @@
         "card_type": "other",
         "card_date": "2024-09-20",
         "card_addr": "meguru_s_sr10"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】八宮 めぐる",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "meguru_s_sr11"
       }
     ]
   },
@@ -1978,6 +1984,12 @@
         "card_type": "event",
         "card_date": "2024-07-09",
         "card_addr": "yuika_s_sr9"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】三峰 結華",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "yuika_s_sr10"
       }
     ]
   },
@@ -3096,6 +3108,12 @@
         "card_type": "event",
         "card_date": "2025-03-19",
         "card_addr": "juri_s_sr9"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】西城 樹里",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "juri_s_sr10"
       }
     ]
   },
@@ -4262,6 +4280,12 @@
         "card_type": "other",
         "card_date": "2024-12-15",
         "card_addr": "tenka_s_sr8"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】大崎 甜花",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "tenka_s_sr9"
       }
     ]
   },
@@ -4472,6 +4496,12 @@
         "card_type": "permanent",
         "card_date": "2025-01-09",
         "card_addr": "chiyuki_s_ssr13"
+      },
+      {
+        "card_name": "【ワーキングスナップ～デート】桑山 千雪",
+        "card_type": "limited",
+        "card_date": "2025-03-20",
+        "card_addr": "chiyuki_s_ssr14"
       }
     ],
     "S_SR": [
@@ -4812,6 +4842,12 @@
         "card_type": "other",
         "card_date": "2024-12-21",
         "card_addr": "asahi_s_sr10"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】芹沢 あさひ",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "asahi_s_sr11"
       }
     ]
   },
@@ -5914,6 +5950,12 @@
         "card_type": "other",
         "card_date": "2024-12-21",
         "card_addr": "koito_s_sr6"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】福丸 小糸",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "koito_s_sr7"
       }
     ]
   },
@@ -6278,6 +6320,12 @@
         "card_type": "other",
         "card_date": "2025-01-12",
         "card_addr": "nichika_s_sr6"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】七草 にちか",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "nichika_s_sr7"
       }
     ]
   },
@@ -6576,6 +6624,12 @@
         "card_type": "other",
         "card_date": "2025-01-12",
         "card_addr": "luca_s_sr2"
+      },
+      {
+        "card_name": "【COSTUME GALLERY】斑鳩 ルカ",
+        "card_type": "other",
+        "card_date": "2025-03-22",
+        "card_addr": "luca_s_sr3"
       }
     ]
   },
