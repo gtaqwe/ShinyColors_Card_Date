@@ -230,6 +230,12 @@
         "card_type": "limited",
         "card_date": "2025-03-19",
         "card_addr": "mano_s_ssr17"
+      },
+      {
+        "card_name": "【分光-1-】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2025-03-28",
+        "card_addr": "mano_s_ssr18"
       }
     ],
     "S_SR": [
@@ -1668,6 +1674,12 @@
         "card_type": "limited",
         "card_date": "2023-11-13",
         "card_addr": "sakuya_s_ssr12"
+      },
+      {
+        "card_name": "【分光-3-】白瀬 咲耶",
+        "card_type": "other",
+        "card_date": "2025-03-28",
+        "card_addr": "sakuya_s_ssr13"
       }
     ],
     "S_SR": [
@@ -5264,6 +5276,12 @@
         "card_type": "event",
         "card_date": "2025-01-30",
         "card_addr": "mei_s_ssr11"
+      },
+      {
+        "card_name": "【分光-4-】和泉 愛依",
+        "card_type": "other",
+        "card_date": "2025-03-28",
+        "card_addr": "mei_s_ssr12"
       }
     ],
     "S_SR": [
@@ -5482,6 +5500,12 @@
         "card_type": "event",
         "card_date": "2025-02-28",
         "card_addr": "toru_s_ssr12"
+      },
+      {
+        "card_name": "【分光-2-】浅倉 透",
+        "card_type": "other",
+        "card_date": "2025-03-28",
+        "card_addr": "toru_s_ssr13"
       }
     ],
     "S_SR": [
