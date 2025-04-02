@@ -76,6 +76,12 @@
         "card_type": "limited",
         "card_date": "2024-04-29",
         "card_addr": "mano_p_ssr11"
+      },
+      {
+        "card_name": "【はるかなる】櫻木 真乃",
+        "card_type": "parallel",
+        "card_date": "2025-04-02",
+        "card_addr": "mano_p_ssr12"
       }
     ],
     "P_SR": [
@@ -5400,6 +5406,12 @@
         "card_type": "limited",
         "card_date": "2024-10-09",
         "card_addr": "toru_p_ssr8"
+      },
+      {
+        "card_name": "【テープエンドの行き先】浅倉 透",
+        "card_type": "parallel",
+        "card_date": "2025-04-02",
+        "card_addr": "toru_p_ssr9"
       }
     ],
     "P_SR": [
@@ -6130,6 +6142,12 @@
         "card_type": "limited",
         "card_date": "2025-03-03",
         "card_addr": "hinana_s_ssr8"
+      },
+      {
+        "card_name": "【sa!l】市川 雛菜",
+        "card_type": "event",
+        "card_date": "2025-04-02",
+        "card_addr": "hinana_s_ssr9"
       }
     ],
     "S_SR": [
