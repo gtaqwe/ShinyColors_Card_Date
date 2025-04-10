@@ -3804,6 +3804,12 @@
         "card_type": "limited",
         "card_date": "2024-08-30",
         "card_addr": "amana_p_ssr12"
+      },
+      {
+        "card_name": "【挑戦アトラクティブ】大崎 甘奈",
+        "card_type": "twilight",
+        "card_date": "2025-04-10",
+        "card_addr": "amana_p_ssr13"
       }
     ],
     "P_SR": [
@@ -4600,6 +4606,12 @@
         "card_type": "other",
         "card_date": "2024-11-23",
         "card_addr": "chiyuki_s_sr11"
+      },
+      {
+        "card_name": "【誘わないで、陽光】桑山 千雪",
+        "card_type": "event",
+        "card_date": "2025-04-10",
+        "card_addr": "chiyuki_s_sr12"
       }
     ]
   },
@@ -6530,6 +6542,12 @@
         "card_type": "event",
         "card_date": "2024-12-11",
         "card_addr": "mikoto_s_ssr11"
+      },
+      {
+        "card_name": "【DIGEST】緋田 美琴",
+        "card_type": "twilight",
+        "card_date": "2025-04-10",
+        "card_addr": "mikoto_s_ssr12"
       }
     ],
     "S_SR": [
