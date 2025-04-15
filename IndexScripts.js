@@ -294,33 +294,55 @@ function clearTableBlankLapList() {
 function updateDate(nowSelect) {
   resetCardTypeCountList();
 
-  if (nowSelect == 11) {
-    NOW_SELECT = 11;
-    P_SSR();
-  } else if (nowSelect == 12) {
-    NOW_SELECT = 12;
-    S_SSR();
-  } else if (nowSelect == 13) {
-    NOW_SELECT = 13;
-    ALL_SSR();
-  } else if (nowSelect == 21) {
-    NOW_SELECT = 21;
-    P_SR();
-  } else if (nowSelect == 22) {
-    NOW_SELECT = 22;
-    S_SR();
-  } else if (nowSelect == 23) {
-    NOW_SELECT = 23;
-    ALL_SR();
-  } else if (nowSelect == 31) {
-    NOW_SELECT = 31;
-    ALL_P();
-  } else if (nowSelect == 32) {
-    NOW_SELECT = 32;
-    ALL_S();
-  } else if (nowSelect == 33) {
-    NOW_SELECT = 33;
-    ALL_CARD();
+  switch (nowSelect) {
+    case 11:
+      NOW_SELECT = 11;
+      P_SSR();
+      break;
+    case 12:
+      NOW_SELECT = 12;
+      S_SSR();
+      break;
+    case 13:
+      NOW_SELECT = 13;
+      ALL_SSR();
+      break;
+    case 21:
+      NOW_SELECT = 21;
+      P_SR();
+      break;
+    case 22:
+      NOW_SELECT = 22;
+      S_SR();
+      break;
+    case 23:
+      NOW_SELECT = 23;
+      ALL_SR();
+      break;
+    case 31:
+      NOW_SELECT = 31;
+      ALL_P();
+      break;
+    case 32:
+      NOW_SELECT = 32;
+      ALL_S();
+      break;
+    case 33:
+      NOW_SELECT = 33;
+      ALL_CARD();
+      break;
+    case 41:
+      NOW_SELECT = 41;
+      P_UR();
+      break;
+    case 42:
+      NOW_SELECT = 42;
+      S_UR();
+      break;
+    case 43:
+      NOW_SELECT = 43;
+      ALL_UR();
+      break;
   }
 
   setCardTypeCountList();
@@ -441,10 +463,56 @@ function CtlfesImgConvertBtn(ps) {
 }
 
 /**
+ * P-UR 표시
+ */
+function P_UR() {
+  const displayObj = {
+    pUR: true,
+    pSSR: false,
+    pSR: false,
+    sUR: false,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("P-UR", displayObj);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
+}
+
+/**
+ * S-UR 표시
+ */
+function S_UR() {
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: false,
+    sUR: true,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("S-UR", displayObj);
+  CtlfesImgConvertBtn("s");
+  buildTable(idolData);
+
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
+}
+
+/**
  * P-SSR 표시
  */
 function P_SSR() {
-  var idolData = mergeCardData("P-SSR", true, false, false, false);
+  const displayObj = {
+    pUR: false,
+    pSSR: true,
+    pSR: false,
+    sUR: false,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("P-SSR", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -455,7 +523,15 @@ function P_SSR() {
  * S-SSR 표시
  */
 function S_SSR() {
-  var idolData = mergeCardData("S-SSR", false, false, true, false);
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: false,
+    sUR: false,
+    sSSR: true,
+    sSR: false,
+  };
+  const idolData = mergeCardData("S-SSR", displayObj);
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
@@ -466,7 +542,15 @@ function S_SSR() {
  * P-SR 표시
  */
 function P_SR() {
-  var idolData = mergeCardData("P-SR", false, true, false, false);
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: true,
+    sUR: false,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("P-SR", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -477,7 +561,15 @@ function P_SR() {
  * S-SR 표시
  */
 function S_SR() {
-  var idolData = mergeCardData("S-SR", false, false, false, true);
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: false,
+    sUR: false,
+    sSSR: false,
+    sSR: true,
+  };
+  const idolData = mergeCardData("S-SR", displayObj);
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
@@ -488,7 +580,34 @@ function S_SR() {
  * 모든 카드 표시
  */
 function ALL_CARD() {
-  var idolData = mergeCardData("All", true, true, true, true);
+  const displayObj = {
+    pUR: true,
+    pSSR: true,
+    pSR: true,
+    sUR: true,
+    sSSR: true,
+    sSR: true,
+  };
+  const idolData = mergeCardData("All", displayObj);
+  CtlfesImgConvertBtn("p");
+  buildTable(idolData);
+
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
+}
+
+/**
+ * 모든 UR 표시
+ */
+function ALL_UR() {
+  const displayObj = {
+    pUR: true,
+    pSSR: false,
+    pSR: false,
+    sUR: true,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("UR", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -499,7 +618,15 @@ function ALL_CARD() {
  * 모든 SSR 표시
  */
 function ALL_SSR() {
-  var idolData = mergeCardData("SSR", true, false, true, false);
+  const displayObj = {
+    pUR: false,
+    pSSR: true,
+    pSR: false,
+    sUR: false,
+    sSSR: true,
+    sSR: false,
+  };
+  const idolData = mergeCardData("SSR", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -510,7 +637,15 @@ function ALL_SSR() {
  * 모든 SR 표시
  */
 function ALL_SR() {
-  var idolData = mergeCardData("SR", false, true, false, true);
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: true,
+    sUR: false,
+    sSSR: false,
+    sSR: true,
+  };
+  const idolData = mergeCardData("SR", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -521,7 +656,15 @@ function ALL_SR() {
  * 모든 P 표시
  */
 function ALL_P() {
-  var idolData = mergeCardData("P", true, true, false, false);
+  const displayObj = {
+    pUR: true,
+    pSSR: true,
+    pSR: true,
+    sUR: false,
+    sSSR: false,
+    sSR: false,
+  };
+  const idolData = mergeCardData("P", displayObj);
   CtlfesImgConvertBtn("p");
   buildTable(idolData);
 
@@ -532,7 +675,15 @@ function ALL_P() {
  * 모든 S 표시
  */
 function ALL_S() {
-  var idolData = mergeCardData("S", false, false, true, true);
+  const displayObj = {
+    pUR: false,
+    pSSR: false,
+    pSR: false,
+    sUR: true,
+    sSSR: true,
+    sSR: true,
+  };
+  const idolData = mergeCardData("S", displayObj);
   CtlfesImgConvertBtn("s");
   buildTable(idolData);
 
@@ -598,10 +749,24 @@ function getCardList(cardAry) {
 /**
  * 전체 카드의 데이터를 추출, 재가공
  */
-function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
+function mergeCardData(tableTitle, displayObj) {
+  const pUR = displayObj.pUR;
+  const sUR = displayObj.sUR;
+  const pSSR = displayObj.pSSR;
+  const sSSR = displayObj.sSSR;
+  const pSR = displayObj.pSR;
+  const sSR = displayObj.sSR;
+
   var totalList = JSON_DATA.map((idol) => {
     var firstList = [];
     var tempCardList = [];
+
+    // P UR
+    if (pUR) {
+      let idolList = [...idol.P_UR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
 
     // P SSR
     if (pSSR) {
@@ -613,6 +778,13 @@ function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
     // P SR
     if (pSR) {
       let idolList = [...idol.P_SR];
+      firstList = firstList.concat(idolList.shift());
+      tempCardList = tempCardList.concat([...idolList]);
+    }
+
+    // S UR
+    if (sUR) {
+      let idolList = [...idol.S_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
@@ -808,15 +980,44 @@ function captureScreen(frameName) {
     if ($("#campaignCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.campaign;
     if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
 
-    if (NOW_SELECT == 11) captureName = frameName + "_P_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 12) captureName = frameName + "_S_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 13) captureName = frameName + "_SSR_" + viewMode + ".png";
-    else if (NOW_SELECT == 21) captureName = frameName + "_P_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 22) captureName = frameName + "_S_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 23) captureName = frameName + "_SR_" + viewMode + ".png";
-    else if (NOW_SELECT == 31) captureName = frameName + "_P_" + viewMode + ".png";
-    else if (NOW_SELECT == 32) captureName = frameName + "_S_" + viewMode + ".png";
-    else if (NOW_SELECT == 33) captureName = frameName + "_ALL_" + viewMode + ".png";
+    switch (NOW_SELECT) {
+      case 11:
+        captureName = frameName + "_P_SSR_" + viewMode + ".png";
+        break;
+      case 12:
+        captureName = frameName + "_S_SSR_" + viewMode + ".png";
+        break;
+      case 13:
+        captureName = frameName + "_SSR_" + viewMode + ".png";
+        break;
+      case 21:
+        captureName = frameName + "_P_SR_" + viewMode + ".png";
+        break;
+      case 22:
+        captureName = frameName + "_S_SR_" + viewMode + ".png";
+        break;
+      case 23:
+        captureName = frameName + "_SR_" + viewMode + ".png";
+        break;
+      case 31:
+        captureName = frameName + "_P_" + viewMode + ".png";
+        break;
+      case 32:
+        captureName = frameName + "_S_" + viewMode + ".png";
+        break;
+      case 33:
+        captureName = frameName + "_ALL_" + viewMode + ".png";
+        break;
+      case 41:
+        captureName = frameName + "_P_UR_" + viewMode + ".png";
+        break;
+      case 42:
+        captureName = frameName + "_S_UR_" + viewMode + ".png";
+        break;
+      case 43:
+        captureName = frameName + "_UR_" + viewMode + ".png";
+        break;
+    }
 
     $(frameId).css("overflow", "hidden");
     $("#convertSpan").css("display", "none");

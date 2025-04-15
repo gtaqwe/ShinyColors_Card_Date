@@ -4,6 +4,15 @@
     "idol_ja_name": "櫻木 真乃",
     "idol_en_name": "Mano",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -146,6 +155,15 @@
         "card_date": "2022-04-11",
         "card_addr": "1030010060",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -396,6 +414,15 @@
     "idol_ja_name": "風野 灯織",
     "idol_en_name": "Hiori",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -538,6 +565,15 @@
         "card_date": "2022-09-20",
         "card_addr": "1030020050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -767,6 +803,15 @@
     "idol_ja_name": "八宮 めぐる",
     "idol_en_name": "Meguru",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -902,6 +947,15 @@
         "card_date": "2022-12-20",
         "card_addr": "1030030050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -1131,6 +1185,15 @@
     "idol_ja_name": "月岡 恋鐘",
     "idol_en_name": "Kogane",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -1266,6 +1329,15 @@
         "card_date": "2022-02-10",
         "card_addr": "1030040050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -1474,6 +1546,15 @@
     "idol_ja_name": "田中 摩美々",
     "idol_en_name": "Mamimi",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -1602,6 +1683,15 @@
         "card_date": "2022-06-20",
         "card_addr": "1030050050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -1803,6 +1893,15 @@
     "idol_ja_name": "白瀬 咲耶",
     "idol_en_name": "Sakuya",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -1924,6 +2023,15 @@
         "card_date": "2020-06-10",
         "card_addr": "1030060030",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -2118,6 +2226,15 @@
     "idol_ja_name": "三峰 結華",
     "idol_en_name": "Yuika",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -2239,6 +2356,15 @@
         "card_date": "2021-11-10",
         "card_addr": "1030070040",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -2433,6 +2559,15 @@
     "idol_ja_name": "幽谷 霧子",
     "idol_en_name": "Kiriko",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -2568,6 +2703,15 @@
         "card_date": "2021-06-21",
         "card_addr": "1030080050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -2783,6 +2927,15 @@
     "idol_ja_name": "小宮 果穂",
     "idol_en_name": "Kaho",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -2918,6 +3071,15 @@
         "card_date": "2022-01-20",
         "card_addr": "1030090050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -3119,6 +3281,15 @@
     "idol_ja_name": "園田 智代子",
     "idol_en_name": "Chiyoko",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -3240,6 +3411,15 @@
         "card_date": "2021-11-19",
         "card_addr": "1030100040",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -3469,6 +3649,15 @@
     "idol_ja_name": "西城 樹里",
     "idol_en_name": "Juri",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -3597,6 +3786,15 @@
         "card_date": "2023-01-20",
         "card_addr": "1030110050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -3798,6 +3996,15 @@
     "idol_ja_name": "杜野 凛世",
     "idol_en_name": "Rinze",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -3947,6 +4154,15 @@
         "card_date": "2022-03-19",
         "card_addr": "1030120060",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -4162,6 +4378,15 @@
     "idol_ja_name": "有栖川 夏葉",
     "idol_en_name": "Natsuha",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -4290,6 +4515,15 @@
         "card_date": "2021-01-22",
         "card_addr": "1030130040",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -4498,6 +4732,15 @@
     "idol_ja_name": "大崎 甘奈",
     "idol_en_name": "Amana",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -4640,6 +4883,15 @@
         "card_date": "2022-07-21",
         "card_addr": "1030140050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -4862,6 +5114,15 @@
     "idol_ja_name": "大崎 甜花",
     "idol_en_name": "Tenka",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -5004,6 +5265,15 @@
         "card_date": "2022-05-20",
         "card_addr": "1030150060",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -5219,6 +5489,15 @@
     "idol_ja_name": "桑山 千雪",
     "idol_en_name": "Chiyuki",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -5354,6 +5633,15 @@
         "card_date": "2021-09-10",
         "card_addr": "1030160050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2018-04-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -5576,6 +5864,15 @@
     "idol_ja_name": "芹沢 あさひ",
     "idol_en_name": "Asahi",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-01",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -5697,6 +5994,15 @@
         "card_date": "2023-03-20",
         "card_addr": "1030170050",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-12",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -5905,6 +6211,15 @@
     "idol_ja_name": "黛 冬優子",
     "idol_en_name": "Fuyuko",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-05",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -6026,6 +6341,15 @@
         "card_date": "2022-11-30",
         "card_addr": "1030180040",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-12",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -6192,6 +6516,15 @@
     "idol_ja_name": "和泉 愛依",
     "idol_en_name": "Mei",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-09",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -6306,6 +6639,15 @@
         "card_date": "2022-08-19",
         "card_addr": "1030190040",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2019-04-12",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -6479,6 +6821,15 @@
     "idol_ja_name": "浅倉 透",
     "idol_en_name": "Toru",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-03",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -6579,6 +6930,15 @@
         "card_date": "2022-10-11",
         "card_addr": "1030200030",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-13",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -6766,6 +7126,15 @@
     "idol_ja_name": "樋口 円香",
     "idol_en_name": "Madoka",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-06",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -6859,6 +7228,15 @@
         "card_date": "2022-01-20",
         "card_addr": "1030210020",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-13",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -7046,6 +7424,15 @@
     "idol_ja_name": "福丸 小糸",
     "idol_en_name": "Koito",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-09",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -7132,6 +7519,15 @@
         "card_date": "2023-02-19",
         "card_addr": "1030220020",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-13",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -7277,6 +7673,15 @@
     "idol_ja_name": "市川 雛菜",
     "idol_en_name": "Hinana",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-12",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -7370,6 +7775,15 @@
         "card_date": "2021-05-10",
         "card_addr": "1030230020",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2020-04-13",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -7515,6 +7929,15 @@
     "idol_ja_name": "七草 にちか",
     "idol_en_name": "Nichika",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2021-04-05",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -7601,6 +8024,15 @@
         "card_date": "2022-11-18",
         "card_addr": "1030240020",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2021-04-30",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -7739,6 +8171,15 @@
     "idol_ja_name": "緋田 美琴",
     "idol_en_name": "Mikoto",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2021-04-08",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -7825,6 +8266,15 @@
         "card_date": "2022-07-21",
         "card_addr": "1030250020",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2021-04-30",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -7970,6 +8420,15 @@
     "idol_ja_name": "斑鳩 ルカ",
     "idol_en_name": "Luca",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2023-04-02",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -8035,6 +8494,15 @@
         "card_date": "2023-09-21",
         "card_addr": "1030260010",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2023-04-21",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -8131,6 +8599,15 @@
     "idol_ja_name": "鈴木 羽那",
     "idol_en_name": "Hana",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -8182,6 +8659,15 @@
         "card_date": "2024-02-19",
         "card_addr": "1030270010",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -8271,6 +8757,15 @@
     "idol_ja_name": "郁田 はるき",
     "idol_en_name": "Haruki",
     "display_ranking": true,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2023-12-11",
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -8322,6 +8817,15 @@
         "card_date": "2024-11-08",
         "card_addr": "1030280010",
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2024-01-01",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -8390,6 +8894,15 @@
     "idol_ja_name": "七草 はづき",
     "idol_en_name": "Hazuki",
     "display_ranking": false,
+    "P_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": null,
+        "card_addr": null,
+        "ps_type": "p"
+      }
+    ],
     "P_SSR": [
       {
         "card_name": null,
@@ -8406,6 +8919,15 @@
         "card_date": null,
         "card_addr": null,
         "ps_type": "p"
+      }
+    ],
+    "S_UR": [
+      {
+        "card_name": null,
+        "card_type": "first",
+        "card_date": "2024-10-24",
+        "card_addr": null,
+        "ps_type": "s"
       }
     ],
     "S_SSR": [

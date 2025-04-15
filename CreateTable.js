@@ -191,9 +191,9 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       resContent += `<div class="cell-div">`;
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
-      if ($(iconImgConvertBtn).is(":checked") && cardAddr != "" && cardAddr != undefined) {
+      if ($(iconImgConvertBtn).is(":checked") && cardAddr) {
         var style = `style= "width:72px; height:72px"`;
-        var onerror = `onerror = "this.src='./img/assets/Blank_Idol.png'"`;
+        var onerror = `onerror = "this.src='./img/assets/Blank_Icon.png'"`;
 
         var imgPath;
         // 아이콘 패스 지정
