@@ -633,11 +633,17 @@ function mergeCardData(tableTitle, pSSR, pSR, sSSR, sSR) {
 
     // 첫실장 데이터가 복수 있을시, 최초의 첫실장만 취득
     let firstImplementation = firstList
-      .filter((v) => v !== undefined)
+      .filter((v) => v)
       .sort((a, b) => {
-        if (a.card_date > b.card_date) {
+        // card_date가 존재하지 않는 경우, 마지막에 위치하도록 처리
+        aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
+        bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
+
+        if (aDate < bDate) {
+          // a가 b보다 이전
           return -1;
-        } else if (a.card_date < b.card_date) {
+        } else if (aDate > bDate) {
+          // a가 b보다 이후
           return 1;
         } else {
           return 0;
@@ -699,17 +705,28 @@ function imgMapping() {
     function (e) {
       var imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
       var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
-      var fesChk = $("#fesImgConvertBtn").is(":checked"); // 일러스트 표시 모드
-      var imgPath = "card_normal";
+      var fesChk = $("#fesImgConvertBtn").is(":checked"); // 페스 일러스트 표시 모드
+      var psType = $(this).closest("td").attr("ps"); // 카드명
+
+      var imgPath;
+      // 일러 패스 지정
+      if (psType == "p") {
+        // 프로듀스 일러
+        imgPath = "produce_idol";
+        if (fesChk) {
+          // 페스 일러
+          imgPath += "/fes_card";
+        } else {
+          // 사복 일러
+          imgPath += "/card";
+        }
+      } else {
+        // 서포트 일러
+        imgPath = "support_idol/card";
+      }
 
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
-      if (imgNameAttr != "" && imgNameAttr != undefined) {
-        // 페스 일러는 일반 일러스트 파일명에 "_f"를 추가
-        // 페스 일러 체크, P 카드인 경우에 파일명 추가
-        if (fesChk == true && imgAddrAttr.split("_")[1] == "p") {
-          imgPath = "card_fes";
-        }
-
+      if (imgNameAttr) {
         $("body").append(
           `<p id="preview"><img src="${getImgSrc(
             imgPath,

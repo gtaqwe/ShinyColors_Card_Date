@@ -149,21 +149,13 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       var cardType = cardDataList[idx].card_type;
       var cardName = cardDataList[idx].card_name;
       var cardAddr = cardDataList[idx].card_addr;
-      var cardRerun = ""; // 복각 데이터 삭제에 따른 변경
-
-      var rerunVal = $(`input[name="showRerun"]:checked`).val();
-      var cardRerunStr = cardRerun.toString();
+      var psType = cardDataList[idx].ps_type;
 
       countCardType(cardType);
 
       // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "limited") {
-        // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
-        if (rerunVal != "" && (rerunVal == "all" || rerunVal == cardRerunStr)) {
-          resContent += `<td class="card-rerun-${cardRerunStr}-cell" `;
-        } else {
-          resContent += '<td class="limit-card-cell" ';
-        }
+        resContent += '<td class="limit-card-cell" ';
       } else if (cardType == "twilight") {
         resContent += '<td class="twilight-card-cell" ';
       } else if (cardType == "mysongs") {
@@ -182,37 +174,56 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
         resContent += "<td ";
       }
 
-      resContent += `addr="${cardAddr}" name="${cardName}">`;
-
-      // 복각 표시 라디오버튼에 따라 복각 표시 스타일 지정
-      // 캡쳐시 box-shadow에 버그가 있기 때문에 div로 스타일 변경
-      if (
-        cardType == "limited" &&
-        rerunVal != "" &&
-        (rerunVal == "all" || rerunVal == cardRerunStr)
-      ) {
-        resContent += `<div class="cell-div-limit">`;
-      } else {
-        resContent += `<div class="cell-div">`;
+      if (cardAddr) {
+        resContent += `addr="${cardAddr}" `;
       }
+
+      if (cardName) {
+        resContent += `name="${cardName}" `;
+      }
+
+      if (psType) {
+        resContent += `ps="${psType}" `;
+      }
+
+      resContent += `>`;
+
+      resContent += `<div class="cell-div">`;
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($(iconImgConvertBtn).is(":checked") && cardAddr != "" && cardAddr != undefined) {
         var style = `style= "width:72px; height:72px"`;
         var onerror = `onerror = "this.src='./img/assets/Blank_Idol.png'"`;
 
-        var imgPath = "icon_normal";
-        if ($(fesImgConvertBtn).is(":checked") && cardAddr.split("_")[1] == "p") {
-          imgPath = "icon_fes";
+        var imgPath;
+        // 아이콘 패스 지정
+        if (psType == "p") {
+          // 프로듀스 아이콘
+          imgPath = "produce_idol";
+          if ($(fesImgConvertBtn).is(":checked")) {
+            // 페스 아이콘
+            imgPath += "/fes_icon";
+          } else {
+            // 사복 아이콘
+            imgPath += "/icon";
+          }
+        } else {
+          // 서포트 아이콘
+          imgPath = "support_idol/icon";
         }
+
         resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
       }
-      resContent += `${cardDate}</div></td>`;
+      // cardDate가 존재할때 표시
+      if (cardDate) {
+        resContent += `${cardDate}`;
+      }
+      resContent += `</div></td>`;
 
       // 카드 일정 데이터가 있는 경우, 간격일을 계산
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
       // 최신 실장인 경우, 기준일과의 간격일 계산
-      if (cardDate != "") {
+      if (cardDate) {
         dateBefore = calDate(cardDate);
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {

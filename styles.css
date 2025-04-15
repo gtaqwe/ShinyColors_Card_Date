@@ -83,14 +83,6 @@ footer {
   background-color: #92d050;
 }
 
-.card-rerun-true-cell {
-  background-color: #0000ff;
-}
-
-.card-rerun-false-cell {
-  background-color: #ff0000;
-}
-
 .twilight-card-cell {
   background-color: #5000c0;
   color: #ffffff;
