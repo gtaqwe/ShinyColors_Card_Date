@@ -723,8 +723,8 @@ function getCardList(cardAry) {
           return card;
         }
       })
-      // undefined 데이터 제거
-      .filter((v) => v !== undefined)
+      // 존재하지 않는 데이터 제거
+      .filter((v) => v)
       .filter(
         (v) =>
           v.card_type == "first" ||
@@ -735,9 +735,15 @@ function getCardList(cardAry) {
       // 단순 비교로 정렬하는 경우
       // 브라우저 차이로 인한 표시의 차이가 있을 가능성이 있기에 「<」, 「>」, 「=」를 모두 확인
       .sort((a, b) => {
-        if (a.card_date < b.card_date) {
+        // card_date가 존재하지 않는 경우, 마지막에 위치하도록 처리
+        aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
+        bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
+
+        if (aDate < bDate) {
+          // a가 b보다 이전
           return -1;
-        } else if (a.card_date > b.card_date) {
+        } else if (aDate > bDate) {
+          // a가 b보다 이후
           return 1;
         } else {
           return 0;
