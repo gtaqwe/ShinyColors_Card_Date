@@ -14,8 +14,16 @@ function buildTable(idolData) {
  * 메인표 작성
  */
 function runBuildTable(idolData) {
-  var tableTitle = idolData.Title; // 카드 타입
-  var rowLength = idolData.Data.length; // 아이돌 수
+  // 카드 정보가 존재 하지 않을 경우, 표를 작성하지 않음
+  if (!idolData) {
+    $("#MAIN").empty();
+    return;
+  }
+
+  // 선택된 레어리티가 1개일때 표 타이틀을 설정
+  // 그 외의 경우에는 공란
+  const tableTitle = idolData.Title.length == 1 ? idolData.Title[0] : "";
+  const rowLength = idolData.Data.length; // 아이돌 수
 
   var maxColumnLength = Math.max(
     ...idolData.Data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
@@ -91,7 +99,7 @@ function tableHeader(title, columnLength) {
 /**
  * 카드 차수 변경
  */
-function changeCardLapCount(nowSel, idolNum, inputObj) {
+function changeCardLapCount(idolNum, inputObj) {
   let val = Number(inputObj.value);
 
   if (val > Number(inputObj.max)) {
@@ -105,7 +113,7 @@ function changeCardLapCount(nowSel, idolNum, inputObj) {
 
   saveTableBlankLapListInStorage();
 
-  updateDate(nowSel);
+  updateDate(NOW_SELECT);
 }
 
 /**
@@ -117,7 +125,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
     resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
-    style="height:10px; width:50px" onchange="changeCardLapCount(${NOW_SELECT},${idolNum},this)"></td>`;
+    style="height:10px; width:50px" onchange="changeCardLapCount(${idolNum},this)"></td>`;
   }
 
   cardDataList = totalData.card_data;
@@ -268,9 +276,16 @@ function calDate(dateStr) {
 }
 
 /**
- * 랭킹표 작성 시작
+ * 랭킹표 작성
  */
 function runBuildDateRank(idolData) {
+  // 카드 정보가 존재 하지 않을 경우, 표를 작성하지 않음
+  if (!idolData) {
+    $("#MAIN_RANK").empty();
+    $("#RANK").empty();
+    return;
+  }
+
   var intervalAry = [];
   var rows = $("#date-table .tr-main-data");
 
@@ -280,7 +295,7 @@ function runBuildDateRank(idolData) {
     // 이하의 경우에는 랭킹 표시를 하지 않음 (「-」로 표시)
     // 1. 카드가 단 하나도 실장되지 않았을 경우 (R카드도 없는 경우)
     // 2. 랭킹표시 플래그가 False인 경우
-    var nowInterval = $(`#date-table .tr-main-data:eq(${rowIdx}) .now-interval`);
+    const nowInterval = $(`#date-table .tr-main-data:eq(${rowIdx}) .now-interval`);
     if (nowInterval.length == 0 || idolData.Data[rowIdx].display_ranking == false) {
       intervalAry.push([nameStr, NONE_INTERVAL]);
     } else {
@@ -288,36 +303,23 @@ function runBuildDateRank(idolData) {
     }
   }
 
-  buildDataRank(intervalAry);
-}
-
-/**
- * 랭킹 정렬 후 실제 랭킹표 작성
- */
-function buildDataRank(intervalAry) {
-  // old... : 오래된 순으로 랭킹 계산
-  // new... : 최신 순으로 랭킹 계산
-
   // 원본 배열을 바꾸지 않도록 하기위해 slice()사용
-  var oldFirst = intervalAry.slice().sort((a, b) => b[1] - a[1]);
-  // var newFirst = intervalAry.slice().sort(function(a,b){return a-b});
-  var oldRanks = intervalAry.map(function (v) {
+  const oldFirst = intervalAry.slice().sort((a, b) => b[1] - a[1]);
+  const oldRanks = intervalAry.map(function (v) {
     return oldFirst.indexOf(v) + 1;
   });
-  // var newRanks = intervalAry.map(function (v) {
-  //   return newFirst.indexOf(v) + 1;
-  // });
 
-  var borderStyle = {
+  const borderStyle = {
     left: "border-left: 1px solid #000000;",
     right: "border-right: 1px solid #000000;",
   };
 
-  var tableType = $("#table-type").text();
+  // 랭킹표 타이틀에 선택한 레어리티를 모두 표시
+  const tableType = idolData.Title.join("<br>");
 
   // 0 : 메인표 옆에 표시 (아이돌의 위치는 바뀌지 않음)
   // 1 : 메인표와 별개로 표시 (아이돌의 위치가 바뀜)
-  buildRankTable0(tableType, intervalAry, oldRanks, borderStyle);
+  buildRankTable0(intervalAry, oldRanks, borderStyle);
   buildRankTable1(tableType, intervalAry, oldRanks, borderStyle);
 }
 
@@ -345,7 +347,7 @@ function selectCellColor(rankStr) {
 /**
  * 메인표 옆의 랭킹표 (아이돌 순으로 랭킹 표시)
  */
-function buildRankTable0(_tableType, intervalAry, oldRanks, borderStyle) {
+function buildRankTable0(intervalAry, oldRanks, borderStyle) {
   const tableName = "rank-table-0";
   var table = `<table id="${tableName}">`;
   table += "<thead>";

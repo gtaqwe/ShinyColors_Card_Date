@@ -126,7 +126,8 @@ footer {
 
 .Pbutton,
 .Sbutton,
-.ALLbutton {
+.ALLbutton,
+.DeactivateButton {
   border: none;
   color: white;
   width: 130px;
@@ -140,6 +141,15 @@ footer {
   font-size: 16px;
   cursor: pointer;
 }
+
+.DeactivateButton{
+  background-color: #666666;
+}
+
+.DeactivateButton:hover{
+  background-color: #858585;
+}
+
 
 .Pbutton {
   background-color: #ff62a6;

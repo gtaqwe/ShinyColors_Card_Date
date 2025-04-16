@@ -1,4 +1,6 @@
-var NOW_SELECT = 0;
+// 현재 표시 선택중인 레어리티
+var NOW_SELECT = resetNowSelect();
+
 var JSON_DATA;
 var VIEW_LANGUAGE;
 var IDOL_TOTAL_COUNT;
@@ -36,7 +38,7 @@ async function init() {
   IDOL_TOTAL_COUNT = JSON_DATA.length;
   TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
-  NOW_SELECT = 0;
+  NOW_SELECT = resetNowSelect();
   // 초기 기준일
   // Start : 서비스 개시일
   // End : 오늘
@@ -117,6 +119,17 @@ function setLanguageInTable(currLang, tableName) {
   $(`#${tableName} [data-lang]`).each(function () {
     $(this).html($.lang[currLang][$(this).data("lang")]);
   });
+}
+
+function resetNowSelect() {
+  return {
+    pSSR: { selected: false, title: "P-SSR", ps: "p", rarity: "ssr" },
+    pSR: { selected: false, title: "P-SR", ps: "p", rarity: "sr" },
+    pUR: { selected: false, title: "P-UR", ps: "p", rarity: "ur" },
+    sSSR: { selected: false, title: "S-SSR", ps: "s", rarity: "ssr" },
+    sSR: { selected: false, title: "S-SR", ps: "s", rarity: "sr" },
+    sUR: { selected: false, title: "S-UR", ps: "s", rarity: "ur" },
+  };
 }
 
 function changeLanguage() {
@@ -279,70 +292,268 @@ function clearTableBlankLapList() {
 }
 
 /**
- * VIEW_SELECT의 표시타입 체크 변경
- * 0 : undefined
- * 1 : P-SSR
- * 2 : S-SSR
- * 3 : P-SR
- * 4 : S-SR
- * 5 : ALL
- * 6 : SSR
- * 7 : SR
- * 8 : P
- * 9 : S
+ * P-SSR 표시
  */
+function setPSsr() {
+  if (NOW_SELECT.pSSR.selected == true) {
+    NOW_SELECT.pSSR.selected = false;
+    $(`#pSSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.pSSR.selected = true;
+    $(`#pSSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * S-SSR 표시
+ */
+function setSSsr() {
+  if (NOW_SELECT.sSSR.selected == true) {
+    NOW_SELECT.sSSR.selected = false;
+    $(`#sSSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.sSSR.selected = true;
+    $(`#sSSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 SSR 표시
+ */
+function setAllSsr() {
+  if (
+    Object.values(NOW_SELECT)
+      .filter((v) => v.rarity == "ssr")
+      .every((v) => v.selected == true)
+  ) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "ssr") {
+        NOW_SELECT[k].selected = false;
+      }
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "ssr") {
+        NOW_SELECT[k].selected = true;
+      }
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * P-SR 표시
+ */
+function setPSr() {
+  if (NOW_SELECT.pSR.selected == true) {
+    NOW_SELECT.pSR.selected = false;
+    $(`#pSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.pSR.selected = true;
+    $(`#pSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * S-SR 표시
+ */
+function setSSr() {
+  if (NOW_SELECT.sSR.selected == true) {
+    NOW_SELECT.sSR.selected = false;
+    $(`#sSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.sSR.selected = true;
+    $(`#sSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 SR 표시
+ */
+function setAllSr() {
+  if (
+    Object.values(NOW_SELECT)
+      .filter((v) => v.rarity == "sr")
+      .every((v) => v.selected == true)
+  ) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "sr") {
+        NOW_SELECT[k].selected = false;
+      }
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "sr") {
+        NOW_SELECT[k].selected = true;
+      }
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * P-UR 표시
+ */
+function setPUr() {
+  if (NOW_SELECT.pUR.selected == true) {
+    NOW_SELECT.pUR.selected = false;
+    $(`#pURButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.pUR.selected = true;
+    $(`#pURButton`).removeClass("DeactivateButton").addClass("Pbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * S-UR 표시
+ */
+function setSUr() {
+  if (NOW_SELECT.sUR.selected == true) {
+    NOW_SELECT.sUR.selected = false;
+    $(`#sURButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  } else {
+    NOW_SELECT.sUR.selected = true;
+    $(`#sURButton`).removeClass("DeactivateButton").addClass("Sbutton");
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 UR 표시
+ */
+function setAllUr() {
+  if (
+    Object.values(NOW_SELECT)
+      .filter((v) => v.rarity == "ur")
+      .every((v) => v.selected == true)
+  ) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "ur") {
+        NOW_SELECT[k].selected = false;
+      }
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].rarity == "ur") {
+        NOW_SELECT[k].selected = true;
+      }
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 P 표시
+ */
+function setAllP() {
+  if (
+    Object.values(NOW_SELECT)
+      .filter((v) => v.ps == "p")
+      .every((v) => v.selected == true)
+  ) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].ps == "p") {
+        NOW_SELECT[k].selected = false;
+      }
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].ps == "p") {
+        NOW_SELECT[k].selected = true;
+      }
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 S 표시
+ */
+function setAllS() {
+  if (
+    Object.values(NOW_SELECT)
+      .filter((v) => v.ps == "s")
+      .every((v) => v.selected == true)
+  ) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].ps == "s") {
+        NOW_SELECT[k].selected = false;
+      }
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      if (NOW_SELECT[k].ps == "s") {
+        NOW_SELECT[k].selected = true;
+      }
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
+/**
+ * 모든 카드 표시
+ */
+function setAllCard() {
+  // 모든 레어리티가 선택 되어 있는 경우, 모두 해제
+  // 그 외의 경우, 모두 선택
+  if (Object.values(NOW_SELECT).every((v) => v.selected == true)) {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      NOW_SELECT[k].selected = false;
+    });
+  } else {
+    Object.keys(NOW_SELECT).forEach((k) => {
+      NOW_SELECT[k].selected = true;
+    });
+  }
+
+  updateDate(NOW_SELECT);
+}
+
 function updateDate(nowSelect) {
   resetCardTypeCountList();
 
-  switch (nowSelect) {
-    case 11:
-      NOW_SELECT = 11;
-      P_SSR();
-      break;
-    case 12:
-      NOW_SELECT = 12;
-      S_SSR();
-      break;
-    case 13:
-      NOW_SELECT = 13;
-      ALL_SSR();
-      break;
-    case 21:
-      NOW_SELECT = 21;
-      P_SR();
-      break;
-    case 22:
-      NOW_SELECT = 22;
-      S_SR();
-      break;
-    case 23:
-      NOW_SELECT = 23;
-      ALL_SR();
-      break;
-    case 31:
-      NOW_SELECT = 31;
-      ALL_P();
-      break;
-    case 32:
-      NOW_SELECT = 32;
-      ALL_S();
-      break;
-    case 33:
-      NOW_SELECT = 33;
-      ALL_CARD();
-      break;
-    case 41:
-      NOW_SELECT = 41;
-      P_UR();
-      break;
-    case 42:
-      NOW_SELECT = 42;
-      S_UR();
-      break;
-    case 43:
-      NOW_SELECT = 43;
-      ALL_UR();
-      break;
+  // 선택한 레어리티 정보를 취득
+  const selectedRarity = Object.values(nowSelect).filter((v) => v.selected == true);
+
+  // 선택한 레어리티가 1개인 경우, 해당 타이틀을 표 타이틀로 설정
+  // 그 외에는 공란으로 설정
+  const tableTitleList = selectedRarity.map((v) => v.title);
+
+  // 선택한 레어리티가 없거나, 프로듀스가 선택되어있는 경우
+  // 페스 일러스트 표시 체크가 가능하도록 설정
+  const ps =
+    selectedRarity.length == 0 || selectedRarity.filter((v) => v.ps == "p").length > 0 ? "p" : "s";
+
+  // 선택 레어리티의 카드리스트를 취득
+  const idolData = mergeCardData(tableTitleList, nowSelect);
+
+  // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
+  CtlfesImgConvertBtn(ps);
+
+  // 표 작성
+  buildTable(idolData);
+
+  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", `${ps}FirstImplementNote`);
+
+  // 카드 정보가 존재 하지 않을 경우, 메세지를 표시하지 않음
+  if (!idolData) {
+    $("#NOTE_SPACE").empty();
   }
 
   setCardTypeCountList();
@@ -463,234 +674,6 @@ function CtlfesImgConvertBtn(ps) {
 }
 
 /**
- * P-UR 표시
- */
-function P_UR() {
-  const displayObj = {
-    pUR: true,
-    pSSR: false,
-    pSR: false,
-    sUR: false,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("P-UR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-}
-
-/**
- * S-UR 표시
- */
-function S_UR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: false,
-    sUR: true,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("S-UR", displayObj);
-  CtlfesImgConvertBtn("s");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-}
-
-/**
- * P-SSR 표시
- */
-function P_SSR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: true,
-    pSR: false,
-    sUR: false,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("P-SSR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-}
-
-/**
- * S-SSR 표시
- */
-function S_SSR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: false,
-    sUR: false,
-    sSSR: true,
-    sSR: false,
-  };
-  const idolData = mergeCardData("S-SSR", displayObj);
-  CtlfesImgConvertBtn("s");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-}
-
-/**
- * P-SR 표시
- */
-function P_SR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: true,
-    sUR: false,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("P-SR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-}
-
-/**
- * S-SR 표시
- */
-function S_SR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: false,
-    sUR: false,
-    sSSR: false,
-    sSR: true,
-  };
-  const idolData = mergeCardData("S-SR", displayObj);
-  CtlfesImgConvertBtn("s");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-}
-
-/**
- * 모든 카드 표시
- */
-function ALL_CARD() {
-  const displayObj = {
-    pUR: true,
-    pSSR: true,
-    pSR: true,
-    sUR: true,
-    sSSR: true,
-    sSR: true,
-  };
-  const idolData = mergeCardData("All", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-}
-
-/**
- * 모든 UR 표시
- */
-function ALL_UR() {
-  const displayObj = {
-    pUR: true,
-    pSSR: false,
-    pSR: false,
-    sUR: true,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("UR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-}
-
-/**
- * 모든 SSR 표시
- */
-function ALL_SSR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: true,
-    pSR: false,
-    sUR: false,
-    sSSR: true,
-    sSR: false,
-  };
-  const idolData = mergeCardData("SSR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-}
-
-/**
- * 모든 SR 표시
- */
-function ALL_SR() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: true,
-    sUR: false,
-    sSSR: false,
-    sSR: true,
-  };
-  const idolData = mergeCardData("SR", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "allFirstImplementNote");
-}
-
-/**
- * 모든 P 표시
- */
-function ALL_P() {
-  const displayObj = {
-    pUR: true,
-    pSSR: true,
-    pSR: true,
-    sUR: false,
-    sSSR: false,
-    sSR: false,
-  };
-  const idolData = mergeCardData("P", displayObj);
-  CtlfesImgConvertBtn("p");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "pFirstImplementNote");
-}
-
-/**
- * 모든 S 표시
- */
-function ALL_S() {
-  const displayObj = {
-    pUR: false,
-    pSSR: false,
-    pSR: false,
-    sUR: true,
-    sSSR: true,
-    sSR: true,
-  };
-  const idolData = mergeCardData("S", displayObj);
-  CtlfesImgConvertBtn("s");
-  buildTable(idolData);
-
-  setLanguageById(VIEW_LANGUAGE, "#NOTE_SPACE", "sFirstImplementNote");
-}
-
-/**
  * 조건에 해당되는 카드를 Filter, Sort 후 리스트로 Return
  */
 function getCardList(cardAry) {
@@ -755,13 +738,18 @@ function getCardList(cardAry) {
 /**
  * 전체 카드의 데이터를 추출, 재가공
  */
-function mergeCardData(tableTitle, displayObj) {
-  const pUR = displayObj.pUR;
-  const sUR = displayObj.sUR;
-  const pSSR = displayObj.pSSR;
-  const sSSR = displayObj.sSSR;
-  const pSR = displayObj.pSR;
-  const sSR = displayObj.sSR;
+function mergeCardData(tableTitleList, nowSelect) {
+  // 선택된 항목이 없다면 undefined를 return
+  if (Object.values(nowSelect).filter((v) => v.selected == true).length == 0) {
+    return;
+  }
+
+  const pUR = nowSelect.pUR.selected;
+  const sUR = nowSelect.sUR.selected;
+  const pSSR = nowSelect.pSSR.selected;
+  const sSSR = nowSelect.sSSR.selected;
+  const pSR = nowSelect.pSR.selected;
+  const sSR = nowSelect.sSR.selected;
 
   var totalList = JSON_DATA.map((idol) => {
     var firstList = [];
@@ -830,7 +818,9 @@ function mergeCardData(tableTitle, displayObj) {
       .shift();
 
     // 첫실장을 카드 리스트의 처음에 추가
-    tempCardList.unshift(firstImplementation);
+    if (firstImplementation) {
+      tempCardList.unshift(firstImplementation);
+    }
 
     var cardList = getCardList(tempCardList);
 
@@ -852,8 +842,8 @@ function mergeCardData(tableTitle, displayObj) {
   // 표시할 데이터
   // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
   // Data : 표시할 카드 데이터
-  var selectedData = {
-    Title: tableTitle,
+  const selectedData = {
+    Title: tableTitleList,
     Data: totalList,
   };
 
@@ -961,108 +951,77 @@ function getImgSrc(path, addr) {
  * 표 캡쳐, 다운로드 처리
  */
 function captureScreen(frameName) {
-  if (NOW_SELECT != 0) {
-    var captureName;
-    var frameId;
-    var viewMode = "";
-
-    let nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
-
-    if (nowChangeLapFlag == true) {
-      $(`#showChangeCardLapConvertBtn`).prop("checked", false);
-      updateDate(NOW_SELECT);
-    }
-
-    if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
-    else if (frameName == "RANK") frameId = "#RANK";
-
-    if ($("#permanentCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.permanent;
-    if ($("#limitedCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.limited;
-    if ($("#twilightCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.twilight;
-    if ($("#mysongsCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.mysongs;
-    if ($("#parallelCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.parallel;
-    if ($("#eventCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.event;
-    if ($("#gradeFesCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.fes;
-    if ($("#campaignCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.campaign;
-    if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
-
-    switch (NOW_SELECT) {
-      case 11:
-        captureName = frameName + "_P_SSR_" + viewMode + ".png";
-        break;
-      case 12:
-        captureName = frameName + "_S_SSR_" + viewMode + ".png";
-        break;
-      case 13:
-        captureName = frameName + "_SSR_" + viewMode + ".png";
-        break;
-      case 21:
-        captureName = frameName + "_P_SR_" + viewMode + ".png";
-        break;
-      case 22:
-        captureName = frameName + "_S_SR_" + viewMode + ".png";
-        break;
-      case 23:
-        captureName = frameName + "_SR_" + viewMode + ".png";
-        break;
-      case 31:
-        captureName = frameName + "_P_" + viewMode + ".png";
-        break;
-      case 32:
-        captureName = frameName + "_S_" + viewMode + ".png";
-        break;
-      case 33:
-        captureName = frameName + "_ALL_" + viewMode + ".png";
-        break;
-      case 41:
-        captureName = frameName + "_P_UR_" + viewMode + ".png";
-        break;
-      case 42:
-        captureName = frameName + "_S_UR_" + viewMode + ".png";
-        break;
-      case 43:
-        captureName = frameName + "_UR_" + viewMode + ".png";
-        break;
-    }
-
-    $(frameId).css("overflow", "hidden");
-    $("#convertSpan").css("display", "none");
-
-    $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
-    $("#BaseStartSpan").css("display", "none");
-    $("#BaseStartDateStr").css("display", "");
-
-    $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
-    $("#BaseEndSpan").css("display", "none");
-    $("#BaseEndDateStr").css("display", "");
-
-    $("#ALL_TYPE_SELECT").css("display", "none");
-    $("#DATE_PRESET").css("display", "none");
-
-    html2canvas(document.querySelector(frameId), {
-      scrollY: -window.scrollY,
-      scrollX: -window.scrollX,
-    }).then((canvas) => {
-      downloadURI(canvas.toDataURL("image/png"), captureName);
-    });
-
-    if (nowChangeLapFlag == true) {
-      $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
-      updateDate(NOW_SELECT);
-    }
-
-    $(frameId).css("overflow", "");
-    $("#convertSpan").css("display", "");
-
-    $("#BaseStartSpan").css("display", "");
-    $("#BaseStartDateStr").css("display", "none");
-
-    $("#BaseEndSpan").css("display", "");
-    $("#BaseEndDateStr").css("display", "none");
-
-    $("#ALL_TYPE_SELECT").css("display", "");
-    $("#DATE_PRESET").css("display", "");
+  if (Object.values(NOW_SELECT).every((v) => v.selected == false)) {
+    return;
   }
+
+  var captureName = "";
+  var frameId = "";
+  var viewMode = "";
+
+  const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
+
+  if (nowChangeLapFlag == true) {
+    $(`#showChangeCardLapConvertBtn`).prop("checked", false);
+    updateDate(NOW_SELECT);
+  }
+
+  if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
+  else if (frameName == "RANK") frameId = "#RANK";
+
+  if ($("#permanentCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.permanent;
+  if ($("#limitedCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.limited;
+  if ($("#twilightCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.twilight;
+  if ($("#mysongsCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.mysongs;
+  if ($("#parallelCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.parallel;
+  if ($("#eventCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.event;
+  if ($("#gradeFesCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.fes;
+  if ($("#campaignCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.campaign;
+  if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
+
+  selectedRarity = Object.values(NOW_SELECT)
+    .filter((v) => v.selected == true)
+    .map((v) => v.title.replace("-", ""));
+
+  captureName = frameName + "_" + selectedRarity.join("_") + "_" + viewMode + ".png";
+
+  $(frameId).css("overflow", "hidden");
+  $("#convertSpan").css("display", "none");
+
+  $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
+  $("#BaseStartSpan").css("display", "none");
+  $("#BaseStartDateStr").css("display", "");
+
+  $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
+  $("#BaseEndSpan").css("display", "none");
+  $("#BaseEndDateStr").css("display", "");
+
+  $("#ALL_TYPE_SELECT").css("display", "none");
+  $("#DATE_PRESET").css("display", "none");
+
+  html2canvas(document.querySelector(frameId), {
+    scrollY: -window.scrollY,
+    scrollX: -window.scrollX,
+  }).then((canvas) => {
+    downloadURI(canvas.toDataURL("image/png"), captureName);
+  });
+
+  if (nowChangeLapFlag == true) {
+    $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
+    updateDate(NOW_SELECT);
+  }
+
+  $(frameId).css("overflow", "");
+  $("#convertSpan").css("display", "");
+
+  $("#BaseStartSpan").css("display", "");
+  $("#BaseStartDateStr").css("display", "none");
+
+  $("#BaseEndSpan").css("display", "");
+  $("#BaseEndDateStr").css("display", "none");
+
+  $("#ALL_TYPE_SELECT").css("display", "");
+  $("#DATE_PRESET").css("display", "");
 }
 
 function downloadURI(uri, filename) {
