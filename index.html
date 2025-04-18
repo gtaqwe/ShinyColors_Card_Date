@@ -15,129 +15,129 @@
       <hr />
     </div>
 
-    <div>
-      <input
-        type="button"
-        id="pURButton"
-        value="P-UR"
-        onclick="setPUr()"
-        class="DeactivateButton"
-      />
-      <input
-        type="button"
-        id="sURButton"
-        value="S-UR"
-        onclick="setSUr()"
-        class="DeactivateButton"
-      />
-      <br />
-
-      <input
-        type="button"
-        id="pSSRButton"
-        value="P-SSR"
-        onclick="setPSsr()"
-        class="DeactivateButton"
-      />
-      <input
-        type="button"
-        id="sSSRButton"
-        value="S-SSR"
-        onclick="setSSsr()"
-        class="DeactivateButton"
-      />
-      <br />
-
-      <input
-        type="button"
-        id="pSRButton"
-        value="P-SR"
-        onclick="setPSr()"
-        class="DeactivateButton"
-      />
-      <input
-        type="button"
-        id="sSRButton"
-        value="S-SR"
-        onclick="setSSr()"
-        class="DeactivateButton"
-      />
-    </div>
-
-    <div>
-      <input
-        type="button"
-        value="Main Capture"
-        onclick="captureScreen('TABLE')"
-        class="Capturebutton"
-      />
-      <input
-        type="button"
-        value="Rank List Capture"
-        onclick="captureScreen('RANK')"
-        class="Capturebutton"
-      />
-    </div>
-
-    <div>
-      <fieldset style="width: max-content">
-        <span style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="showIcon">아이콘 표시</span>
-            <input type="checkbox" id="iconImgConvertBtn" name="viewOptionChk" />
-            <span class="checkmark"></span>
-          </label>
-        </span>
-
-        <span style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="showRCard">첫 실장 비표시</span>
-            <input type="checkbox" id="noShowRCardConvertBtn" name="viewOptionChk" />
-            <span class="checkmark"></span>
-          </label>
-        </span>
-
-        <span style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="showCardCount">카드 수 표시</span>
-            <input type="checkbox" id="showCardCountConvertBtn" name="viewOptionChk" />
-            <span class="checkmark"></span>
-          </label>
-        </span>
-
-        <span style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
-            <input
-              type="checkbox"
-              id="showChangeCardLapConvertBtn"
-              onchange="changeCardLapConvertBtnValue()"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </span>
-
-        <!-- 카드 차수 변경을 리셋 -->
-        <span style="margin: 5px 0px; float: left">
-          <input
-            type="button"
-            value="Reset"
-            class="Resetbutton"
-            onclick="clearTableBlankLapList()"
-          />
-        </span>
-
-        <span id="convertSpan" style="margin: 5px 10px; float: left">
-          <label class="container">
-            <span data-lang="showFesIcon">페스 일러스트로 표시</span>
-            <input type="checkbox" id="fesImgConvertBtn" onchange="setFesImg()" />
-            <span class="checkmark"></span>
-          </label>
-        </span>
-      </fieldset>
-    </div>
-
     <div id="CAPTURE_FRAME" style="width: max-content; height: max-content">
+      <div>
+        <input
+          type="button"
+          id="pURButton"
+          value="P-UR"
+          onclick="setPUr()"
+          class="DeactivateButton"
+        />
+        <input
+          type="button"
+          id="sURButton"
+          value="S-UR"
+          onclick="setSUr()"
+          class="DeactivateButton"
+        />
+        <br />
+
+        <input
+          type="button"
+          id="pSSRButton"
+          value="P-SSR"
+          onclick="setPSsr()"
+          class="DeactivateButton"
+        />
+        <input
+          type="button"
+          id="sSSRButton"
+          value="S-SSR"
+          onclick="setSSsr()"
+          class="DeactivateButton"
+        />
+        <br />
+
+        <input
+          type="button"
+          id="pSRButton"
+          value="P-SR"
+          onclick="setPSr()"
+          class="DeactivateButton"
+        />
+        <input
+          type="button"
+          id="sSRButton"
+          value="S-SR"
+          onclick="setSSr()"
+          class="DeactivateButton"
+        />
+      </div>
+
+      <div id="CAPTURE_BUTTON">
+        <input
+          type="button"
+          value="Main Capture"
+          onclick="captureScreen('TABLE')"
+          class="Capturebutton"
+        />
+        <input
+          type="button"
+          value="Rank List Capture"
+          onclick="captureScreen('RANK')"
+          class="Capturebutton"
+        />
+      </div>
+
+      <div id="VIEW_OPTION">
+        <fieldset style="width: max-content">
+          <span style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="showIcon">아이콘 표시</span>
+              <input type="checkbox" id="iconImgConvertBtn" name="viewOptionChk" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+
+          <span style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="showRCard">첫 실장 비표시</span>
+              <input type="checkbox" id="noShowRCardConvertBtn" name="viewOptionChk" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+
+          <span style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="showCardCount">카드 수 표시</span>
+              <input type="checkbox" id="showCardCountConvertBtn" name="viewOptionChk" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+
+          <span style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
+              <input
+                type="checkbox"
+                id="showChangeCardLapConvertBtn"
+                onchange="changeCardLapConvertBtnValue()"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+
+          <!-- 카드 차수 변경을 리셋 -->
+          <span style="margin: 5px 0px; float: left">
+            <input
+              type="button"
+              value="Reset"
+              class="Resetbutton"
+              onclick="clearTableBlankLapList()"
+            />
+          </span>
+
+          <span id="convertSpan" style="margin: 5px 10px; float: left">
+            <label class="container">
+              <span data-lang="showFesIcon">페스 일러스트로 표시</span>
+              <input type="checkbox" id="fesImgConvertBtn" onchange="setFesImg()" />
+              <span class="checkmark"></span>
+            </label>
+          </span>
+        </fieldset>
+      </div>
+
       <div id="VIEW_SELECT" style="width: max-content; overflow: hidden">
         <fieldset style="width: max-content">
           <span id="generalChkSpan" style="margin: 5px 10px; float: left">

@@ -996,6 +996,8 @@ function captureScreen(frameName) {
   $("#BaseEndSpan").css("display", "none");
   $("#BaseEndDateStr").css("display", "");
 
+  $("#CAPTURE_BUTTON").css("display", "none");
+  $("#VIEW_OPTION").css("display", "none");
   $("#ALL_TYPE_SELECT").css("display", "none");
   $("#DATE_PRESET").css("display", "none");
 
@@ -1020,6 +1022,8 @@ function captureScreen(frameName) {
   $("#BaseEndSpan").css("display", "");
   $("#BaseEndDateStr").css("display", "none");
 
+  $("#CAPTURE_BUTTON").css("display", "");
+  $("#VIEW_OPTION").css("display", "");
   $("#ALL_TYPE_SELECT").css("display", "");
   $("#DATE_PRESET").css("display", "");
 }
