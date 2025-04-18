@@ -2365,6 +2365,13 @@
         "card_date": "2018-04-24",
         "card_addr": null,
         "ps_type": "s"
+      },
+      {
+        "card_name": "【HoP PoP らびっつ】三峰 結華",
+        "card_type": "permanent",
+        "card_date": "2025-04-18",
+        "card_addr": "2050070010",
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -2918,6 +2925,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930082510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【旅・風・段・々】幽谷 霧子",
+        "card_type": "event",
+        "card_date": "2025-04-18",
+        "card_addr": "2030080110",
         "ps_type": "s"
       }
     ]
@@ -6217,6 +6231,13 @@
         "card_type": "first",
         "card_date": "2019-04-05",
         "card_addr": null,
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【誘爆ハートビート】黛 冬優子",
+        "card_type": "permanent",
+        "card_date": "2025-04-18",
+        "card_addr": "1050180010",
         "ps_type": "p"
       }
     ],
