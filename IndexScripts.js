@@ -123,12 +123,12 @@ function setLanguageInTable(currLang, tableName) {
 
 function resetNowSelect() {
   return {
+    pUR: { selected: false, title: "P-UR", ps: "p", rarity: "ur" },
     pSSR: { selected: false, title: "P-SSR", ps: "p", rarity: "ssr" },
     pSR: { selected: false, title: "P-SR", ps: "p", rarity: "sr" },
-    pUR: { selected: false, title: "P-UR", ps: "p", rarity: "ur" },
+    sUR: { selected: false, title: "S-UR", ps: "s", rarity: "ur" },
     sSSR: { selected: false, title: "S-SSR", ps: "s", rarity: "ssr" },
     sSR: { selected: false, title: "S-SR", ps: "s", rarity: "sr" },
-    sUR: { selected: false, title: "S-UR", ps: "s", rarity: "ur" },
   };
 }
 
