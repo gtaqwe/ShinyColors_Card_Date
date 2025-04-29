@@ -2146,6 +2146,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940062510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【ホカンティーカ】白瀬 咲耶",
+        "card_type": "limited",
+        "card_date": "2025-04-29",
+        "card_addr": "2040060140",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -7531,6 +7538,13 @@
         "card_date": "2024-11-08",
         "card_addr": "1040220080",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【羽をやすめて】福丸 小糸",
+        "card_type": "limited",
+        "card_date": "2025-04-29",
+        "card_addr": "1040220090",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -8133,6 +8147,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940242510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【その先、】七草 にちか",
+        "card_type": "event",
+        "card_date": "2025-04-29",
+        "card_addr": "2040240080",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -8409,6 +8430,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940252510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【INSOMNIAC】緋田 美琴",
+        "card_type": "fes",
+        "card_date": "2025-04-29",
+        "card_addr": "2040250130",
         "ps_type": "s"
       }
     ],
