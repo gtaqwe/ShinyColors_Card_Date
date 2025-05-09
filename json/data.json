@@ -1184,6 +1184,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2930032510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【ルート・ストリート】八宮 めぐる",
+        "card_type": "event",
+        "card_date": "2025-05-09",
+        "card_addr": "2030030120",
+        "ps_type": "s"
       }
     ]
   },
@@ -8056,6 +8063,13 @@
         "card_type": "parallel",
         "card_date": "2025-01-21",
         "card_addr": "1040240080",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【受けトル sun Q】七草 にちか",
+        "card_type": "permanent",
+        "card_date": "2025-05-09",
+        "card_addr": "1040240090",
         "ps_type": "p"
       }
     ],
