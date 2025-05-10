@@ -413,6 +413,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2930012510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【Larva,1】櫻木 真乃",
+        "card_type": "other",
+        "card_date": "2025-05-10",
+        "card_addr": "2030010130",
+        "ps_type": "s"
       }
     ]
   },
@@ -801,6 +808,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930022510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【Performance Uka,】風野 灯織",
+        "card_type": "other",
+        "card_date": "2025-05-10",
+        "card_addr": "2030020150",
         "ps_type": "s"
       }
     ]
