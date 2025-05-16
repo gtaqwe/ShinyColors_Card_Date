@@ -816,6 +816,13 @@
         "card_date": "2025-05-10",
         "card_addr": "2030020150",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【Imago,3】風野 灯織",
+        "card_type": "other",
+        "card_date": "2025-05-11",
+        "card_addr": "2030020140",
+        "ps_type": "s"
       }
     ]
   },
@@ -1204,6 +1211,13 @@
         "card_type": "event",
         "card_date": "2025-05-09",
         "card_addr": "2030030120",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【Pupa,2】八宮 めぐる",
+        "card_type": "other",
+        "card_date": "2025-05-11",
+        "card_addr": "2030030130",
         "ps_type": "s"
       }
     ]
