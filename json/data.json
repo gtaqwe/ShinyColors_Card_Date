@@ -3805,6 +3805,13 @@
         "card_date": "2025-01-01",
         "card_addr": "1040110110",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【きらり、足跡】西城 樹里",
+        "card_type": "parallel",
+        "card_date": "2025-05-20",
+        "card_addr": "1040110120",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -4050,6 +4057,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930112510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【ひととき淑女】西城 樹里",
+        "card_type": "event",
+        "card_date": "2025-05-20",
+        "card_addr": "2030110110",
         "ps_type": "s"
       }
     ]
@@ -8912,6 +8926,13 @@
         "card_type": "mysongs",
         "card_date": "2024-12-13",
         "card_addr": "1040280040",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【song for you】郁田 はるき",
+        "card_type": "parallel",
+        "card_date": "2025-05-20",
+        "card_addr": "1040280050",
         "ps_type": "p"
       }
     ],
