@@ -313,6 +313,13 @@
         "card_date": "2025-04-25",
         "card_addr": "2040010190",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【だいすきだよ】櫻木 真乃",
+        "card_type": "twilight",
+        "card_date": "2025-05-30",
+        "card_addr": "2040010200",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -5111,6 +5118,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940142510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【つづいていくものがたり】大崎 甘奈",
+        "card_type": "event",
+        "card_date": "2025-05-30",
+        "card_addr": "2040140170",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -6040,6 +6054,13 @@
         "card_type": "parallel",
         "card_date": "2024-12-19",
         "card_addr": "1040170100",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【何故、ベルは鳴る】芹沢 あさひ",
+        "card_type": "twilight",
+        "card_date": "2025-05-30",
+        "card_addr": "1040170110",
         "ps_type": "p"
       }
     ],
