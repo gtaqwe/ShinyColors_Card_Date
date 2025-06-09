@@ -3104,6 +3104,13 @@
         "card_date": "2024-07-18",
         "card_addr": "1040090120",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【アイドルじゃなくなったら】小宮 果穂",
+        "card_type": "limited",
+        "card_date": "2025-06-09",
+        "card_addr": "1040090130",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -8715,6 +8722,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940262510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【she sees】斑鳩 ルカ",
+        "card_type": "limited",
+        "card_date": "2025-06-09",
+        "card_addr": "2040260060",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -9053,6 +9067,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930282510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【創彗星】郁田 はるき",
+        "card_type": "event",
+        "card_date": "2025-06-09",
+        "card_addr": "2030280040",
         "ps_type": "s"
       }
     ]
