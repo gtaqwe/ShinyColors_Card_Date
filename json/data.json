@@ -1688,6 +1688,13 @@
         "card_date": "2024-11-19",
         "card_addr": "1040050110",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【まといてホワイトフル】田中 摩美々",
+        "card_type": "limited",
+        "card_date": "2025-06-17",
+        "card_addr": "1040050120",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -2201,6 +2208,13 @@
         "card_type": "limited",
         "card_date": "2025-04-29",
         "card_addr": "2040060140",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【afterward(s)】白瀬 咲耶",
+        "card_type": "event",
+        "card_date": "2025-06-17",
+        "card_addr": "2040060150",
         "ps_type": "s"
       }
     ],
@@ -5131,6 +5145,13 @@
         "card_type": "event",
         "card_date": "2025-05-30",
         "card_addr": "2040140170",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【ウェディングナイツ】大崎 甘奈",
+        "card_type": "limited",
+        "card_date": "2025-06-17",
+        "card_addr": "2040140180",
         "ps_type": "s"
       }
     ],
