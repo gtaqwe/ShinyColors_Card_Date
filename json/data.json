@@ -1587,6 +1587,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2930042510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【first quadrant】月岡 恋鐘",
+        "card_type": "other",
+        "card_date": "2025-06-21",
+        "card_addr": "2030040110",
+        "ps_type": "s"
       }
     ]
   },
@@ -2916,6 +2923,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940082510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【円環 -Halo around-】幽谷 霧子",
+        "card_type": "other",
+        "card_date": "2025-06-21",
+        "card_addr": "2040080150",
         "ps_type": "s"
       }
     ],
