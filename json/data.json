@@ -2410,6 +2410,13 @@
         "card_date": "2024-10-31",
         "card_addr": "1040070110",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【眩いステージ】三峰 結華",
+        "card_type": "parallel",
+        "card_date": "2025-06-29",
+        "card_addr": "1040070120",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -8629,6 +8636,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2930252510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【OBLIVION】緋田 美琴",
+        "card_type": "event",
+        "card_date": "2025-06-29",
+        "card_addr": "2030250040",
+        "ps_type": "s"
       }
     ]
   },
@@ -8866,6 +8880,13 @@
         "card_type": "mysongs",
         "card_date": "2025-02-12",
         "card_addr": "1040270040",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【純白の君へ】鈴木 羽那",
+        "card_type": "parallel",
+        "card_date": "2025-06-29",
+        "card_addr": "1040270050",
         "ps_type": "p"
       }
     ],
