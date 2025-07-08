@@ -991,6 +991,13 @@
         "card_date": "2018-04-24",
         "card_addr": null,
         "ps_type": "s"
+      },
+      {
+        "card_name": "【君色オーバーラップ】八宮 めぐる",
+        "card_type": "permanent",
+        "card_date": "2025-07-08",
+        "card_addr": "2050030010",
+        "ps_type": "s"
       }
     ],
     "S_SSR": [
@@ -6639,6 +6646,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940182510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【放課後の振り返り】黛 冬優子",
+        "card_type": "event",
+        "card_date": "2025-07-08",
+        "card_addr": "2040180120",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -7342,6 +7356,13 @@
         "card_type": "first",
         "card_date": "2020-04-06",
         "card_addr": null,
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【アマテラス】樋口 円香",
+        "card_type": "permanent",
+        "card_date": "2025-07-08",
+        "card_addr": "1050210010",
         "ps_type": "p"
       }
     ],
