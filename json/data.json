@@ -1341,6 +1341,13 @@
         "card_date": "2025-01-09",
         "card_addr": "1040040120",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【あなたと、メモリアル】月岡 恋鐘",
+        "card_type": "twilight",
+        "card_date": "2025-07-18",
+        "card_addr": "1040040130",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -1961,6 +1968,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930052510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【ひたすらウォーカー】田中 摩美々",
+        "card_type": "event",
+        "card_date": "2025-07-18",
+        "card_addr": "2030050110",
         "ps_type": "s"
       }
     ]
@@ -2662,6 +2676,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930072510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【サマーアイドル2019】三峰 結華",
+        "card_type": "other",
+        "card_date": "2025-07-18",
+        "card_addr": "2030070120",
         "ps_type": "s"
       }
     ]
@@ -5937,6 +5958,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940162510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【溢れそうなDiary】桑山 千雪",
+        "card_type": "twilight",
+        "card_date": "2025-07-18",
+        "card_addr": "2040160150",
         "ps_type": "s"
       }
     ],
