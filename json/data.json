@@ -2084,6 +2084,13 @@
         "card_date": "2024-04-02",
         "card_addr": "1040060110",
         "ps_type": "p"
+      },
+      {
+        "card_name": "【いつかのアルファルドへ】白瀬 咲耶",
+        "card_type": "parallel",
+        "card_date": "2025-07-30",
+        "card_addr": "1040060120",
+        "ps_type": "p"
       }
     ],
     "P_SR": [
@@ -3548,6 +3555,13 @@
         "card_type": "twilight",
         "card_date": "2024-08-19",
         "card_addr": "1040100110",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【T☆ Queen】園田 智代子",
+        "card_type": "parallel",
+        "card_date": "2025-07-30",
+        "card_addr": "1040100120",
         "ps_type": "p"
       }
     ],
@@ -5698,6 +5712,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2930152510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【サマーアイドル2020】大崎 甜花",
+        "card_type": "other",
+        "card_date": "2025-07-30",
+        "card_addr": "2030150100",
+        "ps_type": "s"
       }
     ]
   },
@@ -6440,6 +6461,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2930172510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【公園探索記】芹沢 あさひ",
+        "card_type": "event",
+        "card_date": "2025-07-30",
+        "card_addr": "2030170120",
         "ps_type": "s"
       }
     ]
@@ -7616,6 +7644,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940212510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【ジューンブライド2025】樋口 円香",
+        "card_type": "limited",
+        "card_date": "2025-07-30",
+        "card_addr": "2040210130",
         "ps_type": "s"
       }
     ],
@@ -9054,6 +9089,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940272510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【未 来世界】鈴木 羽那",
+        "card_type": "fes",
+        "card_date": "2025-07-30",
+        "card_addr": "2040270050",
         "ps_type": "s"
       }
     ],
