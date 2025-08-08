@@ -3462,6 +3462,13 @@
         "card_date": "2025-07-05",
         "card_addr": "2030090090",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【サマーアイドル2021】小宮 果穂",
+        "card_type": "other",
+        "card_date": "2025-08-08",
+        "card_addr": "2030090100",
+        "ps_type": "s"
       }
     ]
   },
@@ -5639,6 +5646,13 @@
         "card_type": "other",
         "card_date": "2025-04-11",
         "card_addr": "2940152510",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【相談ならおまかせ？】大崎 甜花",
+        "card_type": "event",
+        "card_date": "2025-08-08",
+        "card_addr": "2040150170",
         "ps_type": "s"
       }
     ],
@@ -8199,6 +8213,13 @@
         "card_date": "2025-04-11",
         "card_addr": "2940232510",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【The ☆ summer】市川 雛菜",
+        "card_type": "limited",
+        "card_date": "2025-08-08",
+        "card_addr": "2040230100",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -8599,6 +8620,13 @@
         "card_type": "parallel",
         "card_date": "2025-03-11",
         "card_addr": "1040250080",
+        "ps_type": "p"
+      },
+      {
+        "card_name": "【GLIMMER】緋田 美琴",
+        "card_type": "limited",
+        "card_date": "2025-08-08",
+        "card_addr": "1040250090",
         "ps_type": "p"
       }
     ],
