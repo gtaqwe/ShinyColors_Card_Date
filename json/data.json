@@ -5265,6 +5265,13 @@
         "card_date": "2025-06-17",
         "card_addr": "2040140180",
         "ps_type": "s"
+      },
+      {
+        "card_name": "【円環 -Halo around-】大崎 甘奈",
+        "card_type": "other",
+        "card_date": "2025-08-09",
+        "card_addr": "2040140190",
+        "ps_type": "s"
       }
     ],
     "S_SR": [
@@ -9326,6 +9333,13 @@
         "card_type": "event",
         "card_date": "2025-06-09",
         "card_addr": "2030280040",
+        "ps_type": "s"
+      },
+      {
+        "card_name": "【third quadrant】郁田 はるき",
+        "card_type": "other",
+        "card_date": "2025-08-09",
+        "card_addr": "2030280050",
         "ps_type": "s"
       }
     ]
