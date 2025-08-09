@@ -25,13 +25,13 @@ function runBuildTable(idolData) {
   const tableTitle = idolData.Title.length == 1 ? idolData.Title[0] : "";
   const rowLength = idolData.Data.length; // 아이돌 수
 
-  var maxColumnLength = Math.max(
+  const maxColumnLength = Math.max(
     ...idolData.Data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
   );
 
   const tableName = "date-table";
 
-  var table = `<table id="${tableName}">`;
+  let table = `<table id="${tableName}">`;
 
   table += "<thead>";
   table += `<tr class="tr-main-header">`;
@@ -42,12 +42,12 @@ function runBuildTable(idolData) {
   table += "</thead>";
   table += "<tbody>";
 
-  let maxLap = Math.max(
+  const maxLap = Math.max(
     ...idolData.Data.map(
       (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
     )
   );
-  for (var row = 0; row < rowLength; row++) {
+  for (let row = 0; row < rowLength; row++) {
     table += `<tr class="tr-main-data">`;
 
     table += setCardData(idolData.Data[row], maxColumnLength, row, maxLap);
@@ -73,7 +73,7 @@ function runBuildTable(idolData) {
  * (타이틀) | 차수변경(옵션) | 첫 실장 | 간격 | 1 | 간격 | 2 | 간격 | ... | n | 간격 |
  */
 function tableHeader(title, columnLength) {
-  var resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
+  let resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
 
   // 카드 차수 변경
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
@@ -88,7 +88,7 @@ function tableHeader(title, columnLength) {
     columnLength--;
   }
 
-  for (var i = 0; i < columnLength; i++) {
+  for (let i = 0; i < columnLength; i++) {
     resContent += `<th class="th-header-title-cell">${i + 1}</th>`;
     resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
   }
@@ -120,7 +120,7 @@ function changeCardLapCount(idolNum, inputObj) {
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
 function setCardData(totalData, totalLen, idolNum, maxLap) {
-  var resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
+  let resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
@@ -135,12 +135,12 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
     totalLen--;
   }
 
-  for (var idx = 0; idx < totalLen; idx++) {
-    var dateBefore; // Before
-    var dateAfter; // After
-    var currDay = 24 * 60 * 60 * 1000;
-    var interval;
-    var intervalCode;
+  for (let idx = 0; idx < totalLen; idx++) {
+    const currDay = 24 * 60 * 60 * 1000;
+    let dateBefore;
+    let dateAfter;
+    let interval;
+    let intervalCode;
 
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
     if (
@@ -153,11 +153,11 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
     }
 
     if (idx < cardLen) {
-      var cardDate = cardDataList[idx].card_date;
-      var cardType = cardDataList[idx].card_type;
-      var cardName = cardDataList[idx].card_name;
-      var cardAddr = cardDataList[idx].card_addr;
-      var psType = cardDataList[idx].ps_type;
+      const cardDate = cardDataList[idx].card_date;
+      const cardType = cardDataList[idx].card_type;
+      const cardName = cardDataList[idx].card_name;
+      const cardAddr = cardDataList[idx].card_addr;
+      const psType = cardDataList[idx].ps_type;
 
       countCardType(cardType);
 
@@ -200,10 +200,10 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($(iconImgConvertBtn).is(":checked") && cardAddr) {
-        var style = `style= "width:72px; height:72px"`;
-        var onerror = `onerror = "this.src='./img/assets/Blank_Icon.png'"`;
+        const style = `style= "width:72px; height:72px"`;
+        const onerror = `onerror = "this.src='./img/assets/Blank_Icon.png'"`;
 
-        var imgPath;
+        let imgPath = "";
         // 아이콘 패스 지정
         if (psType == "p") {
           // 프로듀스 아이콘
@@ -263,7 +263,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
  * 설정한 기준일을 Return
  */
 function getBaseDate(dateId) {
-  var baseEndDate = new Date($(dateId).val());
+  const baseEndDate = new Date($(dateId).val());
 
   return baseEndDate.toISOString().slice(0, 10);
 }
@@ -286,10 +286,10 @@ function runBuildDateRank(idolData) {
     return;
   }
 
-  var intervalAry = [];
-  var rows = $("#date-table .tr-main-data");
+  const intervalAry = [];
+  const rows = $("#date-table .tr-main-data");
 
-  for (var rowIdx = 0; rowIdx < rows.length; rowIdx++) {
+  for (let rowIdx = 0; rowIdx < rows.length; rowIdx++) {
     nameStr = $(`#date-table .tr-main-data:eq(${rowIdx}) .td-name-cell`).text();
 
     // 이하의 경우에는 랭킹 표시를 하지 않음 (「-」로 표시)
@@ -349,7 +349,7 @@ function selectCellColor(rankStr) {
  */
 function buildRankTable0(intervalAry, oldRanks, borderStyle) {
   const tableName = "rank-table-0";
-  var table = `<table id="${tableName}">`;
+  let table = `<table id="${tableName}">`;
   table += "<thead>";
 
   table += `<tr style="height:${$("#date-table tr").eq(0).height()}px">`;
@@ -361,10 +361,10 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
 
   table += "<tbody>";
 
-  for (var i = 0; i < intervalAry.length; i++) {
-    var rankStr = "-";
-    var nameStr = intervalAry[i][0];
-    var intervalStr = "-";
+  for (let i = 0; i < intervalAry.length; i++) {
+    const nameStr = intervalAry[i][0];
+    let rankStr = "-";
+    let intervalStr = "-";
 
     if (Number(intervalAry[i][1]) != NONE_INTERVAL) {
       rankStr = oldRanks[i];
@@ -372,7 +372,7 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
     }
 
     if (intervalAry[i] == "") rankStr = "미실장";
-    var cellColor = selectCellColor(rankStr);
+    const cellColor = selectCellColor(rankStr);
 
     table += `<tr style="height:${$("#date-table tr")
       .eq(i + 1)
@@ -395,7 +395,7 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
  */
 function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   const tableName = "rank-table-1";
-  var table = `<table id="${tableName}">`;
+  let table = `<table id="${tableName}">`;
   table += "<thead>";
   table += "<tr>";
   table += `<th class="th-rank" colspan="3">${tableType}</th>`;
@@ -403,7 +403,7 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
 
   // 선택한 카드타입 표시
   const notSelectStr = "미선택";
-  var gachaTypeStr = notSelectStr;
+  let gachaTypeStr = notSelectStr;
   if ($("#permanentCardChkBox").is(":checked")) {
     gachaTypeStr = "";
     gachaTypeStr += CARD_TYPE_CHAR.permanent;
@@ -469,18 +469,18 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
 
   table += "<tbody>";
 
-  for (var i = 0; i < intervalAry.length; i++) {
-    var rankIndex = oldRanks.indexOf(i + 1);
-    var rankStr = "-";
-    var nameStr = intervalAry[rankIndex][0];
-    var intervalStr = "-";
+  for (let i = 0; i < intervalAry.length; i++) {
+    const rankIndex = oldRanks.indexOf(i + 1);
+    const nameStr = intervalAry[rankIndex][0];
+    let rankStr = "-";
+    let intervalStr = "-";
 
     if (Number(intervalAry[rankIndex][1]) != NONE_INTERVAL) {
       rankStr = oldRanks[rankIndex];
       intervalStr = intervalAry[rankIndex][1];
     }
 
-    var cellColor = selectCellColor(rankStr);
+    const cellColor = selectCellColor(rankStr);
 
     table += "<tr>";
     table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;

@@ -1,9 +1,9 @@
 // 현재 표시 선택중인 레어리티
-var NOW_SELECT = resetNowSelect();
+let NOW_SELECT = resetNowSelect();
 
-var JSON_DATA;
-var VIEW_LANGUAGE;
-var IDOL_TOTAL_COUNT;
+let JSON_DATA;
+let VIEW_LANGUAGE;
+let IDOL_TOTAL_COUNT;
 const DEFALUT_LANGUAGE = "ko";
 const CARD_TYPE_CHAR = {
   permanent: "P",
@@ -17,37 +17,39 @@ const CARD_TYPE_CHAR = {
   other: "O",
 };
 const GACHA_CATEGORY_COUNT = Object.keys(CARD_TYPE_CHAR).length;
+const SERVICE_START_DATE_STRING = "2018-04-24";
 
 // 카드 차수 변경 데이터의 배열
-var TABLE_BLANK_LAP_LIST;
+let TABLE_BLANK_LAP_LIST;
 
 // 통상, 한정, 트와코레, 마이코레, 이벤트, 페스, 캠페인, 기타
-var CARD_TYPE_COUNT_LIST = Array(GACHA_CATEGORY_COUNT).fill(0);
+let CARD_TYPE_COUNT_LIST = Array(GACHA_CATEGORY_COUNT).fill(0);
 
 $().ready(function () {
   init();
 });
 
-// document.body.addEventListener("onload", init());
-
+/**
+ * 초기화
+ */
 async function init() {
-  await getJSON("json/data.json").then(function (resp) {
-    JSON_DATA = JSON.parse(resp);
-  });
-
+  JSON_DATA = await getJSON("json/data.json");
   IDOL_TOTAL_COUNT = JSON_DATA.length;
   TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
+  // 초기상태에는 카드분류를 아무것도 선택하지 않음
   NOW_SELECT = resetNowSelect();
+
   // 초기 기준일
   // Start : 서비스 개시일
-  // End : 오늘
-  $("#BaseStartDate").val("2018-04-24");
+  // End : 현재 날짜
+  $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
   $("#BaseEndDate").val(getToday());
 
+  // 언어설정을 취득 후,
+  // 지원하는 언어가 아닌 경우 한국어로 표시하도록 설정
+  // 지원하는 언어 : 한국어, 일본어
   VIEW_LANGUAGE = getLanguage();
-
-  // 지원하는 언어가 아닌 경우 한국어로 표시
   if (!(VIEW_LANGUAGE in $.lang)) VIEW_LANGUAGE = DEFALUT_LANGUAGE;
 
   // 수동으로 언어 설정시 선택한 언어로 표시
@@ -57,11 +59,11 @@ async function init() {
       $("#languageSetting").css("display", "inline");
     }
   }
+
   setLanguage(VIEW_LANGUAGE);
   $("#languageSelect").val(VIEW_LANGUAGE).prop("selected", true);
 
   setViewCheckboxSetting();
-
   readTableBlankLapList();
 
   // 카드 수 리셋
@@ -75,26 +77,16 @@ async function init() {
 /**
  * JSON 데이터 읽기
  */
-function getJSON(jsonFile) {
+async function getJSON(jsonFile, cacheMode = "no-cache") {
   try {
-    return new Promise(function (resolve, reject) {
-      var request = new XMLHttpRequest();
-      request.open("GET", jsonFile, true);
-      request.onload = function () {
-        if (request.status == 200) {
-          resolve(request.responseText);
-        } else {
-          reject(Error(request.statusText));
-        }
-      };
-
-      request.onerror = function () {
-        reject(Error("Error fetching data."));
-      };
-      request.send();
-    });
+    const response = await fetch(jsonFile, { cache: cacheMode });
+    if (!response.ok) {
+      throw new Error(`HTTP error status: ${response.status}`);
+    }
+    return await response.json();
   } catch (err) {
-    console.error(err);
+    console.error("Failed to fetch JSON:", err);
+    throw err;
   }
 }
 
@@ -123,12 +115,12 @@ function setLanguageInTable(currLang, tableName) {
 
 function resetNowSelect() {
   return {
-    pUR: { selected: false, title: "P-UR", ps: "p", rarity: "ur" },
-    pSSR: { selected: false, title: "P-SSR", ps: "p", rarity: "ssr" },
-    pSR: { selected: false, title: "P-SR", ps: "p", rarity: "sr" },
-    sUR: { selected: false, title: "S-UR", ps: "s", rarity: "ur" },
-    sSSR: { selected: false, title: "S-SSR", ps: "s", rarity: "ssr" },
-    sSR: { selected: false, title: "S-SR", ps: "s", rarity: "sr" },
+    pUR: { isSelected: false, title: "P-UR", ps: "p", rarity: "ur" },
+    pSSR: { isSelected: false, title: "P-SSR", ps: "p", rarity: "ssr" },
+    pSR: { isSelected: false, title: "P-SR", ps: "p", rarity: "sr" },
+    sUR: { isSelected: false, title: "S-UR", ps: "s", rarity: "ur" },
+    sSSR: { isSelected: false, title: "S-SSR", ps: "s", rarity: "ssr" },
+    sSR: { isSelected: false, title: "S-SR", ps: "s", rarity: "sr" },
   };
 }
 
@@ -140,37 +132,26 @@ function changeLanguage() {
 
 /**
  * URL의 쿼리를 Object형식으로 취득
- * ~~/?a=a1&b=ab2 -> {a: a1, b: ab2}
+ * https://example.com/?foo=bar&baz=qux -> {foo: bar, baz: qux}
  */
 function getQuery() {
-  var url = document.location.href;
-  if (url.indexOf("?") == -1) return;
+  const params = new URLSearchParams(window.location.search);
 
-  var qs = url.substring(url.indexOf("?") + 1).split("&");
-  for (var i = 0, result = {}; i < qs.length; i++) {
-    qs[i] = qs[i].split("=");
-    result[qs[i][0]] = decodeURIComponent(qs[i][1]);
-  }
-  return result;
+  // Query Parameter를 [key, value] 형태의 배열을 취득 후, Object형태로 변환 후 Return
+  return Object.fromEntries(params.entries());
 }
 
 /**
- * 당일 날짜를 yyyy-MM-dd 형식 String으로 Return
+ * 현재날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
  */
 function getToday() {
-  var today = new Date();
-  var nowYear = today.getFullYear();
-  var nowMonth = today.getMonth() + 1;
-  var nowDate = today.getDate();
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
 
   // yyyy-MM-dd 형식
-  return (
-    nowYear.toString() +
-    "-" +
-    nowMonth.toString().padStart(2, "0") +
-    "-" +
-    nowDate.toString().padStart(2, "0")
-  );
+  return `${year}-${month}-${day}`;
 }
 
 /**
@@ -178,10 +159,10 @@ function getToday() {
  * False인 경우, localStorage의 값을 반영하지 않음
  */
 function readTableBlankLapList() {
-  let nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
+  const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
 
   if (nowChangeLapFlag) {
-    let localList = localStorage.getItem("TABLE_BLANK_LAP_LIST");
+    const localList = localStorage.getItem("TABLE_BLANK_LAP_LIST");
     if (localList !== null) {
       TABLE_BLANK_LAP_LIST = localList.split(",");
     }
@@ -192,13 +173,10 @@ function readTableBlankLapList() {
  * 연도 프리셋 버튼 초기화
  */
 function initDatePresetButton() {
-  const startYear = 2018;
-  const today = new Date();
-  const nowYear = today.getFullYear();
+  const startYear = SERVICE_START_DATE_STRING.split("-")[0];
+  const nowYear = new Date().getFullYear();
 
-  for (let i = 0; i < nowYear - startYear + 1; i++) {
-    const targetYear = startYear + i;
-
+  for (let targetYear = startYear; targetYear <= nowYear; targetYear++) {
     const startDate = `${targetYear}-01-01`;
     const endDate = targetYear == nowYear ? getToday() : `${targetYear}-12-31`;
 
@@ -219,7 +197,7 @@ function initDatePresetButton() {
 function setViewCheckboxSetting() {
   // 전체 체크 클릭 시
   $("input:checkbox[name='showCardAllTypeChk']").click(function () {
-    if ($("input:checkbox[name='showCardAllTypeChk']").is(":checked") == true) {
+    if ($("input:checkbox[name='showCardAllTypeChk']").is(":checked")) {
       $("input:checkbox[name='showCardTypeChk']").prop("checked", true);
     } else {
       $("input:checkbox[name='showCardTypeChk']").prop("checked", false);
@@ -229,8 +207,8 @@ function setViewCheckboxSetting() {
 
   // 카드타입 클릭 시
   $("input:checkbox[name='showCardTypeChk']").click(function () {
-    var allCnt = $("input:checkbox[name='showCardTypeChk']").length; // 카드타입 전체갯수
-    var selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // 카드타입 선택갯수
+    const allCnt = $("input:checkbox[name='showCardTypeChk']").length; // 카드타입 전체갯수
+    const selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // 카드타입 선택갯수
 
     if (allCnt == selCnt) {
       $("input:checkbox[name='showCardAllTypeChk']").prop("checked", true);
@@ -295,11 +273,11 @@ function clearTableBlankLapList() {
  * P-SSR 표시
  */
 function setPSsr() {
-  if (NOW_SELECT.pSSR.selected == true) {
-    NOW_SELECT.pSSR.selected = false;
+  if (NOW_SELECT.pSSR.isSelected) {
+    NOW_SELECT.pSSR.isSelected = false;
     $(`#pSSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.pSSR.selected = true;
+    NOW_SELECT.pSSR.isSelected = true;
     $(`#pSSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
   }
 
@@ -310,11 +288,11 @@ function setPSsr() {
  * S-SSR 표시
  */
 function setSSsr() {
-  if (NOW_SELECT.sSSR.selected == true) {
-    NOW_SELECT.sSSR.selected = false;
+  if (NOW_SELECT.sSSR.isSelected) {
+    NOW_SELECT.sSSR.isSelected = false;
     $(`#sSSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.sSSR.selected = true;
+    NOW_SELECT.sSSR.isSelected = true;
     $(`#sSSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
   }
 
@@ -328,17 +306,17 @@ function setAllSsr() {
   if (
     Object.values(NOW_SELECT)
       .filter((v) => v.rarity == "ssr")
-      .every((v) => v.selected == true)
+      .every((v) => v.isSelected)
   ) {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "ssr") {
-        NOW_SELECT[k].selected = false;
+        NOW_SELECT[k].isSelected = false;
       }
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "ssr") {
-        NOW_SELECT[k].selected = true;
+        NOW_SELECT[k].isSelected = true;
       }
     });
   }
@@ -350,11 +328,11 @@ function setAllSsr() {
  * P-SR 표시
  */
 function setPSr() {
-  if (NOW_SELECT.pSR.selected == true) {
-    NOW_SELECT.pSR.selected = false;
+  if (NOW_SELECT.pSR.isSelected) {
+    NOW_SELECT.pSR.isSelected = false;
     $(`#pSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.pSR.selected = true;
+    NOW_SELECT.pSR.isSelected = true;
     $(`#pSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
   }
 
@@ -365,11 +343,11 @@ function setPSr() {
  * S-SR 표시
  */
 function setSSr() {
-  if (NOW_SELECT.sSR.selected == true) {
-    NOW_SELECT.sSR.selected = false;
+  if (NOW_SELECT.sSR.isSelected) {
+    NOW_SELECT.sSR.isSelected = false;
     $(`#sSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.sSR.selected = true;
+    NOW_SELECT.sSR.isSelected = true;
     $(`#sSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
   }
 
@@ -383,17 +361,17 @@ function setAllSr() {
   if (
     Object.values(NOW_SELECT)
       .filter((v) => v.rarity == "sr")
-      .every((v) => v.selected == true)
+      .every((v) => v.isSelected)
   ) {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "sr") {
-        NOW_SELECT[k].selected = false;
+        NOW_SELECT[k].isSelected = false;
       }
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "sr") {
-        NOW_SELECT[k].selected = true;
+        NOW_SELECT[k].isSelected = true;
       }
     });
   }
@@ -405,11 +383,11 @@ function setAllSr() {
  * P-UR 표시
  */
 function setPUr() {
-  if (NOW_SELECT.pUR.selected == true) {
-    NOW_SELECT.pUR.selected = false;
+  if (NOW_SELECT.pUR.isSelected) {
+    NOW_SELECT.pUR.isSelected = false;
     $(`#pURButton`).removeClass("Pbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.pUR.selected = true;
+    NOW_SELECT.pUR.isSelected = true;
     $(`#pURButton`).removeClass("DeactivateButton").addClass("Pbutton");
   }
 
@@ -420,11 +398,11 @@ function setPUr() {
  * S-UR 표시
  */
 function setSUr() {
-  if (NOW_SELECT.sUR.selected == true) {
-    NOW_SELECT.sUR.selected = false;
+  if (NOW_SELECT.sUR.isSelected) {
+    NOW_SELECT.sUR.isSelected = false;
     $(`#sURButton`).removeClass("Sbutton").addClass("DeactivateButton");
   } else {
-    NOW_SELECT.sUR.selected = true;
+    NOW_SELECT.sUR.isSelected = true;
     $(`#sURButton`).removeClass("DeactivateButton").addClass("Sbutton");
   }
 
@@ -438,17 +416,17 @@ function setAllUr() {
   if (
     Object.values(NOW_SELECT)
       .filter((v) => v.rarity == "ur")
-      .every((v) => v.selected == true)
+      .every((v) => v.isSelected)
   ) {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "ur") {
-        NOW_SELECT[k].selected = false;
+        NOW_SELECT[k].isSelected = false;
       }
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].rarity == "ur") {
-        NOW_SELECT[k].selected = true;
+        NOW_SELECT[k].isSelected = true;
       }
     });
   }
@@ -463,17 +441,17 @@ function setAllP() {
   if (
     Object.values(NOW_SELECT)
       .filter((v) => v.ps == "p")
-      .every((v) => v.selected == true)
+      .every((v) => v.isSelected)
   ) {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].ps == "p") {
-        NOW_SELECT[k].selected = false;
+        NOW_SELECT[k].isSelected = false;
       }
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].ps == "p") {
-        NOW_SELECT[k].selected = true;
+        NOW_SELECT[k].isSelected = true;
       }
     });
   }
@@ -488,17 +466,17 @@ function setAllS() {
   if (
     Object.values(NOW_SELECT)
       .filter((v) => v.ps == "s")
-      .every((v) => v.selected == true)
+      .every((v) => v.isSelected)
   ) {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].ps == "s") {
-        NOW_SELECT[k].selected = false;
+        NOW_SELECT[k].isSelected = false;
       }
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
       if (NOW_SELECT[k].ps == "s") {
-        NOW_SELECT[k].selected = true;
+        NOW_SELECT[k].isSelected = true;
       }
     });
   }
@@ -512,13 +490,13 @@ function setAllS() {
 function setAllCard() {
   // 모든 레어리티가 선택 되어 있는 경우, 모두 해제
   // 그 외의 경우, 모두 선택
-  if (Object.values(NOW_SELECT).every((v) => v.selected == true)) {
+  if (Object.values(NOW_SELECT).every((v) => v.isSelected)) {
     Object.keys(NOW_SELECT).forEach((k) => {
-      NOW_SELECT[k].selected = false;
+      NOW_SELECT[k].isSelected = false;
     });
   } else {
     Object.keys(NOW_SELECT).forEach((k) => {
-      NOW_SELECT[k].selected = true;
+      NOW_SELECT[k].isSelected = true;
     });
   }
 
@@ -529,7 +507,7 @@ function updateDate(nowSelect) {
   resetCardTypeCountList();
 
   // 선택한 레어리티 정보를 취득
-  const selectedRarity = Object.values(nowSelect).filter((v) => v.selected == true);
+  const selectedRarity = Object.values(nowSelect).filter((v) => v.isSelected);
 
   // 선택한 레어리티가 1개인 경우, 해당 타이틀을 표 타이틀로 설정
   // 그 외에는 공란으로 설정
@@ -613,9 +591,19 @@ function convertShowCardCount() {
  * 시작일이 종료일보다 클 경우 시작일을 종료일로 변경
  */
 function updateBaseDate(changedBase, nowSelect) {
-  var serviceStartDate = new Date("2018-04-24");
-  var baseStartDate = new Date($("#BaseStartDate").val());
-  var baseEndDate = new Date($("#BaseEndDate").val());
+  const serviceStartDate = new Date(SERVICE_START_DATE_STRING);
+  const baseStartDate = new Date($("#BaseStartDate").val());
+  const baseEndDate = new Date($("#BaseEndDate").val());
+
+  // 시작일이 유효하지 않은 경우 서비스 개시일로 변경
+  if (isNaN(baseStartDate.getTime())) {
+    $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
+  }
+
+  // 종료일이 유효하지 않은 경우 현재 날짜로 변경
+  if (isNaN(baseEndDate.getTime())) {
+    $("#BaseEndDate").val(getToday());
+  }
 
   // 시작일 변경 시 종료일 이후로 할 수 없음
   if (changedBase == "start" && baseStartDate.getTime() > baseEndDate.getTime()) {
@@ -629,7 +617,7 @@ function updateBaseDate(changedBase, nowSelect) {
 
   // 시작일이 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
   if (baseStartDate.getTime() < serviceStartDate.getTime()) {
-    $("#BaseStartDate").val("2018-04-24");
+    $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
   }
 
   updateDate(nowSelect);
@@ -680,7 +668,7 @@ function getCardList(cardAry) {
   return (
     cardAry
       .map((card, idx) => {
-        var cardType = card.card_type;
+        const cardType = card.card_type;
         if (cardType == "first" && idx == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
           return card;
         }
@@ -740,70 +728,70 @@ function getCardList(cardAry) {
  */
 function mergeCardData(tableTitleList, nowSelect) {
   // 선택된 항목이 없다면 undefined를 return
-  if (Object.values(nowSelect).filter((v) => v.selected == true).length == 0) {
+  if (Object.values(nowSelect).filter((v) => v.isSelected).length == 0) {
     return;
   }
 
-  const pUR = nowSelect.pUR.selected;
-  const sUR = nowSelect.sUR.selected;
-  const pSSR = nowSelect.pSSR.selected;
-  const sSSR = nowSelect.sSSR.selected;
-  const pSR = nowSelect.pSR.selected;
-  const sSR = nowSelect.sSR.selected;
+  const pUR = nowSelect.pUR.isSelected;
+  const sUR = nowSelect.sUR.isSelected;
+  const pSSR = nowSelect.pSSR.isSelected;
+  const sSSR = nowSelect.sSSR.isSelected;
+  const pSR = nowSelect.pSR.isSelected;
+  const sSR = nowSelect.sSR.isSelected;
 
-  var totalList = JSON_DATA.map((idol) => {
-    var firstList = [];
-    var tempCardList = [];
+  const totalList = JSON_DATA.map((idol) => {
+    let firstList = [];
+    let tempCardList = [];
 
     // P UR
     if (pUR) {
-      let idolList = [...idol.P_UR];
+      const idolList = [...idol.P_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SSR
     if (pSSR) {
-      let idolList = [...idol.P_SSR];
+      const idolList = [...idol.P_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SR
     if (pSR) {
-      let idolList = [...idol.P_SR];
+      const idolList = [...idol.P_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S UR
     if (sUR) {
-      let idolList = [...idol.S_UR];
+      const idolList = [...idol.S_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SSR
     if (sSSR) {
-      let idolList = [...idol.S_SSR];
+      const idolList = [...idol.S_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SR
     if (sSR) {
-      let idolList = [...idol.S_SR];
+      const idolList = [...idol.S_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // 첫실장 데이터가 복수 있을시, 최초의 첫실장만 취득
-    let firstImplementation = firstList
+    const firstImplementation = firstList
       .filter((v) => v)
       .sort((a, b) => {
         // card_date가 존재하지 않는 경우, 마지막에 위치하도록 처리
-        aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
-        bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
+        const aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
+        const bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
 
         if (aDate < bDate) {
           // a가 b보다 이전
@@ -822,61 +810,47 @@ function mergeCardData(tableTitleList, nowSelect) {
       tempCardList.unshift(firstImplementation);
     }
 
-    var cardList = getCardList(tempCardList);
-
-    // 이름 언어 : idol_(ko, ja, en)_name
-    var idolName = idol.idol_ko_name;
+    let idolName = idol.idol_ko_name;
     if (VIEW_LANGUAGE == "ja") {
       idolName = idol.idol_ja_name;
     }
 
-    var obj = {
+    return {
       idol_name: idolName,
       display_ranking: idol.display_ranking,
-      card_data: cardList,
+      card_data: getCardList(tempCardList),
     };
-
-    return obj;
   });
 
   // 표시할 데이터
   // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
   // Data : 표시할 카드 데이터
-  const selectedData = {
+  const selectedCardTypeData = {
     Title: tableTitleList,
     Data: totalList,
   };
 
-  return selectedData;
+  return selectedCardTypeData;
 }
-
-//////////////////////////////////////////////////
 
 /**
  * 마우스 포인트 위치에 따라 이미지 프리뷰
  */
 function imgMapping() {
-  /* CONFIG */
-
-  var xOffset = 10;
-  var yOffset = 20;
-  var imgWidth = 320;
-  var imgHeight = 180;
-
-  // these 2 variable determine popup's distance from the cursor
-  // you might want to adjust to get the right result
-
-  /* END CONFIG */
+  const xOffset = 10;
+  const yOffset = 20;
+  const imgWidth = 320;
+  const imgHeight = 180;
 
   // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
   $("#date-table td").hover(
     function (e) {
-      var imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
-      var imgNameAttr = $(this).closest("td").attr("name"); // 카드명
-      var fesChk = $("#fesImgConvertBtn").is(":checked"); // 페스 일러스트 표시 모드
-      var psType = $(this).closest("td").attr("ps"); // 카드명
+      const imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
+      const imgNameAttr = $(this).closest("td").attr("name"); // 카드명
+      const fesChk = $("#fesImgConvertBtn").is(":checked"); // 페스 일러스트 표시 모드
+      const psType = $(this).closest("td").attr("ps"); // 카드명
 
-      var imgPath;
+      let imgPath = "";
       // 일러 패스 지정
       if (psType == "p") {
         // 프로듀스 일러
@@ -915,26 +889,27 @@ function imgMapping() {
 
   // 마우스 포인트 위치에 따라 프리뷰 이동
   $("#date-table td").mousemove(function (e) {
-    var previewWidth = $("#preview").width();
-    var previewHeight = $("#preview").height();
+    const nowPreview = $("#preview");
+    const previewWidth = nowPreview.width();
+    const previewHeight = nowPreview.height();
 
     if (e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop()) {
-      $("#preview").css("top", e.pageY - xOffset - previewHeight + "px");
+      nowPreview.css("top", e.pageY - xOffset - previewHeight + "px");
     } else {
-      $("#preview").css("top", e.pageY - xOffset + "px");
+      nowPreview.css("top", e.pageY - xOffset + "px");
     }
 
     if (e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()) {
-      $("#preview").css("left", e.pageX - yOffset - previewWidth + "px");
+      nowPreview.css("left", e.pageX - yOffset - previewWidth + "px");
     } else {
-      $("#preview").css("left", e.pageX + yOffset + "px");
+      nowPreview.css("left", e.pageX + yOffset + "px");
     }
 
     if (
       e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop() &&
       e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()
     ) {
-      $("#preview")
+      nowPreview
         .css("top", e.pageY - xOffset - previewHeight - xOffset + "px")
         .css("left", e.pageX - yOffset - previewWidth + "px");
     }
@@ -945,23 +920,22 @@ function getImgSrc(path, addr) {
   return `./img/${path}/${addr}.png`;
 }
 
-//////////////////////////////////////////////////
-
 /**
  * 표 캡쳐, 다운로드 처리
  */
 function captureScreen(frameName) {
-  if (Object.values(NOW_SELECT).every((v) => v.selected == false)) {
+  // 선택된 표시 타입이 없는 경우 스킵
+  if (Object.values(NOW_SELECT).every((v) => !v.isSelected)) {
     return;
   }
 
-  var captureName = "";
-  var frameId = "";
-  var viewMode = "";
+  let captureName = "";
+  let frameId = "";
+  let viewMode = "";
 
   const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
 
-  if (nowChangeLapFlag == true) {
+  if (nowChangeLapFlag) {
     $(`#showChangeCardLapConvertBtn`).prop("checked", false);
     updateDate(NOW_SELECT);
   }
@@ -980,26 +954,26 @@ function captureScreen(frameName) {
   if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
 
   selectedRarity = Object.values(NOW_SELECT)
-    .filter((v) => v.selected == true)
+    .filter((v) => v.isSelected)
     .map((v) => v.title.replace("-", ""));
 
   captureName = frameName + "_" + selectedRarity.join("_") + "_" + viewMode + ".png";
 
   $(frameId).css("overflow", "hidden");
-  $("#convertSpan").css("display", "none");
+  cssDisplayOff("#convertSpan");
 
   $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
-  $("#BaseStartSpan").css("display", "none");
-  $("#BaseStartDateStr").css("display", "");
+  cssDisplayOff("#BaseStartSpan");
+  cssDisplayOn("#BaseStartDateStr");
 
   $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
-  $("#BaseEndSpan").css("display", "none");
-  $("#BaseEndDateStr").css("display", "");
+  cssDisplayOff("#BaseEndSpan");
+  cssDisplayOn("#BaseEndDateStr");
 
-  $("#CAPTURE_BUTTON").css("display", "none");
-  $("#VIEW_OPTION").css("display", "none");
-  $("#ALL_TYPE_SELECT").css("display", "none");
-  $("#DATE_PRESET").css("display", "none");
+  cssDisplayOff("#CAPTURE_BUTTON");
+  cssDisplayOff("#VIEW_OPTION");
+  cssDisplayOff("#ALL_TYPE_SELECT");
+  cssDisplayOff("#DATE_PRESET");
 
   html2canvas(document.querySelector(frameId), {
     scrollY: -window.scrollY,
@@ -1008,28 +982,36 @@ function captureScreen(frameName) {
     downloadURI(canvas.toDataURL("image/png"), captureName);
   });
 
-  if (nowChangeLapFlag == true) {
+  if (nowChangeLapFlag) {
     $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
     updateDate(NOW_SELECT);
   }
 
   $(frameId).css("overflow", "");
-  $("#convertSpan").css("display", "");
+  cssDisplayOn("#convertSpan");
 
-  $("#BaseStartSpan").css("display", "");
-  $("#BaseStartDateStr").css("display", "none");
+  cssDisplayOn("#BaseStartSpan");
+  cssDisplayOff("#BaseStartDateStr");
 
-  $("#BaseEndSpan").css("display", "");
-  $("#BaseEndDateStr").css("display", "none");
+  cssDisplayOn("#BaseEndSpan");
+  cssDisplayOff("#BaseEndDateStr");
 
-  $("#CAPTURE_BUTTON").css("display", "");
-  $("#VIEW_OPTION").css("display", "");
-  $("#ALL_TYPE_SELECT").css("display", "");
-  $("#DATE_PRESET").css("display", "");
+  cssDisplayOn("#CAPTURE_BUTTON");
+  cssDisplayOn("#VIEW_OPTION");
+  cssDisplayOn("#ALL_TYPE_SELECT");
+  cssDisplayOn("#DATE_PRESET");
+}
+
+function cssDisplayOn(id) {
+  $(id).css("display", "");
+}
+
+function cssDisplayOff(id) {
+  $(id).css("display", "none");
 }
 
 function downloadURI(uri, filename) {
-  var link = document.createElement("a");
+  const link = document.createElement("a");
   link.download = filename;
   link.href = uri;
   link.click();
