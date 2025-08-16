@@ -22,11 +22,11 @@ function runBuildTable(idolData) {
 
   // 선택된 레어리티가 1개일때 표 타이틀을 설정
   // 그 외의 경우에는 공란
-  const tableTitle = idolData.Title.length == 1 ? idolData.Title[0] : "";
-  const rowLength = idolData.Data.length; // 아이돌 수
+  const tableTitle = idolData.title.length == 1 ? idolData.title[0] : "";
+  const rowLength = idolData.data.length; // 아이돌 수
 
   const maxColumnLength = Math.max(
-    ...idolData.Data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
+    ...idolData.data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
   );
 
   const tableName = "date-table";
@@ -43,14 +43,14 @@ function runBuildTable(idolData) {
   table += "<tbody>";
 
   const maxLap = Math.max(
-    ...idolData.Data.map(
+    ...idolData.data.map(
       (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
     )
   );
   for (let row = 0; row < rowLength; row++) {
     table += `<tr class="tr-main-data">`;
 
-    table += setCardData(idolData.Data[row], maxColumnLength, row, maxLap);
+    table += setCardData(idolData.data[row], maxColumnLength, row, maxLap);
 
     table += "</tr>";
   }
@@ -113,7 +113,7 @@ function changeCardLapCount(idolNum, inputObj) {
 
   saveTableBlankLapListInStorage();
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -296,7 +296,7 @@ function runBuildDateRank(idolData) {
     // 1. 카드가 단 하나도 실장되지 않았을 경우 (R카드도 없는 경우)
     // 2. 랭킹표시 플래그가 False인 경우
     const nowInterval = $(`#date-table .tr-main-data:eq(${rowIdx}) .now-interval`);
-    if (nowInterval.length == 0 || idolData.Data[rowIdx].display_ranking == false) {
+    if (nowInterval.length == 0 || idolData.data[rowIdx].display_ranking == false) {
       intervalAry.push([nameStr, NONE_INTERVAL]);
     } else {
       intervalAry.push([nameStr, Number(nowInterval.text())]);
@@ -315,7 +315,7 @@ function runBuildDateRank(idolData) {
   };
 
   // 랭킹표 타이틀에 선택한 레어리티를 모두 표시
-  const tableType = idolData.Title.join("<br>");
+  const tableType = idolData.title.join("<br>");
 
   // 0 : 메인표 옆에 표시 (아이돌의 위치는 바뀌지 않음)
   // 1 : 메인표와 별개로 표시 (아이돌의 위치가 바뀜)

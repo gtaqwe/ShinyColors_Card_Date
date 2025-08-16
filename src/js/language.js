@@ -4,14 +4,14 @@ const Language = (() => {
   const supportedLanguages = ["ko", "ja"];
   const defaultLang = "ko";
 
-  async function ready() {
+  async function init() {
     const browserLang = getBrowserLanguage();
     await setLanguage(browserLang);
   }
 
   async function setLanguage(langCode) {
     const finalLang = supportedLanguages.includes(langCode) ? langCode : defaultLang;
-    langData = await getJSON(`json/lang/${finalLang}.json`);
+    langData = await getJSON(`/src/json/lang/${finalLang}.json`);
     currentLang = finalLang;
   }
 
@@ -54,7 +54,7 @@ const Language = (() => {
   }
 
   return {
-    ready,
+    init,
     setLanguage,
     getTranslatedName,
     getCurrentLanguage,

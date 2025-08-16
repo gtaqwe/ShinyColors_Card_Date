@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
     <title>Card Table</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- jQuery fallback -->
+    <script>
+      if (typeof jQuery === "undefined") {
+        document.write('<script src="/lib/jquery-3.7.1.min.js"><\/script>');
+      }
+    </script>
   </head>
 
   <body>
@@ -17,14 +27,14 @@
 
     <div id="CAPTURE_FRAME" style="width: max-content; height: max-content">
       <div>
-        <input type="button" id="pURButton" value="P-UR" class="DeactivateButton" />
-        <input type="button" id="sURButton" value="S-UR" class="DeactivateButton" />
+        <input type="button" id="pUrButton" value="P-UR" class="DeactivateButton" />
+        <input type="button" id="sUrButton" value="S-UR" class="DeactivateButton" />
         <br />
-        <input type="button" id="pSSRButton" value="P-SSR" class="DeactivateButton" />
-        <input type="button" id="sSSRButton" value="S-SSR" class="DeactivateButton" />
+        <input type="button" id="pSsrButton" value="P-SSR" class="DeactivateButton" />
+        <input type="button" id="sSsrButton" value="S-SSR" class="DeactivateButton" />
         <br />
-        <input type="button" id="pSRButton" value="P-SR" class="DeactivateButton" />
-        <input type="button" id="sSRButton" value="S-SR" class="DeactivateButton" />
+        <input type="button" id="pSrButton" value="P-SR" class="DeactivateButton" />
+        <input type="button" id="sSrButton" value="S-SR" class="DeactivateButton" />
       </div>
 
       <div id="CAPTURE_BUTTON">
@@ -71,11 +81,7 @@
           <span style="margin: 5px 10px; float: left">
             <label class="container">
               <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
-              <input
-                type="checkbox"
-                id="showChangeCardLapConvertBtn"
-                onchange="changeCardLapConvertBtnValue()"
-              />
+              <input type="checkbox" id="showChangeCardLapConvertBtn" />
               <span class="checkmark"></span>
             </label>
           </span>
@@ -88,7 +94,7 @@
           <span id="convertSpan" style="margin: 5px 10px; float: left">
             <label class="container">
               <span data-lang="showFesIcon">페스 일러스트로 표시</span>
-              <input type="checkbox" id="fesImgConvertBtn" onchange="setFesImg()" />
+              <input type="checkbox" id="fesImgConvertBtn" />
               <span class="checkmark"></span>
             </label>
           </span>
@@ -240,19 +246,8 @@
       <div style="overflow: hidden; max-width: max-content">
         <label data-lang="startBaseDate">시작일:</label>
         <span id="baseStartSpan">
-          <input
-            type="date"
-            id="baseStartDate"
-            name="BaseStartDate"
-            onchange="updateBaseDate('start', NOW_SELECT)"
-          />
-          <input
-            type="button"
-            id="baseStartDateResetButton"
-            value="Reset"
-            class="Resetbutton"
-            onclick="baseDateReset('BaseStartDate', '2018-04-24')"
-          />
+          <input type="date" id="baseStartDate" name="BaseStartDate" />
+          <input type="button" id="baseStartDateResetButton" value="Reset" class="Resetbutton" />
         </span>
         <label id="baseStartDateStr" style="display: none"></label>
       </div>
@@ -260,19 +255,8 @@
       <div style="overflow: hidden; max-width: max-content">
         <label data-lang="endBaseDate">종료일:</label>
         <span id="baseEndSpan">
-          <input
-            type="date"
-            id="baseEndDate"
-            name="BaseEndDate"
-            onchange="updateBaseDate('end', NOW_SELECT)"
-          />
-          <input
-            type="button"
-            id="baseEndDateResetButton"
-            value="Reset"
-            class="Resetbutton"
-            onclick="baseDateReset('BaseEndDate', getToday())"
-          />
+          <input type="date" id="baseEndDate" name="BaseEndDate" />
+          <input type="button" id="baseEndDateResetButton" value="Reset" class="Resetbutton" />
         </span>
         <label id="baseEndDateStr" style="display: none"></label>
       </div>
@@ -312,12 +296,12 @@
       <div id="RANK" style="float: left; margin: 5px 10px 5px 0px"></div>
     </div>
 
-    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script defer src="src/common.js"></script>
-    <script defer src="src/language.js"></script>
-    <script defer src="src/main.js"></script>
-    <script defer src="src/createTable.js"></script>
+    <script src="src/js/constant.js"></script>
+    <script src="src/js/common.js"></script>
+    <script src="src/js/language.js"></script>
+    <script src="src/js/cardRarity.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/createTable.js"></script>
   </body>
   <footer>
     <hr />

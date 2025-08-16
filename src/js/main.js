@@ -1,42 +1,17 @@
-// 현재 표시 선택중인 레어리티
-let NOW_SELECT = resetNowSelect();
-
-let JSON_DATA;
-let VIEW_LANGUAGE;
-let IDOL_TOTAL_COUNT;
-const DEFALUT_LANGUAGE = "ko";
-const cardTypeIdentifier = {
-  PERMANENT: "P",
-  LIMITED: "L",
-  TWILIGHT: "Tw",
-  MY_SONGS: "My",
-  PARALLEL: "Pa",
-  EVENT: "E",
-  FES: "F",
-  CAMPAIGN: "C",
-  OTHER: "O",
-};
-const GACHA_CATEGORY_COUNT = Object.keys(cardTypeIdentifier).length;
-const SERVICE_START_DATE_STRING = "2018-04-24";
-
-// 카드 차수 변경 데이터의 배열
-let TABLE_BLANK_LAP_LIST;
-
-// 통상, 한정, 트와코레, 마이코레, 이벤트, 페스, 캠페인, 기타
-let CARD_TYPE_COUNT_LIST = Array(GACHA_CATEGORY_COUNT).fill(0);
-
-init();
+$(function () {
+  init();
+});
 
 /**
  * 초기화
  */
 async function init() {
-  JSON_DATA = await getJSON("json/data.json");
+  JSON_DATA = await getJSON("/src/json/data/data.json");
   IDOL_TOTAL_COUNT = JSON_DATA.length;
   TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
-  // 초기상태에는 카드분류를 아무것도 선택하지 않음
-  NOW_SELECT = resetNowSelect();
+  // 선택한 카드레어리티 초기화
+  CardRarity.init();
 
   // 초기 기준일
   // Start : 서비스 개시일
@@ -64,33 +39,48 @@ async function init() {
  * 각 버튼의 이벤트를 바인딩
  */
 function setEventHandler() {
-  // 카드 분류 버튼
-  $("#pURButton").on("click", () => setPUr());
-  $("#sURButton").on("click", () => setSUr());
-  $("#pSSRButton").on("click", () => setPSsr());
-  $("#sSSRButton").on("click", () => setSSsr());
-  $("#pSRButton").on("click", () => setPSr());
-  $("#sSRButton").on("click", () => setSSr());
+  // 카드 레어도 선택 버튼
+  $("#pUrButton").on("click", () => setPUr());
+  $("#sUrButton").on("click", () => setSUr());
+  $("#pSsrButton").on("click", () => setPSsr());
+  $("#sSsrButton").on("click", () => setSSsr());
+  $("#pSrButton").on("click", () => setPSr());
+  $("#sSrButton").on("click", () => setSSr());
 
   // 스크린샷 버튼
   $("#tableScreenCaptureButton").on("click", () => captureScreen("TABLE"));
   $("#rankScreenCaptureButton").on("click", () => captureScreen("RANK"));
 
+  // 시작일 변경
+  $("#baseStartDate").on("change", () => updateStartBaseDate());
+
   // 시작일 리셋 버튼
   $("#baseStartDateResetButton").on("click", () => baseDateReset("baseStartDate", "2018-04-24"));
 
+  // 종료일 변경
+  $("#baseEndDate").on("change", () => updateEndBaseDate());
+
   // 종료일 리셋 버튼
   $("#baseEndDateResetButton").on("click", () => baseDateReset("baseEndDate", getToday()));
+
+  // 카드 차수 변경 표시
+  $("#showChangeCardLapConvertBtn").on("change", () => changeCardLapConvertBtnValue());
 
   // 카드 차수 리셋 버튼
   $("#cardLapResetButton").on("click", () => clearTableBlankLapList());
 
   // 언어 변경 선택 버튼
   $("#languageSelect").on("change", async () => await changeLanguage("languageSelect"));
+
+  // 페스 일러 표시
+  $("#fesImgConvertBtn").on("change", () => setFesImg());
 }
 
+/**
+ * 언어 설정 초기화
+ */
 async function initLanguage() {
-  await Language.ready();
+  await Language.init();
 
   // Query Parameter로 언어 설정시 선택한 언어로 표시
   const query = getQuery();
@@ -104,21 +94,10 @@ async function initLanguage() {
   $("#languageSelect").val(Language.getCurrentLanguage()).prop("selected", true);
 }
 
-function resetNowSelect() {
-  return {
-    pUR: { isSelected: false, title: "P-UR", ps: "p", rarity: "ur" },
-    pSSR: { isSelected: false, title: "P-SSR", ps: "p", rarity: "ssr" },
-    pSR: { isSelected: false, title: "P-SR", ps: "p", rarity: "sr" },
-    sUR: { isSelected: false, title: "S-UR", ps: "s", rarity: "ur" },
-    sSSR: { isSelected: false, title: "S-SSR", ps: "s", rarity: "ssr" },
-    sSR: { isSelected: false, title: "S-SR", ps: "s", rarity: "sr" },
-  };
-}
-
 async function changeLanguage(id) {
   await Language.setLanguage($(`#${id}`).val());
   Language.setLanguageInMenu();
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -193,7 +172,7 @@ function setViewCheckboxSetting() {
     } else {
       $("input:checkbox[name='showCardTypeChk']").prop("checked", false);
     }
-    updateDate(NOW_SELECT);
+    updateDate();
   });
 
   // 카드타입 클릭 시
@@ -206,12 +185,12 @@ function setViewCheckboxSetting() {
     } else {
       $("input:checkbox[name='showCardAllTypeChk']").prop("checked", false);
     }
-    updateDate(NOW_SELECT);
+    updateDate();
   });
 
   // 표시 옵션 클릭
   $("input:checkbox[name='viewOptionChk']").click(function () {
-    updateDate(NOW_SELECT);
+    updateDate();
   });
 }
 
@@ -244,7 +223,7 @@ function clearStorage() {
 function changeCardLapConvertBtnValue() {
   readTableBlankLapList();
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -257,248 +236,110 @@ function clearTableBlankLapList() {
 
   resetTableBlankLapList();
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * P-SSR 표시
  */
 function setPSsr() {
-  if (NOW_SELECT.pSSR.isSelected) {
-    NOW_SELECT.pSSR.isSelected = false;
-    $(`#pSSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  const buttonId = "pSsrButton";
+  const buttonClassName = "Pbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
+    CardRarity.updateSelectOff(cardRarityType.P_SSR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.pSSR.isSelected = true;
-    $(`#pSSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
+    CardRarity.updateSelectOn(cardRarityType.P_SSR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * S-SSR 표시
  */
 function setSSsr() {
-  if (NOW_SELECT.sSSR.isSelected) {
-    NOW_SELECT.sSSR.isSelected = false;
-    $(`#sSSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  const buttonId = "sSsrButton";
+  const buttonClassName = "Sbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
+    CardRarity.updateSelectOff(cardRarityType.S_SSR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.sSSR.isSelected = true;
-    $(`#sSSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
+    CardRarity.updateSelectOn(cardRarityType.S_SSR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
-}
-
-/**
- * 모든 SSR 표시
- */
-function setAllSsr() {
-  if (
-    Object.values(NOW_SELECT)
-      .filter((v) => v.rarity == "ssr")
-      .every((v) => v.isSelected)
-  ) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "ssr") {
-        NOW_SELECT[k].isSelected = false;
-      }
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "ssr") {
-        NOW_SELECT[k].isSelected = true;
-      }
-    });
-  }
-
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * P-SR 표시
  */
 function setPSr() {
-  if (NOW_SELECT.pSR.isSelected) {
-    NOW_SELECT.pSR.isSelected = false;
-    $(`#pSRButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  const buttonId = "pSrButton";
+  const buttonClassName = "Pbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
+    CardRarity.updateSelectOff(cardRarityType.P_SR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.pSR.isSelected = true;
-    $(`#pSRButton`).removeClass("DeactivateButton").addClass("Pbutton");
+    CardRarity.updateSelectOn(cardRarityType.P_SR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * S-SR 표시
  */
 function setSSr() {
-  if (NOW_SELECT.sSR.isSelected) {
-    NOW_SELECT.sSR.isSelected = false;
-    $(`#sSRButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  const buttonId = "sSrButton";
+  const buttonClassName = "Sbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
+    CardRarity.updateSelectOff(cardRarityType.S_SR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.sSR.isSelected = true;
-    $(`#sSRButton`).removeClass("DeactivateButton").addClass("Sbutton");
+    CardRarity.updateSelectOn(cardRarityType.S_SR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
-}
-
-/**
- * 모든 SR 표시
- */
-function setAllSr() {
-  if (
-    Object.values(NOW_SELECT)
-      .filter((v) => v.rarity == "sr")
-      .every((v) => v.isSelected)
-  ) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "sr") {
-        NOW_SELECT[k].isSelected = false;
-      }
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "sr") {
-        NOW_SELECT[k].isSelected = true;
-      }
-    });
-  }
-
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * P-UR 표시
  */
 function setPUr() {
-  if (NOW_SELECT.pUR.isSelected) {
-    NOW_SELECT.pUR.isSelected = false;
-    $(`#pURButton`).removeClass("Pbutton").addClass("DeactivateButton");
+  const buttonId = "pUrButton";
+  const buttonClassName = "Pbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
+    CardRarity.updateSelectOff(cardRarityType.P_UR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.pUR.isSelected = true;
-    $(`#pURButton`).removeClass("DeactivateButton").addClass("Pbutton");
+    CardRarity.updateSelectOn(cardRarityType.P_UR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
  * S-UR 표시
  */
 function setSUr() {
-  if (NOW_SELECT.sUR.isSelected) {
-    NOW_SELECT.sUR.isSelected = false;
-    $(`#sURButton`).removeClass("Sbutton").addClass("DeactivateButton");
+  const buttonId = "sUrButton";
+  const buttonClassName = "Sbutton";
+
+  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
+    CardRarity.updateSelectOff(cardRarityType.S_UR, buttonId, buttonClassName);
   } else {
-    NOW_SELECT.sUR.isSelected = true;
-    $(`#sURButton`).removeClass("DeactivateButton").addClass("Sbutton");
+    CardRarity.updateSelectOn(cardRarityType.S_UR, buttonId, buttonClassName);
   }
 
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
-/**
- * 모든 UR 표시
- */
-function setAllUr() {
-  if (
-    Object.values(NOW_SELECT)
-      .filter((v) => v.rarity == "ur")
-      .every((v) => v.isSelected)
-  ) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "ur") {
-        NOW_SELECT[k].isSelected = false;
-      }
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].rarity == "ur") {
-        NOW_SELECT[k].isSelected = true;
-      }
-    });
-  }
-
-  updateDate(NOW_SELECT);
-}
-
-/**
- * 모든 P 표시
- */
-function setAllP() {
-  if (
-    Object.values(NOW_SELECT)
-      .filter((v) => v.ps == "p")
-      .every((v) => v.isSelected)
-  ) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].ps == "p") {
-        NOW_SELECT[k].isSelected = false;
-      }
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].ps == "p") {
-        NOW_SELECT[k].isSelected = true;
-      }
-    });
-  }
-
-  updateDate(NOW_SELECT);
-}
-
-/**
- * 모든 S 표시
- */
-function setAllS() {
-  if (
-    Object.values(NOW_SELECT)
-      .filter((v) => v.ps == "s")
-      .every((v) => v.isSelected)
-  ) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].ps == "s") {
-        NOW_SELECT[k].isSelected = false;
-      }
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      if (NOW_SELECT[k].ps == "s") {
-        NOW_SELECT[k].isSelected = true;
-      }
-    });
-  }
-
-  updateDate(NOW_SELECT);
-}
-
-/**
- * 모든 카드 표시
- */
-function setAllCard() {
-  // 모든 레어리티가 선택 되어 있는 경우, 모두 해제
-  // 그 외의 경우, 모두 선택
-  if (Object.values(NOW_SELECT).every((v) => v.isSelected)) {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      NOW_SELECT[k].isSelected = false;
-    });
-  } else {
-    Object.keys(NOW_SELECT).forEach((k) => {
-      NOW_SELECT[k].isSelected = true;
-    });
-  }
-
-  updateDate(NOW_SELECT);
-}
-
-function updateDate(nowSelect) {
+function updateDate() {
   resetCardTypeCountList();
 
   // 선택한 레어리티 정보를 취득
-  const selectedRarity = Object.values(nowSelect).filter((v) => v.isSelected);
+  const selectedRarity = CardRarity.getSelectedCardRarity();
 
   // 선택한 레어리티가 1개인 경우, 해당 타이틀을 표 타이틀로 설정
   // 그 외에는 공란으로 설정
@@ -510,7 +351,7 @@ function updateDate(nowSelect) {
     selectedRarity.length == 0 || selectedRarity.filter((v) => v.ps == "p").length > 0 ? "p" : "s";
 
   // 선택 레어리티의 카드리스트를 취득
-  const idolData = mergeCardData(tableTitleList, nowSelect);
+  const idolData = mergeCardData(tableTitleList);
 
   // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
   CtlfesImgConvertBtn(ps);
@@ -577,11 +418,7 @@ function convertShowCardCount() {
   }
 }
 
-/**
- * 카드 표시 시작일과 종료일 비교
- * 시작일이 종료일보다 클 경우 시작일을 종료일로 변경
- */
-function updateBaseDate(changedBase, nowSelect) {
+function updateStartBaseDate() {
   const serviceStartDate = new Date(SERVICE_START_DATE_STRING);
   const baseStartDate = new Date($("#baseStartDate").val());
   const baseEndDate = new Date($("#baseEndDate").val());
@@ -591,19 +428,9 @@ function updateBaseDate(changedBase, nowSelect) {
     $("#baseStartDate").val(SERVICE_START_DATE_STRING);
   }
 
-  // 종료일이 유효하지 않은 경우 현재 날짜로 변경
-  if (isNaN(baseEndDate.getTime())) {
-    $("#BaseEndDate").val(getToday());
-  }
-
   // 시작일 변경 시 종료일 이후로 할 수 없음
-  if (changedBase == "start" && baseStartDate.getTime() > baseEndDate.getTime()) {
-    $("#baseStartDate").val($("#BaseEndDate").val());
-  }
-
-  // 종료일 변경 시 시작일 이전으로 할 수 없음
-  if (changedBase == "end" && baseStartDate.getTime() > baseEndDate.getTime()) {
-    $("#BaseEndDate").val($("#baseStartDate").val());
+  if (baseStartDate.getTime() > baseEndDate.getTime()) {
+    $("#baseStartDate").val($("#baseEndDate").val());
   }
 
   // 시작일이 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
@@ -611,7 +438,24 @@ function updateBaseDate(changedBase, nowSelect) {
     $("#baseStartDate").val(SERVICE_START_DATE_STRING);
   }
 
-  updateDate(nowSelect);
+  updateDate();
+}
+
+function updateEndBaseDate() {
+  const baseStartDate = new Date($("#baseStartDate").val());
+  const baseEndDate = new Date($("#baseEndDate").val());
+
+  // 종료일이 유효하지 않은 경우 현재 날짜로 변경
+  if (isNaN(baseEndDate.getTime())) {
+    $("#baseEndDate").val(getToday());
+  }
+
+  // 종료일 변경 시 시작일 이전으로 할 수 없음
+  if (baseStartDate.getTime() > baseEndDate.getTime()) {
+    $("#baseEndDate").val($("#baseStartDate").val());
+  }
+
+  updateDate();
 }
 
 /**
@@ -619,7 +463,7 @@ function updateBaseDate(changedBase, nowSelect) {
  */
 function baseDateReset(id, inputDate) {
   $(`#${id}`).val(inputDate);
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -628,7 +472,7 @@ function baseDateReset(id, inputDate) {
 function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
   $(`#${startId}`).val(startInputDate);
   $(`#${endtId}`).val(endInputDate);
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -636,7 +480,7 @@ function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
  * (표, 프리뷰)
  */
 function setFesImg() {
-  updateDate(NOW_SELECT);
+  updateDate();
 }
 
 /**
@@ -717,60 +561,55 @@ function getCardList(cardAry) {
 /**
  * 전체 카드의 데이터를 추출, 재가공
  */
-function mergeCardData(tableTitleList, nowSelect) {
+function mergeCardData(tableTitleList) {
+  const selectedCardRarity = CardRarity.getSelectedCardRarity();
+
   // 선택된 항목이 없다면 undefined를 return
-  if (Object.values(nowSelect).filter((v) => v.isSelected).length == 0) {
+  if (selectedCardRarity.length == 0) {
     return;
   }
-
-  const pUR = nowSelect.pUR.isSelected;
-  const sUR = nowSelect.sUR.isSelected;
-  const pSSR = nowSelect.pSSR.isSelected;
-  const sSSR = nowSelect.sSSR.isSelected;
-  const pSR = nowSelect.pSR.isSelected;
-  const sSR = nowSelect.sSR.isSelected;
 
   const totalList = JSON_DATA.map((idol) => {
     let firstList = [];
     let tempCardList = [];
 
     // P UR
-    if (pUR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
       const idolList = [...idol.P_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SSR
-    if (pSSR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
       const idolList = [...idol.P_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SR
-    if (pSR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
       const idolList = [...idol.P_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S UR
-    if (sUR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
       const idolList = [...idol.S_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SSR
-    if (sSSR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
       const idolList = [...idol.S_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SR
-    if (sSR) {
+    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
       const idolList = [...idol.S_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
@@ -801,27 +640,22 @@ function mergeCardData(tableTitleList, nowSelect) {
       tempCardList.unshift(firstImplementation);
     }
 
-    let idolName = idol.idol_ko_name;
-    if (Language.getCurrentLanguage() == "ja") {
-      idolName = idol.idol_ja_name;
-    }
-
     return {
-      idol_name: idolName,
+      idol_name: idol[`idol_${Language.getCurrentLanguage()}_name`],
       display_ranking: idol.display_ranking,
       card_data: getCardList(tempCardList),
     };
   });
 
   // 표시할 데이터
-  // Title : 카드 타입 (P-SSR, S-SSR, P-SR, S-SR)
+  // Title : 카드 레어도 (P-SSR, S-SSR 등)
   // Data : 표시할 카드 데이터
-  const selectedCardTypeData = {
-    Title: tableTitleList,
-    Data: totalList,
+  const selectedCardData = {
+    title: tableTitleList,
+    data: totalList,
   };
 
-  return selectedCardTypeData;
+  return selectedCardData;
 }
 
 /**
@@ -915,40 +749,25 @@ function getImgSrc(path, addr) {
  * 표 캡쳐, 다운로드 처리
  */
 function captureScreen(frameName) {
-  // 선택된 표시 타입이 없는 경우 스킵
-  if (Object.values(NOW_SELECT).every((v) => !v.isSelected)) {
+  // 선택된 표시 타입이 하나도 없는 경우 스킵
+  if (CardRarity.isAllNotSelectedCardRarity()) {
     return;
   }
 
   let captureName = "";
   let frameId = "";
-  let viewMode = "";
 
   const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
 
   if (nowChangeLapFlag) {
     $(`#showChangeCardLapConvertBtn`).prop("checked", false);
-    updateDate(NOW_SELECT);
+    updateDate();
   }
 
   if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
   else if (frameName == "RANK") frameId = "#RANK";
 
-  if ($("#permanentCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.PERMANENT;
-  if ($("#limitedCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.LIMITED;
-  if ($("#twilightCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.TWILIGHT;
-  if ($("#mysongsCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.MY_SONGS;
-  if ($("#parallelCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.PARALLEL;
-  if ($("#eventCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.EVENT;
-  if ($("#gradeFesCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.FES;
-  if ($("#campaignCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.CAMPAIGN;
-  if ($("#otherCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.OTHER;
-
-  selectedRarity = Object.values(NOW_SELECT)
-    .filter((v) => v.isSelected)
-    .map((v) => v.title.replace("-", ""));
-
-  captureName = frameName + "_" + selectedRarity.join("_") + "_" + viewMode + ".png";
+  captureName = getCaptureFileName(frameName);
 
   $(frameId).css("overflow", "hidden");
   cssDisplayOff("#convertSpan");
@@ -975,7 +794,7 @@ function captureScreen(frameName) {
 
   if (nowChangeLapFlag) {
     $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
-    updateDate(NOW_SELECT);
+    updateDate();
   }
 
   $(frameId).css("overflow", "");
@@ -1006,4 +825,18 @@ function downloadURI(uri, filename) {
   link.download = filename;
   link.href = uri;
   link.click();
+}
+
+function getCaptureFileName(title) {
+  const d = new Date();
+
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, "0");
+  const dd = String(d.getDate()).padStart(2, "0");
+  const hh = String(d.getHours()).padStart(2, "0");
+  const mi = String(d.getMinutes()).padStart(2, "0");
+  const ss = String(d.getSeconds()).padStart(2, "0");
+  const ms = String(d.getMilliseconds()).padStart(3, "0");
+
+  return `${title}_${yyyy}${mm}${dd}${hh}${mi}${ss}${ms}.png`;
 }
