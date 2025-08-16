@@ -63,7 +63,7 @@ function runBuildTable(idolData) {
     $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
   }
 
-  setLanguageInTable(VIEW_LANGUAGE, tableName);
+  Language.setLanguageInTable(tableName);
 
   imgMapping(this);
 }
@@ -387,7 +387,7 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
   table += "</table>";
   $("#MAIN_RANK").html(table);
 
-  setLanguageInTable(VIEW_LANGUAGE, tableName);
+  Language.setLanguageInTable(tableName);
 }
 
 /**
@@ -493,7 +493,7 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   table += "</table>";
   $("#RANK").html(table);
 
-  setLanguageInTable(VIEW_LANGUAGE, tableName);
+  Language.setLanguageInTable(tableName);
 }
 
 function getGachaTypeSeparateChar() {

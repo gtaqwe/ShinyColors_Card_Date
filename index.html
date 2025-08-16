@@ -8,7 +8,7 @@
 
   <body>
     <div id="languageSetting" style="display: none">
-      <select id="languageSelect" style="height: 30px" onchange="changeLanguage()">
+      <select id="languageSelect" style="height: 30px">
         <option value="ko">한국어</option>
         <option value="ja">日本語</option>
       </select>
@@ -312,11 +312,12 @@
       <div id="RANK" style="float: left; margin: 5px 10px 5px 0px"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="lang.js"></script>
-    <script src="IndexScripts.js"></script>
-    <script src="CreateTable.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script defer src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script defer src="src/common.js"></script>
+    <script defer src="src/language.js"></script>
+    <script defer src="src/indexScripts.js"></script>
+    <script defer src="src/createTable.js"></script>
   </body>
   <footer>
     <hr />
