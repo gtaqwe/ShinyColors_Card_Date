@@ -22,7 +22,6 @@ async function init() {
   // 언어 설정
   await initLanguage();
 
-  setViewCheckboxSetting();
   readTableBlankLapList();
 
   // 카드 수 리셋
@@ -73,7 +72,10 @@ function setEventHandler() {
   $("#languageSelect").on("change", async () => await changeLanguage("languageSelect"));
 
   // 페스 일러 표시
-  $("#fesImgConvertBtn").on("change", () => setFesImg());
+  $("#fesImgConvertBtn").on("change", () => updateDate());
+
+  // 카드 타입 체크박스 설정
+  setViewCheckboxSetting();
 }
 
 /**
@@ -166,30 +168,28 @@ function initDatePresetButton() {
  */
 function setViewCheckboxSetting() {
   // 전체 체크 클릭 시
-  $("input:checkbox[name='showCardAllTypeChk']").click(function () {
-    if ($("input:checkbox[name='showCardAllTypeChk']").is(":checked")) {
-      $("input:checkbox[name='showCardTypeChk']").prop("checked", true);
+  $("input[type='checkbox'][name='showCardAllTypeChk']").on("change", function () {
+    if ($(this).is(":checked")) {
+      $("input[type='checkbox'][name='showCardTypeChk']").prop("checked", true);
     } else {
-      $("input:checkbox[name='showCardTypeChk']").prop("checked", false);
+      $("input[type='checkbox'][name='showCardTypeChk']").prop("checked", false);
     }
     updateDate();
   });
 
-  // 카드타입 클릭 시
-  $("input:checkbox[name='showCardTypeChk']").click(function () {
-    const allCnt = $("input:checkbox[name='showCardTypeChk']").length; // 카드타입 전체갯수
-    const selCnt = $("input:checkbox[name='showCardTypeChk']:checked").length; // 카드타입 선택갯수
+  // 카드타입을 모두 선택 했을 시, 전체 체크 버튼을 체크
+  // 카드타입이 하나라도 빠졌을 시, 전체 체크 버튼을 체크해제
+  $("input[type='checkbox'][name='showCardTypeChk']").on("change", function () {
+    const showCardTypeChk = $("input[type='checkbox'][name='showCardTypeChk']");
+    const isAllChecked = showCardTypeChk.length == showCardTypeChk.filter(":checked").length;
 
-    if (allCnt == selCnt) {
-      $("input:checkbox[name='showCardAllTypeChk']").prop("checked", true);
-    } else {
-      $("input:checkbox[name='showCardAllTypeChk']").prop("checked", false);
-    }
+    $("input[type='checkbox'][name='showCardAllTypeChk']").prop("checked", isAllChecked);
+
     updateDate();
   });
 
   // 표시 옵션 클릭
-  $("input:checkbox[name='viewOptionChk']").click(function () {
+  $("input[type='checkbox'][name='viewOptionChk']").on("change", function () {
     updateDate();
   });
 }
@@ -412,9 +412,9 @@ function setCardTypeCountList() {
 
 function convertShowCardCount() {
   if ($(showCardCountConvertBtn).is(":checked")) {
-    $(cardCountTR).css("display", "");
+    cssDisplayOn("#cardCountTR");
   } else {
-    $(cardCountTR).css("display", "none");
+    cssDisplayOff("#cardCountTR");
   }
 }
 
@@ -476,23 +476,15 @@ function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
 }
 
 /**
- * 페스 이미지 세팅
- * (표, 프리뷰)
- */
-function setFesImg() {
-  updateDate();
-}
-
-/**
  * 표시 일러스트 변경 (사복 - 페스)
  * S의 경우 사복으로 고정
  */
 function CtlfesImgConvertBtn(ps) {
   if (ps == "p") {
-    document.getElementById("fesImgConvertBtn").disabled = false;
+    $("#fesImgConvertBtn").prop("disabled", false);
   } else if (ps == "s") {
-    document.getElementById("fesImgConvertBtn").checked = false;
-    document.getElementById("fesImgConvertBtn").disabled = true;
+    $("#fesImgConvertBtn").prop("checked", false);
+    $("#fesImgConvertBtn").prop("disabled", true);
   }
 }
 
