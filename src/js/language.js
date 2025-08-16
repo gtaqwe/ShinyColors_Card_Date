@@ -11,7 +11,7 @@ const Language = (() => {
 
   async function setLanguage(langCode) {
     const finalLang = supportedLanguages.includes(langCode) ? langCode : defaultLang;
-    langData = await getJSON(`/src/json/lang/${finalLang}.json`);
+    langData = await getJSON(`src/json/lang/${finalLang}.json`);
     currentLang = finalLang;
   }
 

@@ -6,7 +6,7 @@ $(function () {
  * 초기화
  */
 async function init() {
-  JSON_DATA = await getJSON("/src/json/data/data.json");
+  JSON_DATA = await getJSON("src/json/data/data.json");
   IDOL_TOTAL_COUNT = JSON_DATA.length;
   TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
 
