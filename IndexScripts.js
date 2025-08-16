@@ -5,18 +5,18 @@ let JSON_DATA;
 let VIEW_LANGUAGE;
 let IDOL_TOTAL_COUNT;
 const DEFALUT_LANGUAGE = "ko";
-const CARD_TYPE_CHAR = {
-  permanent: "P",
-  limited: "L",
-  twilight: "Tw",
-  mysongs: "My",
-  parallel: "Pa",
-  event: "E",
-  fes: "F",
-  campaign: "C",
-  other: "O",
+const cardTypeIdentifier = {
+  PERMANENT: "P",
+  LIMITED: "L",
+  TWILIGHT: "Tw",
+  MY_SONGS: "My",
+  PARALLEL: "Pa",
+  EVENT: "E",
+  FES: "F",
+  CAMPAIGN: "C",
+  OTHER: "O",
 };
-const GACHA_CATEGORY_COUNT = Object.keys(CARD_TYPE_CHAR).length;
+const GACHA_CATEGORY_COUNT = Object.keys(cardTypeIdentifier).length;
 const SERVICE_START_DATE_STRING = "2018-04-24";
 
 // 카드 차수 변경 데이터의 배열
@@ -43,8 +43,8 @@ async function init() {
   // 초기 기준일
   // Start : 서비스 개시일
   // End : 현재 날짜
-  $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
-  $("#BaseEndDate").val(getToday());
+  $("#baseStartDate").val(SERVICE_START_DATE_STRING);
+  $("#baseEndDate").val(getToday());
 
   // 언어설정을 취득 후,
   // 지원하는 언어가 아닌 경우 한국어로 표시하도록 설정
@@ -72,6 +72,34 @@ async function init() {
 
   // 연도 프리셋 추가
   initDatePresetButton();
+
+  setEventHandler();
+}
+
+/**
+ * 각 버튼의 이벤트를 바인딩
+ */
+function setEventHandler() {
+  // 카드 분류 버튼
+  $("#pURButton").on("click", () => setPUr());
+  $("#sURButton").on("click", () => setSUr());
+  $("#pSSRButton").on("click", () => setPSsr());
+  $("#sSSRButton").on("click", () => setSSsr());
+  $("#pSRButton").on("click", () => setPSr());
+  $("#sSRButton").on("click", () => setSSr());
+
+  // 스크린샷 버튼
+  $("#tableScreenCaptureButton").on("click", () => captureScreen("TABLE"));
+  $("#rankScreenCaptureButton").on("click", () => captureScreen("RANK"));
+
+  // 시작일 리셋 버튼
+  $("#baseStartDateResetButton").on("click", () => baseDateReset("baseStartDate", "2018-04-24"));
+
+  // 종료일 리셋 버튼
+  $("#baseEndDateResetButton").on("click", () => baseDateReset("baseEndDate", getToday()));
+
+  // 카드 차수 리셋 버튼
+  $("#cardLapResetButton").on("click", () => clearTableBlankLapList());
 }
 
 /**
@@ -186,7 +214,7 @@ function initDatePresetButton() {
         type="button"
         value="${targetYear}"
         class="DatePresetButton"
-        onclick="baseDateFullReset('BaseStartDate', '${startDate}','BaseEndDate', '${endDate}')"
+        onclick="baseDateFullReset('baseStartDate', '${startDate}','baseEndDate', '${endDate}')"
       />`);
   }
 }
@@ -592,12 +620,12 @@ function convertShowCardCount() {
  */
 function updateBaseDate(changedBase, nowSelect) {
   const serviceStartDate = new Date(SERVICE_START_DATE_STRING);
-  const baseStartDate = new Date($("#BaseStartDate").val());
-  const baseEndDate = new Date($("#BaseEndDate").val());
+  const baseStartDate = new Date($("#baseStartDate").val());
+  const baseEndDate = new Date($("#baseEndDate").val());
 
   // 시작일이 유효하지 않은 경우 서비스 개시일로 변경
   if (isNaN(baseStartDate.getTime())) {
-    $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
+    $("#baseStartDate").val(SERVICE_START_DATE_STRING);
   }
 
   // 종료일이 유효하지 않은 경우 현재 날짜로 변경
@@ -607,17 +635,17 @@ function updateBaseDate(changedBase, nowSelect) {
 
   // 시작일 변경 시 종료일 이후로 할 수 없음
   if (changedBase == "start" && baseStartDate.getTime() > baseEndDate.getTime()) {
-    $("#BaseStartDate").val($("#BaseEndDate").val());
+    $("#baseStartDate").val($("#BaseEndDate").val());
   }
 
   // 종료일 변경 시 시작일 이전으로 할 수 없음
   if (changedBase == "end" && baseStartDate.getTime() > baseEndDate.getTime()) {
-    $("#BaseEndDate").val($("#BaseStartDate").val());
+    $("#BaseEndDate").val($("#baseStartDate").val());
   }
 
   // 시작일이 서비스 개시일보다 이전의 경우, 서비스 개시일로 변경
   if (baseStartDate.getTime() < serviceStartDate.getTime()) {
-    $("#BaseStartDate").val(SERVICE_START_DATE_STRING);
+    $("#baseStartDate").val(SERVICE_START_DATE_STRING);
   }
 
   updateDate(nowSelect);
@@ -699,8 +727,8 @@ function getCardList(cardAry) {
       .filter(
         (v) =>
           v.card_type == "first" ||
-          (new Date(v.card_date) >= new Date($("#BaseStartDate").val()) &&
-            new Date(v.card_date) <= new Date($("#BaseEndDate").val()))
+          (new Date(v.card_date) >= new Date($("#baseStartDate").val()) &&
+            new Date(v.card_date) <= new Date($("#baseEndDate").val()))
       )
       // 오래된 순으로 정렬
       // 단순 비교로 정렬하는 경우
@@ -943,15 +971,15 @@ function captureScreen(frameName) {
   if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
   else if (frameName == "RANK") frameId = "#RANK";
 
-  if ($("#permanentCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.permanent;
-  if ($("#limitedCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.limited;
-  if ($("#twilightCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.twilight;
-  if ($("#mysongsCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.mysongs;
-  if ($("#parallelCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.parallel;
-  if ($("#eventCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.event;
-  if ($("#gradeFesCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.fes;
-  if ($("#campaignCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.campaign;
-  if ($("#otherCardChkBox").is(":checked")) viewMode += CARD_TYPE_CHAR.other;
+  if ($("#permanentCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.PERMANENT;
+  if ($("#limitedCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.LIMITED;
+  if ($("#twilightCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.TWILIGHT;
+  if ($("#mysongsCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.MY_SONGS;
+  if ($("#parallelCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.PARALLEL;
+  if ($("#eventCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.EVENT;
+  if ($("#gradeFesCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.FES;
+  if ($("#campaignCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.CAMPAIGN;
+  if ($("#otherCardChkBox").is(":checked")) viewMode += cardTypeIdentifier.OTHER;
 
   selectedRarity = Object.values(NOW_SELECT)
     .filter((v) => v.isSelected)
@@ -962,13 +990,13 @@ function captureScreen(frameName) {
   $(frameId).css("overflow", "hidden");
   cssDisplayOff("#convertSpan");
 
-  $("#BaseStartDateStr").text(getBaseDate("#BaseStartDate"));
-  cssDisplayOff("#BaseStartSpan");
-  cssDisplayOn("#BaseStartDateStr");
+  $("#baseStartDateStr").text(getBaseDate("#baseStartDate"));
+  cssDisplayOff("#baseStartSpan");
+  cssDisplayOn("#baseStartDateStr");
 
-  $("#BaseEndDateStr").text(getBaseDate("#BaseEndDate"));
-  cssDisplayOff("#BaseEndSpan");
-  cssDisplayOn("#BaseEndDateStr");
+  $("#baseEndDateStr").text(getBaseDate("#baseEndDate"));
+  cssDisplayOff("#baseEndSpan");
+  cssDisplayOn("#baseEndDateStr");
 
   cssDisplayOff("#CAPTURE_BUTTON");
   cssDisplayOff("#VIEW_OPTION");
@@ -990,11 +1018,11 @@ function captureScreen(frameName) {
   $(frameId).css("overflow", "");
   cssDisplayOn("#convertSpan");
 
-  cssDisplayOn("#BaseStartSpan");
-  cssDisplayOff("#BaseStartDateStr");
+  cssDisplayOn("#baseStartSpan");
+  cssDisplayOff("#baseStartDateStr");
 
-  cssDisplayOn("#BaseEndSpan");
-  cssDisplayOff("#BaseEndDateStr");
+  cssDisplayOn("#baseEndSpan");
+  cssDisplayOff("#baseEndDateStr");
 
   cssDisplayOn("#CAPTURE_BUTTON");
   cssDisplayOn("#VIEW_OPTION");

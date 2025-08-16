@@ -235,7 +235,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
         dateBefore = calDate(cardDate);
 
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
-          dateAfter = calDate(getBaseDate("#BaseEndDate"));
+          dateAfter = calDate(getBaseDate("#baseEndDate"));
           interval = (dateAfter.getTime() - dateBefore.getTime()) / currDay;
           intervalCode = `<td class="now-interval">${interval}</td>`;
         } else {
@@ -406,47 +406,47 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   let gachaTypeStr = notSelectStr;
   if ($("#permanentCardChkBox").is(":checked")) {
     gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.permanent;
+    gachaTypeStr += cardTypeIdentifier.PERMANENT;
   }
   if ($("#limitedCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.limited;
+    gachaTypeStr += cardTypeIdentifier.LIMITED;
   }
   if ($("#twilightCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.twilight;
+    gachaTypeStr += cardTypeIdentifier.TWILIGHT;
   }
   if ($("#mysongsCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.mysongs;
+    gachaTypeStr += cardTypeIdentifier.MY_SONGS;
   }
   if ($("#parallelCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.parallel;
+    gachaTypeStr += cardTypeIdentifier.PARALLEL;
   }
   if ($("#eventCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.event;
+    gachaTypeStr += cardTypeIdentifier.EVENT;
   }
   if ($("#gradeFesCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.fes;
+    gachaTypeStr += cardTypeIdentifier.FES;
   }
   if ($("#campaignCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.campaign;
+    gachaTypeStr += cardTypeIdentifier.CAMPAIGN;
   }
   if ($("#otherCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += CARD_TYPE_CHAR.other;
+    gachaTypeStr += cardTypeIdentifier.OTHER;
   }
 
   table += "<tr>";
@@ -455,9 +455,9 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
 
   table += "<tr>";
   table += `<th class="th-rank" colspan="3">
-  ${getBaseDate("#BaseStartDate")}<br />
+  ${getBaseDate("#baseStartDate")}<br />
   ~<br />
-  ${getBaseDate("#BaseEndDate")}</th>`;
+  ${getBaseDate("#baseEndDate")}</th>`;
   table += "</tr>";
 
   table += "<tr>";

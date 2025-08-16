@@ -17,65 +17,27 @@
 
     <div id="CAPTURE_FRAME" style="width: max-content; height: max-content">
       <div>
-        <input
-          type="button"
-          id="pURButton"
-          value="P-UR"
-          onclick="setPUr()"
-          class="DeactivateButton"
-        />
-        <input
-          type="button"
-          id="sURButton"
-          value="S-UR"
-          onclick="setSUr()"
-          class="DeactivateButton"
-        />
+        <input type="button" id="pURButton" value="P-UR" class="DeactivateButton" />
+        <input type="button" id="sURButton" value="S-UR" class="DeactivateButton" />
         <br />
-
-        <input
-          type="button"
-          id="pSSRButton"
-          value="P-SSR"
-          onclick="setPSsr()"
-          class="DeactivateButton"
-        />
-        <input
-          type="button"
-          id="sSSRButton"
-          value="S-SSR"
-          onclick="setSSsr()"
-          class="DeactivateButton"
-        />
+        <input type="button" id="pSSRButton" value="P-SSR" class="DeactivateButton" />
+        <input type="button" id="sSSRButton" value="S-SSR" class="DeactivateButton" />
         <br />
-
-        <input
-          type="button"
-          id="pSRButton"
-          value="P-SR"
-          onclick="setPSr()"
-          class="DeactivateButton"
-        />
-        <input
-          type="button"
-          id="sSRButton"
-          value="S-SR"
-          onclick="setSSr()"
-          class="DeactivateButton"
-        />
+        <input type="button" id="pSRButton" value="P-SR" class="DeactivateButton" />
+        <input type="button" id="sSRButton" value="S-SR" class="DeactivateButton" />
       </div>
 
       <div id="CAPTURE_BUTTON">
         <input
           type="button"
+          id="tableScreenCaptureButton"
           value="Main Capture"
-          onclick="captureScreen('TABLE')"
           class="Capturebutton"
         />
         <input
           type="button"
+          id="rankScreenCaptureButton"
           value="Rank List Capture"
-          onclick="captureScreen('RANK')"
           class="Capturebutton"
         />
       </div>
@@ -120,12 +82,7 @@
 
           <!-- 카드 차수 변경을 리셋 -->
           <span style="margin: 5px 0px; float: left">
-            <input
-              type="button"
-              value="Reset"
-              class="Resetbutton"
-              onclick="clearTableBlankLapList()"
-            />
+            <input type="button" id="cardLapResetButton" value="Reset" class="Resetbutton" />
           </span>
 
           <span id="convertSpan" style="margin: 5px 10px; float: left">
@@ -282,40 +239,42 @@
 
       <div style="overflow: hidden; max-width: max-content">
         <label data-lang="startBaseDate">시작일:</label>
-        <span id="BaseStartSpan">
+        <span id="baseStartSpan">
           <input
             type="date"
-            id="BaseStartDate"
+            id="baseStartDate"
             name="BaseStartDate"
             onchange="updateBaseDate('start', NOW_SELECT)"
           />
           <input
             type="button"
+            id="baseStartDateResetButton"
             value="Reset"
             class="Resetbutton"
             onclick="baseDateReset('BaseStartDate', '2018-04-24')"
           />
         </span>
-        <label id="BaseStartDateStr" style="display: none"></label>
+        <label id="baseStartDateStr" style="display: none"></label>
       </div>
 
       <div style="overflow: hidden; max-width: max-content">
         <label data-lang="endBaseDate">종료일:</label>
-        <span id="BaseEndSpan">
+        <span id="baseEndSpan">
           <input
             type="date"
-            id="BaseEndDate"
+            id="baseEndDate"
             name="BaseEndDate"
             onchange="updateBaseDate('end', NOW_SELECT)"
           />
           <input
             type="button"
+            id="baseEndDateResetButton"
             value="Reset"
             class="Resetbutton"
             onclick="baseDateReset('BaseEndDate', getToday())"
           />
         </span>
-        <label id="BaseEndDateStr" style="display: none"></label>
+        <label id="baseEndDateStr" style="display: none"></label>
       </div>
 
       <div style="max-width: max-content">
