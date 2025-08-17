@@ -338,23 +338,29 @@ function setSUr() {
 function updateDate() {
   resetCardTypeCountList();
 
+  let idolData;
+
   // 선택한 레어리티 정보를 취득
   const selectedRarity = CardRarity.getSelectedCardRarity();
 
-  // 선택한 레어리티가 1개인 경우, 해당 타이틀을 표 타이틀로 설정
-  // 그 외에는 공란으로 설정
-  const tableTitleList = selectedRarity.map((v) => v.title);
+  if (selectedRarity.length != 0) {
+    // 선택한 레어리티의 타이틀을 모두 취득
+    const tableTitleList = selectedRarity.map((v) => v.title);
+
+    // 선택 레어리티의 카드리스트를 취득
+    const selectedCardData = mergeCardData();
+
+    idolData = {
+      titleList: tableTitleList,
+      data: selectedCardData,
+    };
+  }
 
   // 선택한 레어리티가 없거나, 프로듀스가 선택되어있는 경우
-  // 페스 일러스트 표시 체크가 가능하도록 설정
-  const ps =
-    selectedRarity.length == 0 || selectedRarity.filter((v) => v.ps == "p").length > 0 ? "p" : "s";
-
-  // 선택 레어리티의 카드리스트를 취득
-  const idolData = mergeCardData(tableTitleList);
-
   // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
-  CtlfesImgConvertBtn(ps);
+  const ps = selectedRarity.filter((v) => v.ps == "p").length == 0 ? "s" : "p";
+
+  changeForFesImgConvertButton(ps);
 
   // 표 작성
   buildTable(idolData);
@@ -411,10 +417,10 @@ function setCardTypeCountList() {
 }
 
 function convertShowCardCount() {
-  if ($(showCardCountConvertBtn).is(":checked")) {
-    cssDisplayOn("#cardCountTR");
+  if ($("#showCardCountConvertBtn").is(":checked")) {
+    cssDisplayOn("#cardCountTr");
   } else {
-    cssDisplayOff("#cardCountTR");
+    cssDisplayOff("#cardCountTr");
   }
 }
 
@@ -479,7 +485,7 @@ function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
  * 표시 일러스트 변경 (사복 - 페스)
  * S의 경우 사복으로 고정
  */
-function CtlfesImgConvertBtn(ps) {
+function changeForFesImgConvertButton(ps) {
   if (ps == "p") {
     $("#fesImgConvertBtn").prop("disabled", false);
   } else if (ps == "s") {
@@ -492,32 +498,28 @@ function CtlfesImgConvertBtn(ps) {
  * 조건에 해당되는 카드를 Filter, Sort 후 리스트로 Return
  */
 function getCardList(cardAry) {
+  const cardTypeCheckBoxes = {
+    permanent: "permanentCardChkBox",
+    limited: "limitedCardChkBox",
+    twilight: "twilightCardChkBox",
+    mysongs: "mysongsCardChkBox",
+    parallel: "parallelCardChkBox",
+    event: "eventCardChkBox",
+    fes: "gradeFesCardChkBox",
+    campaign: "campaignCardChkBox",
+    other: "otherCardChkBox",
+  };
+
   return (
     cardAry
       .map((card, idx) => {
         const cardType = card.card_type;
-        if (cardType == "first" && idx == 0 && !$(noShowRCardConvertBtn).is(":checked")) {
+        if (cardType == "first" && idx == 0 && !$("#noShowRCardConvertBtn").is(":checked")) {
           return card;
         }
 
         // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-        if (cardType == "permanent" && $("#permanentCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "limited" && $("#limitedCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "twilight" && $("#twilightCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "mysongs" && $("#mysongsCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "parallel" && $("#parallelCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "event" && $("#eventCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "fes" && $("#gradeFesCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "campaign" && $("#campaignCardChkBox").is(":checked")) {
-          return card;
-        } else if (cardType == "other" && $("#otherCardChkBox").is(":checked")) {
+        if (cardTypeCheckBoxes[cardType] && $(`#${cardTypeCheckBoxes[cardType]}`).is(":checked")) {
           return card;
         }
       })
@@ -533,19 +535,7 @@ function getCardList(cardAry) {
       // 단순 비교로 정렬하는 경우
       // 브라우저 차이로 인한 표시의 차이가 있을 가능성이 있기에 「<」, 「>」, 「=」를 모두 확인
       .sort((a, b) => {
-        // card_date가 존재하지 않는 경우, 마지막에 위치하도록 처리
-        aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
-        bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
-
-        if (aDate < bDate) {
-          // a가 b보다 이전
-          return -1;
-        } else if (aDate > bDate) {
-          // a가 b보다 이후
-          return 1;
-        } else {
-          return 0;
-        }
+        return getCompareValueByCardDate(a.card_date, b.card_date);
       })
   );
 }
@@ -553,15 +543,8 @@ function getCardList(cardAry) {
 /**
  * 전체 카드의 데이터를 추출, 재가공
  */
-function mergeCardData(tableTitleList) {
-  const selectedCardRarity = CardRarity.getSelectedCardRarity();
-
-  // 선택된 항목이 없다면 undefined를 return
-  if (selectedCardRarity.length == 0) {
-    return;
-  }
-
-  const totalList = JSON_DATA.map((idol) => {
+function mergeCardData() {
+  return JSON_DATA.map((idol) => {
     let firstList = [];
     let tempCardList = [];
 
@@ -611,19 +594,7 @@ function mergeCardData(tableTitleList) {
     const firstImplementation = firstList
       .filter((v) => v)
       .sort((a, b) => {
-        // card_date가 존재하지 않는 경우, 마지막에 위치하도록 처리
-        const aDate = new Date(a.card_date ? a.card_date : 8640000000000000);
-        const bDate = new Date(b.card_date ? b.card_date : 8640000000000000);
-
-        if (aDate < bDate) {
-          // a가 b보다 이전
-          return -1;
-        } else if (aDate > bDate) {
-          // a가 b보다 이후
-          return 1;
-        } else {
-          return 0;
-        }
+        return getCompareValueByCardDate(a.card_date, b.card_date);
       })
       .shift();
 
@@ -638,16 +609,27 @@ function mergeCardData(tableTitleList) {
       card_data: getCardList(tempCardList),
     };
   });
+}
 
-  // 표시할 데이터
-  // Title : 카드 레어도 (P-SSR, S-SSR 등)
-  // Data : 표시할 카드 데이터
-  const selectedCardData = {
-    title: tableTitleList,
-    data: totalList,
-  };
+/**
+ * 날짜를 비교한 결과를 취득
+ * A가 B보다 이전인 경우, 0보다 작음
+ * A가 B보다 이후인 경우, 0보다 큼
+ */
+function getCompareValueByCardDate(dateA, dateB) {
+  // 날짜 데이터가 존재 하지 않는 경우, 마지막에 위치하도록 무한으로 설정
+  const timeA = dateA ? new Date(dateA).getTime() : Infinity;
+  const timeB = dateB ? new Date(dateB).getTime() : Infinity;
 
-  return selectedCardData;
+  return timeA - timeB;
+}
+
+function getImagePath(isProduce, isFes, isCard) {
+  const cardTypeName = isProduce ? "produce_idol" : "support_idol";
+  const imgTypeName = isCard ? "card" : "icon";
+  const fesName = isFes ? "fes_" : "";
+
+  return `${cardTypeName}/${fesName}${imgTypeName}`;
 }
 
 /**
@@ -662,36 +644,28 @@ function imgMapping() {
   // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
   $("#date-table td").hover(
     function (e) {
-      const imgAddrAttr = $(this).closest("td").attr("addr"); // 이미지 파일명
-      const imgNameAttr = $(this).closest("td").attr("name"); // 카드명
-      const fesChk = $("#fesImgConvertBtn").is(":checked"); // 페스 일러스트 표시 모드
-      const psType = $(this).closest("td").attr("ps"); // 카드명
+      const imgAddrAttr = $(this).closest("td").attr("addr");
+      const imgNameAttr = $(this).closest("td").attr("name");
+      const isProduce = $(this).closest("td").attr("ps") == "p";
+      const isFes = $("#fesImgConvertBtn").is(":checked");
+      const isCard = true;
 
-      let imgPath = "";
-      // 일러 패스 지정
-      if (psType == "p") {
-        // 프로듀스 일러
-        imgPath = "produce_idol";
-        if (fesChk) {
-          // 페스 일러
-          imgPath += "/fes_card";
-        } else {
-          // 사복 일러
-          imgPath += "/card";
-        }
-      } else {
-        // 서포트 일러
-        imgPath = "support_idol/card";
-      }
+      const imgPath = getImagePath(isProduce, isFes, isCard);
 
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
       if (imgNameAttr) {
-        $("body").append(
-          `<p id="preview"><img src="${getImgSrc(
-            imgPath,
-            imgAddrAttr
-          )}" width="${imgWidth}" height="${imgHeight}" onerror = "this.src='./img/assets/Blank_Card.png'"><br>${imgNameAttr}</p>`
-        );
+        const previewImgTag = $("<img>").attr({
+          src: getImgSrc(imgPath, imgAddrAttr),
+          witdh: imgWidth,
+          height: imgHeight,
+          onerror: "this.src='./img/assets/Blank_Card.png'",
+        });
+        const previewIdTag = $("<p>")
+          .attr("id", "preview")
+          .append(previewImgTag)
+          .append("<br>")
+          .append(imgNameAttr);
+        $("body").append(previewIdTag);
         $("#preview")
           .css("top", e.pageY - xOffset + "px")
           .css("left", e.pageX + yOffset + "px")
@@ -746,8 +720,8 @@ function captureScreen(frameName) {
     return;
   }
 
-  let captureName = "";
-  let frameId = "";
+  const frameMap = { TABLE: "#CAPTURE_FRAME", RANK: "#RANK" };
+  const frameId = frameMap[frameName] || "";
 
   const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
 
@@ -756,10 +730,7 @@ function captureScreen(frameName) {
     updateDate();
   }
 
-  if (frameName == "TABLE") frameId = "#CAPTURE_FRAME";
-  else if (frameName == "RANK") frameId = "#RANK";
-
-  captureName = getCaptureFileName(frameName);
+  const captureName = getCaptureFileName(frameName);
 
   $(frameId).css("overflow", "hidden");
   cssDisplayOff("#convertSpan");
@@ -819,7 +790,7 @@ function downloadURI(uri, filename) {
   link.click();
 }
 
-function getCaptureFileName(title) {
+function getCaptureFileName(name) {
   const d = new Date();
 
   const yyyy = d.getFullYear();
@@ -830,5 +801,5 @@ function getCaptureFileName(title) {
   const ss = String(d.getSeconds()).padStart(2, "0");
   const ms = String(d.getMilliseconds()).padStart(3, "0");
 
-  return `${title}_${yyyy}${mm}${dd}${hh}${mi}${ss}${ms}.png`;
+  return `${name}_${yyyy}${mm}${dd}${hh}${mi}${ss}${ms}.png`;
 }

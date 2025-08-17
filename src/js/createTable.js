@@ -22,8 +22,7 @@ function runBuildTable(idolData) {
 
   // 선택된 레어리티가 1개일때 표 타이틀을 설정
   // 그 외의 경우에는 공란
-  const tableTitle = idolData.title.length == 1 ? idolData.title[0] : "";
-  const rowLength = idolData.data.length; // 아이돌 수
+  const tableTitle = idolData.titleList.length == 1 ? idolData.titleList[0] : "";
 
   const maxColumnLength = Math.max(
     ...idolData.data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
@@ -47,7 +46,7 @@ function runBuildTable(idolData) {
       (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
     )
   );
-  for (let row = 0; row < rowLength; row++) {
+  for (let row = 0; row < idolData.data.length; row++) {
     table += `<tr class="tr-main-data">`;
 
     table += setCardData(idolData.data[row], maxColumnLength, row, maxLap);
@@ -202,23 +201,11 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       if ($(iconImgConvertBtn).is(":checked") && cardAddr) {
         const style = `style= "width:72px; height:72px"`;
         const onerror = `onerror = "this.src='./img/assets/Blank_Icon.png'"`;
+        const isProduce = psType == "p";
+        const isFes = $("#fesImgConvertBtn").is(":checked");
+        const isCard = false;
 
-        let imgPath = "";
-        // 아이콘 패스 지정
-        if (psType == "p") {
-          // 프로듀스 아이콘
-          imgPath = "produce_idol";
-          if ($(fesImgConvertBtn).is(":checked")) {
-            // 페스 아이콘
-            imgPath += "/fes_icon";
-          } else {
-            // 사복 아이콘
-            imgPath += "/icon";
-          }
-        } else {
-          // 서포트 아이콘
-          imgPath = "support_idol/icon";
-        }
+        const imgPath = getImagePath(isProduce, isFes, isCard);
 
         resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
       }
@@ -315,7 +302,7 @@ function runBuildDateRank(idolData) {
   };
 
   // 랭킹표 타이틀에 선택한 레어리티를 모두 표시
-  const tableType = idolData.title.join("<br>");
+  const tableType = idolData.titleList.join("<br>");
 
   // 0 : 메인표 옆에 표시 (아이돌의 위치는 바뀌지 않음)
   // 1 : 메인표와 별개로 표시 (아이돌의 위치가 바뀜)
