@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="src/css/styles.css" />
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     <!-- jQuery fallback -->
     <script>
@@ -275,15 +274,15 @@
             <th class="other-card-cell" style="width: 100px" data-lang="other_2">기타</th>
           </tr>
           <tr id="cardCountTr" style="display: none">
-            <td id="cardCount_permanent"></td>
-            <td id="cardCount_limited" class="limit-card-cell"></td>
-            <td id="cardCount_twilight" class="twilight-card-cell"></td>
-            <td id="cardCount_mysongs" class="mysongs-card-cell"></td>
-            <td id="cardCount_parallel" class="parallel-card-cell"></td>
-            <td id="cardCount_event" class="event-card-cell"></td>
-            <td id="cardCount_fes" class="gradeFes-card-cell"></td>
-            <td id="cardCount_campaign" class="campaign-card-cell"></td>
-            <td id="cardCount_other" class="other-card-cell"></td>
+            <td id="cardCount_permanent" card-type="permanent"></td>
+            <td id="cardCount_limited" card-type="limited" class="limit-card-cell"></td>
+            <td id="cardCount_twilight" card-type="twilight" class="twilight-card-cell"></td>
+            <td id="cardCount_mysongs" card-type="mysongs" class="mysongs-card-cell"></td>
+            <td id="cardCount_parallel" card-type="parallel" class="parallel-card-cell"></td>
+            <td id="cardCount_event" card-type="event" class="event-card-cell"></td>
+            <td id="cardCount_fes" card-type="fes" class="gradeFes-card-cell"></td>
+            <td id="cardCount_campaign" card-type="campaign" class="campaign-card-cell"></td>
+            <td id="cardCount_other" card-type="other" class="other-card-cell"></td>
           </tr>
         </table>
       </div>
@@ -299,7 +298,9 @@
     <script src="src/js/constant.js"></script>
     <script src="src/js/common.js"></script>
     <script src="src/js/language.js"></script>
-    <script src="src/js/cardRarity.js"></script>
+    <script src="src/js/cardRarityInfo.js"></script>
+    <script src="src/js/cardTypeInfo.js"></script>
+    <script src="src/js/idolData.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/createTable.js"></script>
   </body>

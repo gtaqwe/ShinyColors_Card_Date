@@ -158,7 +158,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       const cardAddr = cardDataList[idx].card_addr;
       const psType = cardDataList[idx].ps_type;
 
-      countCardType(cardType);
+      increaseCardTypeCount(cardType);
 
       // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
       if (cardType == "limited") {
@@ -393,47 +393,47 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   let gachaTypeStr = notSelectStr;
   if ($("#permanentCardChkBox").is(":checked")) {
     gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.PERMANENT;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("permanent");
   }
   if ($("#limitedCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.LIMITED;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("limited");
   }
   if ($("#twilightCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.TWILIGHT;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("twilight");
   }
   if ($("#mysongsCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.MY_SONGS;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("mysongs");
   }
   if ($("#parallelCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.PARALLEL;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("parallel");
   }
   if ($("#eventCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.EVENT;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("event");
   }
   if ($("#gradeFesCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.FES;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("fes");
   }
   if ($("#campaignCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.CAMPAIGN;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("campaign");
   }
   if ($("#otherCardChkBox").is(":checked")) {
     if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
     else gachaTypeStr = "";
-    gachaTypeStr += cardTypeIdentifier.OTHER;
+    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("other");
   }
 
   table += "<tr>";

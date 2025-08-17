@@ -1,4 +1,4 @@
-const CardRarity = (() => {
+const CardRarityInfo = (() => {
   const cardRarity = {
     pUR: { isSelected: false, title: "P-UR", ps: "p", rarity: "ur" },
     pSSR: { isSelected: false, title: "P-SSR", ps: "p", rarity: "ssr" },

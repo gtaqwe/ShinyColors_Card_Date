@@ -6,12 +6,11 @@ $(function () {
  * 초기화
  */
 async function init() {
-  JSON_DATA = await getJSON("src/json/data/data.json");
-  IDOL_TOTAL_COUNT = JSON_DATA.length;
-  TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
+  await IdolData.init();
+  TABLE_BLANK_LAP_LIST = Array(IdolData.getIdolNumber()).fill(0);
 
   // 선택한 카드레어리티 초기화
-  CardRarity.init();
+  CardRarityInfo.init();
 
   // 초기 기준일
   // Start : 서비스 개시일
@@ -198,7 +197,7 @@ function setViewCheckboxSetting() {
  * TABLE_BLANK_LAP_LIST를 초기화(모든 데이터를 0으로 초기화)
  */
 function resetTableBlankLapList() {
-  TABLE_BLANK_LAP_LIST = Array(IDOL_TOTAL_COUNT).fill(0);
+  TABLE_BLANK_LAP_LIST = Array(IdolData.getIdolNumber()).fill(0);
 }
 
 /**
@@ -246,10 +245,10 @@ function setPSsr() {
   const buttonId = "pSsrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
-    CardRarity.updateSelectOff(cardRarityType.P_SSR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.P_SSR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.P_SSR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.P_SSR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -262,10 +261,10 @@ function setSSsr() {
   const buttonId = "sSsrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
-    CardRarity.updateSelectOff(cardRarityType.S_SSR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.S_SSR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.S_SSR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.S_SSR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -278,10 +277,10 @@ function setPSr() {
   const buttonId = "pSrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
-    CardRarity.updateSelectOff(cardRarityType.P_SR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.P_SR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.P_SR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.P_SR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -294,10 +293,10 @@ function setSSr() {
   const buttonId = "sSrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
-    CardRarity.updateSelectOff(cardRarityType.S_SR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.S_SR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.S_SR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.S_SR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -310,10 +309,10 @@ function setPUr() {
   const buttonId = "pUrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
-    CardRarity.updateSelectOff(cardRarityType.P_UR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.P_UR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.P_UR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.P_UR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -326,22 +325,22 @@ function setSUr() {
   const buttonId = "sUrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
-    CardRarity.updateSelectOff(cardRarityType.S_UR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
+    CardRarityInfo.updateSelectOff(cardRarityType.S_UR, buttonId, buttonClassName);
   } else {
-    CardRarity.updateSelectOn(cardRarityType.S_UR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(cardRarityType.S_UR, buttonId, buttonClassName);
   }
 
   updateDate();
 }
 
 function updateDate() {
-  resetCardTypeCountList();
+  CardTypeInfo.init();
 
   let idolData;
 
   // 선택한 레어리티 정보를 취득
-  const selectedRarity = CardRarity.getSelectedCardRarity();
+  const selectedRarity = CardRarityInfo.getSelectedCardRarity();
 
   if (selectedRarity.length != 0) {
     // 선택한 레어리티의 타이틀을 모두 취득
@@ -376,44 +375,18 @@ function updateDate() {
   convertShowCardCount();
 }
 
-// CARD_TYPE_COUNT_LIST를 리셋
-function resetCardTypeCountList() {
-  CARD_TYPE_COUNT_LIST = Array(CARD_TYPE_COUNT_LIST.length).fill(0);
-}
-
-// 카드 타입 확인 후 CARD_TYPE_COUNT_LIST에 카운트
-function countCardType(cardType) {
-  if (cardType == "permanent") {
-    CARD_TYPE_COUNT_LIST[0] += 1;
-  } else if (cardType == "limited") {
-    CARD_TYPE_COUNT_LIST[1] += 1;
-  } else if (cardType == "twilight") {
-    CARD_TYPE_COUNT_LIST[2] += 1;
-  } else if (cardType == "mysongs") {
-    CARD_TYPE_COUNT_LIST[3] += 1;
-  } else if (cardType == "parallel") {
-    CARD_TYPE_COUNT_LIST[4] += 1;
-  } else if (cardType == "event") {
-    CARD_TYPE_COUNT_LIST[5] += 1;
-  } else if (cardType == "fes") {
-    CARD_TYPE_COUNT_LIST[6] += 1;
-  } else if (cardType == "campaign") {
-    CARD_TYPE_COUNT_LIST[7] += 1;
-  } else if (cardType == "other") {
-    CARD_TYPE_COUNT_LIST[8] += 1;
+function increaseCardTypeCount(cardType) {
+  if (CardTypeInfo.getCardTypeKeys().includes(cardType)) {
+    CardTypeInfo.addCardTypeNumberOne(cardType);
   }
 }
 
 function setCardTypeCountList() {
-  $(cardCount_permanent).text(CARD_TYPE_COUNT_LIST[0]);
-  $(cardCount_limited).text(CARD_TYPE_COUNT_LIST[1]);
-  $(cardCount_twilight).text(CARD_TYPE_COUNT_LIST[2]);
-  $(cardCount_mysongs).text(CARD_TYPE_COUNT_LIST[3]);
-  $(cardCount_parallel).text(CARD_TYPE_COUNT_LIST[4]);
-  $(cardCount_event).text(CARD_TYPE_COUNT_LIST[5]);
-  $(cardCount_fes).text(CARD_TYPE_COUNT_LIST[6]);
-  $(cardCount_campaign).text(CARD_TYPE_COUNT_LIST[7]);
-  $(cardCount_other).text(CARD_TYPE_COUNT_LIST[8]);
+  const cardTypeInfo = CardTypeInfo.getAllCardTypeNumber();
+
+  Object.keys(cardTypeInfo).forEach((key) => {
+    $(`#cardCount_${key}`).text(CardTypeInfo.getCardTypeNumber(key));
+  });
 }
 
 function convertShowCardCount() {
@@ -544,47 +517,48 @@ function getCardList(cardAry) {
  * 전체 카드의 데이터를 추출, 재가공
  */
 function mergeCardData() {
-  return JSON_DATA.map((idol) => {
+  const idolData = IdolData.getIdolData();
+  return idolData.map((idol) => {
     let firstList = [];
     let tempCardList = [];
 
     // P UR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
       const idolList = [...idol.P_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SSR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
       const idolList = [...idol.P_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
       const idolList = [...idol.P_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S UR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
       const idolList = [...idol.S_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SSR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
       const idolList = [...idol.S_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SR
-    if (CardRarity.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
       const idolList = [...idol.S_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
@@ -716,7 +690,7 @@ function getImgSrc(path, addr) {
  */
 function captureScreen(frameName) {
   // 선택된 표시 타입이 하나도 없는 경우 스킵
-  if (CardRarity.isAllNotSelectedCardRarity()) {
+  if (CardRarityInfo.isAllNotSelectedCardRarity()) {
     return;
   }
 
@@ -748,12 +722,25 @@ function captureScreen(frameName) {
   cssDisplayOff("#ALL_TYPE_SELECT");
   cssDisplayOff("#DATE_PRESET");
 
-  html2canvas(document.querySelector(frameId), {
-    scrollY: -window.scrollY,
-    scrollX: -window.scrollX,
-  }).then((canvas) => {
-    downloadURI(canvas.toDataURL("image/png"), captureName);
-  });
+  // 라이브러리를 읽은 후 표를 캡쳐해서 다운로드
+  // 캡쳐에 사용하는 라이브러리는 캡쳐 동작에만 사용하기 때문에 해당 동작할때만 읽기 처리를 수행
+  loadHtml2Canvas()
+    .done(function (html2canvas) {
+      html2canvas(document.querySelector(frameId), {
+        scrollY: -window.scrollY,
+        scrollX: -window.scrollX,
+      })
+        .then((canvas) => {
+          const dataURL = canvas.toDataURL("image/png");
+          downloadURI(dataURL, captureName);
+        })
+        .catch((err) => {
+          console.error("html2canvas rendering failed:", err);
+        });
+    })
+    .fail(function (err) {
+      console.error("Failed to load html2canvas:", err);
+    });
 
   if (nowChangeLapFlag) {
     $(`#showChangeCardLapConvertBtn`).prop("checked", nowChangeLapFlag);
@@ -802,4 +789,25 @@ function getCaptureFileName(name) {
   const ms = String(d.getMilliseconds()).padStart(3, "0");
 
   return `${name}_${yyyy}${mm}${dd}${hh}${mi}${ss}${ms}.png`;
+}
+
+/**
+ * html2canvas 라이브러리를 읽기
+ */
+function loadHtml2Canvas() {
+  const deferred = $.Deferred();
+
+  if (window.html2canvas) {
+    deferred.resolve(window.html2canvas);
+  } else {
+    $.getScript("https://html2canvas.hertzen.com/dist/html2canvas.min.js")
+      .done(function () {
+        deferred.resolve(window.html2canvas);
+      })
+      .fail(function () {
+        deferred.reject(new Error("Failed to load html2canvas"));
+      });
+  }
+
+  return deferred.promise();
 }
