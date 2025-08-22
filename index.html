@@ -86,9 +86,7 @@
           </span>
 
           <!-- 카드 차수 변경을 리셋 -->
-          <span style="margin: 5px 0px; float: left">
-            <input type="button" id="cardLapResetButton" value="Reset" class="Resetbutton" />
-          </span>
+          <span id="changeCardLapSpan" style="margin: 5px 0px; float: left"> </span>
 
           <span id="convertSpan" style="margin: 5px 10px; float: left">
             <label class="container">
@@ -246,7 +244,6 @@
         <label data-lang="startBaseDate">시작일:</label>
         <span id="baseStartSpan">
           <input type="date" id="baseStartDate" name="BaseStartDate" />
-          <input type="button" id="baseStartDateResetButton" value="Reset" class="Resetbutton" />
         </span>
         <label id="baseStartDateStr" style="display: none"></label>
       </div>
@@ -255,7 +252,7 @@
         <label data-lang="endBaseDate">종료일:</label>
         <span id="baseEndSpan">
           <input type="date" id="baseEndDate" name="BaseEndDate" />
-          <input type="button" id="baseEndDateResetButton" value="Reset" class="Resetbutton" />
+          <!-- <input type="button" id="baseEndDateResetButton" value="Reset" class="Resetbutton" /> -->
         </span>
         <label id="baseEndDateStr" style="display: none"></label>
       </div>

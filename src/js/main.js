@@ -27,10 +27,51 @@ async function init() {
   setCardTypeCountList();
   convertShowCardCount();
 
+  // 리셋 버튼 추가
+  createResetButton();
+
   // 연도 프리셋 추가
   initDatePresetButton();
 
   setEventHandler();
+}
+
+/**
+ * 리셋 버튼 생성
+ */
+function createResetButton() {
+  // 카드 차수 리셋 버튼
+  $("#changeCardLapSpan").append(
+    $("<input>", {
+      type: "button",
+      id: "cardLapResetButton",
+      value: "Reset",
+      class: "Resetbutton",
+      click: () => clearTableBlankLapList(),
+    })
+  );
+
+  // 시작일 리셋 버튼
+  $("#baseStartSpan").append(
+    $("<input>", {
+      type: "button",
+      id: "baseStartDateResetButton",
+      value: "Reset",
+      class: "Resetbutton",
+      click: () => baseDateReset("baseStartDate", SERVICE_START_DATE_STRING),
+    })
+  );
+
+  // 종료일 리셋 버튼
+  $("#baseEndSpan").append(
+    $("<input>", {
+      type: "button",
+      id: "baseEndDateResetButton",
+      value: "Reset",
+      class: "Resetbutton",
+      click: () => baseDateReset("baseEndDate", getToday()),
+    })
+  );
 }
 
 /**
@@ -52,20 +93,11 @@ function setEventHandler() {
   // 시작일 변경
   $("#baseStartDate").on("change", () => updateStartBaseDate());
 
-  // 시작일 리셋 버튼
-  $("#baseStartDateResetButton").on("click", () => baseDateReset("baseStartDate", "2018-04-24"));
-
   // 종료일 변경
   $("#baseEndDate").on("change", () => updateEndBaseDate());
 
-  // 종료일 리셋 버튼
-  $("#baseEndDateResetButton").on("click", () => baseDateReset("baseEndDate", getToday()));
-
   // 카드 차수 변경 표시
   $("#showChangeCardLapConvertBtn").on("change", () => changeCardLapConvertBtnValue());
-
-  // 카드 차수 리셋 버튼
-  $("#cardLapResetButton").on("click", () => clearTableBlankLapList());
 
   // 언어 변경 선택 버튼
   $("#languageSelect").on("change", async () => await changeLanguage("languageSelect"));
@@ -102,30 +134,6 @@ async function changeLanguage(id) {
 }
 
 /**
- * URL의 쿼리를 Object형식으로 취득
- * https://example.com/?foo=bar&baz=qux -> {foo: bar, baz: qux}
- */
-function getQuery() {
-  const params = new URLSearchParams(window.location.search);
-
-  // Query Parameter를 [key, value] 형태의 배열을 취득 후, Object형태로 변환 후 Return
-  return Object.fromEntries(params.entries());
-}
-
-/**
- * 현재날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
- */
-function getToday() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const day = String(today.getDate()).padStart(2, "0");
-
-  // yyyy-MM-dd 형식
-  return `${year}-${month}-${day}`;
-}
-
-/**
  * 카드 차수 변경이 True인 경우, localStorage에 저장된 데이터를 읽어서 반영
  * False인 경우, localStorage의 값을 반영하지 않음
  */
@@ -148,17 +156,19 @@ function initDatePresetButton() {
   const nowYear = new Date().getFullYear();
 
   for (let targetYear = startYear; targetYear <= nowYear; targetYear++) {
-    const startDate = `${targetYear}-01-01`;
+    const startDate = targetYear == startYear ? SERVICE_START_DATE_STRING : `${targetYear}-01-01`;
     const endDate = targetYear == nowYear ? getToday() : `${targetYear}-12-31`;
 
     // 프리셋 버튼 추가
-    $(`#datePresetField`).append(`
-      <input
-        type="button"
-        value="${targetYear}"
-        class="DatePresetButton"
-        onclick="baseDateFullReset('baseStartDate', '${startDate}','baseEndDate', '${endDate}')"
-      />`);
+    const presetButton = $("<input>", {
+      type: "button",
+      id: `presetButton_${targetYear}`,
+      value: targetYear,
+      class: "DatePresetButton",
+      click: () => setBaseDate("baseStartDate", startDate, "baseEndDate", endDate),
+    });
+
+    $(`#datePresetField`).append(presetButton);
   }
 }
 
@@ -448,9 +458,10 @@ function baseDateReset(id, inputDate) {
 /**
  * 시작일 / 종료일을 모두 재설정
  */
-function baseDateFullReset(startId, startInputDate, endtId, endInputDate) {
+function setBaseDate(startId, startInputDate, endtId, endInputDate) {
   $(`#${startId}`).val(startInputDate);
   $(`#${endtId}`).val(endInputDate);
+
   updateDate();
 }
 
@@ -583,19 +594,6 @@ function mergeCardData() {
       card_data: getCardList(tempCardList),
     };
   });
-}
-
-/**
- * 날짜를 비교한 결과를 취득
- * A가 B보다 이전인 경우, 0보다 작음
- * A가 B보다 이후인 경우, 0보다 큼
- */
-function getCompareValueByCardDate(dateA, dateB) {
-  // 날짜 데이터가 존재 하지 않는 경우, 마지막에 위치하도록 무한으로 설정
-  const timeA = dateA ? new Date(dateA).getTime() : Infinity;
-  const timeB = dateB ? new Date(dateB).getTime() : Infinity;
-
-  return timeA - timeB;
 }
 
 function getImagePath(isProduce, isFes, isCard) {

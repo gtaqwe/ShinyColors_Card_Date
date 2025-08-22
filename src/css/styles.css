@@ -189,6 +189,10 @@ footer {
   cursor: pointer;
 }
 
+.DatePresetButton {
+  margin: 0px 3px;
+}
+
 .Resetbutton:hover,
 .DatePresetButton:hover {
   background-color: #d0d0d0;
