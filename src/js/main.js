@@ -459,11 +459,9 @@ function getCardList(cardAry) {
           (new Date(v.cardDate) >= new Date($("#baseStartDate").val()) &&
             new Date(v.cardDate) <= new Date($("#baseEndDate").val()))
       )
-      // 오래된 순으로 정렬
-      // 단순 비교로 정렬하는 경우
-      // 브라우저 차이로 인한 표시의 차이가 있을 가능성이 있기에 「<」, 「>」, 「=」를 모두 확인
       .sort((a, b) => {
-        return getCompareValueByCardDate(a.cardDate, b.cardDate);
+        // 오래된 순으로 정렬
+        return compareByCardDateAsc(a.cardDate, b.cardDate);
       })
   );
 }
@@ -523,7 +521,7 @@ function mergeCardData() {
     const firstImplementation = firstList
       .filter((v) => v)
       .sort((a, b) => {
-        return getCompareValueByCardDate(a.cardDate, b.cardDate);
+        return compareByCardDateAsc(a.cardDate, b.cardDate);
       })
       .shift();
 

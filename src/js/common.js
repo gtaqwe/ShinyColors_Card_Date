@@ -53,17 +53,31 @@ function getISODateById(id) {
   return getISODate(new Date($(id).val()));
 }
 
+function compareByValueAsc(itemA, itemB) {
+  const aValue = itemA ? itemA : Infinity;
+  const bValue = itemB ? itemB : Infinity;
+
+  return aValue - bValue;
+}
+
+function compareByValueDesc(itemA, itemB) {
+  const aValue = itemA ? itemA : Infinity;
+  const bValue = itemB ? itemB : Infinity;
+
+  return bValue - aValue;
+}
+
 /**
  * 날짜를 비교한 결과를 취득
  * A가 B보다 이전인 경우, 0보다 작음
  * A가 B보다 이후인 경우, 0보다 큼
  */
-function getCompareValueByCardDate(dateA, dateB) {
+function compareByCardDateAsc(before, after) {
   // 날짜 데이터가 존재 하지 않는 경우, 마지막에 위치하도록 무한으로 설정
-  const timeA = dateA ? new Date(dateA).getTime() : Infinity;
-  const timeB = dateB ? new Date(dateB).getTime() : Infinity;
+  const beforeTime = before ? new Date(before).getTime() : Infinity;
+  const afterTime = after ? new Date(after).getTime() : Infinity;
 
-  return timeA - timeB;
+  return compareByValueAsc(beforeTime, afterTime);
 }
 
 /**
