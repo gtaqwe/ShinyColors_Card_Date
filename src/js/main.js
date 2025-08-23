@@ -7,7 +7,7 @@ $(function () {
  */
 async function init() {
   await IdolData.init();
-  TABLE_BLANK_LAP_LIST = Array(IdolData.getIdolNumber()).fill(0);
+  ChangeCardLapInfo.init(IdolData.getIdolNumber());
 
   // 선택한 카드레어리티 초기화
   CardRarityInfo.init();
@@ -20,8 +20,6 @@ async function init() {
 
   // 언어 설정
   await initLanguage();
-
-  readTableBlankLapList();
 
   // 카드 수 리셋
   setCardTypeCountList();
@@ -47,7 +45,10 @@ function createResetButton() {
       id: "cardLapResetButton",
       value: "Reset",
       class: "Resetbutton",
-      click: () => clearTableBlankLapList(),
+      click: () => {
+        ChangeCardLapInfo.reset();
+        updateDate();
+      },
     })
   );
 
@@ -97,7 +98,7 @@ function setEventHandler() {
   $("#baseEndDate").on("change", () => updateEndBaseDate());
 
   // 카드 차수 변경 표시
-  $("#showChangeCardLapConvertBtn").on("change", () => changeCardLapConvertBtnValue());
+  $("#showChangeCardLapConvertBtn").on("change", () => updateDate());
 
   // 언어 변경 선택 버튼
   $("#languageSelect").on("change", async () => await changeLanguage("languageSelect"));
@@ -131,21 +132,6 @@ async function changeLanguage(id) {
   await Language.setLanguage($(`#${id}`).val());
   Language.setLanguageInMenu();
   updateDate();
-}
-
-/**
- * 카드 차수 변경이 True인 경우, localStorage에 저장된 데이터를 읽어서 반영
- * False인 경우, localStorage의 값을 반영하지 않음
- */
-function readTableBlankLapList() {
-  const nowChangeLapFlag = $(`#showChangeCardLapConvertBtn`).is(":checked");
-
-  if (nowChangeLapFlag) {
-    const localList = localStorage.getItem("TABLE_BLANK_LAP_LIST");
-    if (localList !== null) {
-      TABLE_BLANK_LAP_LIST = localList.split(",");
-    }
-  }
 }
 
 /**
@@ -201,51 +187,6 @@ function setViewCheckboxSetting() {
   $("input[type='checkbox'][name='viewOptionChk']").on("change", function () {
     updateDate();
   });
-}
-
-/**
- * TABLE_BLANK_LAP_LIST를 초기화(모든 데이터를 0으로 초기화)
- */
-function resetTableBlankLapList() {
-  TABLE_BLANK_LAP_LIST = Array(IdolData.getIdolNumber()).fill(0);
-}
-
-/**
- * TABLE_BLANK_LAP_LIST테이터를 localStorage에 저장
- */
-function saveTableBlankLapListInStorage() {
-  localStorage.setItem("TABLE_BLANK_LAP_LIST", TABLE_BLANK_LAP_LIST);
-}
-
-/**
- * localStorage를 Clear
- */
-function clearStorage() {
-  localStorage.clear();
-}
-
-/**
- * 카드 차수 변경 표시를 On/Off시의 동작
- * readTableBlankLapList를 실행 후
- * 표를 다시 읽기
- */
-function changeCardLapConvertBtnValue() {
-  readTableBlankLapList();
-
-  updateDate();
-}
-
-/**
- * 카드 차수 변경 표시를 초기화 했을 경우의 동작
- * localStorage를 Clear, TABLE_BLANK_LAP_LIST 초기화후
- * 표를 다시 읽기
- */
-function clearTableBlankLapList() {
-  clearStorage();
-
-  resetTableBlankLapList();
-
-  updateDate();
 }
 
 /**

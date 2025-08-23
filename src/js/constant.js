@@ -11,6 +11,3 @@ const cardRarityType = {
   S_SSR: "sSSR",
   S_SR: "sSR",
 };
-
-// 카드 차수 변경 데이터의 배열
-let TABLE_BLANK_LAP_LIST;

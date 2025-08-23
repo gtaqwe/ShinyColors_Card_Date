@@ -25,39 +25,44 @@ function runBuildTable(idolData) {
   const tableTitle = idolData.titleList.length == 1 ? idolData.titleList[0] : "";
 
   const maxColumnLength = Math.max(
-    ...idolData.data.map((v, idx) => Number(v.card_data.length) + Number(TABLE_BLANK_LAP_LIST[idx]))
+    ...idolData.data.map(
+      (v, idx) =>
+        Number(v.card_data.length) + Number(ChangeCardLapInfo.getChangeCardLapByIndex(idx))
+    )
   );
 
   const tableName = "date-table";
 
-  let table = `<table id="${tableName}">`;
+  const table = $("<table>", { id: tableName });
 
-  table += "<thead>";
-  table += `<tr class="tr-main-header">`;
+  const thead = $("<thead>");
+  const headerRow = $("<tr>", { class: "tr-main-header" });
 
-  table += tableHeader(tableTitle, maxColumnLength);
-
-  table += "</tr>";
-  table += "</thead>";
-  table += "<tbody>";
+  const headers = tableHeader(tableTitle, maxColumnLength);
+  headerRow.append(headers);
+  thead.append(headerRow);
 
   const maxLap = Math.max(
     ...idolData.data.map(
       (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
     )
   );
+
+  const tbody = $("<tbody>");
+
   for (let row = 0; row < idolData.data.length; row++) {
-    table += `<tr class="tr-main-data">`;
+    const dataRow = $("<tr>", { class: "tr-main-data" });
 
-    table += setCardData(idolData.data[row], maxColumnLength, row, maxLap);
+    const cells = setCardData(idolData.data[row], maxColumnLength, row, maxLap);
+    dataRow.append(cells);
 
-    table += "</tr>";
+    tbody.append(dataRow);
   }
 
-  table += "</tbody>";
-  table += "</table>";
+  table.append(thead).append(tbody);
 
   $("#MAIN").html(table);
+
   if (!$(`#NOTE_SPACE`).length) {
     $("#CAPTURE_FRAME").append(`<div><span id="NOTE_SPACE"></span></div>`);
   }
@@ -72,27 +77,41 @@ function runBuildTable(idolData) {
  * (타이틀) | 차수변경(옵션) | 첫 실장 | 간격 | 1 | 간격 | 2 | 간격 | ... | n | 간격 |
  */
 function tableHeader(title, columnLength) {
-  let resContent = `<th class="th-name-cell" id="table-type">${title}</th>`;
+  const headerList = [];
+  let maxLap = columnLength;
+
+  headerList.push($("<th>", { class: "th-name-cell", id: "table-type" }).text(title));
 
   // 카드 차수 변경
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
-    resContent += `<th class="th-seq-cell"></th>`;
+    headerList.push($("<th>", { class: "th-seq-cell" }));
   }
 
   // 첫 실장 표시/비표시 설정
   if (!$(noShowRCardConvertBtn).is(":checked")) {
-    resContent += `<th class="th-header-title-cell" data-lang="firstImplementation">첫 실장</th>`;
-    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
+    headerList.push(
+      $("<th>", { class: "th-header-title-cell", "data-lang": "firstImplementation" }).text(
+        "첫 실장"
+      )
+    );
 
-    columnLength--;
+    headerList.push(
+      $("<th>", { class: "th-header-interval-cell", "data-lang": "interval" }).text("간격")
+    );
+
+    maxLap--;
   }
 
-  for (let i = 0; i < columnLength; i++) {
-    resContent += `<th class="th-header-title-cell">${i + 1}</th>`;
-    resContent += `<th class="th-header-interval-cell" data-lang="interval">간격</th>`;
+  // 차수 표시
+  for (let i = 0; i < maxLap; i++) {
+    headerList.push($("<th>", { class: "th-header-title-cell" }).text(i + 1));
+
+    headerList.push(
+      $("<th>", { class: "th-header-interval-cell", "data-lang": "interval" }).text("간격")
+    );
   }
 
-  return resContent;
+  return headerList;
 }
 
 /**
@@ -108,10 +127,7 @@ function changeCardLapCount(idolNum, inputObj) {
     val = Number(inputObj.min);
   }
 
-  TABLE_BLANK_LAP_LIST[idolNum] = val;
-
-  saveTableBlankLapListInStorage();
-
+  ChangeCardLapInfo.setChangeCardLapByIdx(idolNum, val);
   updateDate();
 }
 
@@ -123,18 +139,16 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
-    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${TABLE_BLANK_LAP_LIST[idolNum]}"
+    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${ChangeCardLapInfo.getChangeCardLapByIndex(
+      idolNum
+    )}"
     style="height:10px; width:50px" onchange="changeCardLapCount(${idolNum},this)"></td>`;
   }
 
   cardDataList = totalData.card_data;
   cardLen = totalData.card_data.length;
 
-  for (let i = 0; i < TABLE_BLANK_LAP_LIST[idolNum]; i++) {
-    totalLen--;
-  }
-
-  for (let idx = 0; idx < totalLen; idx++) {
+  for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
     const currDay = 24 * 60 * 60 * 1000;
     let dateBefore;
     let dateAfter;
@@ -146,7 +160,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       (!$(noShowRCardConvertBtn).is(":checked") && idx == 1) ||
       ($(noShowRCardConvertBtn).is(":checked") && idx == 0)
     ) {
-      for (let i = 0; i < TABLE_BLANK_LAP_LIST[idolNum]; i++) {
+      for (let i = 0; i < ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); i++) {
         resContent += "<td></td><td></td>";
       }
     }
