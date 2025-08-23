@@ -312,8 +312,11 @@ function updateDate() {
 
   changeForFesImgConvertButton(ps);
 
-  // 표 작성
-  buildTable(idolData);
+  // 메인표 작성
+  createMainTable(idolData);
+
+  // 랭킹표 작성
+  createRankTable(idolData);
 
   Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
 
