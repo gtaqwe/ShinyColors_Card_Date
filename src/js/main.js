@@ -438,7 +438,7 @@ function getCardList(cardAry) {
   return (
     cardAry
       .map((card, idx) => {
-        const cardType = card.card_type;
+        const cardType = card.cardType;
         if (cardType == "first" && idx == 0 && !$("#noShowRCardConvertBtn").is(":checked")) {
           return card;
         }
@@ -452,15 +452,15 @@ function getCardList(cardAry) {
       .filter((v) => v)
       .filter(
         (v) =>
-          v.card_type == "first" ||
-          (new Date(v.card_date) >= new Date($("#baseStartDate").val()) &&
-            new Date(v.card_date) <= new Date($("#baseEndDate").val()))
+          v.cardType == "first" ||
+          (new Date(v.cardDate) >= new Date($("#baseStartDate").val()) &&
+            new Date(v.cardDate) <= new Date($("#baseEndDate").val()))
       )
       // 오래된 순으로 정렬
       // 단순 비교로 정렬하는 경우
       // 브라우저 차이로 인한 표시의 차이가 있을 가능성이 있기에 「<」, 「>」, 「=」를 모두 확인
       .sort((a, b) => {
-        return getCompareValueByCardDate(a.card_date, b.card_date);
+        return getCompareValueByCardDate(a.cardDate, b.cardDate);
       })
   );
 }
@@ -520,7 +520,7 @@ function mergeCardData() {
     const firstImplementation = firstList
       .filter((v) => v)
       .sort((a, b) => {
-        return getCompareValueByCardDate(a.card_date, b.card_date);
+        return getCompareValueByCardDate(a.cardDate, b.cardDate);
       })
       .shift();
 
@@ -530,9 +530,9 @@ function mergeCardData() {
     }
 
     return {
-      idol_name: idol[`idol_${Language.getCurrentLanguage()}_name`],
-      display_ranking: idol.display_ranking,
-      card_data: getCardList(tempCardList),
+      idolName: idol[`idol${changeUpperFirst(Language.getCurrentLanguage())}Name`],
+      displayRanking: idol.displayRanking,
+      cardData: getCardList(tempCardList),
     };
   });
 }

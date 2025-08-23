@@ -80,3 +80,11 @@ function getDateDiff(before, after) {
 function isBlank(str) {
   return !str || /^\s*$/.test(str);
 }
+
+/**
+ * 첫 글자만 대문자로 변경, 나머지는 그대로
+ */
+function changeUpperFirst(str) {
+  if (!str) return "";
+  return str[0].toUpperCase() + str.slice(1);
+}

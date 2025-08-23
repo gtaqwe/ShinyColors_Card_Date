@@ -24,8 +24,7 @@ function runBuildTable(idolData) {
 
   const maxColumnLength = Math.max(
     ...idolData.data.map(
-      (v, idx) =>
-        Number(v.card_data.length) + Number(ChangeCardLapInfo.getChangeCardLapByIndex(idx))
+      (v, idx) => Number(v.cardData.length) + Number(ChangeCardLapInfo.getChangeCardLapByIndex(idx))
     )
   );
 
@@ -41,9 +40,7 @@ function runBuildTable(idolData) {
   thead.append(headerRow);
 
   const maxLap = Math.max(
-    ...idolData.data.map(
-      (v) => v.card_data.filter((cardObj) => cardObj.card_type != "first").length
-    )
+    ...idolData.data.map((v) => v.cardData.filter((cardObj) => cardObj.cardType != "first").length)
   );
 
   const tbody = $("<tbody>");
@@ -136,7 +133,7 @@ function changeCardLapCount(idolNum, value, min, max) {
 function setCardData(totalData, totalLen, idolNum, maxLap) {
   const contentList = [];
 
-  contentList.push($("<td>", { class: "td-name-cell" }).text(totalData.idol_name));
+  contentList.push($("<td>", { class: "td-name-cell" }).text(totalData.idolName));
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
@@ -157,8 +154,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
     );
   }
 
-  cardDataList = totalData.card_data;
-  cardLen = totalData.card_data.length;
+  cardDataList = totalData.cardData;
+  cardLen = totalData.cardData.length;
 
   for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
@@ -173,11 +170,11 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
     }
 
     if (idx < cardLen) {
-      const cardDate = cardDataList[idx].card_date;
-      const cardType = cardDataList[idx].card_type;
-      const cardName = cardDataList[idx].card_name;
-      const cardAddr = cardDataList[idx].card_addr;
-      const psType = cardDataList[idx].ps_type;
+      const cardDate = cardDataList[idx].cardDate;
+      const cardType = cardDataList[idx].cardType;
+      const cardName = cardDataList[idx].cardName;
+      const cardAddr = cardDataList[idx].cardAddr;
+      const psType = cardDataList[idx].psType;
 
       increaseCardTypeCount(cardType);
 
@@ -251,14 +248,14 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       // 최신 실장인 경우, 기준일과의 간격일 계산
       const intervalTd = $("<td>");
       if (cardDate) {
-        if (idx == cardLen - 1 || isBlank(cardDataList[idx + 1].card_date)) {
+        if (idx == cardLen - 1 || isBlank(cardDataList[idx + 1].cardDate)) {
           intervalTd
             .addClass("now-interval")
             .text(getDateDiff(cardDate, getISODateById("#baseEndDate")));
         } else {
           intervalTd
             .addClass("pre-interval")
-            .text(getDateDiff(cardDate, cardDataList[idx + 1].card_date));
+            .text(getDateDiff(cardDate, cardDataList[idx + 1].cardDate));
         }
       }
       contentList.push(intervalTd);
@@ -292,7 +289,7 @@ function runBuildDateRank(idolData) {
     // 1. 카드가 단 하나도 실장되지 않았을 경우 (R카드도 없는 경우)
     // 2. 랭킹표시 플래그가 False인 경우
     const nowInterval = $(`#date-table .tr-main-data:eq(${rowIdx}) .now-interval`);
-    if (nowInterval.length == 0 || idolData.data[rowIdx].display_ranking == false) {
+    if (nowInterval.length == 0 || idolData.data[rowIdx].displayRanking == false) {
       intervalAry.push([nameStr, NONE_INTERVAL]);
     } else {
       intervalAry.push([nameStr, Number(nowInterval.text())]);
@@ -448,7 +445,7 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   const table = $("<table>", { id: tableName });
 
   const thead = $("<thead>");
-  const headTr1 = $("<tr>").append($("<th>", { class: "th-rank", colspan: 3, text: tableType }));
+  const headTr1 = $("<tr>").append($("<th>", { class: "th-rank", colspan: 3 }).append(tableType));
 
   // 선택한 카드타입 표시
   const selectedGachaTypeList = [];
