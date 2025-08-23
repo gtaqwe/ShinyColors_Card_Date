@@ -117,14 +117,15 @@ function tableHeader(title, columnLength) {
 /**
  * 카드 차수 변경
  */
-function changeCardLapCount(idolNum, inputObj) {
-  let val = Number(inputObj.value);
+function changeCardLapCount(idolNum, value, min, max) {
+  let val = value;
 
-  if (val > Number(inputObj.max)) {
-    val = Number(inputObj.max);
+  if (value > max) {
+    val = max;
   }
-  if (val < Number(inputObj.min)) {
-    val = Number(inputObj.min);
+
+  if (value < min) {
+    val = min;
   }
 
   ChangeCardLapInfo.setChangeCardLapByIdx(idolNum, val);
@@ -135,14 +136,33 @@ function changeCardLapCount(idolNum, inputObj) {
  * 카드 데이터의 표시와 카드간 사이의 간격일을 계산해서 표시
  */
 function setCardData(totalData, totalLen, idolNum, maxLap) {
-  let resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
+  const contentList = [];
+
+  contentList.push($("<td>", { class: "td-name-cell" }).text(totalData.idol_name));
+  // let resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
-    resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${ChangeCardLapInfo.getChangeCardLapByIndex(
-      idolNum
-    )}"
-    style="height:10px; width:50px" onchange="changeCardLapCount(${idolNum},this)"></td>`;
+    //   resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${ChangeCardLapInfo.getChangeCardLapByIndex(
+    //     idolNum
+    //   )}"
+    //   style="height:10px; width:50px" onchange="changeCardLapCount(${idolNum},this)"></td>`;
+
+    contentList.push(
+      $("<td>", { class: "td-seq-cell" }).append(
+        $("<input>", {
+          type: "number",
+          min: 0,
+          max: maxLap,
+          value: ChangeCardLapInfo.getChangeCardLapByIndex(idolNum),
+        })
+          .css({ height: "10px", width: "50px" })
+          .on("change", (e) => {
+            const input = e.currentTarget;
+            changeCardLapCount(idolNum, Number(input.value), Number(input.min), Number(input.max));
+          })
+      )
+    );
   }
 
   cardDataList = totalData.card_data;
@@ -150,10 +170,6 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
 
   for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
     const currDay = 24 * 60 * 60 * 1000;
-    let dateBefore;
-    let dateAfter;
-    let interval;
-    let intervalCode;
 
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
     if (
@@ -161,7 +177,9 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       ($(noShowRCardConvertBtn).is(":checked") && idx == 0)
     ) {
       for (let i = 0; i < ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); i++) {
-        resContent += "<td></td><td></td>";
+        contentList.push($("<td>"));
+        contentList.push($("<td>"));
+        // resContent += "<td></td><td></td>";
       }
     }
 
@@ -175,89 +193,113 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       increaseCardTypeCount(cardType);
 
       // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
-      if (cardType == "limited") {
-        resContent += '<td class="limit-card-cell" ';
-      } else if (cardType == "twilight") {
-        resContent += '<td class="twilight-card-cell" ';
-      } else if (cardType == "mysongs") {
-        resContent += '<td class="mysongs-card-cell" ';
-      } else if (cardType == "parallel") {
-        resContent += '<td class="parallel-card-cell" ';
-      } else if (cardType == "event") {
-        resContent += '<td class="event-card-cell" ';
-      } else if (cardType == "fes") {
-        resContent += '<td class="gradeFes-card-cell" ';
-      } else if (cardType == "campaign") {
-        resContent += '<td class="campaign-card-cell" ';
-      } else if (cardType == "other") {
-        resContent += '<td class="other-card-cell" ';
-      } else {
-        resContent += "<td ";
+      const cardDateCell = $("<td>");
+
+      switch (cardType) {
+        case "limited":
+          cardDateCell.addClass("limit-card-cell");
+          break;
+        case "twilight":
+          cardDateCell.addClass("twilight-card-cell");
+          break;
+        case "mysongs":
+          cardDateCell.addClass("mysongs-card-cell");
+          break;
+        case "parallel":
+          cardDateCell.addClass("parallel-card-cell");
+          break;
+        case "event":
+          cardDateCell.addClass("event-card-cell");
+          break;
+        case "fes":
+          cardDateCell.addClass("gradeFes-card-cell");
+          break;
+        case "campaign":
+          cardDateCell.addClass("campaign-card-cell");
+          break;
+        case "other":
+          cardDateCell.addClass("other-card-cell");
+          break;
       }
 
       if (cardAddr) {
-        resContent += `addr="${cardAddr}" `;
+        cardDateCell.attr("addr", cardAddr);
       }
 
       if (cardName) {
-        resContent += `name="${cardName}" `;
+        cardDateCell.attr("name", cardName);
       }
 
       if (psType) {
-        resContent += `ps="${psType}" `;
+        cardDateCell.attr("ps", psType);
       }
 
-      resContent += `>`;
-
-      resContent += `<div class="cell-div">`;
+      const div = $("<div>", { class: "cell-div" });
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($(iconImgConvertBtn).is(":checked") && cardAddr) {
-        const style = `style= "width:72px; height:72px"`;
-        const onerror = `onerror = "this.src='./img/assets/Blank_Icon.png'"`;
         const isProduce = psType == "p";
         const isFes = $("#fesImgConvertBtn").is(":checked");
         const isCard = false;
-
         const imgPath = getImagePath(isProduce, isFes, isCard);
 
-        resContent += `<img src="${getImgSrc(imgPath, cardAddr)}" ${style} ${onerror}><br>`;
+        const iconImage = $("<img>", {
+          src: getImgSrc(imgPath, cardAddr),
+        })
+          .css({
+            height: "72px",
+            width: "72px",
+          })
+          .on("error", (e) => {
+            e.currentTarget.src = "./img/assets/Blank_Icon.png";
+          });
+
+        div.append(iconImage).append("<br>");
       }
-      // cardDate가 존재할때 표시
+
       if (cardDate) {
-        resContent += `${cardDate}`;
+        div.append($("<span>").text(cardDate));
       }
-      resContent += `</div></td>`;
+
+      cardDateCell.append(div);
+
+      contentList.push(cardDateCell);
 
       // 카드 일정 데이터가 있는 경우, 간격일을 계산
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
       // 최신 실장인 경우, 기준일과의 간격일 계산
       if (cardDate) {
-        dateBefore = calDate(cardDate);
-
         if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
-          dateAfter = calDate(getBaseDate("#baseEndDate"));
-          interval = (dateAfter.getTime() - dateBefore.getTime()) / currDay;
-          intervalCode = `<td class="now-interval">${interval}</td>`;
+          const dateAfter = calDate(getBaseDate("#baseEndDate"));
+          const dateBefore = calDate(cardDate);
+
+          contentList.push(
+            $("<td>", {
+              class: "now-interval",
+            }).text((dateAfter.getTime() - dateBefore.getTime()) / currDay)
+          );
         } else {
-          dateAfter = calDate(cardDataList[idx + 1].card_date);
-          interval = (dateAfter.getTime() - dateBefore.getTime()) / currDay;
-          intervalCode = `<td class="pre-interval">${interval}</td>`;
+          const dateAfter = calDate(cardDataList[idx + 1].card_date);
+          const dateBefore = calDate(cardDate);
+
+          contentList.push(
+            $("<td>", {
+              class: "pre-interval",
+            }).text((dateAfter.getTime() - dateBefore.getTime()) / currDay)
+          );
         }
       }
       // 카드 일정 데이터가 없는 경우, Skip
       else {
-        intervalCode = "<td></td>";
+        contentList.push($("<td>"));
       }
     } else {
-      resContent += "<td></td>";
-      intervalCode = "<td></td>";
+      contentList.push($("<td>"));
+      contentList.push($("<td>"));
     }
-
-    resContent = resContent + intervalCode;
   }
 
-  return resContent;
+  return contentList;
 }
 
 /**

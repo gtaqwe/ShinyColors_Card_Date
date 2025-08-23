@@ -580,8 +580,7 @@ function imgMapping() {
           .append(imgNameAttr);
         $("body").append(previewIdTag);
         $("#preview")
-          .css("top", e.pageY - xOffset + "px")
-          .css("left", e.pageX + yOffset + "px")
+          .css({ top: e.pageY - xOffset + "px", left: e.pageX + yOffset + "px" })
           .fadeIn("fast");
       }
     },
