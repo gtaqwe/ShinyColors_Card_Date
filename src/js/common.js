@@ -29,13 +29,28 @@ function getQuery() {
  * 현재날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
  */
 function getToday() {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const day = String(today.getDate()).padStart(2, "0");
+  return getISODate(new Date());
+}
+
+/**
+ * 지정한 날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
+ */
+function getISODate(dateStr) {
+  const targetDate = new Date(dateStr);
+
+  const year = targetDate.getFullYear();
+  const month = String(targetDate.getMonth() + 1).padStart(2, "0");
+  const day = String(targetDate.getDate()).padStart(2, "0");
 
   // yyyy-MM-dd 형식
   return `${year}-${month}-${day}`;
+}
+
+/**
+ * 지정한 오브젝트의 ID로부터 날짜 정보를 취득하여 ISO 8601형식(YYYY-MM-DD)으로 Return
+ */
+function getISODateById(id) {
+  return getISODate(new Date($(id).val()));
 }
 
 /**
@@ -49,4 +64,19 @@ function getCompareValueByCardDate(dateA, dateB) {
   const timeB = dateB ? new Date(dateB).getTime() : Infinity;
 
   return timeA - timeB;
+}
+
+/**
+ * 날짜의 차이를 취득
+ */
+function getDateDiff(before, after) {
+  // 하루를 밀리초(ms)로 변환 = 86400000
+  return (new Date(after) - new Date(before)) / 86400000;
+}
+
+/**
+ * 공백에 해당되는 문자열인지 확인
+ */
+function isBlank(str) {
+  return !str || /^\s*$/.test(str);
 }

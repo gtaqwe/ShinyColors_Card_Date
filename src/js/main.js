@@ -612,9 +612,10 @@ function imgMapping() {
       e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop() &&
       e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()
     ) {
-      nowPreview
-        .css("top", e.pageY - xOffset - previewHeight - xOffset + "px")
-        .css("left", e.pageX - yOffset - previewWidth + "px");
+      nowPreview.css({
+        top: e.pageY - xOffset - previewHeight - xOffset + "px",
+        left: e.pageX - yOffset - previewWidth + "px",
+      });
     }
   });
 }
@@ -647,11 +648,11 @@ function captureScreen(frameName) {
   $(frameId).css("overflow", "hidden");
   cssDisplayOff("#convertSpan");
 
-  $("#baseStartDateStr").text(getBaseDate("#baseStartDate"));
+  $("#baseStartDateStr").text(getISODateById("#baseStartDate"));
   cssDisplayOff("#baseStartSpan");
   cssDisplayOn("#baseStartDateStr");
 
-  $("#baseEndDateStr").text(getBaseDate("#baseEndDate"));
+  $("#baseEndDateStr").text(getISODateById("#baseEndDate"));
   cssDisplayOff("#baseEndSpan");
   cssDisplayOn("#baseEndDateStr");
 

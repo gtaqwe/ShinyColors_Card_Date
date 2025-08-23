@@ -33,5 +33,6 @@
   "showCardCount": "カード数表示",
   "showChangeCardLap": "カード周目変更表示",
   "allChk": "すべてチェック",
-  "datePreset": "基準日設定プリセット"
+  "datePreset": "基準日設定プリセット",
+  "notSet": "未設定"
 }

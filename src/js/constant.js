@@ -2,6 +2,7 @@ const IDOL_DATA_PATH = "src/json/data/";
 const LANGUAGE_DATA_PATH = "src/json/lang/";
 const SERVICE_START_DATE_STRING = "2018-04-24";
 const DEACTIVATE_BUTTON_TYPE_CLASS = "DeactivateButton";
+const NONE_INTERVAL = Number.MIN_SAFE_INTEGER;
 
 const cardRarityType = {
   P_UR: "pUR",

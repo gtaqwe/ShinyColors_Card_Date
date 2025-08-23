@@ -1,5 +1,3 @@
-const NONE_INTERVAL = Number.MIN_SAFE_INTEGER;
-
 /**
  * 표 생성
  * idolData : IndexScripts.js의 function idolDataProcess참조
@@ -139,15 +137,9 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   const contentList = [];
 
   contentList.push($("<td>", { class: "td-name-cell" }).text(totalData.idol_name));
-  // let resContent = `<td class="td-name-cell">${totalData.idol_name}</td>`;
 
   // 카드 차수 밀어내기
   if ($(`#showChangeCardLapConvertBtn`).is(":checked")) {
-    //   resContent += `<td class="td-seq-cell"><input type="number" min="0" max="${maxLap}" value="${ChangeCardLapInfo.getChangeCardLapByIndex(
-    //     idolNum
-    //   )}"
-    //   style="height:10px; width:50px" onchange="changeCardLapCount(${idolNum},this)"></td>`;
-
     contentList.push(
       $("<td>", { class: "td-seq-cell" }).append(
         $("<input>", {
@@ -156,7 +148,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
           max: maxLap,
           value: ChangeCardLapInfo.getChangeCardLapByIndex(idolNum),
         })
-          .css({ height: "10px", width: "50px" })
+          .css({ height: 10, width: 50 })
           .on("change", (e) => {
             const input = e.currentTarget;
             changeCardLapCount(idolNum, Number(input.value), Number(input.min), Number(input.max));
@@ -169,8 +161,6 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   cardLen = totalData.card_data.length;
 
   for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
-    const currDay = 24 * 60 * 60 * 1000;
-
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
     if (
       (!$(noShowRCardConvertBtn).is(":checked") && idx == 1) ||
@@ -179,7 +169,6 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       for (let i = 0; i < ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); i++) {
         contentList.push($("<td>"));
         contentList.push($("<td>"));
-        // resContent += "<td></td><td></td>";
       }
     }
 
@@ -222,17 +211,9 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
           break;
       }
 
-      if (cardAddr) {
-        cardDateCell.attr("addr", cardAddr);
-      }
-
-      if (cardName) {
-        cardDateCell.attr("name", cardName);
-      }
-
-      if (psType) {
-        cardDateCell.attr("ps", psType);
-      }
+      if (cardAddr) cardDateCell.attr("addr", cardAddr);
+      if (cardName) cardDateCell.attr("name", cardName);
+      if (psType) cardDateCell.attr("ps", psType);
 
       const div = $("<div>", { class: "cell-div" });
 
@@ -247,8 +228,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
           src: getImgSrc(imgPath, cardAddr),
         })
           .css({
-            height: "72px",
-            width: "72px",
+            height: 72,
+            width: 72,
           })
           .on("error", (e) => {
             e.currentTarget.src = "./img/assets/Blank_Icon.png";
@@ -268,31 +249,19 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       // 카드 일정 데이터가 있는 경우, 간격일을 계산
       // 최신 실장이 아닌 경우 다음 실장 카드와 카드 간격일 계산
       // 최신 실장인 경우, 기준일과의 간격일 계산
+      const intervalTd = $("<td>");
       if (cardDate) {
-        if (idx == cardLen - 1 || cardDataList[idx + 1].card_date == "") {
-          const dateAfter = calDate(getBaseDate("#baseEndDate"));
-          const dateBefore = calDate(cardDate);
-
-          contentList.push(
-            $("<td>", {
-              class: "now-interval",
-            }).text((dateAfter.getTime() - dateBefore.getTime()) / currDay)
-          );
+        if (idx == cardLen - 1 || isBlank(cardDataList[idx + 1].card_date)) {
+          intervalTd
+            .addClass("now-interval")
+            .text(getDateDiff(cardDate, getISODateById("#baseEndDate")));
         } else {
-          const dateAfter = calDate(cardDataList[idx + 1].card_date);
-          const dateBefore = calDate(cardDate);
-
-          contentList.push(
-            $("<td>", {
-              class: "pre-interval",
-            }).text((dateAfter.getTime() - dateBefore.getTime()) / currDay)
-          );
+          intervalTd
+            .addClass("pre-interval")
+            .text(getDateDiff(cardDate, cardDataList[idx + 1].card_date));
         }
       }
-      // 카드 일정 데이터가 없는 경우, Skip
-      else {
-        contentList.push($("<td>"));
-      }
+      contentList.push(intervalTd);
     } else {
       contentList.push($("<td>"));
       contentList.push($("<td>"));
@@ -300,22 +269,6 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   }
 
   return contentList;
-}
-
-/**
- * 설정한 기준일을 Return
- */
-function getBaseDate(dateId) {
-  const baseEndDate = new Date($(dateId).val());
-
-  return baseEndDate.toISOString().slice(0, 10);
-}
-
-/**
- * 입력한 날짜 문자열을 Date형으로 Return
- */
-function calDate(dateStr) {
-  return new Date(dateStr);
 }
 
 /**
@@ -353,8 +306,8 @@ function runBuildDateRank(idolData) {
   });
 
   const borderStyle = {
-    left: "border-left: 1px solid #000000;",
-    right: "border-right: 1px solid #000000;",
+    left: { "border-left": "1px solid #000000" },
+    right: { "border-right": "1px solid #000000" },
   };
 
   // 랭킹표 타이틀에 선택한 레어리티를 모두 표시
@@ -370,21 +323,31 @@ function runBuildDateRank(idolData) {
  * 랭킹에 따른 셀의 색 결정
  */
 function selectCellColor(rankStr) {
-  // Red
-  if (rankStr == "1") return "background-color: rgba(255, 0, 0, 0.4); ";
-  // Orange
-  else if (rankStr == "2") return "background-color: rgba(255, 165, 0, 0.4); ";
-  // Yellow
-  else if (rankStr == "3") return "background-color: rgba(255, 255, 0, 0.4); ";
-  // Green
-  else if (rankStr == "4") return "background-color: rgba(0, 128, 0, 0.4); ";
-  // Blue
-  else if (rankStr == "5") return "background-color: rgba(0, 0, 255, 0.4); ";
-  // Indigo
-  else if (rankStr == "6") return "background-color: rgba(75, 0, 130, 0.4); ";
-  // Violet
-  else if (rankStr == "7") return "background-color: rgba(238, 130, 238, 0.4); ";
-  else return "";
+  switch (rankStr) {
+    case 1:
+      // Red
+      return { "background-color": "rgba(255, 0, 0, 0.4)" };
+    case 2:
+      // Orange
+      return { "background-color": "rgba(255, 165, 0, 0.4)" };
+    case 3:
+      // Yellow
+      return { "background-color": "rgba(255, 255, 0, 0.4)" };
+    case 4:
+      // Green
+      return { "background-color": "rgba(0, 128, 0, 0.4)" };
+    case 5:
+      // Blue
+      return { "background-color": "rgba(0, 0, 255, 0.4)" };
+    case 6:
+      // Indigo
+      return { "background-color": "rgba(75, 0, 130, 0.4)" };
+    case 7:
+      // Violet
+      return { "background-color": "rgba(238, 130, 238, 0.4)" };
+    default:
+      return {};
+  }
 }
 
 /**
@@ -392,17 +355,44 @@ function selectCellColor(rankStr) {
  */
 function buildRankTable0(intervalAry, oldRanks, borderStyle) {
   const tableName = "rank-table-0";
-  let table = `<table id="${tableName}">`;
-  table += "<thead>";
 
-  table += `<tr style="height:${$("#date-table tr").eq(0).height()}px">`;
-  table += `<th class="th-rank" style="${borderStyle.right}" data-lang="name">이름</th>`;
-  table += `<th class="th-rank" style="${borderStyle.right}${borderStyle.left}" data-lang="rank">순위</th>`;
-  table += `<th class="th-rank" style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
-  table += "</tr>";
-  table += "</thead>";
+  const table = $("<table>", { id: tableName });
+  const thead = $("<thead>");
 
-  table += "<tbody>";
+  const tr = $("<tr>").css({
+    height: $("#date-table tr").eq(0).height(),
+  });
+
+  const th1 = $("<th>", {
+    class: "th-rank",
+    "data-lang": "name",
+  })
+    .css(borderStyle.right)
+    .text("이름");
+
+  const th2 = tr.append(
+    $("<th>", {
+      class: "th-rank",
+      "data-lang": "rank",
+    })
+      .css(borderStyle.right)
+      .css(borderStyle.left)
+      .text("순위")
+  );
+
+  const th3 = tr.append(
+    $("<th>", {
+      class: "th-rank",
+      "data-lang": "intervalDate",
+    })
+      .css(borderStyle.left)
+      .text("간격일")
+  );
+
+  tr.append(th1, th2, th3);
+  thead.append(tr);
+
+  const tbody = $("<tbody>");
 
   for (let i = 0; i < intervalAry.length; i++) {
     const nameStr = intervalAry[i][0];
@@ -417,17 +407,34 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
     if (intervalAry[i] == "") rankStr = "미실장";
     const cellColor = selectCellColor(rankStr);
 
-    table += `<tr style="height:${$("#date-table tr")
-      .eq(i + 1)
-      .height()}px">`;
-    table += `<td style="${borderStyle.right}${cellColor}"><div class="cell-div">${nameStr}</div></td>`;
-    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}"><div class="cell-div">${rankStr}</div></td>`;
-    table += `<td style="${borderStyle.left}${cellColor}"><div class="cell-div">${intervalStr}</div></td>`;
-    table += "</tr>";
+    const tr = $("<tr>").css({
+      height: $("#date-table tr")
+        .eq(i + 1)
+        .height(),
+    });
+
+    const td1 = $("<td>")
+      .css(borderStyle.right)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(nameStr));
+
+    const td2 = $("<td>")
+      .css(borderStyle.right)
+      .css(borderStyle.left)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(rankStr));
+
+    const td3 = $("<td>")
+      .css(borderStyle.left)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(intervalStr));
+
+    tr.append(td1, td2, td3);
+    tbody.append(tr);
   }
 
-  table += "</tbody>";
-  table += "</table>";
+  table.append(thead, tbody);
+
   $("#MAIN_RANK").html(table);
 
   Language.setLanguageInTable(tableName);
@@ -438,79 +445,76 @@ function buildRankTable0(intervalAry, oldRanks, borderStyle) {
  */
 function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
   const tableName = "rank-table-1";
-  let table = `<table id="${tableName}">`;
-  table += "<thead>";
-  table += "<tr>";
-  table += `<th class="th-rank" colspan="3">${tableType}</th>`;
-  table += "</tr>";
+  const table = $("<table>", { id: tableName });
+
+  const thead = $("<thead>");
+  const headTr1 = $("<tr>").append($("<th>", { class: "th-rank", colspan: 3, text: tableType }));
 
   // 선택한 카드타입 표시
-  const notSelectStr = "미선택";
-  let gachaTypeStr = notSelectStr;
+  const selectedGachaTypeList = [];
+
   if ($("#permanentCardChkBox").is(":checked")) {
-    gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("permanent");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("permanent"));
   }
   if ($("#limitedCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("limited");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("limited"));
   }
   if ($("#twilightCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("twilight");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("twilight"));
   }
   if ($("#mysongsCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("mysongs");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("mysongs"));
   }
   if ($("#parallelCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("parallel");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("parallel"));
   }
   if ($("#eventCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("event");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("event"));
   }
   if ($("#gradeFesCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("fes");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("fes"));
   }
   if ($("#campaignCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("campaign");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("campaign"));
   }
   if ($("#otherCardChkBox").is(":checked")) {
-    if (gachaTypeStr != notSelectStr) gachaTypeStr += getGachaTypeSeparateChar();
-    else gachaTypeStr = "";
-    gachaTypeStr += CardTypeInfo.getCardTypeIdentifier("other");
+    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("other"));
   }
 
-  table += "<tr>";
-  table += `<th class="th-rank" colspan="3">${gachaTypeStr}</th>`;
-  table += "</tr>";
+  const gachaTypeStr =
+    selectedGachaTypeList.length > 0
+      ? selectedGachaTypeList.join(" ")
+      : Language.getTranslatedName("notSet");
 
-  table += "<tr>";
-  table += `<th class="th-rank" colspan="3">
-  ${getBaseDate("#baseStartDate")}<br />
-  ~<br />
-  ${getBaseDate("#baseEndDate")}</th>`;
-  table += "</tr>";
+  const headTr2 = $("<tr>").append($("<th>", { class: "th-rank", colspan: 3 }).text(gachaTypeStr));
 
-  table += "<tr>";
-  table += `<th class="th-rank" style="${borderStyle.right}" data-lang="name">이름</th>`;
-  table += `<th class="th-rank" style="${borderStyle.right}${borderStyle.left}" data-lang="rank">순위</th>`;
-  table += `<th class="th-rank" style="${borderStyle.left}" data-lang="intervalDate">간격일</th>`;
-  table += "</tr>";
-  table += "</thead>";
+  const headTr3 = $("<tr>").append(
+    $("<th>", { class: "th-rank", colspan: 3 })
+      .append(getISODateById("#baseStartDate"))
+      .append("<br>~<br>")
+      .append(getISODateById("#baseEndDate"))
+  );
 
-  table += "<tbody>";
+  const headTr4 = $("<tr>");
+
+  const th1 = $("<th>", { class: "th-rank", "data-lang": "name" })
+    .css(borderStyle.right)
+    .text("이름");
+
+  const th2 = $("<th>", { class: "th-rank", "data-lang": "rank" })
+    .css(borderStyle.right)
+    .css(borderStyle.left)
+    .text("순위");
+
+  const th3 = $("<th>", { class: "th-rank", "data-lang": "intervalDate" })
+    .css(borderStyle.left)
+    .text("간격일");
+
+  headTr4.append(th1, th2, th3);
+
+  thead.append(headTr1, headTr2, headTr3, headTr4);
+
+  const tbody = $("<tbody>");
 
   for (let i = 0; i < intervalAry.length; i++) {
     const rankIndex = oldRanks.indexOf(i + 1);
@@ -525,20 +529,31 @@ function buildRankTable1(tableType, intervalAry, oldRanks, borderStyle) {
 
     const cellColor = selectCellColor(rankStr);
 
-    table += "<tr>";
-    table += `<td style="${borderStyle.right}${cellColor}">${nameStr}</td>`;
-    table += `<td style="${borderStyle.right}${borderStyle.left}${cellColor}">${rankStr}</td>`;
-    table += `<td style="${borderStyle.left}${cellColor}">${intervalStr}</td>`;
-    table += "</tr>";
+    const tr = $("<tr>");
+
+    const td1 = $("<td>")
+      .css(borderStyle.right)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(nameStr));
+
+    const td2 = $("<td>")
+      .css(borderStyle.right)
+      .css(borderStyle.left)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(rankStr));
+
+    const td3 = $("<td>")
+      .css(borderStyle.left)
+      .css(cellColor)
+      .append($("<div>", { class: "cell-div" }).text(intervalStr));
+
+    tr.append(td1, td2, td3);
+    tbody.append(tr);
   }
 
-  table += "</tbody>";
-  table += "</table>";
+  table.append(thead, tbody);
+
   $("#RANK").html(table);
 
   Language.setLanguageInTable(tableName);
-}
-
-function getGachaTypeSeparateChar() {
-  return " ";
 }
