@@ -51,3 +51,5 @@ const CardTypeInfo = (() => {
     getAllCardTypeNumber,
   };
 })();
+
+export default CardTypeInfo;

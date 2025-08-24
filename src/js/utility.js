@@ -1,7 +1,7 @@
 /**
  * JSON 데이터 읽기
  */
-async function getJSON(jsonFile, cacheMode = "no-cache") {
+export async function getJSON(jsonFile, cacheMode = "no-cache") {
   try {
     const response = await fetch(jsonFile, { cache: cacheMode });
     if (!response.ok) {
@@ -18,7 +18,7 @@ async function getJSON(jsonFile, cacheMode = "no-cache") {
  * URL의 쿼리를 Object형식으로 취득
  * https://example.com/?foo=bar&baz=qux -> {foo: bar, baz: qux}
  */
-function getQuery() {
+export function getQuery() {
   const params = new URLSearchParams(window.location.search);
 
   // Query Parameter를 [key, value] 형태의 배열을 취득 후, Object형태로 변환 후 Return
@@ -28,14 +28,14 @@ function getQuery() {
 /**
  * 현재날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
  */
-function getToday() {
+export function getToday() {
   return getISODate(new Date());
 }
 
 /**
  * 지정한 날짜를 ISO 8601형식(YYYY-MM-DD)으로 Return
  */
-function getISODate(dateStr) {
+export function getISODate(dateStr) {
   const targetDate = new Date(dateStr);
 
   const year = targetDate.getFullYear();
@@ -49,18 +49,18 @@ function getISODate(dateStr) {
 /**
  * 지정한 오브젝트의 ID로부터 날짜 정보를 취득하여 ISO 8601형식(YYYY-MM-DD)으로 Return
  */
-function getISODateById(id) {
+export function getISODateById(id) {
   return getISODate(new Date($(id).val()));
 }
 
-function compareByValueAsc(itemA, itemB) {
+export function compareByValueAsc(itemA, itemB) {
   const aValue = itemA ? itemA : Infinity;
   const bValue = itemB ? itemB : Infinity;
 
   return aValue - bValue;
 }
 
-function compareByValueDesc(itemA, itemB) {
+export function compareByValueDesc(itemA, itemB) {
   const aValue = itemA ? itemA : Infinity;
   const bValue = itemB ? itemB : Infinity;
 
@@ -72,7 +72,7 @@ function compareByValueDesc(itemA, itemB) {
  * A가 B보다 이전인 경우, 0보다 작음
  * A가 B보다 이후인 경우, 0보다 큼
  */
-function compareByCardDateAsc(before, after) {
+export function compareByCardDateAsc(before, after) {
   // 날짜 데이터가 존재 하지 않는 경우, 마지막에 위치하도록 무한으로 설정
   const beforeTime = before ? new Date(before).getTime() : Infinity;
   const afterTime = after ? new Date(after).getTime() : Infinity;
@@ -83,7 +83,7 @@ function compareByCardDateAsc(before, after) {
 /**
  * 날짜의 차이를 취득
  */
-function getDateDiff(before, after) {
+export function getDateDiff(before, after) {
   // 하루를 밀리초(ms)로 변환 = 86400000
   return (new Date(after) - new Date(before)) / 86400000;
 }
@@ -91,14 +91,26 @@ function getDateDiff(before, after) {
 /**
  * 공백에 해당되는 문자열인지 확인
  */
-function isBlank(str) {
+export function isBlank(str) {
   return !str || /^\s*$/.test(str);
 }
 
 /**
  * 첫 글자만 대문자로 변경, 나머지는 그대로
  */
-function changeUpperFirst(str) {
+export function changeUpperFirst(str) {
   if (!str) return "";
   return str[0].toUpperCase() + str.slice(1);
+}
+
+export function getImagePath(isProduce, isFes, isCard) {
+  const cardTypeName = isProduce ? "produce_idol" : "support_idol";
+  const imgTypeName = isCard ? "card" : "icon";
+  const fesName = isProduce && isFes ? "fes_" : "";
+
+  return `${cardTypeName}/${fesName}${imgTypeName}`;
+}
+
+export function getImgSrc(path, addr) {
+  return `./img/${path}/${addr}.png`;
 }

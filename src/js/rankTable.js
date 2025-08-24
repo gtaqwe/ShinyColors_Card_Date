@@ -1,7 +1,14 @@
+import CardTypeInfo from "./cardTypeInfo.js";
+import Language from "./language.js";
+
+import { NONE_INTERVAL } from "./constant.js";
+
+import * as Utility from "./utility.js";
+
 /**
  * 랭킹표 작성
  */
-function createRankTable(idolData) {
+export function createRankTable(idolData) {
   // 카드 정보가 존재 하지 않을 경우, 표를 작성하지 않음
   if (!idolData) {
     $("#MAIN_RANK").empty();
@@ -28,7 +35,7 @@ function createRankTable(idolData) {
   });
 
   const sortedListByInterval = [...intervalList].sort((a, b) =>
-    compareByValueDesc(a.interval, b.interval)
+    Utility.compareByValueDesc(a.interval, b.interval)
   );
   const rankedIntervalList = intervalList.map((item) => {
     const rank = sortedListByInterval.findIndex((sortedItem) => sortedItem == item) + 1;
@@ -219,9 +226,9 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
 
   const headTr3 = $("<tr>").append(
     $("<th>", { class: "th-rank", colspan: 3 })
-      .append(getISODateById("#baseStartDate"))
+      .append(Utility.getISODateById("#baseStartDate"))
       .append("<br>~<br>")
-      .append(getISODateById("#baseEndDate"))
+      .append(Utility.getISODateById("#baseEndDate"))
   );
 
   const headTr4 = $("<tr>");

@@ -1,3 +1,15 @@
+import IdolData from "./idolData.js";
+import ChangeCardLapInfo from "./changeCardLapInfo.js";
+import CardRarityInfo from "./cardRarityInfo.js";
+import CardTypeInfo from "./cardTypeInfo.js";
+import Language from "./language.js";
+
+import { SERVICE_START_DATE_STRING, CARD_RARITY_TYPE } from "./constant.js";
+
+import * as Utility from "./utility.js";
+import * as MainTable from "./mainTable.js";
+import * as RankTable from "./rankTable.js";
+
 $(function () {
   init();
 });
@@ -16,7 +28,7 @@ async function init() {
   // Start : 서비스 개시일
   // End : 현재 날짜
   $("#baseStartDate").val(SERVICE_START_DATE_STRING);
-  $("#baseEndDate").val(getToday());
+  $("#baseEndDate").val(Utility.getToday());
 
   // 언어 설정
   await initLanguage();
@@ -70,7 +82,7 @@ function createResetButton() {
       id: "baseEndDateResetButton",
       value: "Reset",
       class: "Resetbutton",
-      click: () => baseDateReset("baseEndDate", getToday()),
+      click: () => baseDateReset("baseEndDate", Utility.getToday()),
     })
   );
 }
@@ -97,6 +109,9 @@ function setEventHandler() {
   // 종료일 변경
   $("#baseEndDate").on("change", () => updateEndBaseDate());
 
+  // 카드 수 표시
+  $("#showCardCountConvertBtn").on("change", () => convertShowCardCount());
+
   // 카드 차수 변경 표시
   $("#showChangeCardLapConvertBtn").on("change", () => updateDate());
 
@@ -117,7 +132,7 @@ async function initLanguage() {
   await Language.init();
 
   // Query Parameter로 언어 설정시 선택한 언어로 표시
-  const query = getQuery();
+  const query = Utility.getQuery();
   if (query.lang !== undefined) {
     await Language.setLanguage(query.lang);
     $("#languageSetting").css("display", "inline");
@@ -143,7 +158,7 @@ function initDatePresetButton() {
 
   for (let targetYear = startYear; targetYear <= nowYear; targetYear++) {
     const startDate = targetYear == startYear ? SERVICE_START_DATE_STRING : `${targetYear}-01-01`;
-    const endDate = targetYear == nowYear ? getToday() : `${targetYear}-12-31`;
+    const endDate = targetYear == nowYear ? Utility.getToday() : `${targetYear}-12-31`;
 
     // 프리셋 버튼 추가
     const presetButton = $("<input>", {
@@ -196,10 +211,10 @@ function setPSsr() {
   const buttonId = "pSsrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.P_SSR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SSR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_SSR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.P_SSR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.P_SSR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -212,10 +227,10 @@ function setSSsr() {
   const buttonId = "sSsrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.S_SSR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SSR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_SSR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.S_SSR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.S_SSR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -228,10 +243,10 @@ function setPSr() {
   const buttonId = "pSrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.P_SR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_SR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.P_SR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.P_SR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -244,10 +259,10 @@ function setSSr() {
   const buttonId = "sSrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.S_SR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_SR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.S_SR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.S_SR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -260,10 +275,10 @@ function setPUr() {
   const buttonId = "pUrButton";
   const buttonClassName = "Pbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.P_UR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_UR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_UR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.P_UR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.P_UR, buttonId, buttonClassName);
   }
 
   updateDate();
@@ -276,63 +291,55 @@ function setSUr() {
   const buttonId = "sUrButton";
   const buttonClassName = "Sbutton";
 
-  if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
-    CardRarityInfo.updateSelectOff(cardRarityType.S_UR, buttonId, buttonClassName);
+  if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_UR)) {
+    CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_UR, buttonId, buttonClassName);
   } else {
-    CardRarityInfo.updateSelectOn(cardRarityType.S_UR, buttonId, buttonClassName);
+    CardRarityInfo.updateSelectOn(CARD_RARITY_TYPE.S_UR, buttonId, buttonClassName);
   }
 
   updateDate();
 }
 
-function updateDate() {
+export function updateDate() {
   CardTypeInfo.init();
-
-  let idolData;
 
   // 선택한 레어리티 정보를 취득
   const selectedRarity = CardRarityInfo.getSelectedCardRarity();
 
-  if (selectedRarity.length != 0) {
-    // 선택한 레어리티의 타이틀을 모두 취득
-    const tableTitleList = selectedRarity.map((v) => v.title);
+  const idolData = selectedRarity.length != 0 ? getSelectedCardDataInfo(selectedRarity) : undefined;
 
-    // 선택 레어리티의 카드리스트를 취득
-    const selectedCardData = mergeCardData();
-
-    idolData = {
-      titleList: tableTitleList,
-      data: selectedCardData,
-    };
-  }
-
-  // 선택한 레어리티가 없거나, 프로듀스가 선택되어있는 경우
   // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
-  const ps = selectedRarity.filter((v) => v.ps == "p").length == 0 ? "s" : "p";
+  const ps = selectedRarity.filter((v) => v.ps == "p").length > 0 ? "p" : "s";
 
   changeForFesImgConvertButton(ps);
 
   // 메인표 작성
-  createMainTable(idolData);
+  MainTable.createMainTable(idolData);
 
   // 랭킹표 작성
-  createRankTable(idolData);
+  RankTable.createRankTable(idolData);
 
   Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
 
-  // 카드 정보가 존재 하지 않을 경우, 메세지를 표시하지 않음
-  if (!idolData) {
+  // 선택한 레어리티가 없는 경우, 하단 메세지를 표시하지 않음
+  if (selectedRarity.length == 0) {
     $("#NOTE_SPACE").empty();
   }
 
   setCardTypeCountList();
-  convertShowCardCount();
 }
 
-function increaseCardTypeCount(cardType) {
-  if (CardTypeInfo.getCardTypeKeys().includes(cardType)) {
-    CardTypeInfo.addCardTypeNumberOne(cardType);
-  }
+function getSelectedCardDataInfo(selectedRarity) {
+  // 선택한 레어리티의 타이틀을 모두 취득
+  const tableTitleList = selectedRarity.map((v) => v.title);
+
+  // 선택 레어리티의 카드리스트를 취득
+  const selectedCardData = mergeCardData();
+
+  return {
+    titleList: tableTitleList,
+    data: selectedCardData,
+  };
 }
 
 function setCardTypeCountList() {
@@ -380,7 +387,7 @@ function updateEndBaseDate() {
 
   // 종료일이 유효하지 않은 경우 현재 날짜로 변경
   if (isNaN(baseEndDate.getTime())) {
-    $("#baseEndDate").val(getToday());
+    $("#baseEndDate").val(Utility.getToday());
   }
 
   // 종료일 변경 시 시작일 이전으로 할 수 없음
@@ -461,7 +468,7 @@ function getCardList(cardAry) {
       )
       .sort((a, b) => {
         // 오래된 순으로 정렬
-        return compareByCardDateAsc(a.cardDate, b.cardDate);
+        return Utility.compareByCardDateAsc(a.cardDate, b.cardDate);
       })
   );
 }
@@ -476,42 +483,42 @@ function mergeCardData() {
     let tempCardList = [];
 
     // P UR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_UR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_UR)) {
       const idolList = [...idol.P_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SSR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SSR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SSR)) {
       const idolList = [...idol.P_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // P SR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.P_SR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SR)) {
       const idolList = [...idol.P_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S UR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_UR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_UR)) {
       const idolList = [...idol.S_UR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SSR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SSR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SSR)) {
       const idolList = [...idol.S_SSR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
     }
 
     // S SR
-    if (CardRarityInfo.getIsSelectedByCardRarity(cardRarityType.S_SR)) {
+    if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SR)) {
       const idolList = [...idol.S_SR];
       firstList = firstList.concat(idolList.shift());
       tempCardList = tempCardList.concat([...idolList]);
@@ -521,7 +528,7 @@ function mergeCardData() {
     const firstImplementation = firstList
       .filter((v) => v)
       .sort((a, b) => {
-        return compareByCardDateAsc(a.cardDate, b.cardDate);
+        return Utility.compareByCardDateAsc(a.cardDate, b.cardDate);
       })
       .shift();
 
@@ -531,98 +538,11 @@ function mergeCardData() {
     }
 
     return {
-      idolName: idol[`idol${changeUpperFirst(Language.getCurrentLanguage())}Name`],
+      idolName: idol[`idol${Utility.changeUpperFirst(Language.getCurrentLanguage())}Name`],
       displayRanking: idol.displayRanking,
       cardData: getCardList(tempCardList),
     };
   });
-}
-
-function getImagePath(isProduce, isFes, isCard) {
-  const cardTypeName = isProduce ? "produce_idol" : "support_idol";
-  const imgTypeName = isCard ? "card" : "icon";
-  const fesName = isFes ? "fes_" : "";
-
-  return `${cardTypeName}/${fesName}${imgTypeName}`;
-}
-
-/**
- * 마우스 포인트 위치에 따라 이미지 프리뷰
- */
-function imgMapping() {
-  const xOffset = 10;
-  const yOffset = 20;
-  const imgWidth = 320;
-  const imgHeight = 180;
-
-  // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
-  $("#date-table td").hover(
-    function (e) {
-      const imgAddrAttr = $(this).closest("td").attr("addr");
-      const imgNameAttr = $(this).closest("td").attr("name");
-      const isProduce = $(this).closest("td").attr("ps") == "p";
-      const isFes = $("#fesImgConvertBtn").is(":checked");
-      const isCard = true;
-
-      const imgPath = getImagePath(isProduce, isFes, isCard);
-
-      // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
-      if (imgNameAttr) {
-        const previewImgTag = $("<img>").attr({
-          src: getImgSrc(imgPath, imgAddrAttr),
-          witdh: imgWidth,
-          height: imgHeight,
-          onerror: "this.src='./img/assets/Blank_Card.png'",
-        });
-        const previewIdTag = $("<p>")
-          .attr("id", "preview")
-          .append(previewImgTag)
-          .append("<br>")
-          .append(imgNameAttr);
-        $("body").append(previewIdTag);
-        $("#preview")
-          .css({ top: e.pageY - xOffset + "px", left: e.pageX + yOffset + "px" })
-          .fadeIn("fast");
-      }
-    },
-    // 마우스 포인트가 해당 셀에 위치하지 않으면 비표시
-    function () {
-      $("#preview").remove();
-    }
-  );
-
-  // 마우스 포인트 위치에 따라 프리뷰 이동
-  $("#date-table td").mousemove(function (e) {
-    const nowPreview = $("#preview");
-    const previewWidth = nowPreview.width();
-    const previewHeight = nowPreview.height();
-
-    if (e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop()) {
-      nowPreview.css("top", e.pageY - xOffset - previewHeight + "px");
-    } else {
-      nowPreview.css("top", e.pageY - xOffset + "px");
-    }
-
-    if (e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()) {
-      nowPreview.css("left", e.pageX - yOffset - previewWidth + "px");
-    } else {
-      nowPreview.css("left", e.pageX + yOffset + "px");
-    }
-
-    if (
-      e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop() &&
-      e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()
-    ) {
-      nowPreview.css({
-        top: e.pageY - xOffset - previewHeight - xOffset + "px",
-        left: e.pageX - yOffset - previewWidth + "px",
-      });
-    }
-  });
-}
-
-function getImgSrc(path, addr) {
-  return `./img/${path}/${addr}.png`;
 }
 
 /**
@@ -649,11 +569,11 @@ function captureScreen(frameName) {
   $(frameId).css("overflow", "hidden");
   cssDisplayOff("#convertSpan");
 
-  $("#baseStartDateStr").text(getISODateById("#baseStartDate"));
+  $("#baseStartDateStr").text(Utility.getISODateById("#baseStartDate"));
   cssDisplayOff("#baseStartSpan");
   cssDisplayOn("#baseStartDateStr");
 
-  $("#baseEndDateStr").text(getISODateById("#baseEndDate"));
+  $("#baseEndDateStr").text(Utility.getISODateById("#baseEndDate"));
   cssDisplayOff("#baseEndSpan");
   cssDisplayOn("#baseEndDateStr");
 

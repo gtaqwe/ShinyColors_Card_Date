@@ -1,3 +1,6 @@
+import { LANGUAGE_DATA_PATH } from "./constant.js";
+import * as Utility from "./utility.js";
+
 const Language = (() => {
   let langData = {};
   let currentLang;
@@ -11,7 +14,7 @@ const Language = (() => {
 
   async function setLanguage(langCode) {
     const finalLang = supportedLanguages.includes(langCode) ? langCode : defaultLang;
-    langData = await getJSON(`${LANGUAGE_DATA_PATH}${finalLang}.json`);
+    langData = await Utility.getJSON(`${LANGUAGE_DATA_PATH}${finalLang}.json`);
     currentLang = finalLang;
   }
 
@@ -64,3 +67,5 @@ const Language = (() => {
     setLanguageInTable,
   };
 })();
+
+export default Language;

@@ -1,8 +1,11 @@
+import { IDOL_DATA_PATH } from "./constant.js";
+import * as Utility from "./utility.js";
+
 const IdolData = (() => {
   let idolData = {};
 
   async function init() {
-    idolData = await getJSON(`${IDOL_DATA_PATH}data.json`);
+    idolData = await Utility.getJSON(`${IDOL_DATA_PATH}data.json`);
   }
 
   function getIdolData() {
@@ -19,3 +22,5 @@ const IdolData = (() => {
     getIdolNumber,
   };
 })();
+
+export default IdolData;

@@ -30,3 +30,5 @@ const ChangeCardLapInfo = (() => {
     getChangeCardLapByIndex,
   };
 })();
+
+export default ChangeCardLapInfo;

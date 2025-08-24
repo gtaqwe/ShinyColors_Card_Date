@@ -1,3 +1,5 @@
+import { DEACTIVATE_BUTTON_TYPE_CLASS } from "./constant.js";
+
 const CardRarityInfo = (() => {
   const cardRarity = {
     pUR: { isSelected: false, title: "P-UR", ps: "p", rarity: "ur" },
@@ -50,3 +52,5 @@ const CardRarityInfo = (() => {
     isAllNotSelectedCardRarity,
   };
 })();
+
+export default CardRarityInfo;

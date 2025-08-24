@@ -1,7 +1,14 @@
+import ChangeCardLapInfo from "./changeCardLapInfo.js";
+import CardTypeInfo from "./cardTypeInfo.js";
+import Language from "./language.js";
+import { updateDate } from "./main.js";
+
+import * as Utility from "./utility.js";
+
 /**
  * 메인표 작성
  */
-function createMainTable(idolData) {
+export function createMainTable(idolData) {
   // 카드 정보가 존재 하지 않을 경우, 표를 작성하지 않음
   if (!idolData) {
     $("#MAIN").empty();
@@ -54,7 +61,7 @@ function createMainTable(idolData) {
 
   Language.setLanguageInTable(tableName);
 
-  imgMapping(this);
+  cardImagePreview(this);
 }
 
 /**
@@ -144,8 +151,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
     );
   }
 
-  cardDataList = totalData.cardData;
-  cardLen = totalData.cardData.length;
+  const cardDataList = totalData.cardData;
+  const cardLen = totalData.cardData.length;
 
   for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
@@ -209,10 +216,10 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
         const isProduce = psType == "p";
         const isFes = $("#fesImgConvertBtn").is(":checked");
         const isCard = false;
-        const imgPath = getImagePath(isProduce, isFes, isCard);
+        const imgPath = Utility.getImagePath(isProduce, isFes, isCard);
 
         const iconImage = $("<img>", {
-          src: getImgSrc(imgPath, cardAddr),
+          src: Utility.getImgSrc(imgPath, cardAddr),
         })
           .css({
             height: 72,
@@ -238,14 +245,14 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       // 최신 실장인 경우, 기준일과의 간격일 계산
       const intervalTd = $("<td>");
       if (cardDate) {
-        if (idx == cardLen - 1 || isBlank(cardDataList[idx + 1].cardDate)) {
+        if (idx == cardLen - 1 || Utility.isBlank(cardDataList[idx + 1].cardDate)) {
           intervalTd
             .addClass("now-interval")
-            .text(getDateDiff(cardDate, getISODateById("#baseEndDate")));
+            .text(Utility.getDateDiff(cardDate, Utility.getISODateById("#baseEndDate")));
         } else {
           intervalTd
             .addClass("pre-interval")
-            .text(getDateDiff(cardDate, cardDataList[idx + 1].cardDate));
+            .text(Utility.getDateDiff(cardDate, cardDataList[idx + 1].cardDate));
         }
       }
       contentList.push(intervalTd);
@@ -256,4 +263,85 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   }
 
   return contentList;
+}
+
+function increaseCardTypeCount(cardType) {
+  if (CardTypeInfo.getCardTypeKeys().includes(cardType)) {
+    CardTypeInfo.addCardTypeNumberOne(cardType);
+  }
+}
+
+/**
+ * 마우스 포인트 위치에 따라 이미지 프리뷰
+ */
+function cardImagePreview() {
+  const xOffset = 10;
+  const yOffset = 20;
+  const imgWidth = 320;
+  const imgHeight = 180;
+
+  // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
+  $("#date-table td").hover(
+    function (e) {
+      const imgAddrAttr = $(this).closest("td").attr("addr");
+      const imgNameAttr = $(this).closest("td").attr("name");
+      const isProduce = $(this).closest("td").attr("ps") == "p";
+      const isFes = $("#fesImgConvertBtn").is(":checked");
+      const isCard = true;
+
+      const imgPath = Utility.getImagePath(isProduce, isFes, isCard);
+
+      // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
+      if (imgNameAttr) {
+        const previewImgTag = $("<img>").attr({
+          src: Utility.getImgSrc(imgPath, imgAddrAttr),
+          witdh: imgWidth,
+          height: imgHeight,
+          onerror: "this.src='./img/assets/Blank_Card.png'",
+        });
+        const previewIdTag = $("<p>")
+          .attr("id", "preview")
+          .append(previewImgTag)
+          .append("<br>")
+          .append(imgNameAttr);
+        $("body").append(previewIdTag);
+        $("#preview")
+          .css({ top: e.pageY - xOffset + "px", left: e.pageX + yOffset + "px" })
+          .fadeIn("fast");
+      }
+    },
+    // 마우스 포인트가 해당 셀에 위치하지 않으면 비표시
+    function () {
+      $("#preview").remove();
+    }
+  );
+
+  // 마우스 포인트 위치에 따라 프리뷰 이동
+  $("#date-table td").mousemove(function (e) {
+    const nowPreview = $("#preview");
+    const previewWidth = nowPreview.width();
+    const previewHeight = nowPreview.height();
+
+    if (e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop()) {
+      nowPreview.css("top", e.pageY - xOffset - previewHeight + "px");
+    } else {
+      nowPreview.css("top", e.pageY - xOffset + "px");
+    }
+
+    if (e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()) {
+      nowPreview.css("left", e.pageX - yOffset - previewWidth + "px");
+    } else {
+      nowPreview.css("left", e.pageX + yOffset + "px");
+    }
+
+    if (
+      e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop() &&
+      e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()
+    ) {
+      nowPreview.css({
+        top: e.pageY - xOffset - previewHeight - xOffset + "px",
+        left: e.pageX - yOffset - previewWidth + "px",
+      });
+    }
+  });
 }
