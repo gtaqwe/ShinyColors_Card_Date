@@ -80,7 +80,7 @@ function tableHeader(title, columnLength) {
   }
 
   // 첫 실장 표시/비표시 설정
-  if (!$(noShowRCardConvertBtn).is(":checked")) {
+  if (!$("#noShowRCardConvertBtn").is(":checked")) {
     headerList.push(
       $("<th>", { class: "th-header-title-cell", "data-lang": "firstImplementation" }).text(
         "첫 실장"
@@ -157,8 +157,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   for (let idx = 0; idx < totalLen - ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); idx++) {
     // 첫 실장 표시/비표시 설정에 따른 카드 차수 변경 표시
     if (
-      (!$(noShowRCardConvertBtn).is(":checked") && idx == 1) ||
-      ($(noShowRCardConvertBtn).is(":checked") && idx == 0)
+      (!$("#noShowRCardConvertBtn").is(":checked") && idx == 1) ||
+      ($("#noShowRCardConvertBtn").is(":checked") && idx == 0)
     ) {
       for (let i = 0; i < ChangeCardLapInfo.getChangeCardLapByIndex(idolNum); i++) {
         contentList.push($("<td>"));
@@ -212,7 +212,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       const div = $("<div>", { class: "cell-div" });
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
-      if ($(iconImgConvertBtn).is(":checked") && cardAddr) {
+      if ($("#iconImgConvertBtn").is(":checked") && cardAddr) {
         const isProduce = psType == "p";
         const isFes = $("#fesImgConvertBtn").is(":checked");
         const isCard = false;
