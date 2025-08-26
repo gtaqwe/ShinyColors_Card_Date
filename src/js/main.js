@@ -308,10 +308,10 @@ export function updateDate() {
 
   const idolData = selectedRarity.length != 0 ? getSelectedCardDataInfo(selectedRarity) : undefined;
 
-  // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
-  const ps = selectedRarity.filter((v) => v.ps == "p").length > 0 ? "p" : "s";
+  const isSelectedProduce = selectedRarity.some((v) => v.ps == "p");
 
-  changeForFesImgConvertButton(ps);
+  // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
+  updateFesImgConvertButtonStatus(isSelectedProduce);
 
   // 메인표 작성
   MainTable.createMainTable(idolData);
@@ -319,11 +319,13 @@ export function updateDate() {
   // 랭킹표 작성
   RankTable.createRankTable(idolData);
 
-  Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
-
   // 선택한 레어리티가 없는 경우, 하단 메세지를 표시하지 않음
   if (selectedRarity.length == 0) {
     $("#NOTE_SPACE").empty();
+  } else {
+    // 표 하단의 비고
+    const ps = isSelectedProduce ? "p" : "s";
+    Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
   }
 
   setCardTypeCountList();
@@ -417,15 +419,18 @@ function setBaseDate(startId, startInputDate, endtId, endInputDate) {
 }
 
 /**
- * 표시 일러스트 변경 (사복 - 페스)
- * S의 경우 사복으로 고정
+ * 페스 일러스트 표시 버튼의 선택 가능/불가 업데이트
+ * 프로듀스 타입을 선택 한 경우에는 버튼 활성화
+ * 프로듀스 타입을 선택하지 않은 경우에는 버튼 비활성화
  */
-function changeForFesImgConvertButton(ps) {
-  if (ps == "p") {
-    $("#fesImgConvertBtn").prop("disabled", false);
-  } else if (ps == "s") {
-    $("#fesImgConvertBtn").prop("checked", false);
-    $("#fesImgConvertBtn").prop("disabled", true);
+function updateFesImgConvertButtonStatus(isSelectedProduce) {
+  const fesImgConvertBtn = $("#fesImgConvertBtn");
+
+  if (isSelectedProduce) {
+    fesImgConvertBtn.prop("disabled", false);
+  } else {
+    fesImgConvertBtn.prop("checked", false);
+    fesImgConvertBtn.prop("disabled", true);
   }
 }
 
