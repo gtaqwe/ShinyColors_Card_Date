@@ -1,7 +1,7 @@
 import ChangeCardLapInfo from "./changeCardLapInfo.js";
 import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
-import { updateDate } from "./main.js";
+import { withUpdateTable } from "./updateTable.js";
 
 import * as Utility from "./utility.js";
 
@@ -121,7 +121,6 @@ function changeCardLapCount(idolNum, value, min, max) {
   }
 
   ChangeCardLapInfo.setChangeCardLapByIdx(idolNum, val);
-  updateDate();
 }
 
 /**
@@ -143,10 +142,18 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
           value: ChangeCardLapInfo.getChangeCardLapByIndex(idolNum),
         })
           .css({ height: 10, width: 50 })
-          .on("change", (e) => {
-            const input = e.currentTarget;
-            changeCardLapCount(idolNum, Number(input.value), Number(input.min), Number(input.max));
-          })
+          .on(
+            "change",
+            withUpdateTable((e) => {
+              const target = e.currentTarget;
+              changeCardLapCount(
+                idolNum,
+                Number(target.value),
+                Number(target.min),
+                Number(target.max)
+              );
+            })
+          )
       )
     );
   }

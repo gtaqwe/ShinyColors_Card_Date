@@ -12,8 +12,10 @@ const CardTypeInfo = (() => {
   };
 
   function init() {
-    Object.values(cardType).forEach((item) => {
-      item.number = 0;
+    Object.entries(cardType).forEach(([key, value]) => {
+      const initNum = 0;
+      $(`#cardCount_${key}`).text(initNum);
+      value.number = initNum;
     });
   }
 
