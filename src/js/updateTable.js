@@ -144,7 +144,7 @@ function mergeCardData() {
     }
 
     return {
-      idolName: idol[`idol${Utility.changeUpperFirst(Language.getCurrentLanguage())}Name`],
+      idolName: idol[`idol${Language.getCurrentLanguageFirstUpper()}Name`],
       displayRanking: idol.displayRanking,
       cardData: getCardList(tempCardList),
     };
@@ -171,6 +171,7 @@ function getCardList(cardAry) {
     cardAry
       .map((card, idx) => {
         const cardType = card.cardType;
+        // 첫 실장(R) 표시하기 위해 return
         if (cardType == "first" && idx == 0 && !$("#noShowRCardConvertBtn").is(":checked")) {
           return card;
         }

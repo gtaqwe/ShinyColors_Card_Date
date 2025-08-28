@@ -32,8 +32,19 @@ const Language = (() => {
     return supportedLanguages.includes(shortLang) ? shortLang : defaultLang;
   }
 
+  /**
+   * 현재 언어 코드를 Return
+   */
   function getCurrentLanguage() {
     return currentLang;
+  }
+
+  /**
+   * 현재 언어 코드의 첫문자를 대문자로 변경해서 Return
+   * ko -> Ko
+   */
+  function getCurrentLanguageFirstUpper() {
+    return Utility.changeUpperFirst(currentLang);
   }
 
   function getLanguageData() {
@@ -61,6 +72,7 @@ const Language = (() => {
     setLanguage,
     getTranslatedName,
     getCurrentLanguage,
+    getCurrentLanguageFirstUpper,
     getLanguageData,
     setLanguageInMenu,
     setLanguageById,
