@@ -3,6 +3,8 @@ import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 import { withUpdateTable } from "./updateTable.js";
 
+import { PREVIEW_IMG_SIZE, ICON_SIZE } from "./constant.js";
+
 import * as Utility from "./utility.js";
 
 /**
@@ -229,8 +231,8 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
           src: Utility.getImgSrc(imgPath, cardAddr),
         })
           .css({
-            height: 72,
-            width: 72,
+            height: ICON_SIZE.HEIGHT,
+            width: ICON_SIZE.WIDTH,
           })
           .on("error", (e) => {
             e.currentTarget.src = "./img/assets/Blank_Icon.png";
@@ -284,8 +286,6 @@ function increaseCardTypeCount(cardType) {
 function cardImagePreview() {
   const xOffset = 10;
   const yOffset = 20;
-  const imgWidth = 320;
-  const imgHeight = 180;
 
   // 마우스 포인트가 위치한 셀에 해당하는 일러스트의 프리뷰 표시
   $("#date-table td").hover(
@@ -299,23 +299,25 @@ function cardImagePreview() {
       const imgPath = Utility.getImagePath(isProduce, isFes, isCard);
 
       // 카드명이 없는 경우 일러스트 프리뷰를 표시하지 않음
-      if (imgNameAttr) {
-        const previewImgTag = $("<img>").attr({
-          src: Utility.getImgSrc(imgPath, imgAddrAttr),
-          witdh: imgWidth,
-          height: imgHeight,
-          onerror: "this.src='./img/assets/Blank_Card.png'",
-        });
-        const previewIdTag = $("<p>")
-          .attr("id", "preview")
-          .append(previewImgTag)
-          .append("<br>")
-          .append(imgNameAttr);
-        $("body").append(previewIdTag);
-        $("#preview")
-          .css({ top: e.pageY - xOffset + "px", left: e.pageX + yOffset + "px" })
-          .fadeIn("fast");
+      if (!imgNameAttr) {
+        return;
       }
+
+      const previewImgTag = $("<img>").attr({
+        src: Utility.getImgSrc(imgPath, imgAddrAttr),
+        height: PREVIEW_IMG_SIZE.HEIGHT,
+        witdh: PREVIEW_IMG_SIZE.WIDTH,
+        onerror: "this.src='./img/assets/Blank_Card.png'",
+      });
+      const previewIdTag = $("<p>")
+        .attr("id", "preview")
+        .append(previewImgTag)
+        .append("<br>")
+        .append(imgNameAttr);
+      $("body").append(previewIdTag);
+      $("#preview")
+        .css({ top: e.pageY - xOffset, left: e.pageX + yOffset })
+        .fadeIn("fast");
     },
     // 마우스 포인트가 해당 셀에 위치하지 않으면 비표시
     function () {
@@ -330,15 +332,15 @@ function cardImagePreview() {
     const previewHeight = nowPreview.height();
 
     if (e.pageY + previewHeight > $(window).innerHeight() + $(document).scrollTop()) {
-      nowPreview.css("top", e.pageY - xOffset - previewHeight + "px");
+      nowPreview.css("top", e.pageY - xOffset - previewHeight);
     } else {
-      nowPreview.css("top", e.pageY - xOffset + "px");
+      nowPreview.css("top", e.pageY - xOffset);
     }
 
     if (e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()) {
-      nowPreview.css("left", e.pageX - yOffset - previewWidth + "px");
+      nowPreview.css("left", e.pageX - yOffset - previewWidth);
     } else {
-      nowPreview.css("left", e.pageX + yOffset + "px");
+      nowPreview.css("left", e.pageX + yOffset);
     }
 
     if (
@@ -346,8 +348,8 @@ function cardImagePreview() {
       e.pageX + previewWidth > $(window).innerWidth() + $(document).scrollLeft()
     ) {
       nowPreview.css({
-        top: e.pageY - xOffset - previewHeight - xOffset + "px",
-        left: e.pageX - yOffset - previewWidth + "px",
+        top: e.pageY - xOffset - previewHeight - xOffset,
+        left: e.pageX - yOffset - previewWidth,
       });
     }
   });

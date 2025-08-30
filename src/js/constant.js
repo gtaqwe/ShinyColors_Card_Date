@@ -12,3 +12,13 @@ export const CARD_RARITY_TYPE = {
   S_SSR: "sSSR",
   S_SR: "sSR",
 };
+
+export const PREVIEW_IMG_SIZE = {
+  HEIGHT: 180,
+  WIDTH: 320,
+};
+
+export const ICON_SIZE = {
+  HEIGHT: 72,
+  WIDTH: 72,
+};
