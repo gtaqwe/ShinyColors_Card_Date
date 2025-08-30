@@ -4709,6 +4709,13 @@
         "cardDate": "2025-01-30",
         "cardAddr": "1040130120",
         "psType": "p"
+      },
+      {
+        "cardName": "【summer break】有栖川 夏葉",
+        "cardType": "twilight",
+        "cardDate": "2025-08-30",
+        "cardAddr": "1040130130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -6771,6 +6778,13 @@
         "cardType": "event",
         "cardDate": "2025-07-08",
         "cardAddr": "2040180120",
+        "psType": "s"
+      },
+      {
+        "cardName": "【きづけばまほろば】黛 冬優子",
+        "cardType": "twilight",
+        "cardDate": "2025-08-30",
+        "cardAddr": "2040180130",
         "psType": "s"
       }
     ],
@@ -9009,6 +9023,13 @@
         "cardDate": "2025-06-09",
         "cardAddr": "2040260060",
         "psType": "s"
+      },
+      {
+        "cardName": "【サマーアイドル2025】斑鳩 ルカ",
+        "cardType": "limited",
+        "cardDate": "2025-08-30",
+        "cardAddr": "2040260090",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -9045,6 +9066,13 @@
         "cardType": "other",
         "cardDate": "2025-04-11",
         "cardAddr": "2930262510",
+        "psType": "s"
+      },
+      {
+        "cardName": "【不意】斑鳩 ルカ",
+        "cardType": "event",
+        "cardDate": "2025-08-30",
+        "cardAddr": "2030260040",
         "psType": "s"
       }
     ]
