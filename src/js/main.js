@@ -57,7 +57,7 @@ function createResetButton() {
       type: "button",
       id: "cardLapResetButton",
       value: "Reset",
-      class: "Resetbutton",
+      class: "ResetButton",
       click: withUpdateTable(ChangeCardLapInfo.reset),
     })
   );
@@ -68,7 +68,7 @@ function createResetButton() {
       type: "button",
       id: "baseStartDateResetButton",
       value: "Reset",
-      class: "Resetbutton",
+      class: "ResetButton",
       click: withUpdateTable(() => setBaseDate("baseStartDate", SERVICE_START_DATE_STRING)),
     })
   );
@@ -79,7 +79,7 @@ function createResetButton() {
       type: "button",
       id: "baseEndDateResetButton",
       value: "Reset",
-      class: "Resetbutton",
+      class: "ResetButton",
       click: withUpdateTable(() => setBaseDate("baseEndDate", Utility.getToday())),
     })
   );
@@ -216,7 +216,7 @@ function setViewCheckboxSetting() {
  */
 function setPSsr() {
   const buttonId = "pSsrButton";
-  const buttonClassName = "Pbutton";
+  const buttonClassName = "PButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SSR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_SSR, buttonId, buttonClassName);
@@ -230,7 +230,7 @@ function setPSsr() {
  */
 function setSSsr() {
   const buttonId = "sSsrButton";
-  const buttonClassName = "Sbutton";
+  const buttonClassName = "SButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SSR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_SSR, buttonId, buttonClassName);
@@ -244,7 +244,7 @@ function setSSsr() {
  */
 function setPSr() {
   const buttonId = "pSrButton";
-  const buttonClassName = "Pbutton";
+  const buttonClassName = "PButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_SR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_SR, buttonId, buttonClassName);
@@ -258,7 +258,7 @@ function setPSr() {
  */
 function setSSr() {
   const buttonId = "sSrButton";
-  const buttonClassName = "Sbutton";
+  const buttonClassName = "SButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_SR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_SR, buttonId, buttonClassName);
@@ -272,7 +272,7 @@ function setSSr() {
  */
 function setPUr() {
   const buttonId = "pUrButton";
-  const buttonClassName = "Pbutton";
+  const buttonClassName = "PButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.P_UR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.P_UR, buttonId, buttonClassName);
@@ -286,7 +286,7 @@ function setPUr() {
  */
 function setSUr() {
   const buttonId = "sUrButton";
-  const buttonClassName = "Sbutton";
+  const buttonClassName = "SButton";
 
   if (CardRarityInfo.getIsSelectedByCardRarity(CARD_RARITY_TYPE.S_UR)) {
     CardRarityInfo.updateSelectOff(CARD_RARITY_TYPE.S_UR, buttonId, buttonClassName);
@@ -349,7 +349,7 @@ function setBaseDate(id, inputDate) {
 /**
  * 시작일 / 종료일을 모두 재설정
  */
-function setAllBaseDate(startId, startInputDate, endtId, endInputDate) {
+function setAllBaseDate(startId, startInputDate, endId, endInputDate) {
   $(`#${startId}`).val(startInputDate);
-  $(`#${endtId}`).val(endInputDate);
+  $(`#${endId}`).val(endInputDate);
 }

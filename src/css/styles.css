@@ -124,8 +124,8 @@ footer {
   background-color: #ffff00;
 }
 
-.Pbutton,
-.Sbutton,
+.PButton,
+.SButton,
 .ALLbutton,
 .DeactivateButton {
   border: none;
@@ -151,19 +151,19 @@ footer {
 }
 
 
-.Pbutton {
+.PButton {
   background-color: #ff62a6;
 }
 
-.Pbutton:hover {
+.PButton:hover {
   background-color: #ff74b6;
 }
 
-.Sbutton {
+.SButton {
   background-color: #4ca0f2;
 }
 
-.Sbutton:hover {
+.SButton:hover {
   background-color: #5cb4fe;
 }
 
@@ -175,7 +175,7 @@ footer {
   background: linear-gradient(to bottom right, #ff74b6 50%, #5cb4fe 50%);
 }
 
-.Resetbutton,
+.ResetButton,
 .DatePresetButton {
   background-color: #e7e7e7;
   border: 1px solid;
@@ -193,7 +193,7 @@ footer {
   margin: 0px 3px;
 }
 
-.Resetbutton:hover,
+.ResetButton:hover,
 .DatePresetButton:hover {
   background-color: #d0d0d0;
 }

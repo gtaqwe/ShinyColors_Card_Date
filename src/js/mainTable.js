@@ -306,7 +306,7 @@ function cardImagePreview() {
       const previewImgTag = $("<img>").attr({
         src: Utility.getImgSrc(imgPath, imgAddrAttr),
         height: PREVIEW_IMG_SIZE.HEIGHT,
-        witdh: PREVIEW_IMG_SIZE.WIDTH,
+        width: PREVIEW_IMG_SIZE.WIDTH,
         onerror: "this.src='./img/assets/Blank_Card.png'",
       });
       const previewIdTag = $("<p>")
