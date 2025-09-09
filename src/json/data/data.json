@@ -2712,6 +2712,13 @@
         "cardDate": "2025-07-18",
         "cardAddr": "2030070120",
         "psType": "s"
+      },
+      {
+        "cardName": "【スキを繋ぐ】三峰 結華",
+        "cardType": "event",
+        "cardDate": "2025-09-09",
+        "cardAddr": "2030070110",
+        "psType": "s"
       }
     ]
   },
@@ -6944,6 +6951,13 @@
         "cardType": "parallel",
         "cardDate": "2025-02-18",
         "cardAddr": "1040190100",
+        "psType": "p"
+      },
+      {
+        "cardName": "【心安らげる場所】和泉 愛依",
+        "cardType": "limited",
+        "cardDate": "2025-09-09",
+        "cardAddr": "1040190110",
         "psType": "p"
       }
     ],
