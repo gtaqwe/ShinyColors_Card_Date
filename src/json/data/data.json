@@ -320,6 +320,13 @@
         "cardDate": "2025-05-30",
         "cardAddr": "2040010200",
         "psType": "s"
+      },
+      {
+        "cardName": "【思い出、繋いで】櫻木 真乃",
+        "cardType": "event",
+        "cardDate": "2025-09-19",
+        "cardAddr": "2040010210",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -8165,6 +8172,13 @@
         "cardDate": "2025-02-28",
         "cardAddr": "1040230090",
         "psType": "p"
+      },
+      {
+        "cardName": "【loading...】市川 雛菜",
+        "cardType": "limited",
+        "cardDate": "2025-09-19",
+        "cardAddr": "1040230100",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -8538,6 +8552,13 @@
         "cardType": "limited",
         "cardDate": "2025-07-26",
         "cardAddr": "2040240090",
+        "psType": "s"
+      },
+      {
+        "cardName": "【そういう時間、も】七草 にちか",
+        "cardType": "limited",
+        "cardDate": "2025-09-19",
+        "cardAddr": "2040240100",
         "psType": "s"
       }
     ],
