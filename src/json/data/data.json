@@ -1751,6 +1751,13 @@
         "cardDate": "2025-06-17",
         "cardAddr": "1040050120",
         "psType": "p"
+      },
+      {
+        "cardName": "【モラトリアム・レポート】田中 摩美々",
+        "cardType": "parallel",
+        "cardDate": "2025-09-29",
+        "cardAddr": "1040050130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -4628,6 +4635,13 @@
         "cardType": "other",
         "cardDate": "2025-04-11",
         "cardAddr": "2930122510",
+        "psType": "s"
+      },
+      {
+        "cardName": "【をとめ茶会】杜野 凛世",
+        "cardType": "event",
+        "cardDate": "2025-09-29",
+        "cardAddr": "2030120120",
         "psType": "s"
       }
     ]
@@ -7922,6 +7936,13 @@
         "cardType": "limited",
         "cardDate": "2025-04-29",
         "cardAddr": "1040220090",
+        "psType": "p"
+      },
+      {
+        "cardName": "【ちいさな巣立ち】福丸 小糸",
+        "cardType": "parallel",
+        "cardDate": "2025-09-29",
+        "cardAddr": "1040220100",
         "psType": "p"
       }
     ],
