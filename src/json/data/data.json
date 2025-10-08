@@ -4269,6 +4269,13 @@
         "cardDate": "2018-04-24",
         "cardAddr": null,
         "psType": "p"
+      },
+      {
+        "cardName": "【絵空靴】杜野 凛世",
+        "cardType": "permanent",
+        "cardDate": "2025-10-08",
+        "cardAddr": "1050120010",
+        "psType": "p"
       }
     ],
     "P_SSR": [
@@ -5595,6 +5602,13 @@
         "cardType": "first",
         "cardDate": "2018-04-24",
         "cardAddr": null,
+        "psType": "s"
+      },
+      {
+        "cardName": "【A Kiss to JOL】大崎 甜花",
+        "cardType": "permanent",
+        "cardDate": "2025-10-08",
+        "cardAddr": "2050150010",
         "psType": "s"
       }
     ],
@@ -7537,6 +7551,13 @@
         "cardType": "other",
         "cardDate": "2025-04-11",
         "cardAddr": "2930202510",
+        "psType": "s"
+      },
+      {
+        "cardName": "【フルホンズ】浅倉 透",
+        "cardType": "event",
+        "cardDate": "2025-10-08",
+        "cardAddr": "2030200090",
         "psType": "s"
       }
     ]
