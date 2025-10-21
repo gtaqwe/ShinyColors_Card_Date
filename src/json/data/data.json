@@ -3900,6 +3900,13 @@
         "cardDate": "2025-04-11",
         "cardAddr": "2930102510",
         "psType": "s"
+      },
+      {
+        "cardName": "【怖怖レイトナイト】園田 智代子",
+        "cardType": "event",
+        "cardDate": "2025-10-20",
+        "cardAddr": "2030100130",
+        "psType": "s"
       }
     ]
   },
@@ -7334,6 +7341,13 @@
         "cardDate": "2025-04-02",
         "cardAddr": "1040200090",
         "psType": "p"
+      },
+      {
+        "cardName": "【アルマ】浅倉 透",
+        "cardType": "twilight",
+        "cardDate": "2025-10-20",
+        "cardAddr": "1040200100",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -9348,6 +9362,13 @@
         "cardType": "limited",
         "cardDate": "2025-10-02",
         "cardAddr": "2040270070",
+        "psType": "s"
+      },
+      {
+        "cardName": "【MANAZASHI】鈴木 羽那",
+        "cardType": "twilight",
+        "cardDate": "2025-10-20",
+        "cardAddr": "2040270080",
         "psType": "s"
       }
     ],
