@@ -2379,6 +2379,13 @@
         "cardDate": "2025-04-11",
         "cardAddr": "2930062510",
         "psType": "s"
+      },
+      {
+        "cardName": "【the origin on the axes】白瀬 咲耶",
+        "cardType": "other",
+        "cardDate": "2025-10-25",
+        "cardAddr": "2030060100",
+        "psType": "s"
       }
     ]
   },
@@ -8962,6 +8969,13 @@
         "cardType": "limited",
         "cardDate": "2025-09-08",
         "cardAddr": "2040250150",
+        "psType": "s"
+      },
+      {
+        "cardName": "【螺旋 -Halo around-】緋田 美琴",
+        "cardType": "other",
+        "cardDate": "2025-10-25",
+        "cardAddr": "2040250160",
         "psType": "s"
       }
     ],
