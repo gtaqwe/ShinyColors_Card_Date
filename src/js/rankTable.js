@@ -189,33 +189,14 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
   // 선택한 카드타입 표시
   const selectedGachaTypeList = [];
 
-  if ($("#permanentCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("permanent"));
-  }
-  if ($("#limitedCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("limited"));
-  }
-  if ($("#twilightCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("twilight"));
-  }
-  if ($("#mysongsCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("mysongs"));
-  }
-  if ($("#parallelCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("parallel"));
-  }
-  if ($("#eventCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("event"));
-  }
-  if ($("#gradeFesCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("fes"));
-  }
-  if ($("#campaignCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("campaign"));
-  }
-  if ($("#otherCardChkBox").is(":checked")) {
-    selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier("other"));
-  }
+  const cardTypeKeys = CardTypeInfo.getCardTypeKeys();
+
+  cardTypeKeys.forEach((cardType) => {
+    const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
+    if ($(`#${checkBox}`).is(":checked")) {
+      selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier(cardType));
+    }
+  });
 
   const gachaTypeStr =
     selectedGachaTypeList.length > 0

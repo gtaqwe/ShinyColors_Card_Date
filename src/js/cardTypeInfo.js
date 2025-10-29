@@ -1,14 +1,65 @@
 const CardTypeInfo = (() => {
   const cardType = {
-    permanent: { identifier: "P", number: 0 },
-    limited: { identifier: "L", number: 0 },
-    twilight: { identifier: "Tw", number: 0 },
-    mysongs: { identifier: "My", number: 0 },
-    parallel: { identifier: "Pa", number: 0 },
-    event: { identifier: "E", number: 0 },
-    fes: { identifier: "F", number: 0 },
-    campaign: { identifier: "C", number: 0 },
-    other: { identifier: "O", number: 0 },
+    permanent: {
+      identifier: "P",
+      checkBox: "permanentCardChkBox",
+      cellClass: undefined,
+      number: 0,
+    },
+    limited: {
+      identifier: "L",
+      checkBox: "limitedCardChkBox",
+      cellClass: "limit-card-cell",
+      number: 0,
+    },
+    twilight: {
+      identifier: "Tw",
+      checkBox: "twilightCardChkBox",
+      cellClass: "twilight-card-cell",
+      number: 0,
+    },
+    mysongs: {
+      identifier: "My",
+      checkBox: "mysongsCardChkBox",
+      cellClass: "mysongs-card-cell",
+      number: 0,
+    },
+    parallel: {
+      identifier: "Pa",
+      checkBox: "parallelCardChkBox",
+      cellClass: "parallel-card-cell",
+      number: 0,
+    },
+    casting: {
+      identifier: "Ca",
+      checkBox: "castingCardChkBox",
+      cellClass: "casting-card-cell",
+      number: 0,
+    },
+    event: {
+      identifier: "E",
+      checkBox: "eventCardChkBox",
+      cellClass: "event-card-cell",
+      number: 0,
+    },
+    fes: {
+      identifier: "F",
+      checkBox: "gradeFesCardChkBox",
+      cellClass: "gradeFes-card-cell",
+      number: 0,
+    },
+    campaign: {
+      identifier: "C",
+      checkBox: "campaignCardChkBox",
+      cellClass: "campaign-card-cell",
+      number: 0,
+    },
+    other: {
+      identifier: "O",
+      checkBox: "otherCardChkBox",
+      cellClass: "other-card-cell",
+      number: 0,
+    },
   };
 
   function init() {
@@ -43,6 +94,17 @@ const CardTypeInfo = (() => {
     return Object.fromEntries(Object.entries(cardType).map(([key, value]) => [key, value.number]));
   }
 
+  function getCardTypeCheckBox(type) {
+    return cardType[type].checkBox;
+  }
+
+  function getCardTypeCellClass(type) {
+    if (type in cardType) {
+      return cardType[type].cellClass;
+    }
+    return undefined;
+  }
+
   return {
     init,
     getCardTypeKeys,
@@ -51,6 +113,8 @@ const CardTypeInfo = (() => {
     getCardTypeIdentifier,
     getCardTypeNumber,
     getAllCardTypeNumber,
+    getCardTypeCheckBox,
+    getCardTypeCellClass,
   };
 })();
 

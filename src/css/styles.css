@@ -97,6 +97,11 @@ footer {
   background-color: #43F8ed;
 }
 
+.casting-card-cell {
+  background-color: #db1010;
+  color: #ffffff;
+}
+
 .event-card-cell {
   background-color: #00b0f0;
 }

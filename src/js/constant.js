@@ -13,6 +13,11 @@ export const CARD_RARITY_TYPE = {
   S_SR: "sSR",
 };
 
+export const PS_STATUS = {
+  PRODUCE: "p",
+  SUPPORT: "s",
+};
+
 export const PREVIEW_IMG_SIZE = {
   HEIGHT: 180,
   WIDTH: 320,

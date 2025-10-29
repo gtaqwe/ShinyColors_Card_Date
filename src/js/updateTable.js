@@ -3,7 +3,7 @@ import CardRarityInfo from "./cardRarityInfo.js";
 import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 
-import { CARD_RARITY_TYPE } from "./constant.js";
+import { CARD_RARITY_TYPE, PS_STATUS } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -29,7 +29,7 @@ function updateDateTable() {
 
   const idolData = selectedRarity.length != 0 ? getSelectedCardDataInfo(selectedRarity) : undefined;
 
-  const isSelectedProduce = selectedRarity.some((v) => v.ps == "p");
+  const isSelectedProduce = selectedRarity.some((v) => v.ps == PS_STATUS.PRODUCE);
 
   // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
   updateFesImgConvertButtonStatus(isSelectedProduce);
@@ -45,7 +45,7 @@ function updateDateTable() {
     $("#NOTE_SPACE").empty();
   } else {
     // 표 하단의 비고
-    const ps = isSelectedProduce ? "p" : "s";
+    const ps = isSelectedProduce ? PS_STATUS.PRODUCE : PS_STATUS.SUPPORT;
     Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
   }
 }
@@ -155,18 +155,6 @@ function mergeCardData() {
  * 조건에 해당되는 카드를 Filter, Sort 후 리스트로 Return
  */
 function getCardList(cardAry) {
-  const cardTypeCheckBoxes = {
-    permanent: "permanentCardChkBox",
-    limited: "limitedCardChkBox",
-    twilight: "twilightCardChkBox",
-    mysongs: "mysongsCardChkBox",
-    parallel: "parallelCardChkBox",
-    event: "eventCardChkBox",
-    fes: "gradeFesCardChkBox",
-    campaign: "campaignCardChkBox",
-    other: "otherCardChkBox",
-  };
-
   return (
     cardAry
       .map((card, idx) => {
@@ -177,12 +165,14 @@ function getCardList(cardAry) {
         }
 
         // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-        if (cardTypeCheckBoxes[cardType] && $(`#${cardTypeCheckBoxes[cardType]}`).is(":checked")) {
+        const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
+        if (checkBox && $(`#${checkBox}`).is(":checked")) {
           return card;
         }
       })
       // 존재하지 않는 데이터 제거
       .filter((v) => v)
+      // 중복되는 first를 정리
       .filter(
         (v) =>
           v.cardType == "first" ||

@@ -3,7 +3,7 @@ import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 import { withUpdateTable } from "./updateTable.js";
 
-import { PREVIEW_IMG_SIZE, ICON_SIZE } from "./constant.js";
+import { PS_STATUS, PREVIEW_IMG_SIZE, ICON_SIZE } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -187,31 +187,10 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
       // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
       const cardDateCell = $("<td>");
 
-      switch (cardType) {
-        case "limited":
-          cardDateCell.addClass("limit-card-cell");
-          break;
-        case "twilight":
-          cardDateCell.addClass("twilight-card-cell");
-          break;
-        case "mysongs":
-          cardDateCell.addClass("mysongs-card-cell");
-          break;
-        case "parallel":
-          cardDateCell.addClass("parallel-card-cell");
-          break;
-        case "event":
-          cardDateCell.addClass("event-card-cell");
-          break;
-        case "fes":
-          cardDateCell.addClass("gradeFes-card-cell");
-          break;
-        case "campaign":
-          cardDateCell.addClass("campaign-card-cell");
-          break;
-        case "other":
-          cardDateCell.addClass("other-card-cell");
-          break;
+      const cellClass = CardTypeInfo.getCardTypeCellClass(cardType);
+
+      if (cellClass) {
+        cardDateCell.addClass(cellClass);
       }
 
       if (cardAddr) cardDateCell.attr("addr", cardAddr);
@@ -222,7 +201,7 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
       if ($("#iconImgConvertBtn").is(":checked") && cardAddr) {
-        const isProduce = psType == "p";
+        const isProduce = psType == PS_STATUS.PRODUCE;
         const isFes = $("#fesImgConvertBtn").is(":checked");
         const isCard = false;
         const imgPath = Utility.getImagePath(isProduce, isFes, isCard);
@@ -292,7 +271,7 @@ function cardImagePreview() {
     function (e) {
       const imgAddrAttr = $(this).closest("td").attr("addr");
       const imgNameAttr = $(this).closest("td").attr("name");
-      const isProduce = $(this).closest("td").attr("ps") == "p";
+      const isProduce = $(this).closest("td").attr("ps") == PS_STATUS.PRODUCE;
       const isFes = $("#fesImgConvertBtn").is(":checked");
       const isCard = true;
 
