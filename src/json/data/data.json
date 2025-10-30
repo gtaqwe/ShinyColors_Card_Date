@@ -549,6 +549,13 @@
         "cardDate": "2025-03-19",
         "cardAddr": "1040020130",
         "psType": "p"
+      },
+      {
+        "cardName": "【お弁当と未来】風野 灯織",
+        "cardType": "casting",
+        "cardDate": "2025-10-30",
+        "cardAddr": "1040020140",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -729,6 +736,13 @@
         "cardType": "other",
         "cardDate": "2025-09-28",
         "cardAddr": "2040020150",
+        "psType": "s"
+      },
+      {
+        "cardName": "【天に寂寥】風野 灯織",
+        "cardType": "event",
+        "cardDate": "2025-10-30",
+        "cardAddr": "2040020160",
         "psType": "s"
       }
     ],
@@ -5967,6 +5981,13 @@
         "cardDate": "2024-05-21",
         "cardAddr": "1040160120",
         "psType": "p"
+      },
+      {
+        "cardName": "【末永く、ふたり】桑山 千雪",
+        "cardType": "casting",
+        "cardDate": "2025-10-30",
+        "cardAddr": "1040160130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -8117,6 +8138,13 @@
         "cardType": "other",
         "cardDate": "2025-09-27",
         "cardAddr": "2040220090",
+        "psType": "s"
+      },
+      {
+        "cardName": "【ふわもこ注意報！】福丸 小糸",
+        "cardType": "fes",
+        "cardDate": "2025-10-30",
+        "cardAddr": "2040220100",
         "psType": "s"
       }
     ],
