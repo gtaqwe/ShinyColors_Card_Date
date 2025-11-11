@@ -973,6 +973,13 @@
         "cardDate": "2024-11-29",
         "cardAddr": "1040030120",
         "psType": "p"
+      },
+      {
+        "cardName": "【晴れ空オーシニ】八宮 めぐる",
+        "cardType": "limited",
+        "cardDate": "2025-11-11",
+        "cardAddr": "1040030130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -7282,6 +7289,13 @@
         "cardDate": "2025-04-11",
         "cardAddr": "2930192510",
         "psType": "s"
+      },
+      {
+        "cardName": "【あたし流・かわいい】和泉 愛依",
+        "cardType": "event",
+        "cardDate": "2025-11-11",
+        "cardAddr": "2030190080",
+        "psType": "s"
       }
     ]
   },
@@ -8706,6 +8720,13 @@
         "cardType": "limited",
         "cardDate": "2025-09-19",
         "cardAddr": "2040240100",
+        "psType": "s"
+      },
+      {
+        "cardName": "【いっしょ】七草 にちか",
+        "cardType": "limited",
+        "cardDate": "2025-11-11",
+        "cardAddr": "2040240110",
         "psType": "s"
       }
     ],
