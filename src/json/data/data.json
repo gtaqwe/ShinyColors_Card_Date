@@ -2876,6 +2876,13 @@
         "cardDate": "2025-03-11",
         "cardAddr": "1040080120",
         "psType": "p"
+      },
+      {
+        "cardName": "【援・心・熱・行】幽谷 霧子",
+        "cardType": "limited",
+        "cardDate": "2025-11-19",
+        "cardAddr": "1040080130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -4980,6 +4987,13 @@
         "cardType": "limited",
         "cardDate": "2025-08-16",
         "cardAddr": "2040130150",
+        "psType": "s"
+      },
+      {
+        "cardName": "【Just】有栖川 夏葉",
+        "cardType": "limited",
+        "cardDate": "2025-11-19",
+        "cardAddr": "2040130160",
         "psType": "s"
       }
     ],
@@ -9483,6 +9497,13 @@
         "cardType": "other",
         "cardDate": "2025-04-11",
         "cardAddr": "2930272510",
+        "psType": "s"
+      },
+      {
+        "cardName": "【Cat And Nap】鈴木 羽那",
+        "cardType": "event",
+        "cardDate": "2025-11-19",
+        "cardAddr": "2030270040",
         "psType": "s"
       }
     ]
