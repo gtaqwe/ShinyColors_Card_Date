@@ -3279,6 +3279,13 @@
         "cardDate": "2025-06-09",
         "cardAddr": "1040090130",
         "psType": "p"
+      },
+      {
+        "cardName": "【ねぇねぇ先生、質問です！】小宮 果穂",
+        "cardType": "casting",
+        "cardDate": "2025-11-29",
+        "cardAddr": "1040090140",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -6391,6 +6398,13 @@
         "cardDate": "2025-05-30",
         "cardAddr": "1040170110",
         "psType": "p"
+      },
+      {
+        "cardName": "【センパイレッスン】芹沢 あさひ",
+        "cardType": "casting",
+        "cardDate": "2025-11-29",
+        "cardAddr": "1040170120",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -8536,6 +8550,13 @@
         "cardType": "other",
         "cardDate": "2025-09-27",
         "cardAddr": "2030230070",
+        "psType": "s"
+      },
+      {
+        "cardName": "【great on U】市川 雛菜",
+        "cardType": "event",
+        "cardDate": "2025-11-29",
+        "cardAddr": "2030230080",
         "psType": "s"
       }
     ]
