@@ -2515,6 +2515,13 @@
         "cardDate": "2025-06-29",
         "cardAddr": "1040070120",
         "psType": "p"
+      },
+      {
+        "cardName": "【映す光】三峰 結華",
+        "cardType": "twilight",
+        "cardDate": "2025-12-08",
+        "cardAddr": "1040070130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -8842,6 +8849,13 @@
         "cardDate": "2025-04-11",
         "cardAddr": "2930242510",
         "psType": "s"
+      },
+      {
+        "cardName": "【滑走、躍るように】七草 にちか",
+        "cardType": "event",
+        "cardDate": "2025-12-08",
+        "cardAddr": "2030240080",
+        "psType": "s"
       }
     ]
   },
@@ -9660,6 +9674,13 @@
         "cardType": "limited",
         "cardDate": "2025-10-31",
         "cardAddr": "2040280050",
+        "psType": "s"
+      },
+      {
+        "cardName": "【My Christmas】郁田 はるき",
+        "cardType": "twilight",
+        "cardDate": "2025-12-08",
+        "cardAddr": "2040280030",
         "psType": "s"
       }
     ],
