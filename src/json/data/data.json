@@ -1182,6 +1182,13 @@
         "cardDate": "2025-07-22",
         "cardAddr": "2040030170",
         "psType": "s"
+      },
+      {
+        "cardName": "【虹の行方】八宮 めぐる",
+        "cardType": "other",
+        "cardDate": "2025-12-15",
+        "cardAddr": "2040030190",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -6585,6 +6592,13 @@
         "cardType": "other",
         "cardDate": "2025-07-06",
         "cardAddr": "2040170140",
+        "psType": "s"
+      },
+      {
+        "cardName": "【虹の行方】芹沢 あさひ",
+        "cardType": "other",
+        "cardDate": "2025-12-15",
+        "cardAddr": "2040170170",
         "psType": "s"
       }
     ],
