@@ -1411,6 +1411,13 @@
         "cardDate": "2025-07-18",
         "cardAddr": "1040040130",
         "psType": "p"
+      },
+      {
+        "cardName": "【思いがけず、ジェラシー】月岡 恋鐘",
+        "cardType": "casting",
+        "cardDate": "2025-12-17",
+        "cardAddr": "1040040140",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -5237,6 +5244,13 @@
         "cardType": "twilight",
         "cardDate": "2025-04-10",
         "cardAddr": "1040140130",
+        "psType": "p"
+      },
+      {
+        "cardName": "【さかさまハート】大崎 甘奈",
+        "cardType": "casting",
+        "cardDate": "2025-12-17",
+        "cardAddr": "1040140140",
         "psType": "p"
       }
     ],
@@ -9709,6 +9723,13 @@
         "cardType": "twilight",
         "cardDate": "2025-12-08",
         "cardAddr": "2040280030",
+        "psType": "s"
+      },
+      {
+        "cardName": "【きせき、辿って】郁田 はるき",
+        "cardType": "event",
+        "cardDate": "2025-12-17",
+        "cardAddr": "2040280040",
         "psType": "s"
       }
     ],
