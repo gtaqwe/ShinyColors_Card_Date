@@ -5461,6 +5461,13 @@
         "cardDate": "2025-08-20",
         "cardAddr": "2040140200",
         "psType": "s"
+      },
+      {
+        "cardName": "【勇気をください】大崎 甘奈",
+        "cardType": "limited",
+        "cardDate": "2025-12-25",
+        "cardAddr": "2040140210",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -5856,6 +5863,13 @@
         "cardType": "event",
         "cardDate": "2025-08-08",
         "cardAddr": "2040150170",
+        "psType": "s"
+      },
+      {
+        "cardName": "【メリー・バースデー！】大崎 甜花",
+        "cardType": "limited",
+        "cardDate": "2025-12-25",
+        "cardAddr": "2040150180",
         "psType": "s"
       }
     ],
