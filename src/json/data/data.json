@@ -1967,6 +1967,13 @@
         "cardDate": "2025-05-24",
         "cardAddr": "2040050140",
         "psType": "s"
+      },
+      {
+        "cardName": "【騎士団のヴェール】田中 摩美々",
+        "cardType": "other",
+        "cardDate": "2025-12-28",
+        "cardAddr": "2040050160",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -2341,6 +2348,13 @@
         "cardType": "limited",
         "cardDate": "2025-06-27",
         "cardAddr": "2040060160",
+        "psType": "s"
+      },
+      {
+        "cardName": "【騎士団のヴェール】白瀬 咲耶",
+        "cardType": "other",
+        "cardDate": "2025-12-28",
+        "cardAddr": "2040060170",
         "psType": "s"
       }
     ],
