@@ -36,6 +36,12 @@ const CardTypeInfo = (() => {
       cellClass: "casting-card-cell",
       number: 0,
     },
+    prelude: {
+      identifier: "Pr",
+      checkBox: "preludeCardChkBox",
+      cellClass: "prelude-card-cell",
+      number: 0,
+    },
     event: {
       identifier: "E",
       checkBox: "eventCardChkBox",

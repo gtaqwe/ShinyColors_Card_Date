@@ -297,9 +297,9 @@ function setSUr() {
 
 function convertShowCardCount() {
   if ($("#showCardCountConvertBtn").is(":checked")) {
-    $("#cardCountTr").css("display", "");
+    $(".cardCountTrClass").css("display", "");
   } else {
-    $("#cardCountTr").css("display", "none");
+    $(".cardCountTrClass").css("display", "none");
   }
 }
 

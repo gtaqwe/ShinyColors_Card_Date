@@ -94,11 +94,17 @@ footer {
 }
 
 .parallel-card-cell {
-  background-color: #43F8ed;
+  background-color: #1caca2;
+  color: #ffffff;
 }
 
 .casting-card-cell {
   background-color: #db1010;
+  color: #ffffff;
+}
+
+.prelude-card-cell {
+  background-color: #ee6111;
   color: #ffffff;
 }
 
@@ -111,7 +117,7 @@ footer {
 }
 
 .campaign-card-cell {
-  background-color: #ffc000;
+  background-color: #ffee00;
 }
 
 .other-card-cell {
