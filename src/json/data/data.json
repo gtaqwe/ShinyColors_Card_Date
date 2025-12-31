@@ -1592,6 +1592,13 @@
         "cardDate": "2025-08-21",
         "cardAddr": "2040040150",
         "psType": "s"
+      },
+      {
+        "cardName": "【思い出を重ねて】月岡 恋鐘",
+        "cardType": "event",
+        "cardDate": "2026-01-01",
+        "cardAddr": "2040040160",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -9052,6 +9059,13 @@
         "cardDate": "2021-04-30",
         "cardAddr": null,
         "psType": "s"
+      },
+      {
+        "cardName": "【REHEARSE】緋田 美琴",
+        "cardType": "permanent",
+        "cardDate": "2026-01-01",
+        "cardAddr": "2050250010",
+        "psType": "s"
       }
     ],
     "S_SSR": [
@@ -9394,6 +9408,13 @@
         "cardDate": "2025-12-24",
         "cardAddr": "2040260110",
         "psType": "s"
+      },
+      {
+        "cardName": "【あの子の港町】斑鳩 ルカ",
+        "cardType": "prelude",
+        "cardDate": "2026-01-01",
+        "cardAddr": "2040260070",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -9452,6 +9473,13 @@
         "cardType": "first",
         "cardDate": "2023-12-11",
         "cardAddr": null,
+        "psType": "p"
+      },
+      {
+        "cardName": "【Cherish You】鈴木 羽那",
+        "cardType": "permanent",
+        "cardDate": "2026-01-01",
+        "cardAddr": "1050270010",
         "psType": "p"
       }
     ],
