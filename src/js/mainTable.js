@@ -3,7 +3,7 @@ import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 import { withUpdateTable } from "./updateTable.js";
 
-import { PS_STATUS, PREVIEW_IMG_SIZE, ICON_SIZE } from "./constant.js";
+import { PS_STATUS, PREVIEW_IMG_SIZE, ICON_SIZE, FIRST_IMPLEMENT_TYPE } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -39,7 +39,9 @@ export function createMainTable(idolData) {
   thead.append(headerRow);
 
   const maxLap = Math.max(
-    ...idolData.data.map((v) => v.cardData.filter((cardObj) => cardObj.cardType != "first").length)
+    ...idolData.data.map(
+      (v) => v.cardData.filter((cardObj) => cardObj.cardType != FIRST_IMPLEMENT_TYPE).length
+    )
   );
 
   const tbody = $("<tbody>");

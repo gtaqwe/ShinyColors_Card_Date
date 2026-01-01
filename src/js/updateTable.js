@@ -3,7 +3,7 @@ import CardRarityInfo from "./cardRarityInfo.js";
 import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 
-import { CARD_RARITY_TYPE, PS_STATUS } from "./constant.js";
+import { CARD_RARITY_TYPE, PS_STATUS, FIRST_IMPLEMENT_TYPE } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -159,15 +159,17 @@ function getCardList(cardAry) {
     cardAry
       .map((card, idx) => {
         const cardType = card.cardType;
-        // 첫 실장(R) 표시하기 위해 return
-        if (cardType == "first" && idx == 0 && !$("#noShowRCardConvertBtn").is(":checked")) {
-          return card;
-        }
-
-        // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-        const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
-        if (checkBox && $(`#${checkBox}`).is(":checked")) {
-          return card;
+        if (cardType == FIRST_IMPLEMENT_TYPE) {
+          // 첫 실장(R)의 날짜를 표시
+          if (isShowFirstCard(idx)) {
+            return card;
+          }
+        } else {
+          // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
+          const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
+          if (checkBox && $(`#${checkBox}`).is(":checked")) {
+            return card;
+          }
         }
       })
       // 존재하지 않는 데이터 제거
@@ -175,7 +177,7 @@ function getCardList(cardAry) {
       // 중복되는 first를 정리
       .filter(
         (v) =>
-          v.cardType == "first" ||
+          v.cardType == FIRST_IMPLEMENT_TYPE ||
           (new Date(v.cardDate) >= new Date($("#baseStartDate").val()) &&
             new Date(v.cardDate) <= new Date($("#baseEndDate").val()))
       )
@@ -184,6 +186,10 @@ function getCardList(cardAry) {
         return Utility.compareByCardDateAsc(a.cardDate, b.cardDate);
       })
   );
+}
+
+function isShowFirstCard(idx) {
+  return !$("#noShowRCardConvertBtn").is(":checked") && idx == 0;
 }
 
 /**
