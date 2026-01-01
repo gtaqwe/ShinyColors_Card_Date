@@ -53,7 +53,7 @@
 
       <div id="VIEW_OPTION">
         <fieldset style="width: max-content">
-          <span style="margin: 5px 10px; float: left">
+          <span class="select-optional">
             <label class="container">
               <span data-lang="showIcon">아이콘 표시</span>
               <input type="checkbox" id="iconImgConvertBtn" />
@@ -61,7 +61,7 @@
             </label>
           </span>
 
-          <span style="margin: 5px 10px; float: left">
+          <span class="select-optional">
             <label class="container">
               <span data-lang="showRCard">첫 실장 비표시</span>
               <input type="checkbox" id="noShowRCardConvertBtn" />
@@ -69,7 +69,7 @@
             </label>
           </span>
 
-          <span style="margin: 5px 10px; float: left">
+          <span class="select-optional">
             <label class="container">
               <span data-lang="showCardCount">카드 수 표시</span>
               <input type="checkbox" id="showCardCountConvertBtn" />
@@ -77,7 +77,7 @@
             </label>
           </span>
 
-          <span style="margin: 5px 10px; float: left">
+          <span class="select-optional">
             <label class="container">
               <span data-lang="showChangeCardLap">카드 차수 변경 표시</span>
               <input type="checkbox" id="showChangeCardLapConvertBtn" />
@@ -86,9 +86,9 @@
           </span>
 
           <!-- 카드 차수 변경을 리셋 -->
-          <span id="changeCardLapSpan" style="margin: 5px 0px; float: left"> </span>
+          <span id="changeCardLapSpan" class="select-optional"> </span>
 
-          <span id="convertSpan" style="margin: 5px 10px; float: left">
+          <span id="convertSpan" class="select-optional">
             <label class="container">
               <span data-lang="showFesIcon">페스 일러스트로 표시</span>
               <input type="checkbox" id="fesImgConvertBtn" />
@@ -100,8 +100,8 @@
 
       <div id="VIEW_SELECT" style="width: max-content; overflow: hidden">
         <fieldset style="width: max-content">
-          <div>
-            <span id="generalChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+          <div class="select-view-grid">
+            <span id="generalChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="permanent_1">통상</span>
                 <input
@@ -114,7 +114,7 @@
               </label>
             </span>
 
-            <span id="limitChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="limitChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="limited_1">한정</span>
                 <input
@@ -127,7 +127,7 @@
               </label>
             </span>
 
-            <span id="eventChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="eventChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="event_1">이벤트</span>
                 <input
@@ -140,7 +140,7 @@
               </label>
             </span>
 
-            <span id="fesChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="fesChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="fes_1">페스</span>
                 <input
@@ -153,7 +153,7 @@
               </label>
             </span>
 
-            <span id="campaignChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="campaignChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="campaign_1">캠페인</span>
                 <input
@@ -166,7 +166,7 @@
               </label>
             </span>
 
-            <span id="otherChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="otherChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="other_1">기타</span>
                 <input
@@ -178,9 +178,8 @@
                 <span class="checkmark"></span>
               </label>
             </span>
-          </div>
-          <div>
-            <span id="twilightChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+
+            <span id="twilightChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="twilight_1">트와코레</span>
                 <input
@@ -193,7 +192,7 @@
               </label>
             </span>
 
-            <span id="mysongsChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="mysongsChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="mysongs_1">마이코레</span>
                 <input
@@ -206,7 +205,7 @@
               </label>
             </span>
 
-            <span id="parallelChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="parallelChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="parallel_1">파라코레</span>
                 <input
@@ -219,7 +218,7 @@
               </label>
             </span>
 
-            <span id="castingChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="castingChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="casting_1">캐스코레</span>
                 <input
@@ -232,7 +231,7 @@
               </label>
             </span>
 
-            <span id="preludeChkSpan" style="margin: 5px 10px; float: left; width: 120px">
+            <span id="preludeChkSpan" class="select-card-type">
               <label class="container">
                 <span data-lang="prelude_1">프레코레</span>
                 <input
@@ -248,7 +247,7 @@
         </fieldset>
 
         <div id="ALL_TYPE_SELECT" style="width: max-content">
-          <span id="allChkSpan" style="margin: 5px 10px; float: left">
+          <span id="allChkSpan" class="select-card-type">
             <label class="container">
               <span data-lang="allChk">전체 체크</span>
               <input

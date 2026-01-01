@@ -28,6 +28,17 @@ footer {
   font-size: 10px;
 }
 
+.select-view-grid {
+  display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content;
+}
+
+.select-optional,
+.select-card-type {
+  margin: 5px 10px;
+  float: left;
+}
+
 .th-head,
 .th-rank,
 .th-name-cell,
