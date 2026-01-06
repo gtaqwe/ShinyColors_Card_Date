@@ -12,6 +12,30 @@ const CardTypeInfo = (() => {
       cellClass: "limit-card-cell",
       number: 0,
     },
+    event: {
+      identifier: "E",
+      checkBox: "eventCardChkBox",
+      cellClass: "event-card-cell",
+      number: 0,
+    },
+    fes: {
+      identifier: "F",
+      checkBox: "gradeFesCardChkBox",
+      cellClass: "gradeFes-card-cell",
+      number: 0,
+    },
+    campaign: {
+      identifier: "C",
+      checkBox: "campaignCardChkBox",
+      cellClass: "campaign-card-cell",
+      number: 0,
+    },
+    other: {
+      identifier: "O",
+      checkBox: "otherCardChkBox",
+      cellClass: "other-card-cell",
+      number: 0,
+    },
     twilight: {
       identifier: "Tw",
       checkBox: "twilightCardChkBox",
@@ -40,30 +64,6 @@ const CardTypeInfo = (() => {
       identifier: "Pr",
       checkBox: "preludeCardChkBox",
       cellClass: "prelude-card-cell",
-      number: 0,
-    },
-    event: {
-      identifier: "E",
-      checkBox: "eventCardChkBox",
-      cellClass: "event-card-cell",
-      number: 0,
-    },
-    fes: {
-      identifier: "F",
-      checkBox: "gradeFesCardChkBox",
-      cellClass: "gradeFes-card-cell",
-      number: 0,
-    },
-    campaign: {
-      identifier: "C",
-      checkBox: "campaignCardChkBox",
-      cellClass: "campaign-card-cell",
-      number: 0,
-    },
-    other: {
-      identifier: "O",
-      checkBox: "otherCardChkBox",
-      cellClass: "other-card-cell",
       number: 0,
     },
   };
