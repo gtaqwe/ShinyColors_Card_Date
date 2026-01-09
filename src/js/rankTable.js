@@ -1,7 +1,7 @@
 import CardTypeInfo from "./cardTypeInfo.js";
 import Language from "./language.js";
 
-import { NONE_INTERVAL } from "./constant.js";
+import { NONE_INTERVAL, CARD_TYPE_MATRIX } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -198,12 +198,31 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
     }
   });
 
-  const gachaTypeStr =
-    selectedGachaTypeList.length > 0
-      ? selectedGachaTypeList.join(" ")
-      : Language.getTranslatedName("notSet");
+  const sortedIdentifierList = CardTypeInfo.getSortedAllCardTypeIdentifier();
+  const cardTypeTable = $("<table>", { id: "cardTypeTable", class: "card-type-rank-table" });
+  let cardTypeIndex = 0;
+  for (let row = 0; row < CARD_TYPE_MATRIX.ROW; row++) {
+    const tr = $("<tr>", { class: "card-type-rank-tr" });
+    for (let col = 0; col < CARD_TYPE_MATRIX.COLUMN; col++) {
+      const cardTypeIdentifier = sortedIdentifierList.find((item) => item.index === cardTypeIndex);
 
-  const headTr2 = $("<tr>").append($("<th>", { class: "th-rank", colspan: 3 }).text(gachaTypeStr));
+      $("<th>", { class: "card-type-rank-th" })
+        .text(cardTypeIdentifier?.identifier)
+        .toggleClass(function () {
+          return selectedGachaTypeList.find((key) => key === cardTypeIdentifier?.identifier)
+            ? "font-color-normal"
+            : "font-color-transparent";
+        })
+        .appendTo(tr);
+
+      cardTypeIndex++;
+    }
+    cardTypeTable.append(tr);
+  }
+
+  const headTr2 = $("<tr>").append(
+    $("<th>", { class: "th-rank", colspan: 3 }).append(cardTypeTable)
+  );
 
   const headTr3 = $("<tr>").append(
     $("<th>", { class: "th-rank", colspan: 3 })

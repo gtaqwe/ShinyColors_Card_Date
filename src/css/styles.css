@@ -28,6 +28,28 @@ footer {
   font-size: 10px;
 }
 
+.card-type-rank-table,
+.card-type-rank-tr,
+.card-type-rank-th {
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid transparent;
+}
+
+.card-type-rank-th {
+  padding: 0px;
+  width: 30px;
+  padding: 2px 0px;
+}
+
+.font-color-normal {
+  color: #000;
+}
+
+.font-color-transparent {
+  color: transparent;
+}
+
 .select-view-grid {
   display: grid;
   grid-template-columns: max-content max-content max-content max-content max-content max-content;
@@ -164,14 +186,13 @@ footer {
   cursor: pointer;
 }
 
-.DeactivateButton{
+.DeactivateButton {
   background-color: #666666;
 }
 
-.DeactivateButton:hover{
+.DeactivateButton:hover {
   background-color: #858585;
 }
-
 
 .PButton {
   background-color: #ff62a6;

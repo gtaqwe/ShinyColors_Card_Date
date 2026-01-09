@@ -28,3 +28,8 @@ export const ICON_SIZE = {
   HEIGHT: 72,
   WIDTH: 72,
 };
+
+export const CARD_TYPE_MATRIX = {
+  ROW: 2,
+  COLUMN: 6,
+};
