@@ -104,6 +104,13 @@
         "cardDate": "2025-04-02",
         "cardAddr": "1040010120",
         "psType": "p"
+      },
+      {
+        "cardName": "【としたてば旅】櫻木 真乃",
+        "cardType": "limited",
+        "cardDate": "2026-01-09",
+        "cardAddr": "1040010130",
+        "psType": "p"
       }
     ],
     "P_SR": [
@@ -3127,6 +3134,13 @@
         "cardDate": "2025-12-27",
         "cardAddr": "2040080210",
         "psType": "s"
+      },
+      {
+        "cardName": "【聖・捨・裁・罪】幽谷 霧子",
+        "cardType": "limited",
+        "cardDate": "2026-01-09",
+        "cardAddr": "2040080190",
+        "psType": "s"
       }
     ],
     "S_SR": [
@@ -3615,6 +3629,13 @@
         "cardType": "other",
         "cardDate": "2025-08-08",
         "cardAddr": "2030090100",
+        "psType": "s"
+      },
+      {
+        "cardName": "【酸いと甘いと！】小宮 果穂",
+        "cardType": "event",
+        "cardDate": "2026-01-09",
+        "cardAddr": "2030090110",
         "psType": "s"
       }
     ]
@@ -8008,6 +8029,13 @@
         "cardType": "limited",
         "cardDate": "2025-10-27",
         "cardAddr": "2040210140",
+        "psType": "s"
+      },
+      {
+        "cardName": "【露記】樋口 円香",
+        "cardType": "limited",
+        "cardDate": "2026-01-09",
+        "cardAddr": "2040210150",
         "psType": "s"
       }
     ],
