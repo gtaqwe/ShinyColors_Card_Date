@@ -1,5 +1,5 @@
-const CardTypeInfo = (() => {
-  const cardType = {
+const CardCategoryInfo = (() => {
+  const cardCategory = {
     permanent: {
       identifier: "P",
       checkBox: "permanentCardChkBox",
@@ -80,50 +80,52 @@ const CardTypeInfo = (() => {
   };
 
   function init() {
-    Object.entries(cardType).forEach(([key, value]) => {
+    Object.entries(cardCategory).forEach(([key, value]) => {
       const initNum = 0;
       $(`#cardCount_${key}`).text(initNum);
       value.number = initNum;
     });
   }
 
-  function getCardTypeKeys() {
-    return Object.keys(cardType);
+  function getCardCategoryKeys() {
+    return Object.keys(cardCategory);
   }
 
-  function addCardTypeNumber(type, number) {
-    cardType[type].number += number;
+  function addCardCategoryNumber(type, number) {
+    cardCategory[type].number += number;
   }
 
-  function addCardTypeNumberOne(type) {
-    addCardTypeNumber(type, 1);
+  function addCardCategoryNumberOne(type) {
+    addCardCategoryNumber(type, 1);
   }
 
-  function getCardTypeIdentifier(type) {
-    return cardType[type].identifier;
+  function getCardCategoryIdentifier(type) {
+    return cardCategory[type].identifier;
   }
 
-  function getCardTypeNumber(type) {
-    return cardType[type].number;
+  function getCardCategoryNumber(type) {
+    return cardCategory[type].number;
   }
 
-  function getAllCardTypeNumber() {
-    return Object.fromEntries(Object.entries(cardType).map(([key, value]) => [key, value.number]));
+  function getAllCardCategoryNumber() {
+    return Object.fromEntries(
+      Object.entries(cardCategory).map(([key, value]) => [key, value.number])
+    );
   }
 
-  function getCardTypeCheckBox(type) {
-    return cardType[type].checkBox;
+  function getCardCategoryCheckBox(type) {
+    return cardCategory[type].checkBox;
   }
 
-  function getCardTypeCellClass(type) {
-    if (type in cardType) {
-      return cardType[type].cellClass;
+  function getCardCategoryCellClass(type) {
+    if (type in cardCategory) {
+      return cardCategory[type].cellClass;
     }
     return undefined;
   }
 
-  function getSortedAllCardTypeIdentifier() {
-    return Object.entries(cardType)
+  function getSortedAllCardCategoryIdentifier() {
+    return Object.entries(cardCategory)
       .sort(([, a], [, b]) => {
         return a.index > b.index;
       })
@@ -132,16 +134,16 @@ const CardTypeInfo = (() => {
 
   return {
     init,
-    getCardTypeKeys,
-    addCardTypeNumber,
-    addCardTypeNumberOne,
-    getCardTypeIdentifier,
-    getCardTypeNumber,
-    getAllCardTypeNumber,
-    getCardTypeCheckBox,
-    getCardTypeCellClass,
-    getSortedAllCardTypeIdentifier,
+    getCardCategoryKeys,
+    addCardCategoryNumber,
+    addCardCategoryNumberOne,
+    getCardCategoryIdentifier,
+    getCardCategoryNumber,
+    getAllCardCategoryNumber,
+    getCardCategoryCheckBox,
+    getCardCategoryCellClass,
+    getSortedAllCardCategoryIdentifier,
   };
 })();
 
-export default CardTypeInfo;
+export default CardCategoryInfo;

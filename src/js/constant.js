@@ -15,8 +15,8 @@ export const CARD_RARITY_TYPE = {
 };
 
 export const PS_STATUS = {
-  PRODUCE: "p",
-  SUPPORT: "s",
+  PRODUCE: "P",
+  SUPPORT: "S",
 };
 
 export const PREVIEW_IMG_SIZE = {

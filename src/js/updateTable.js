@@ -1,6 +1,6 @@
 import IdolData from "./idolData.js";
 import CardRarityInfo from "./cardRarityInfo.js";
-import CardTypeInfo from "./cardTypeInfo.js";
+import CardCategoryInfo from "./cardCategoryInfo.js";
 import Language from "./language.js";
 
 import { CARD_RARITY_TYPE, PS_STATUS, FIRST_IMPLEMENT_TYPE } from "./constant.js";
@@ -17,19 +17,19 @@ export function withUpdateTable(handler) {
       await handler(...args);
     }
     updateDateTable();
-    updateCardTypeCountListTable();
+    updateCardCategoryCountListTable();
   };
 }
 
 function updateDateTable() {
-  CardTypeInfo.init();
+  CardCategoryInfo.init();
 
   // 선택한 레어리티 정보를 취득
   const selectedRarity = CardRarityInfo.getSelectedCardRarity();
 
   const idolData = selectedRarity.length != 0 ? getSelectedCardDataInfo(selectedRarity) : undefined;
 
-  const isSelectedProduce = selectedRarity.some((v) => v.ps == PS_STATUS.PRODUCE);
+  const isSelectedProduce = selectedRarity.some((v) => v.isProduce);
 
   // 페스 일러스트로 표시 체크 박스의 선택가능/불가능을 설정
   updateFesImgConvertButtonStatus(isSelectedProduce);
@@ -45,7 +45,7 @@ function updateDateTable() {
     $("#NOTE_SPACE").empty();
   } else {
     // 표 하단의 비고
-    const ps = isSelectedProduce ? PS_STATUS.PRODUCE : PS_STATUS.SUPPORT;
+    const ps = (isSelectedProduce ? PS_STATUS.PRODUCE : PS_STATUS.SUPPORT).toLowerCase();
     Language.setLanguageById("#NOTE_SPACE", `${ps}FirstImplementNote`);
   }
 }
@@ -144,7 +144,7 @@ function mergeCardData() {
     }
 
     return {
-      idolName: idol[`idol${Language.getCurrentLanguageFirstUpper()}Name`],
+      idolName: idol[`idolName${Language.getCurrentLanguageFirstUpper()}`],
       displayRanking: idol.displayRanking,
       cardData: getCardList(tempCardList),
     };
@@ -158,15 +158,15 @@ function getCardList(cardAry) {
   return (
     cardAry
       .map((card, idx) => {
-        const cardType = card.cardType;
-        if (cardType == FIRST_IMPLEMENT_TYPE) {
+        const cardCategory = card.cardCategory;
+        if (cardCategory == FIRST_IMPLEMENT_TYPE) {
           // 첫 실장(R)의 날짜를 표시
           if (isShowFirstCard(idx)) {
             return card;
           }
         } else {
           // VIEW_SELECT의 체크 타입 체크에 맞춰 데이터를 Return
-          const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
+          const checkBox = CardCategoryInfo.getCardCategoryCheckBox(cardCategory);
           if (checkBox && $(`#${checkBox}`).is(":checked")) {
             return card;
           }
@@ -177,7 +177,7 @@ function getCardList(cardAry) {
       // 중복되는 first를 정리
       .filter(
         (v) =>
-          v.cardType == FIRST_IMPLEMENT_TYPE ||
+          v.cardCategory == FIRST_IMPLEMENT_TYPE ||
           (new Date(v.cardDate) >= new Date($("#baseStartDate").val()) &&
             new Date(v.cardDate) <= new Date($("#baseEndDate").val()))
       )
@@ -195,10 +195,10 @@ function isShowFirstCard(idx) {
 /**
  * 현재 표시 중인 카드 수를 갱신
  */
-function updateCardTypeCountListTable() {
-  const cardTypeInfo = CardTypeInfo.getAllCardTypeNumber();
+function updateCardCategoryCountListTable() {
+  const cardCategoryInfo = CardCategoryInfo.getAllCardCategoryNumber();
 
-  Object.keys(cardTypeInfo).forEach((key) => {
-    $(`#cardCount_${key}`).text(CardTypeInfo.getCardTypeNumber(key));
+  Object.keys(cardCategoryInfo).forEach((key) => {
+    $(`#cardCount_${key}`).text(CardCategoryInfo.getCardCategoryNumber(key));
   });
 }

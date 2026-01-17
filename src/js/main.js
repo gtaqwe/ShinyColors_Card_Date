@@ -1,7 +1,7 @@
 import IdolData from "./idolData.js";
 import ChangeCardLapInfo from "./changeCardLapInfo.js";
 import CardRarityInfo from "./cardRarityInfo.js";
-import CardTypeInfo from "./cardTypeInfo.js";
+import CardCategoryInfo from "./cardCategoryInfo.js";
 import Language from "./language.js";
 import CaptureScreen from "./captureScreen.js";
 
@@ -35,7 +35,7 @@ async function init() {
   await initLanguage();
 
   // 카드 수 리셋
-  CardTypeInfo.init();
+  CardCategoryInfo.init();
   convertShowCardCount();
 
   // 리셋 버튼 추가
@@ -191,20 +191,21 @@ function setViewCheckboxSetting() {
     withUpdateTable((e) => {
       const target = e.currentTarget;
       if ($(target).is(":checked")) {
-        $("input[type='checkbox'][name='showCardTypeChk']").prop("checked", true);
+        $("input[type='checkbox'][name='showCardCategoryChk']").prop("checked", true);
       } else {
-        $("input[type='checkbox'][name='showCardTypeChk']").prop("checked", false);
+        $("input[type='checkbox'][name='showCardCategoryChk']").prop("checked", false);
       }
     })
   );
 
   // 카드타입을 모두 선택 했을 시, 전체 체크 버튼을 체크
   // 카드타입이 하나라도 빠졌을 시, 전체 체크 버튼을 체크해제
-  $("input[type='checkbox'][name='showCardTypeChk']").on(
+  $("input[type='checkbox'][name='showCardCategoryChk']").on(
     "change",
     withUpdateTable(() => {
-      const showCardTypeChk = $("input[type='checkbox'][name='showCardTypeChk']");
-      const isAllChecked = showCardTypeChk.length == showCardTypeChk.filter(":checked").length;
+      const showCardCategoryChk = $("input[type='checkbox'][name='showCardCategoryChk']");
+      const isAllChecked =
+        showCardCategoryChk.length == showCardCategoryChk.filter(":checked").length;
 
       $("input[type='checkbox'][name='showCardAllTypeChk']").prop("checked", isAllChecked);
     })

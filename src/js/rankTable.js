@@ -1,4 +1,4 @@
-import CardTypeInfo from "./cardTypeInfo.js";
+import CardCategoryInfo from "./cardCategoryInfo.js";
 import Language from "./language.js";
 
 import { NONE_INTERVAL, CARD_TYPE_MATRIX } from "./constant.js";
@@ -189,39 +189,44 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
   // 선택한 카드타입 표시
   const selectedGachaTypeList = [];
 
-  const cardTypeKeys = CardTypeInfo.getCardTypeKeys();
+  const cardCategoryKeys = CardCategoryInfo.getCardCategoryKeys();
 
-  cardTypeKeys.forEach((cardType) => {
-    const checkBox = CardTypeInfo.getCardTypeCheckBox(cardType);
+  cardCategoryKeys.forEach((cardCategory) => {
+    const checkBox = CardCategoryInfo.getCardCategoryCheckBox(cardCategory);
     if ($(`#${checkBox}`).is(":checked")) {
-      selectedGachaTypeList.push(CardTypeInfo.getCardTypeIdentifier(cardType));
+      selectedGachaTypeList.push(CardCategoryInfo.getCardCategoryIdentifier(cardCategory));
     }
   });
 
-  const sortedIdentifierList = CardTypeInfo.getSortedAllCardTypeIdentifier();
-  const cardTypeTable = $("<table>", { id: "cardTypeTable", class: "card-type-rank-table" });
-  let cardTypeIndex = 0;
+  const sortedIdentifierList = CardCategoryInfo.getSortedAllCardCategoryIdentifier();
+  const cardCategoryTable = $("<table>", {
+    id: "cardCategoryTable",
+    class: "card-type-rank-table",
+  });
+  let cardCategoryIndex = 0;
   for (let row = 0; row < CARD_TYPE_MATRIX.ROW; row++) {
     const tr = $("<tr>", { class: "card-type-rank-tr" });
     for (let col = 0; col < CARD_TYPE_MATRIX.COLUMN; col++) {
-      const cardTypeIdentifier = sortedIdentifierList.find((item) => item.index === cardTypeIndex);
+      const cardCategoryIdentifier = sortedIdentifierList.find(
+        (item) => item.index === cardCategoryIndex
+      );
 
       $("<th>", { class: "card-type-rank-th" })
-        .text(cardTypeIdentifier?.identifier)
+        .text(cardCategoryIdentifier?.identifier)
         .toggleClass(function () {
-          return selectedGachaTypeList.find((key) => key === cardTypeIdentifier?.identifier)
+          return selectedGachaTypeList.find((key) => key === cardCategoryIdentifier?.identifier)
             ? "font-color-normal"
             : "font-color-transparent";
         })
         .appendTo(tr);
 
-      cardTypeIndex++;
+      cardCategoryIndex++;
     }
-    cardTypeTable.append(tr);
+    cardCategoryTable.append(tr);
   }
 
   const headTr2 = $("<tr>").append(
-    $("<th>", { class: "th-rank", colspan: 3 }).append(cardTypeTable)
+    $("<th>", { class: "th-rank", colspan: 3 }).append(cardCategoryTable)
   );
 
   const headTr3 = $("<tr>").append(

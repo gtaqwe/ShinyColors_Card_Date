@@ -104,11 +104,11 @@ export function changeUpperFirst(str) {
 }
 
 export function getImagePath(isProduce, isFes, isCard) {
-  const cardTypeName = isProduce ? "produce_idol" : "support_idol";
+  const cardCategoryName = isProduce ? "produce_idol" : "support_idol";
   const imgTypeName = isCard ? "card" : "icon";
   const fesName = isProduce && isFes ? "fes_" : "";
 
-  return `${cardTypeName}/${fesName}${imgTypeName}`;
+  return `${cardCategoryName}/${fesName}${imgTypeName}`;
 }
 
 export function getImgSrc(path, addr) {

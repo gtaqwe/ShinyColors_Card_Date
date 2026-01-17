@@ -1,9 +1,9 @@
 import ChangeCardLapInfo from "./changeCardLapInfo.js";
-import CardTypeInfo from "./cardTypeInfo.js";
+import CardCategoryInfo from "./cardCategoryInfo.js";
 import Language from "./language.js";
 import { withUpdateTable } from "./updateTable.js";
 
-import { PS_STATUS, PREVIEW_IMG_SIZE, ICON_SIZE, FIRST_IMPLEMENT_TYPE } from "./constant.js";
+import { PREVIEW_IMG_SIZE, ICON_SIZE, FIRST_IMPLEMENT_TYPE } from "./constant.js";
 
 import * as Utility from "./utility.js";
 
@@ -40,7 +40,7 @@ export function createMainTable(idolData) {
 
   const maxLap = Math.max(
     ...idolData.data.map(
-      (v) => v.cardData.filter((cardObj) => cardObj.cardType != FIRST_IMPLEMENT_TYPE).length
+      (v) => v.cardData.filter((cardInfo) => cardInfo.cardCategory != FIRST_IMPLEMENT_TYPE).length
     )
   );
 
@@ -179,37 +179,36 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
 
     if (idx < cardLen) {
       const cardDate = cardDataList[idx].cardDate;
-      const cardType = cardDataList[idx].cardType;
+      const cardCategory = cardDataList[idx].cardCategory;
       const cardName = cardDataList[idx].cardName;
-      const cardAddr = cardDataList[idx].cardAddr;
-      const psType = cardDataList[idx].psType;
+      const cardImgName = cardDataList[idx].cardImgName;
+      const isProduce = cardDataList[idx].isProduceCard ?? false;
 
-      increaseCardTypeCount(cardType);
+      increaseCardCategoryCount(cardCategory);
 
       // 한정, 이벤트, 페스, 캠페인, 기타 카드의 경우, 셀 색상을 타입에 맞춰 변경
       const cardDateCell = $("<td>");
 
-      const cellClass = CardTypeInfo.getCardTypeCellClass(cardType);
+      const cellClass = CardCategoryInfo.getCardCategoryCellClass(cardCategory);
 
       if (cellClass) {
         cardDateCell.addClass(cellClass);
       }
 
-      if (cardAddr) cardDateCell.attr("addr", cardAddr);
+      if (cardImgName) cardDateCell.attr("addr", cardImgName);
       if (cardName) cardDateCell.attr("name", cardName);
-      if (psType) cardDateCell.attr("ps", psType);
+      if (isProduce) cardDateCell.attr("isProduce", isProduce);
 
       const div = $("<div>", { class: "cell-div" });
 
       // 아이콘 표시가 체크된 경우 아이콘을 표시하도록 추가
-      if ($("#iconImgConvertBtn").is(":checked") && cardAddr) {
-        const isProduce = psType == PS_STATUS.PRODUCE;
+      if ($("#iconImgConvertBtn").is(":checked") && cardImgName) {
         const isFes = $("#fesImgConvertBtn").is(":checked");
         const isCard = false;
         const imgPath = Utility.getImagePath(isProduce, isFes, isCard);
 
         const iconImage = $("<img>", {
-          src: Utility.getImgSrc(imgPath, cardAddr),
+          src: Utility.getImgSrc(imgPath, cardImgName),
         })
           .css({
             height: ICON_SIZE.HEIGHT,
@@ -255,9 +254,9 @@ function setCardData(totalData, totalLen, idolNum, maxLap) {
   return contentList;
 }
 
-function increaseCardTypeCount(cardType) {
-  if (CardTypeInfo.getCardTypeKeys().includes(cardType)) {
-    CardTypeInfo.addCardTypeNumberOne(cardType);
+function increaseCardCategoryCount(cardCategory) {
+  if (CardCategoryInfo.getCardCategoryKeys().includes(cardCategory)) {
+    CardCategoryInfo.addCardCategoryNumberOne(cardCategory);
   }
 }
 
@@ -273,7 +272,7 @@ function cardImagePreview() {
     function (e) {
       const imgAddrAttr = $(this).closest("td").attr("addr");
       const imgNameAttr = $(this).closest("td").attr("name");
-      const isProduce = $(this).closest("td").attr("ps") == PS_STATUS.PRODUCE;
+      const isProduce = $(this).closest("td").attr("isProduce");
       const isFes = $("#fesImgConvertBtn").is(":checked");
       const isCard = true;
 
