@@ -598,6 +598,13 @@
         "cardDate": "2025-10-30",
         "cardImgName": "1040020140",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【そのひと言が聞きたくて】風野 灯織",
+        "cardCategory": "twilight",
+        "cardDate": "2026-01-20",
+        "cardImgName": "1040020150",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -3232,6 +3239,13 @@
         "cardDate": "2026-01-09",
         "cardImgName": "2040080190",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【寛・汗・幽・湯】幽谷 霧子",
+        "cardCategory": "twilight",
+        "cardDate": "2026-01-20",
+        "cardImgName": "2040080180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -5854,6 +5868,13 @@
         "cardCategory": "other",
         "cardDate": "2025-07-30",
         "cardImgName": "2030150100",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【Pomme pour toi】大崎 甜花",
+        "cardCategory": "event",
+        "cardDate": "2026-01-20",
+        "cardImgName": "2030150110",
         "isProduceCard": false
       }
     ],
