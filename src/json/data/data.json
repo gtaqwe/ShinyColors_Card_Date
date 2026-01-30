@@ -2079,6 +2079,13 @@
         "cardDate": "2025-12-28",
         "cardImgName": "2040050160",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【SWEET♡WINGS】田中 摩美々",
+        "cardCategory": "fes",
+        "cardDate": "2026-01-30",
+        "cardImgName": "2040050150",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -3793,6 +3800,13 @@
         "cardCategory": "parallel",
         "cardDate": "2025-07-30",
         "cardImgName": "1040100120",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【ちちゃカワ】園田 智代子",
+        "cardCategory": "casting",
+        "cardDate": "2026-01-30",
+        "cardImgName": "1040100130",
         "isProduceCard": true
       }
     ],
@@ -8252,6 +8266,13 @@
         "cardDate": "2025-09-29",
         "cardImgName": "1040220100",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【いまだけ先輩】福丸 小糸",
+        "cardCategory": "casting",
+        "cardDate": "2026-01-30",
+        "cardImgName": "1040220110",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -8425,6 +8446,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-11-11",
         "cardImgName": "2040220110",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【リトル・フルール】福丸 小糸",
+        "cardCategory": "fes",
+        "cardDate": "2026-01-30",
+        "cardImgName": "2040220130",
         "isProduceCard": false
       }
     ],
@@ -9519,6 +9547,13 @@
         "cardCategory": "prelude",
         "cardDate": "2026-01-01",
         "cardImgName": "2040260070",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【Three Captures】斑鳩 ルカ",
+        "cardCategory": "event",
+        "cardDate": "2026-01-30",
+        "cardImgName": "2040260080",
         "isProduceCard": false
       }
     ],
