@@ -432,6 +432,13 @@
         "cardDate": "2025-09-19",
         "cardImgName": "2040010210",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【こころ、みちびく。ゆかし夜】櫻木 真乃",
+        "cardCategory": "prelude",
+        "cardDate": "2026-02-09",
+        "cardImgName": "2040010220",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -2325,6 +2332,13 @@
         "cardCategory": "other",
         "cardDate": "2025-10-25",
         "cardImgName": "2030060100",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【ファインダーを覗いて】白瀬 咲耶",
+        "cardCategory": "event",
+        "cardDate": "2026-02-09",
+        "cardImgName": "2030060110",
         "isProduceCard": false
       }
     ],
@@ -5787,6 +5801,13 @@
         "cardCategory": "parallel",
         "cardDate": "2024-09-29",
         "cardImgName": "1040150120",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【花蜜可可】大崎 甜花",
+        "cardCategory": "limited",
+        "cardDate": "2026-02-09",
+        "cardImgName": "1040150130",
         "isProduceCard": true
       }
     ],
