@@ -4080,6 +4080,13 @@
         "cardDate": "2025-07-05",
         "cardImgName": "2040100160",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【Perfect☆February】園田 智代子",
+        "cardCategory": "twilight",
+        "cardDate": "2026-02-18",
+        "cardImgName": "2040100170",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -5104,6 +5111,13 @@
         "cardCategory": "other",
         "cardDate": "2025-04-11",
         "cardImgName": "2930132510",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【放クラ★バレンタイン事情】有栖川 夏葉",
+        "cardCategory": "event",
+        "cardDate": "2026-02-18",
+        "cardImgName": "2030130120",
         "isProduceCard": false
       }
     ],
@@ -7336,6 +7350,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-09-09",
         "cardImgName": "1040190110",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【上るだけ！】和泉 愛依",
+        "cardCategory": "twilight",
+        "cardDate": "2026-02-18",
+        "cardImgName": "1040190120",
         "isProduceCard": true
       }
     ],
