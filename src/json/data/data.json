@@ -884,6 +884,13 @@
         "cardDate": "2025-12-14",
         "cardImgName": "2040020190",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【ひとりと一匹ワンルーム】風野 灯織",
+        "cardCategory": "limited",
+        "cardDate": "2026-02-27",
+        "cardImgName": "2040020180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -6498,6 +6505,13 @@
         "cardDate": "2025-07-18",
         "cardImgName": "2040160150",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【　時を過ぎても解けない魔法】桑山 千雪",
+        "cardCategory": "fes",
+        "cardDate": "2026-02-27",
+        "cardImgName": "2040160180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -7226,6 +7240,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-12-27",
         "cardImgName": "2040180150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【すべてはまるく】黛 冬優子",
+        "cardCategory": "event",
+        "cardDate": "2026-02-27",
+        "cardImgName": "2040180160",
         "isProduceCard": false
       }
     ],
@@ -8932,6 +8953,13 @@
         "cardDate": "2025-05-09",
         "cardImgName": "1040240090",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【きっと、もう少し】七草 にちか",
+        "cardCategory": "casting",
+        "cardDate": "2026-02-27",
+        "cardImgName": "1040240100",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -9506,6 +9534,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-08-20",
         "cardImgName": "1040260070",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【シンギ】斑鳩 ルカ",
+        "cardCategory": "casting",
+        "cardDate": "2026-02-27",
+        "cardImgName": "1040260080",
         "isProduceCard": true
       }
     ],
