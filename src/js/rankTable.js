@@ -35,7 +35,7 @@ export function createRankTable(idolData) {
   });
 
   const sortedListByInterval = [...intervalList].sort((a, b) =>
-    Utility.compareByValueDesc(a.interval, b.interval)
+    Utility.compareByNumberDesc(a.interval, b.interval),
   );
   const rankedIntervalList = intervalList.map((item) => {
     const rank = sortedListByInterval.findIndex((sortedItem) => sortedItem == item) + 1;
@@ -183,7 +183,7 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
 
   const thead = $("<thead>");
   const headTr1 = $("<tr>").append(
-    $("<th>", { class: "th-rank", colspan: 3 }).append(tableTypeHeader)
+    $("<th>", { class: "th-rank", colspan: 3 }).append(tableTypeHeader),
   );
 
   // 선택한 카드타입 표시
@@ -208,7 +208,7 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
     const tr = $("<tr>", { class: "card-type-rank-tr" });
     for (let col = 0; col < CARD_TYPE_MATRIX.COLUMN; col++) {
       const cardCategoryIdentifier = sortedIdentifierList.find(
-        (item) => item.index === cardCategoryIndex
+        (item) => item.index === cardCategoryIndex,
       );
 
       $("<th>", { class: "card-type-rank-th" })
@@ -226,14 +226,14 @@ function createSeparateRankTable(tableTypeHeader, rankedIntervalList, borderStyl
   }
 
   const headTr2 = $("<tr>").append(
-    $("<th>", { class: "th-rank", colspan: 3 }).append(cardCategoryTable)
+    $("<th>", { class: "th-rank", colspan: 3 }).append(cardCategoryTable),
   );
 
   const headTr3 = $("<tr>").append(
     $("<th>", { class: "th-rank", colspan: 3 })
       .append(Utility.getISODateById("#baseStartDate"))
       .append("<br>~<br>")
-      .append(Utility.getISODateById("#baseEndDate"))
+      .append(Utility.getISODateById("#baseEndDate")),
   );
 
   const headTr4 = $("<tr>");

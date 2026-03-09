@@ -53,16 +53,16 @@ export function getISODateById(id) {
   return getISODate(new Date($(id).val()));
 }
 
-export function compareByValueAsc(itemA, itemB) {
-  const aValue = itemA ? itemA : Infinity;
-  const bValue = itemB ? itemB : Infinity;
+export function compareByNumberAsc(itemA, itemB) {
+  const aValue = itemA != null ? itemA : Infinity;
+  const bValue = itemB != null ? itemB : Infinity;
 
   return aValue - bValue;
 }
 
-export function compareByValueDesc(itemA, itemB) {
-  const aValue = itemA ? itemA : Infinity;
-  const bValue = itemB ? itemB : Infinity;
+export function compareByNumberDesc(itemA, itemB) {
+  const aValue = itemA != null ? itemA : Infinity;
+  const bValue = itemB != null ? itemB : Infinity;
 
   return bValue - aValue;
 }
@@ -77,7 +77,7 @@ export function compareByCardDateAsc(before, after) {
   const beforeTime = before ? new Date(before).getTime() : Infinity;
   const afterTime = after ? new Date(after).getTime() : Infinity;
 
-  return compareByValueAsc(beforeTime, afterTime);
+  return compareByNumberAsc(beforeTime, afterTime);
 }
 
 /**
