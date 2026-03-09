@@ -3139,6 +3139,13 @@
         "cardDate": "2025-04-18",
         "cardImgName": "2030080110",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【速・準・一・丁】幽谷 霧子",
+        "cardCategory": "event",
+        "cardDate": "2026-03-09",
+        "cardImgName": "2030080120",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -6282,6 +6289,13 @@
         "cardDate": "2025-10-30",
         "cardImgName": "1040160130",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【Secret Face】桑山 千雪",
+        "cardCategory": "limited",
+        "cardDate": "2026-03-09",
+        "cardImgName": "1040160140",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -6907,6 +6921,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-01-04",
         "cardImgName": "2040170150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【かくりよの少女】芹沢 あさひ",
+        "cardCategory": "limited",
+        "cardDate": "2026-03-09",
+        "cardImgName": "2040170160",
         "isProduceCard": false
       }
     ],
@@ -8558,6 +8579,13 @@
         "cardCategory": "fes",
         "cardDate": "2026-01-30",
         "cardImgName": "2040220130",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【お目当てはいずこ】福丸 小糸",
+        "cardCategory": "limited",
+        "cardDate": "2026-03-09",
+        "cardImgName": "2040220120",
         "isProduceCard": false
       }
     ],
