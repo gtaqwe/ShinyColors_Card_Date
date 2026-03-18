@@ -1173,6 +1173,13 @@
         "cardDate": "2025-05-11",
         "cardImgName": "2030030130",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【花かんむりをあなたへ】八宮 めぐる",
+        "cardCategory": "event",
+        "cardDate": "2026-03-18",
+        "cardImgName": "2030030140",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -4288,6 +4295,13 @@
         "cardDate": "2025-05-20",
         "cardImgName": "1040110120",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【春へと駈ける】西城 樹里",
+        "cardCategory": "limited",
+        "cardDate": "2026-03-18",
+        "cardImgName": "1040110130",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -4913,6 +4927,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-10-19",
         "cardImgName": "2040120150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【遠き御空】杜野 凛世",
+        "cardCategory": "prelude",
+        "cardDate": "2026-03-18",
+        "cardImgName": "2040120160",
         "isProduceCard": false
       }
     ],
