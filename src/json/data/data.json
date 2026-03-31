@@ -439,6 +439,13 @@
         "cardDate": "2026-02-09",
         "cardImgName": "2040010220",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【BLEND / MIX】櫻木 真乃",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2040010240",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -741,6 +748,13 @@
         "cardCategory": "other",
         "cardDate": "2025-05-11",
         "cardImgName": "2030020140",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【櫻風宮 灯め乃】風野 灯織",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030020160",
         "isProduceCard": false
       }
     ],
@@ -1610,6 +1624,13 @@
         "cardCategory": "other",
         "cardDate": "2025-06-21",
         "cardImgName": "2030040110",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【月中谷 咲華】月岡 恋鐘",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030040120",
         "isProduceCard": false
       }
     ],
@@ -3605,6 +3626,13 @@
         "cardDate": "2026-01-09",
         "cardImgName": "2030090110",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【西園宮 凛葉】小宮 果穂",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030090120",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -5592,6 +5620,13 @@
         "cardDate": "2025-04-11",
         "cardImgName": "2930142510",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【桑崎 千花奈】大崎 甘奈",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030140110",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -6850,6 +6885,13 @@
         "cardDate": "2025-07-30",
         "cardImgName": "2030170120",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【沢泉 依子】芹沢 あさひ",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030170130",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -7890,6 +7932,13 @@
         "cardCategory": "event",
         "cardDate": "2025-10-08",
         "cardImgName": "2030200090",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【福倉口 雛】浅倉 透",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030200100",
         "isProduceCard": false
       }
     ],
@@ -9160,6 +9209,13 @@
         "cardDate": "2025-12-08",
         "cardImgName": "2030240080",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【七田 琴か】七草 にちか",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030240090",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -9720,6 +9776,13 @@
         "cardCategory": "event",
         "cardDate": "2025-08-30",
         "cardImgName": "2030260040",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【斑木 はる那】斑鳩 ルカ",
+        "cardCategory": "other",
+        "cardDate": "2026-04-01",
+        "cardImgName": "2030260050",
         "isProduceCard": false
       }
     ],
