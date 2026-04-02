@@ -1350,6 +1350,13 @@
         "cardDate": "2026-03-13",
         "cardImgName": "2040030200",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【門出を飾る】八宮 めぐる",
+        "cardCategory": "twilight",
+        "cardDate": "2026-04-03",
+        "cardImgName": "2040030180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -1925,6 +1932,13 @@
         "cardCategory": "parallel",
         "cardDate": "2025-09-29",
         "cardImgName": "1040050130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【スーツ・ユアセルフ】田中 摩美々",
+        "cardCategory": "twilight",
+        "cardDate": "2026-04-03",
+        "cardImgName": "1040050140",
         "isProduceCard": true
       }
     ],
@@ -3357,6 +3371,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-02-16",
         "cardImgName": "2040080200",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【イル。まどろみとほほえみの。】幽谷 霧子",
+        "cardCategory": "fes",
+        "cardDate": "2026-04-03",
+        "cardImgName": "2040080220",
         "isProduceCard": false
       }
     ],
@@ -4969,6 +4990,13 @@
         "cardCategory": "prelude",
         "cardDate": "2026-03-18",
         "cardImgName": "2040120160",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【流砂の果てに】杜野 凛世",
+        "cardCategory": "event",
+        "cardDate": "2026-04-03",
+        "cardImgName": "2040120170",
         "isProduceCard": false
       }
     ],
