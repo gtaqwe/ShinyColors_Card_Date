@@ -5150,6 +5150,13 @@
         "cardDate": "2025-08-30",
         "cardImgName": "1040130130",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【a[___]ction】有栖川 夏葉",
+        "cardCategory": "casting",
+        "cardDate": "2026-04-09",
+        "cardImgName": "1040130140",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -7873,6 +7880,13 @@
         "cardDate": "2025-10-20",
         "cardImgName": "1040200100",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【月の下、花】浅倉 透",
+        "cardCategory": "casting",
+        "cardDate": "2026-04-09",
+        "cardImgName": "1040200110",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -10253,6 +10267,13 @@
         "cardCategory": "other",
         "cardDate": "2025-08-09",
         "cardImgName": "2030280050",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【Spring×Street】郁田 はるき",
+        "cardCategory": "event",
+        "cardDate": "2026-04-09",
+        "cardImgName": "2030280060",
         "isProduceCard": false
       }
     ],
