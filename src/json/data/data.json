@@ -3109,6 +3109,13 @@
         "cardDate": "2018-04-24",
         "cardImgName": null,
         "isProduceCard": true
+      },
+      {
+        "cardName": "【知・知・識・識】幽谷 霧子",
+        "cardCategory": "permanent",
+        "cardDate": "2026-04-17",
+        "cardImgName": "1050080010",
+        "isProduceCard": true
       }
     ],
     "S_SR": [
@@ -7078,6 +7085,13 @@
         "cardDate": "2019-04-12",
         "cardImgName": null,
         "isProduceCard": false
+      },
+      {
+        "cardName": "【くっつく、くっつかない】芹沢 あさひ",
+        "cardCategory": "permanent",
+        "cardDate": "2026-04-17",
+        "cardImgName": "2050170010",
+        "isProduceCard": false
       }
     ]
   },
@@ -8335,6 +8349,13 @@
         "cardCategory": "other",
         "cardDate": "2025-04-11",
         "cardImgName": "2930212510",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【露色】樋口 円香",
+        "cardCategory": "event",
+        "cardDate": "2026-04-17",
+        "cardImgName": "2030210100",
         "isProduceCard": false
       }
     ],
