@@ -453,6 +453,13 @@
         "cardDate": "2026-04-25",
         "cardImgName": "2040010230",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【ある日、森の中】櫻木 真乃",
+        "cardCategory": "fes",
+        "cardDate": "2026-04-29",
+        "cardImgName": "2040010250",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -2328,6 +2335,13 @@
         "cardCategory": "parallel",
         "cardDate": "2025-07-30",
         "cardImgName": "1040060120",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【Episode05】白瀬 咲耶",
+        "cardCategory": "limited",
+        "cardDate": "2026-04-29",
+        "cardImgName": "1040060130",
         "isProduceCard": true
       }
     ],
@@ -6694,6 +6708,13 @@
         "cardDate": "2026-04-18",
         "cardImgName": "2040160160",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【それぞれのネガイ】桑山 千雪",
+        "cardCategory": "event",
+        "cardDate": "2026-04-29",
+        "cardImgName": "2040160170",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -7832,6 +7853,13 @@
         "cardCategory": "other",
         "cardDate": "2026-04-12",
         "cardImgName": "2040190170",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【２８３ファミリー】和泉 愛依",
+        "cardCategory": "fes",
+        "cardDate": "2026-04-29",
+        "cardImgName": "2040190150",
         "isProduceCard": false
       }
     ],
