@@ -2445,6 +2445,13 @@
         "cardDate": "2026-02-09",
         "cardImgName": "2030060110",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【夕景スロータイム】白瀬 咲耶",
+        "cardCategory": "event",
+        "cardDate": "2026-05-12",
+        "cardImgName": "2030060120",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -5866,6 +5873,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-12-25",
         "cardImgName": "2040140210",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【おようふくめもりぃ】大崎 甘奈",
+        "cardCategory": "prelude",
+        "cardDate": "2026-05-12",
+        "cardImgName": "2040140220",
         "isProduceCard": false
       }
     ],
