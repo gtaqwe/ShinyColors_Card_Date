@@ -4509,6 +4509,13 @@
         "cardDate": "2025-05-20",
         "cardImgName": "2030110110",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【碧天にとけて】西城 樹里",
+        "cardCategory": "event",
+        "cardDate": "2026-05-21",
+        "cardImgName": "2030110120",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -8881,6 +8888,13 @@
         "cardDate": "2026-03-09",
         "cardImgName": "2040220120",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【そらいろの海】福丸 小糸",
+        "cardCategory": "twilight",
+        "cardDate": "2026-05-21",
+        "cardImgName": "2040220140",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -9302,6 +9316,13 @@
         "cardCategory": "casting",
         "cardDate": "2026-02-27",
         "cardImgName": "1040240100",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【花ノ名前】七草 にちか",
+        "cardCategory": "twilight",
+        "cardDate": "2026-05-21",
+        "cardImgName": "1040240110",
         "isProduceCard": true
       }
     ],
