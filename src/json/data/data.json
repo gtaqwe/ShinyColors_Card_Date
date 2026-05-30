@@ -933,6 +933,13 @@
         "cardDate": "2026-03-20",
         "cardImgName": "2040020220",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【囲む実り】風野 灯織",
+        "cardCategory": "event",
+        "cardDate": "2026-05-30",
+        "cardImgName": "2040020210",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -2752,6 +2759,13 @@
         "cardCategory": "twilight",
         "cardDate": "2025-12-08",
         "cardImgName": "1040070130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【心、知れて】三峰 結華",
+        "cardCategory": "casting",
+        "cardDate": "2026-05-30",
+        "cardImgName": "1040070140",
         "isProduceCard": true
       }
     ],
@@ -7305,6 +7319,13 @@
         "cardDate": "2024-07-30",
         "cardImgName": "1040180110",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【あなたが待つ場所】黛 冬優子",
+        "cardCategory": "casting",
+        "cardDate": "2026-05-30",
+        "cardImgName": "1040180120",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -9525,6 +9546,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-02-22",
         "cardImgName": "2040240120",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【「うそつき」】七草 にちか",
+        "cardCategory": "fes",
+        "cardDate": "2026-05-30",
+        "cardImgName": "2040240130",
         "isProduceCard": false
       }
     ],
