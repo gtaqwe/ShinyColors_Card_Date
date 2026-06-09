@@ -8381,6 +8381,13 @@
         "cardDate": "2024-07-18",
         "cardImgName": "1040210090",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【ダイヤモンド・クラリティ】樋口 円香",
+        "cardCategory": "limited",
+        "cardDate": "2026-06-09",
+        "cardImgName": "1040210100",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -9128,6 +9135,13 @@
         "cardDate": "2025-11-29",
         "cardImgName": "2030230080",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【「fragrance」】市川 雛菜",
+        "cardCategory": "event",
+        "cardDate": "2026-06-09",
+        "cardImgName": "2030230090",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -9858,6 +9872,13 @@
         "cardCategory": "other",
         "cardDate": "2026-03-13",
         "cardImgName": "2040250180",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【ROOTS】緋田 美琴",
+        "cardCategory": "prelude",
+        "cardDate": "2026-06-09",
+        "cardImgName": "2040250190",
         "isProduceCard": false
       }
     ],
