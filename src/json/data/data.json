@@ -5075,6 +5075,13 @@
         "cardDate": "2026-04-03",
         "cardImgName": "2040120170",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【幸あれと】杜野 凛世",
+        "cardCategory": "twilight",
+        "cardDate": "2026-06-18",
+        "cardImgName": "2040120180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -9983,6 +9990,13 @@
         "cardDate": "2026-02-27",
         "cardImgName": "1040260080",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【恋人たち】斑鳩 ルカ",
+        "cardCategory": "twilight",
+        "cardDate": "2026-06-18",
+        "cardImgName": "1040260090",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -10498,6 +10512,13 @@
         "cardCategory": "event",
         "cardDate": "2026-04-09",
         "cardImgName": "2030280060",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【雨音の余白】郁田 はるき",
+        "cardCategory": "event",
+        "cardDate": "2026-06-18",
+        "cardImgName": "2030280070",
         "isProduceCard": false
       }
     ],
