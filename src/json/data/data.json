@@ -1099,6 +1099,13 @@
         "cardDate": "2025-11-11",
         "cardImgName": "1040030130",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【寄り道ブラウジング】八宮 めぐる",
+        "cardCategory": "casting",
+        "cardDate": "2026-06-29",
+        "cardImgName": "1040030140",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -2997,6 +3004,13 @@
         "cardDate": "2026-02-15",
         "cardImgName": "2040070140",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【mem∞ry】三峰 結華",
+        "cardCategory": "event",
+        "cardDate": "2026-06-29",
+        "cardImgName": "2040070150",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -3162,6 +3176,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-11-19",
         "cardImgName": "1040080130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【演・勇・伝・言】幽谷 霧子",
+        "cardCategory": "casting",
+        "cardDate": "2026-06-29",
+        "cardImgName": "1040080140",
         "isProduceCard": true
       }
     ],
@@ -10384,6 +10405,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-05-10",
         "cardImgName": "2040270120",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【お腰につけた】鈴木 羽那",
+        "cardCategory": "fes",
+        "cardDate": "2026-06-29",
+        "cardImgName": "2040270100",
         "isProduceCard": false
       }
     ],
