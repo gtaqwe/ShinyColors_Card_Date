@@ -5513,6 +5513,13 @@
         "cardDate": "2025-11-19",
         "cardImgName": "2040130160",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【わかばの頃】有栖川 夏葉",
+        "cardCategory": "prelude",
+        "cardDate": "2026-07-08",
+        "cardImgName": "2040130170",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -6649,6 +6656,13 @@
         "cardCategory": "other",
         "cardDate": "2025-04-11",
         "cardImgName": "2930162510",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【Specialな夏、いただきます】桑山 千雪",
+        "cardCategory": "event",
+        "cardDate": "2026-07-08",
+        "cardImgName": "2030160130",
         "isProduceCard": false
       }
     ],
