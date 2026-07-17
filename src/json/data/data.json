@@ -4565,6 +4565,13 @@
         "cardDate": "2026-05-21",
         "cardImgName": "2030110120",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【小さな灯、空の花】西城 樹里",
+        "cardCategory": "event",
+        "cardDate": "2026-07-17",
+        "cardImgName": "2030110130",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -5694,6 +5701,13 @@
         "cardCategory": "first",
         "cardDate": "2018-04-24",
         "cardImgName": null,
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【前進オフェンス】大崎 甘奈",
+        "cardCategory": "permanent",
+        "cardDate": "2026-07-17",
+        "cardImgName": "1050140010",
         "isProduceCard": true
       }
     ],
@@ -8335,6 +8349,13 @@
         "cardCategory": "first",
         "cardDate": "2020-04-13",
         "cardImgName": null,
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【flieeeers】浅倉 透",
+        "cardCategory": "permanent",
+        "cardDate": "2026-07-17",
+        "cardImgName": "2050200010",
         "isProduceCard": false
       }
     ]
