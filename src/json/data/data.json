@@ -2636,6 +2636,13 @@
         "cardDate": "2026-06-27",
         "cardImgName": "2040060190",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【あわく、とけて】白瀬 咲耶",
+        "cardCategory": "fes",
+        "cardDate": "2026-07-30",
+        "cardImgName": "2040060200",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -4476,6 +4483,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-03-18",
         "cardImgName": "1040110130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【one summer】西城 樹里",
+        "cardCategory": "casting",
+        "cardDate": "2026-07-30",
+        "cardImgName": "1040110140",
         "isProduceCard": true
       }
     ],
@@ -7647,6 +7661,13 @@
         "cardDate": "2026-05-23",
         "cardImgName": "2040180200",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【近づけば遠ざかる】黛 冬優子",
+        "cardCategory": "event",
+        "cardDate": "2026-07-30",
+        "cardImgName": "2040180190",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -9680,6 +9701,20 @@
         "cardDate": "2026-07-26",
         "cardImgName": "2040240140",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【Happy ending?】七草 にちか",
+        "cardCategory": "fes",
+        "cardDate": "2026-07-30",
+        "cardImgName": "2040240150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【ジューンブライド2026】七草 にちか",
+        "cardCategory": "limited",
+        "cardDate": "2026-07-30",
+        "cardImgName": "2040240180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -10336,6 +10371,13 @@
         "cardCategory": "parallel",
         "cardDate": "2025-06-29",
         "cardImgName": "1040270050",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【７日間の天使】鈴木 羽那",
+        "cardCategory": "casting",
+        "cardDate": "2026-07-30",
+        "cardImgName": "1040270060",
         "isProduceCard": true
       }
     ],
