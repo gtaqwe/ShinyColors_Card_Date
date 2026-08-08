@@ -1823,6 +1823,13 @@
         "cardDate": "2026-04-25",
         "cardImgName": "2040040180",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【食堂のリトルアイドル】月岡 恋鐘",
+        "cardCategory": "prelude",
+        "cardDate": "2026-08-07",
+        "cardImgName": "2040040190",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -2090,6 +2097,13 @@
         "cardCategory": "event",
         "cardDate": "2025-07-18",
         "cardImgName": "2030050110",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【ふいにサマーシャワー】田中 摩美々",
+        "cardCategory": "event",
+        "cardDate": "2026-08-07",
+        "cardImgName": "2030050120",
         "isProduceCard": false
       }
     ],
@@ -4066,6 +4080,13 @@
         "cardCategory": "casting",
         "cardDate": "2026-01-30",
         "cardImgName": "1040100130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【Candyならいらない】園田 智代子",
+        "cardCategory": "limited",
+        "cardDate": "2026-08-07",
+        "cardImgName": "1040100140",
         "isProduceCard": true
       }
     ],
