@@ -1236,6 +1236,13 @@
         "cardDate": "2026-03-18",
         "cardImgName": "2030030140",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【向こう側の君へ】八宮 めぐる",
+        "cardCategory": "event",
+        "cardDate": "2026-08-19",
+        "cardImgName": "2030030150",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -2656,6 +2663,13 @@
         "cardCategory": "fes",
         "cardDate": "2026-07-30",
         "cardImgName": "2040060200",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【かっこよさの定義】白瀬 咲耶",
+        "cardCategory": "twilight",
+        "cardDate": "2026-08-19",
+        "cardImgName": "2040060210",
         "isProduceCard": false
       }
     ],
@@ -9221,6 +9235,13 @@
         "cardCategory": "limited",
         "cardDate": "2025-09-19",
         "cardImgName": "1040230100",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【B!c,Cib】市川 雛菜",
+        "cardCategory": "twilight",
+        "cardDate": "2026-08-19",
+        "cardImgName": "1040230110",
         "isProduceCard": true
       }
     ],
