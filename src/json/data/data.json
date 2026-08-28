@@ -2003,6 +2003,13 @@
         "cardDate": "2026-04-03",
         "cardImgName": "1040050140",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【ダイブ・My・ハート】田中 摩美々",
+        "cardCategory": "casting",
+        "cardDate": "2026-08-28",
+        "cardImgName": "1040050150",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -6918,6 +6925,13 @@
         "cardDate": "2026-08-11",
         "cardImgName": "2040160200",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【Grow to Glow】桑山 千雪",
+        "cardCategory": "limited",
+        "cardDate": "2026-08-28",
+        "cardImgName": "2040160210",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -7723,6 +7737,13 @@
         "cardCategory": "event",
         "cardDate": "2026-07-30",
         "cardImgName": "2040180190",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【「忘れないでね」】黛 冬優子",
+        "cardCategory": "fes",
+        "cardDate": "2026-08-28",
+        "cardImgName": "2040180210",
         "isProduceCard": false
       }
     ],
@@ -9132,6 +9153,13 @@
         "cardCategory": "twilight",
         "cardDate": "2026-05-21",
         "cardImgName": "2040220140",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【なんでもない夏】福丸 小糸",
+        "cardCategory": "event",
+        "cardDate": "2026-08-28",
+        "cardImgName": "2040220150",
         "isProduceCard": false
       }
     ],
@@ -10683,6 +10711,13 @@
         "cardCategory": "parallel",
         "cardDate": "2025-05-20",
         "cardImgName": "1040280050",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【恋まで、あと25メートル】郁田 はるき",
+        "cardCategory": "casting",
+        "cardDate": "2026-08-28",
+        "cardImgName": "1040280060",
         "isProduceCard": true
       }
     ],
