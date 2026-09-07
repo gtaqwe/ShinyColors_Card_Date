@@ -2666,7 +2666,7 @@
         "isProduceCard": false
       },
       {
-        "cardName": "【数分だけのアナタに】白瀬 咲耶",
+        "cardName": "【喝采と祝福】白瀬 咲耶",
         "cardCategory": "limited",
         "cardDate": "2026-06-27",
         "cardImgName": "2040060190",
@@ -10159,6 +10159,13 @@
         "cardCategory": "other",
         "cardDate": "2026-07-24",
         "cardImgName": "2040250220",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【NAP】緋田 美琴",
+        "cardCategory": "limited",
+        "cardDate": "2026-09-08",
+        "cardImgName": "2040250200",
         "isProduceCard": false
       }
     ],
