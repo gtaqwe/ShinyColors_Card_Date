@@ -947,6 +947,13 @@
         "cardDate": "2026-05-30",
         "cardImgName": "2040020210",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【分景】風野 灯織",
+        "cardCategory": "limited",
+        "cardDate": "2026-09-07",
+        "cardImgName": "2040020230",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -4224,6 +4231,13 @@
         "cardCategory": "event",
         "cardDate": "2025-10-20",
         "cardImgName": "2030100130",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【metomeスパークル】園田 智代子",
+        "cardCategory": "event",
+        "cardDate": "2026-09-07",
+        "cardImgName": "2030100140",
         "isProduceCard": false
       }
     ],
@@ -8112,6 +8126,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-08-02",
         "cardImgName": "2040190180",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【三つ子の魂えたーなる！】和泉 愛依",
+        "cardCategory": "prelude",
+        "cardDate": "2026-09-07",
+        "cardImgName": "2040190190",
         "isProduceCard": false
       }
     ],
