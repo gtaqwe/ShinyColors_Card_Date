@@ -3699,6 +3699,13 @@
         "cardDate": "2025-11-29",
         "cardImgName": "1040090140",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【げっと！！！】小宮 果穂",
+        "cardCategory": "twilight",
+        "cardDate": "2026-09-16",
+        "cardImgName": "1040090150",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -6494,6 +6501,13 @@
         "cardDate": "2026-02-14",
         "cardImgName": "2040150190",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【ファストムーン・バーガリア】大崎 甜花",
+        "cardCategory": "twilight",
+        "cardDate": "2026-09-16",
+        "cardImgName": "2040150200",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -6945,6 +6959,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-08-28",
         "cardImgName": "2040160210",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【サマーアイドル2026】桑山 千雪",
+        "cardCategory": "limited",
+        "cardDate": "2026-09-16",
+        "cardImgName": "2040160250",
         "isProduceCard": false
       }
     ],
@@ -10003,6 +10024,13 @@
         "cardCategory": "event",
         "cardDate": "2025-06-29",
         "cardImgName": "2030250040",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【EYE LEVEL】緋田 美琴",
+        "cardCategory": "event",
+        "cardDate": "2026-09-16",
+        "cardImgName": "2030250050",
         "isProduceCard": false
       }
     ],
