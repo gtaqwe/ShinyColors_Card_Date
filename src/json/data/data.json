@@ -1851,6 +1851,13 @@
         "cardDate": "2026-08-07",
         "cardImgName": "2040040190",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【Re:パラレル！】月岡 恋鐘",
+        "cardCategory": "event",
+        "cardDate": "2026-09-29",
+        "cardImgName": "2040040200",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -2419,6 +2426,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-04-29",
         "cardImgName": "1040060130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【これも可能性】白瀬 咲耶",
+        "cardCategory": "casting",
+        "cardDate": "2026-09-29",
+        "cardImgName": "1040060140",
         "isProduceCard": true
       }
     ],
@@ -3080,6 +3094,13 @@
         "cardCategory": "event",
         "cardDate": "2026-06-29",
         "cardImgName": "2040070150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【還るまで】三峰 結華",
+        "cardCategory": "fes",
+        "cardDate": "2026-09-29",
+        "cardImgName": "2040070160",
         "isProduceCard": false
       }
     ],
@@ -3977,6 +3998,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-07-29",
         "cardImgName": "2040090180",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【Heavy,Heavy Rain】小宮 果穂",
+        "cardCategory": "limited",
+        "cardDate": "2026-09-29",
+        "cardImgName": "2040090200",
         "isProduceCard": false
       }
     ],
@@ -8653,6 +8681,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-06-09",
         "cardImgName": "1040210100",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【Hug？】樋口 円香",
+        "cardCategory": "casting",
+        "cardDate": "2026-09-29",
+        "cardImgName": "1040210110",
         "isProduceCard": true
       }
     ],
