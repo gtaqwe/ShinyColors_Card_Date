@@ -5546,6 +5546,13 @@
         "cardDate": "2026-02-18",
         "cardImgName": "2030130120",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【誰か越しのあなた】有栖川 夏葉",
+        "cardCategory": "event",
+        "cardDate": "2026-10-08",
+        "cardImgName": "2030130130",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -8558,6 +8565,13 @@
         "cardDate": "2026-05-04",
         "cardImgName": "2040200160",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【アメと風と】浅倉 透",
+        "cardCategory": "prelude",
+        "cardDate": "2026-10-08",
+        "cardImgName": "2040200170",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -10976,6 +10990,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-04-05",
         "cardImgName": "2040280060",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【探偵は二面相】郁田 はるき",
+        "cardCategory": "limited",
+        "cardDate": "2026-10-08",
+        "cardImgName": "2040280090",
         "isProduceCard": false
       }
     ],
