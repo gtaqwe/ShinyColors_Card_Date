@@ -649,6 +649,13 @@
         "cardDate": "2018-04-24",
         "cardImgName": null,
         "isProduceCard": true
+      },
+      {
+        "cardName": "【胸の奥に灯る】風野 灯織",
+        "cardCategory": "permanent",
+        "cardDate": "2026-10-20",
+        "cardImgName": "1050020010",
+        "isProduceCard": true
       }
     ],
     "S_SR": [
@@ -1256,6 +1263,13 @@
         "cardCategory": "event",
         "cardDate": "2026-08-19",
         "cardImgName": "2030030150",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【支え合えばどこまでも】八宮 めぐる",
+        "cardCategory": "event",
+        "cardDate": "2026-10-20",
+        "cardImgName": "2030030160",
         "isProduceCard": false
       }
     ],
@@ -10543,6 +10557,13 @@
         "cardCategory": "first",
         "cardDate": "2023-04-21",
         "cardImgName": null,
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【CoMEDY】斑鳩 ルカ",
+        "cardCategory": "permanent",
+        "cardDate": "2026-10-20",
+        "cardImgName": "2050260010",
         "isProduceCard": false
       }
     ]
