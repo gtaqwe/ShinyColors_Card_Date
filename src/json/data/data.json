@@ -5807,6 +5807,13 @@
         "cardDate": "2026-10-24",
         "cardImgName": "2040130200",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【さあ、正直に！】有栖川 夏葉",
+        "cardCategory": "fes",
+        "cardDate": "2026-10-30",
+        "cardImgName": "2040130190",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -6424,6 +6431,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-02-09",
         "cardImgName": "1040150130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【Sweet Sweet Halloween】大崎 甜花",
+        "cardCategory": "casting",
+        "cardDate": "2026-10-30",
+        "cardImgName": "1040150140",
         "isProduceCard": true
       }
     ],
@@ -8128,6 +8142,13 @@
         "cardDate": "2026-02-18",
         "cardImgName": "1040190120",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【離さない♡】和泉 愛依",
+        "cardCategory": "casting",
+        "cardDate": "2026-10-30",
+        "cardImgName": "1040190130",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -9788,6 +9809,13 @@
         "cardDate": "2026-10-24",
         "cardImgName": "2040230150",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【SOL!LOQUY】市川 雛菜",
+        "cardCategory": "limited",
+        "cardDate": "2026-10-30",
+        "cardImgName": "2040230140",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -10134,6 +10162,20 @@
         "cardCategory": "other",
         "cardDate": "2026-10-24",
         "cardImgName": "2040240200",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【約いもうと】七草 にちか",
+        "cardCategory": "limited",
+        "cardDate": "2026-10-30",
+        "cardImgName": "2040240160",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【いらない】七草 にちか",
+        "cardCategory": "event",
+        "cardDate": "2026-10-30",
+        "cardImgName": "2040240170",
         "isProduceCard": false
       }
     ],
@@ -11235,6 +11277,13 @@
         "cardCategory": "other",
         "cardDate": "2026-10-24",
         "cardImgName": "2040280120",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【あやかしの棲む宿】郁田 はるき",
+        "cardCategory": "fes",
+        "cardDate": "2026-10-30",
+        "cardImgName": "2040280080",
         "isProduceCard": false
       }
     ],
