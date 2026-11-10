@@ -9518,6 +9518,13 @@
         "cardDate": "2026-10-24",
         "cardImgName": "2040220170",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【いつまでもとくべつ】福丸 小糸",
+        "cardCategory": "limited",
+        "cardDate": "2026-11-11",
+        "cardImgName": "2040220160",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -9850,6 +9857,13 @@
         "cardCategory": "limited",
         "cardDate": "2026-10-30",
         "cardImgName": "2040230140",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【ふたりぶんわんだふる】市川 雛菜",
+        "cardCategory": "limited",
+        "cardDate": "2026-11-11",
+        "cardImgName": "2040230160",
         "isProduceCard": false
       }
     ],
