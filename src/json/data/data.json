@@ -474,6 +474,13 @@
         "cardDate": "2026-10-24",
         "cardImgName": "2040010280",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【主役全員、悪役令嬢】櫻木 真乃",
+        "cardCategory": "limited",
+        "cardDate": "2026-11-10",
+        "cardImgName": "2040010270",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -1147,6 +1154,13 @@
         "cardCategory": "casting",
         "cardDate": "2026-06-29",
         "cardImgName": "1040030140",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【激励エーリアル】八宮 めぐる",
+        "cardCategory": "twilight",
+        "cardDate": "2026-11-10",
+        "cardImgName": "1040030150",
         "isProduceCard": true
       }
     ],
@@ -4089,6 +4103,13 @@
         "cardCategory": "other",
         "cardDate": "2026-10-24",
         "cardImgName": "2040090220",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【プレイ・アチーブメント！】小宮 果穂",
+        "cardCategory": "twilight",
+        "cardDate": "2026-11-10",
+        "cardImgName": "2040090210",
         "isProduceCard": false
       }
     ],
@@ -8236,6 +8257,13 @@
         "cardCategory": "event",
         "cardDate": "2025-11-11",
         "cardImgName": "2030190080",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【S.L.P】和泉 愛依",
+        "cardCategory": "event",
+        "cardDate": "2026-11-10",
+        "cardImgName": "2030190090",
         "isProduceCard": false
       }
     ],
