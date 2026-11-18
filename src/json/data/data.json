@@ -3051,6 +3051,13 @@
         "cardDate": "2025-09-09",
         "cardImgName": "2030070110",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【そよかぜのあそび】三峰 結華",
+        "cardCategory": "event",
+        "cardDate": "2026-11-18",
+        "cardImgName": "2030070130",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -7197,6 +7204,13 @@
         "cardCategory": "other",
         "cardDate": "2026-10-24",
         "cardImgName": "2040160230",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【『わたしのすきなもの』】桑山 千雪",
+        "cardCategory": "prelude",
+        "cardDate": "2026-11-18",
+        "cardImgName": "2040160220",
         "isProduceCard": false
       }
     ],
