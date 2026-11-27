@@ -2345,6 +2345,13 @@
         "cardDate": "2026-10-31",
         "cardImgName": "2040050200",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【残光】田中 摩美々",
+        "cardCategory": "limited",
+        "cardDate": "2026-11-27",
+        "cardImgName": "2040050180",
+        "isProduceCard": false
       }
     ],
     "S_UR": [
@@ -4831,6 +4838,13 @@
         "cardDate": "2026-07-17",
         "cardImgName": "2030110130",
         "isProduceCard": false
+      },
+      {
+        "cardName": "【伝えたいこと、伝わるもの】西城 樹里",
+        "cardCategory": "event",
+        "cardDate": "2026-11-27",
+        "cardImgName": "2030110140",
+        "isProduceCard": false
       }
     ],
     "S_SSR": [
@@ -5145,6 +5159,13 @@
         "cardCategory": "permanent",
         "cardDate": "2025-02-07",
         "cardImgName": "1040120130",
+        "isProduceCard": true
+      },
+      {
+        "cardName": "【しるしひとつ】杜野 凛世",
+        "cardCategory": "casting",
+        "cardDate": "2026-11-27",
+        "cardImgName": "1040120140",
         "isProduceCard": true
       }
     ],
@@ -10357,6 +10378,13 @@
         "cardDate": "2025-08-08",
         "cardImgName": "1040250090",
         "isProduceCard": true
+      },
+      {
+        "cardName": "【SUNSHOWER】緋田 美琴",
+        "cardCategory": "casting",
+        "cardDate": "2026-11-27",
+        "cardImgName": "1040250100",
+        "isProduceCard": true
       }
     ],
     "P_UR": [
@@ -10586,6 +10614,13 @@
         "cardCategory": "other",
         "cardDate": "2026-10-24",
         "cardImgName": "2040250240",
+        "isProduceCard": false
+      },
+      {
+        "cardName": "【その一着をめぐって】緋田 美琴",
+        "cardCategory": "fes",
+        "cardDate": "2026-11-27",
+        "cardImgName": "2040250210",
         "isProduceCard": false
       }
     ],
